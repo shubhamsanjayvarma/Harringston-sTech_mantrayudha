@@ -65,15 +65,15 @@ These guidelines are working if: fewer unnecessary changes in diffs, fewer rewri
 7. Structure and Features Detailing
    During the detailed explanation of features and when creating structures, ALWAYS use YAML instead of JSON.
 
-8. Strict Test-Driven Development (TDD) and Security
+8. Strict Test-Driven Development (TDD), Testing Template & Security
    Before writing, changing, or touching even a single line of code, you MUST create a proper plan for implementation.
-   All plans and procedures must adhere to "TEST DRIVEN DEVELOPMENT". This means you must ALWAYS include:
-
-- Guardrails during the execution of code.
-- Test scripts to check whether the code is working properly.
-- Test scripts for edge cases and potential failures.
-- Test scripts for testing cyber attacks on that code to verify vulnerability against hacks and malicious intent.
-  For cyber attack test scripts, refer to the STRIDE framework, OWASP Top 10, and other established frameworks. Do not accumulate the explanations of these frameworks in this file to avoid context rot; instead, utilize the `cyber-security-frameworks` skill.
+   All plans and procedures must adhere to "TEST DRIVEN DEVELOPMENT" and COMPULSORILY follow `spec/template_testing.md`.
+   Every implementation or general plan MUST explicitly include all 4 categories of testing defined in `spec/template_testing.md`:
+   - **Type 1: Space & Time Complexity Testing** (Big-O scaling, strict performance upper-bounds using `performance.now()`, memory allocation patterns, and DoS resilience).
+   - **Type 2: Logic Testing** (Functional correctness, state transitions, domain-specific operations/semantics, edge cases, zero-division, invalid operands).
+   - **Type 3: UI & Integration Testing** (End-to-end workflows, component lifecycle, contract enforcement, theme toggle, responsive layout, and DOM node leak prevention).
+   - **Type 4: QA & Security Testing (STRIDE / OWASP Top 10)** (Threat modeling: Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, Elevation of Privilege, XSS/injection sanitization, parser fuzzing, and sandbox memory boundary verification).
+     For cyber attack test scripts, refer to the STRIDE framework, OWASP Top 10, and other established frameworks. Do not accumulate the explanations of these frameworks in this file to avoid context rot; instead, utilize the `cyber-security-frameworks` skill.
 
 9. Error Logging and Continuous Learning
    Whenever you make a mistake or encounter an error during execution, you MUST log the mistake in `telemetry/error_log.md`. Include a description of the error and the exact procedure or code that caused it. Immediately after logging the error, you MUST dynamically update this `AGENTS.md` file by explicitly writing a new rule or instruction detailing the mistake and exactly what to avoid doing in the future to prevent recurrence.
@@ -84,8 +84,8 @@ These guidelines are working if: fewer unnecessary changes in diffs, fewer rewri
 11. No Force Commits
     Under absolutely no circumstances should you ever use force commits (e.g., `git commit --no-verify`, `git push --force`) to bypass the pre-commit hooks or automated tests. If a commit is failing, the underlying code or test MUST be fixed before proceeding. If a pre-commit hook fails, you MUST stop, create a clear solving plan to address the failure, and then try again. Bypassing guardrails is strictly forbidden.
 
-12. No Vague Plans (Strict Adherence to Structure)
-    Whenever making an implementation plan or a detailed architectural spec, you MUST NOT make a vague or generic plan. You must strictly follow the required structure, particularly Rules #5 and #8. Every single plan document must independently and explicitly include its own Graphify Search/Update phases, Guardrails, TDD scripts, and Cyber Attack testing sections. Creating a separate, generic "testing" file instead of embedding these details into the specific component plans is a violation of this rule.
+12. No Vague Plans (Strict Adherence to Structure & 4 Testing Types)
+    Whenever making an implementation plan or a detailed architectural spec, you MUST NOT make a vague or generic plan. You must strictly follow the required structure, particularly Rules #5, #8, and `spec/template_testing.md`. Every single plan document must independently and explicitly include its own Graphify Search/Update phases, Guardrails, and ALL 4 categories of testing (Space/Time Complexity, Logic Testing, UI/Integration Testing, and STRIDE/OWASP Security Testing). Creating a separate, generic "testing" file instead of embedding these 4 testing sections into the specific component plans is a violation of this rule.
 
 13. Strict Pre-Commit Hook Standards
     Whenever setting up or modifying pre-commit hooks, you MUST configure them with maximum strictness. NEVER write generic or weak hooks. You must ensure that the hooks proactively block commits by strictly checking types (e.g., `tsc --noEmit`), enforcing zero-tolerance linting (e.g., `--max-warnings=0`), and comprehensively running all associated test suites (including unit, integration, and security tests). Do not assume basic validation is enough; enforce the highest code quality standards directly in the automation pipeline.
@@ -104,3 +104,25 @@ These guidelines are working if: fewer unnecessary changes in diffs, fewer rewri
     - **Local Isolation:** Always create a new branch (e.g., `feat/ui-updates`) for your work. If the code breaks irreparably or a massive conflict occurs locally, simply delete the branch and reset to `main`.
     - **Remote PRs:** When ready, push the branch and open a Pull Request. Never push directly to `main`.
     - **Reverting:** If an issue is discovered _after_ merging to `main`, do not attempt to manually track and revert individual scattered commits via the terminal. Instead, track the issue to the specific PR and use GitHub's 1-click "Revert Pull Request" feature to cleanly undo the entire feature block at once.
+
+21. Kimi WebBridge React Textarea Injection
+    When filling highly controlled React components (like the main code editor) via Kimi WebBridge, the native fill command may fail with an Uncaught exception. If this happens, ALWAYS use the evaluate action with the nativeInputValueSetter and dispatch an input event to securely set the value, rather than failing or asking for help.
+
+23. Unused Default React Imports under Strict JSX Runtime
+    When writing or refactoring React components in projects configured with modern JSX transform (`"jsx": "react-jsx"`) and strict TypeScript (`noUnusedLocals: true`), NEVER add default `import React from "react"` unless explicitly referencing `React.*` properties. Unused default imports trigger compiler error TS6133 and fail pre-commit hooks.
+
+24. Mandatory Cybersecurity, Performance, Structural Integrity & Efficiency Standards
+    Whenever any code is written, modified, or refactored, the following four pillars MUST be strictly preserved and accompanied by dedicated automated verification scripts:
+    - **Cybersecurity & Threat Hardening**: All inputs, memory accesses, parser outputs, and state transformations must be hardened against adversarial exploits (e.g., prototype pollution, XSS/injection, ReDoS, memory sandbox breakout, and STRIDE/OWASP vulnerabilities). Dedicated security test scripts (e.g., `tests/security/*.security.test.*` or `*.stride.test.*`) MUST be written to actively attempt adversarial attacks against the code.
+    - **Performance & Computational Efficiency**: Code must be architected for minimal execution time and optimal space complexity (e.g., avoiding unnecessary re-renders, redundant allocations, unindexed lookups, or unmemoized computations). Performance test scripts (e.g., `tests/performance/*.perf.test.*`) with strict execution time upper-bounds (`performance.now()`) and memory stability checks MUST be written to verify efficiency.
+    - **Structural Integrity & Clean Architecture**: Follow strict separation of concerns, modular contracts, consistent typing, and predictable data flow. Integration and contract tests MUST enforce that component boundaries, state immutability, and module interfaces remain intact.
+    - **Zero Speculative Bloat / Lean Code**: Keep code concise, readable, and focused strictly on the user's requirements without over-abstraction or dead code.
+
+25. Multi-Subagent Adversarial Plan Review & Trajectory-Wide Hardening
+    For all major, architectural, or lengthy implementation tasks, the initial draft of the implementation plan MUST undergo rigorous adversarial self-criticism before presenting it for approval or writing any code:
+    - **Multi-Perspective Scrutiny via Subagents**: Spawn dedicated subagents (e.g., Security & Vulnerability Auditor, Architectural & Logic Critic, Performance Bounds Reviewer) to independently stress-test the draft plan, uncover loopholes, find unhandled edge cases, and challenge assumptions.
+    - **Trajectory-Wide Remediation**: Any discovered flaws, vulnerabilities, or weak points MUST NOT be deferred as "fixes at the end" or post-implementation patches. They MUST be directly resolved and integrated throughout the entire milestone-by-milestone trajectory of the implementation plan itself.
+    - **Fortified Final Submission**: Only after the plan has been adversarially critiqued, fortified, and all discovered loopholes systematically patched across every milestone should the finalized implementation plan be presented for user review.
+
+26. Automated PR Lifecycle via GitHub CLI (`gh`)
+    Whenever creating, managing, or merging Pull Requests, ALWAYS use the GitHub CLI (`gh pr create`, `gh pr merge`, etc.) directly from the terminal rather than requesting manual web UI steps from the user. Ensure the PR title, body summary, base branch (`main`), and head branch are clearly specified, and proceed with automated PR creation and merging where structurally appropriate.
