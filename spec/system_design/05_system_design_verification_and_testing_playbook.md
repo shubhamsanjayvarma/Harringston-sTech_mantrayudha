@@ -98,6 +98,43 @@ type_1_milestone_2:
         - "assert P99 GC pause time remains <= 10ms"
 ```
 
+### 2.4 Milestone 3: Query Pagination, Feature Flag & Telemetry Memory Bounds
+```yaml
+type_1_milestone_3:
+  name: "Pagination, Feature Flag & Telemetry Memory Bounds"
+  tests:
+    - test_id: "TC-COMPLEXITY-08"
+      name: "Keyset Pagination vs. Offset B+ Tree Seek Benchmark at 1,000,000 Rows"
+      description: >
+        Populate relational table with 1,000,000 indexed entities.
+        Benchmark page 50,000 access using:
+        (A) SELECT * FROM table ORDER BY created_at DESC LIMIT 20 OFFSET 1000000;
+        (B) Keyset pagination with WHERE (created_at < :last_ts) OR (created_at = :last_ts AND id < :last_id).
+      assertions:
+        - "assert Keyset pagination query latency is <= 1.5ms (local baseline; allow <= 7.5ms on CI runners per Rule 18)"
+        - "assert Offset pagination query latency is >= 2,000ms or times out due to O(N) leaf scanning"
+        - "assert Keyset pagination disk buffer reads are O(log_B N + K) while Offset reads are O(N)"
+
+    - test_id: "TC-COMPLEXITY-09"
+      name: "SipHash-2-4 Feature Flag In-Memory Evaluation Overhead"
+      description: >
+        Execute 1,000,000 in-memory flag evaluations using SipHash-2-4 with secret server salt and AST rules.
+        Measure average latency per evaluation using performance.now().
+      assertions:
+        - "assert mean evaluation latency is < 0.0001ms (< 100ns) per evaluation"
+        - "assert auxiliary heap memory allocation during evaluation is 0 bytes (zero GC garbage)"
+
+    - test_id: "TC-COMPLEXITY-10"
+      name: "OpenTelemetry Tail-Sampling Buffer Memory Bounding at 50,000 Spans/sec"
+      description: >
+        Feed synthetic OTLP span stream of 50,000 spans/sec into Collector tail-sampling processor with T_wait = 30s.
+        Monitor Collector process Resident Set Size (RSS).
+      assertions:
+        - "assert Collector RSS stabilizes within provisioned ceiling (M_heap <= 17.5 GB)"
+        - "assert memory_limiter processor triggers emergency non-sampled span drop if RSS breaches 85% ceiling"
+        - "assert zero process crash or OOMKilled events"
+```
+
 ---
 
 ## 3. Testing Type 2: Logic & Structural Integrity Testing
@@ -167,6 +204,70 @@ type_2_milestone_2:
       assertions:
         - "assert processed_events table records exactly 1 insertion"
         - "assert business logic executes exactly once; 9 duplicate events are acknowledged and dropped"
+```
+
+### 3.4 Milestone 3: Schema Evolution, API Lifecycle & Distributed Contracts
+```yaml
+type_2_milestone_3:
+  name: "Schema Evolution, API Lifecycle & Distributed Contracts"
+  tests:
+    - test_id: "TC-LOGIC-07"
+      name: "Expand-Contract Database Schema Backward/Forward Compatibility Verification"
+      description: >
+        Execute Blue/Green deployment simulation:
+        1. Apply Phase 1 Expand DDL adding nullable/default column.
+        2. Spin up v1 and v2 application pods concurrently reading and writing to the database.
+        3. Assert zero serialization failures or column mismatch errors on v1 pods.
+        4. Execute Phase 4 Contract DDL with lock_timeout = 2000ms.
+      assertions:
+        - "assert v1 pods successfully insert and query rows during Phase 2 parallel run"
+        - "assert DDL lock acquisition does not starve concurrent active read transactions"
+
+    - test_id: "TC-LOGIC-08"
+      name: "RFC 8594 Sunset & RFC 9745 Deprecation Header Injection & Brownout Simulation"
+      description: >
+        Mark API endpoint as deprecated with Sunset timestamp.
+        Query endpoint during normal operations and during scheduled micro-brownout window.
+      assertions:
+        - "assert HTTP response headers include Deprecation: @<timestamp> and Sunset: <HTTP-date>"
+        - "assert Link headers include rel=\"successor-version\" and rel=\"deprecation\""
+        - "assert simulated micro-brownout returns HTTP 410 Gone with structured migration payload during brownout window"
+
+    - test_id: "TC-LOGIC-09"
+      name: "Distributed Deadline Propagation and Early Abort Contract"
+      description: >
+        Client initiates call with grpc-timeout: 50m. Hop 1 consumes 45ms. Hop 2 receives request.
+      assertions:
+        - "assert Hop 2 calculates remaining budget (5ms) < local p50 threshold (15ms)"
+        - "assert Hop 2 immediately aborts with DEADLINE_EXCEEDED without dispatching downstream RPCs"
+
+    - test_id: "TC-LOGIC-10"
+      name: "Keyset Pagination Multi-Column DNF Boundary Transition & Null Resistance"
+      description: >
+        Test keyset pagination across mixed sort directions (created_at DESC, priority ASC, id ASC)
+        and verify handling of edge cases (duplicate timestamps, last page boundary).
+      assertions:
+        - "assert DNF boolean query generates identical contiguous ordering with zero missing or duplicate items"
+        - "assert schema enforces NOT NULL constraint on all cursor columns"
+
+    - test_id: "TC-LOGIC-11"
+      name: "Kafka Consumer SpanLink Context Attachment Invariant"
+      description: >
+        Publish batch of 50 messages from 50 distinct producers to orders-topic.
+        Consumer polls batch and processes records.
+      assertions:
+        - "assert consumer span does NOT set any producer span as its parent"
+        - "assert consumer span creates 50 individual OpenTelemetry SpanLinks referencing producer contexts"
+        - "assert consumer root trace duration accurately measures local execution time (not broker queue delay)"
+
+    - test_id: "TC-LOGIC-12"
+      name: "Pod 3-Phase Shutdown Lifecycle & In-Flight Request Drain Verification"
+      description: >
+        Issue SIGTERM to application container with 20 in-flight requests running and preStop sleep 15s.
+      assertions:
+        - "assert preStop hook delays SIGTERM delivery by 15s to allow EndpointSlice deregistration"
+        - "assert all 20 in-flight requests complete with HTTP 200 before container termination"
+        - "assert zero 502/503 errors during pod shutdown window"
 ```
 
 ---
@@ -262,6 +363,53 @@ type_3_milestone_2:
         - "assert /readyz probe returns HTTP 200 with degraded capability flag if pod serves cached reads"
         - "assert Kubernetes does NOT evict or enter crashLoopBackOff for application pods during database outage"
         - "assert zero transitive dependency failure amplification"
+```
+
+### 4.4 Milestone 3: Progressive Delivery, SRE Alerting & Multi-Region Quorum Drills
+```yaml
+type_3_milestone_3:
+  name: "Progressive Delivery, SRE Alerting & Multi-Region Quorum Drills"
+  tests:
+    - test_id: "TC-CHAOS-09"
+      name: "Automated Canary Analysis Failure & Sub-Second Rollback Verification"
+      description: >
+        Initiate Canary deployment stepping to weight: 5%.
+        Inject artificial 2.0% error rate into canary pods.
+        Monitor Argo Rollouts / Prometheus metric gates.
+      assertions:
+        - "assert Mann-Whitney U test detects statistical anomaly within 60s"
+        - "assert deployment automatically triggers sub-second rollback to weight: 0%"
+        - "assert zero user-facing Sev-1 alert generated"
+
+    - test_id: "TC-CHAOS-10"
+      name: "Spot Instance 2-Minute Preemption Drain & In-Flight Request Flush Drill"
+      description: >
+        Simulate AWS EC2 Spot Interruption Notice via AWS EventBridge.
+        Send termination signal to Kubernetes node holding batch consumers.
+      assertions:
+        - "assert node handler immediately cordons node and initiates pod draining"
+        - "assert batch consumers finish current message ack and pause partition consumption"
+        - "assert all in-flight work flushes to database/storage within the 120-second warning window"
+
+    - test_id: "TC-CHAOS-11"
+      name: "Multi-Window Fast Burn Rate PagerDuty Trigger Drill with Low-QPS Suppression"
+      description: >
+        1. On high-QPS service (1,000 RPS), inject 3.0% error rate for 5 minutes.
+        2. On low-QPS service (0.5 RPS), inject 1 single error out of 10 requests.
+      assertions:
+        - "assert high-QPS service evaluates Burn Rate B = 30.0 > 14.4 and fires Sev-1 PagerDuty alert"
+        - "assert low-QPS service suppresses page because increase(http_requests_total[1h]) < 100 or errors < 5"
+        - "assert zero false alarms generated on low-throughput background microservices"
+
+    - test_id: "TC-CHAOS-12"
+      name: "Multi-Region Network Partition 3rd-Region Witness Quorum Validation"
+      description: >
+        Simulate WAN partition severing direct communication between US-East (Region 1) and US-West (Region 2).
+        Query Raft / CockroachDB cluster status.
+      assertions:
+        - "assert Region 1 and US-Central Witness form 2/3 quorum and elect active leader"
+        - "assert Region 2 steps down to follower state without split-brain partition"
+        - "assert zero split-brain data divergence"
 ```
 
 ---
@@ -440,14 +588,148 @@ type_4_milestone_2:
         - "assert webhook worker fails safely with SSRFSecurityViolationError"
 ```
 
+### 5.4 Milestone 3: Advanced STRIDE & Cryptographic Exploit Verification Suite
+```yaml
+type_4_milestone_3:
+  name: "Advanced STRIDE & Cryptographic Exploit Suite"
+  tests:
+    - threat: "Repudiation & Information Disclosure"
+      test_id: "TC-SEC-STRIDE-07"
+      name: "GDPR Article 17 Crypto-Shredding Irrecoverability & Memory Zeroization Drill"
+      attack_simulation: >
+        1. Encrypt user entity under per-user DEK_u stored in isolated Key Management Tier.
+        2. Backup database to S3.
+        3. Trigger Right-to-Erasure: Destroy DEK_u in Key Management Tier and zeroize application cache.
+        4. Restore historical database backup and attempt to decrypt ciphertext.
+      assertions:
+        - "assert ciphertext is computationally unrecoverable (AES-256 brute-force required)"
+        - "assert in-memory DEK cache evicted within 60s across all pods"
+        - "assert memory inspection of pod heap reveals zero plaintext DEK residues (mlock + sodium_memzero)"
+
+    - threat: "Tampering & Repudiation"
+      test_id: "TC-SEC-STRIDE-08"
+      name: "S3 Object Lock WORM Inviolability & Root SCP Protection Drill"
+      attack_simulation: >
+        1. Attempt s3:DeleteObject and s3:DeleteObjectVersion against compliance audit vault using root IAM credentials.
+        2. Attempt account:CloseAccount and kms:ScheduleKeyDeletion on the CMK via AWS CLI.
+      assertions:
+        - "assert S3 rejects root deletion with AccessDenied (ObjectLockConfiguration: COMPLIANCE)"
+        - "assert AWS Organizations SCP blocks account closure and KMS key deletion"
+        - "assert 100% of immutable audit records remain intact"
+
+    - threat: "Tampering"
+      test_id: "TC-SEC-STRIDE-09"
+      name: "RFC 6962 Merkle Tree Audit Inclusion & Consistency Proof Validation"
+      attack_simulation: >
+        1. Insert 10,000 audit log records into Merkle tree.
+        2. Generate Signed Tree Head (STH) signed via CloudHSM.
+        3. Verify inclusion proof for event #5421 and consistency proof between tree size 5,000 and 10,000.
+      assertions:
+        - "assert verifier validates inclusion proof in O(log N) operations"
+        - "assert verifier validates monotonic append-only consistency proof"
+        - "assert verifier rejects any forged or altered STH signature"
+
+    - threat: "Spoofing & Privilege Escalation"
+      test_id: "TC-SEC-STRIDE-10"
+      name: "W3C Distributed Trace & Baggage Ingress Injection Defense"
+      attack_simulation: >
+        External client injects forged traceparent and malicious baggage (role=superadmin;tenant_id=victim_42).
+      assertions:
+        - "assert edge ingress gateway strips untrusted external baggage headers"
+        - "assert root trace ID is regenerated or re-attested"
+        - "assert security context derives strictly from verified JWT claims, completely ignoring forged baggage"
+
+    - threat: "Tampering & Financial Repudiation"
+      test_id: "TC-SEC-STRIDE-11"
+      name: "Shadow / Dark Deployment Egress Bleed Isolation"
+      attack_simulation: >
+        Envoy request mirroring mirrors 10,000 live production write requests (POST/PUT) to shadow container.
+      assertions:
+        - "assert shadow container operates with read-only DB credentials"
+        - "assert Envoy egress filter intercepts outbound calls with X-Shadow-Mode: true and routes to mock stubs"
+        - "assert zero live mutations executed against external payment or email gateways"
+
+    - threat: "Tampering"
+      test_id: "TC-SEC-STRIDE-12"
+      name: "RFC 6962 Merkle Tree Second-Preimage Attack Attempt Rejection"
+      attack_simulation: >
+        Attacker submits concatenated internal node hashes prefixed with 0x01 as a leaf entry to spoof tree root.
+      assertions:
+        - "assert cryptographic verifier enforces 0x00 leaf domain separation"
+        - "assert verifier rejects second-preimage inclusion proof with CryptographicDomainSeparationError"
+
+    - threat: "Information Disclosure"
+      test_id: "TC-SEC-STRIDE-13"
+      name: "OpenTelemetry Tail-Sampling Buffer Memory & PII Redaction Verification"
+      attack_simulation: >
+        High-throughput span stream (50,000 spans/sec) holding credit cards and Bearer tokens buffered in Collector RAM.
+      assertions:
+        - "assert streaming regex masker redacts sensitive attributes before buffering into memory"
+        - "assert memory inspection of Collector heap reveals zero plaintext credentials or PII"
+
+    - threat: "Denial of Service"
+      test_id: "TC-SEC-STRIDE-14"
+      name: "AWS KMS Envelope Decryption Throttling Exhaustion Defense"
+      attack_simulation: >
+        Flood service with 50,000 read RPS under per-user DEKs to trigger KMS rate limit exhaustion.
+      assertions:
+        - "assert local bounded key derivation cache and circuit breakers absorb the spike"
+        - "assert KMS request rate stays within provisioned TPS limits with zero 429/500 errors"
+
+    - threat: "Elevation of Privilege"
+      test_id: "TC-SEC-STRIDE-15"
+      name: "OPA Fail-Closed Enforcement & Rego Policy Fuzzing"
+      attack_simulation: >
+        Corrupt OPA policy bundles, simulate network partition to OPA daemon, and pass malformed JSON context.
+      assertions:
+        - "assert authorization engine operates in strict default deny mode"
+        - "assert all authorization queries return HTTP 403 Forbidden on policy evaluation failure (zero fail-open)"
+
+    - owasp_category: "A01: Broken Access Control"
+      test_id: "TC-SEC-OWASP-11"
+      name: "Feature Flag Parameter Tampering & Bucket Manipulation Defense"
+      attack_simulation: >
+        Attacker fuzzes user context parameters to force assignment into unauthorized feature buckets.
+      assertions:
+        - "assert SipHash-2-4 keyed hashing with secret server salt prevents deterministic bucketing"
+        - "assert zero unauthorized feature exposure across 100,000 randomized user IDs"
+
+    - owasp_category: "A02: Cryptographic Failures"
+      test_id: "TC-SEC-OWASP-12"
+      name: "Keyset Pagination Cursor HMAC Forgery & Timing Side-Channel Defense"
+      attack_simulation: >
+        Attacker manipulates base64 cursor parameters and executes timing attacks against cursor signature verification.
+      assertions:
+        - "assert cursor is signed with HMAC-SHA256 and verified via crypto.timingSafeEqual"
+        - "assert any altered bit triggers immediate rejection with InvalidCursorSignatureError"
+
+    - owasp_category: "A08: Software & Data Integrity Failures"
+      test_id: "TC-SEC-OWASP-13"
+      name: "Unsigned SSE Feature Flag Injection & Replay Defense"
+      attack_simulation: >
+        Inject forged rule payload over SSE stream; attempt replay of obsolete revision payload.
+      assertions:
+        - "assert SSE client rejects unsigned payloads (Ed25519 verification required)"
+        - "assert SSE client discards payloads with revision <= active_revision"
+
+    - owasp_category: "A10: Server-Side Request Forgery (SSRF)"
+      test_id: "TC-SEC-OWASP-14"
+      name: "Ephemeral Sandbox Disaster Recovery Restore SSRF Defense"
+      attack_simulation: >
+        Inject malicious webhook/restore URLs pointing to http://169.254.169.254 during automated DR drill.
+      assertions:
+        - "assert restore worker blocks cloud metadata and private VPC IP egress via strict network isolation"
+```
+
 ---
 
 ## 6. Verification Checklist & Success Criteria
 
 Before marking any system implementation complete:
-- [ ] All Milestone 1 & 2 Space & Time Complexity tests passed with zero Big-O or memory violations.
-- [ ] All Milestone 1 & 2 Logic & Contract tests passed with zero aggregate boundary violations.
-- [ ] All Milestone 1 & 2 Integration & Chaos drills executed with zero cascading failures or thundering herds.
-- [ ] All Milestone 1 & 2 STRIDE & OWASP security exploit attempts passed with zero unauthorized breaches.
+- [ ] All Milestone 1, 2 & 3 Space & Time Complexity tests passed with zero Big-O or memory violations.
+- [ ] All Milestone 1, 2 & 3 Logic & Contract tests passed with zero aggregate boundary violations.
+- [ ] All Milestone 1, 2 & 3 Integration & Chaos drills executed with zero cascading failures or thundering herds.
+- [ ] All Milestone 1, 2 & 3 STRIDE & OWASP security exploit attempts passed with zero unauthorized breaches.
 - [ ] Any discovered defects logged in `telemetry/error_log.md` with preventive rules updated in `AGENTS.md`.
 - [ ] Knowledge graph updated via `graphify update .` to reflect verified production architectures.
+

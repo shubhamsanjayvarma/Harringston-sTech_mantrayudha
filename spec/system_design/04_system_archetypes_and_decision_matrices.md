@@ -326,6 +326,89 @@ caching_taxonomy:
 
 ---
 
+### 3.5 Storage Class Selection Matrix
+
+```yaml
+storage_class_axioms:
+  object_storage: "Unstructured immutable blobs, write-once read-many, HTTP API, high latency (20-100ms)"
+  block_storage: "Raw virtual drive blocks, single instance mount, lowest latency (<1ms), NVMe protocol"
+  relational_dbms: "Structured schemas, strict ACID, multi-table JOINs, complex transactions, normalized models"
+  nosql_stores: "Horizontally scalable semi-structured data, specialized access patterns, tunable consistency"
+  data_lakehouse: "Columnar format (Parquet), decoupled compute/storage, massive batch/OLAP scans"
+```
+
+| Storage Class | Representative Technologies | Data Model & Structure | Primary Access Protocol | Read/Write Latency | Cost Model | Optimal Production Use Case | Anti-Patterns & Pitfalls |
+|---|---|---|---|---|---|---|---|
+| **Object Storage** | AWS S3, GCS, Azure Blob, MinIO | Unstructured blobs with metadata | REST HTTP/HTTPS (GET/PUT) | Read: 20–100ms<br>Write: 50–200ms | Extremely cheap per GB; charges for API operations and egress | Images, videos, PDF documents, database backup archives, data lake raw stages | Storing small files (<128KB) or high-frequency transactional state; transactional updates |
+| **Distributed Block / Filesystem** | AWS EBS (gp3/io2), EFS, Ceph, Lustre | Raw filesystem blocks, POSIX directory hierarchies | NVMe / iSCSI / NFS | Read: < 1ms (NVMe)<br>Write: 1–3ms | Moderate to high; charged per provisioned GB and IOPS | Database data directories (PostgreSQL data volume), shared persistent volume claims (K8s PVCs) | Storing petabyte-scale static assets; multi-region cross-cloud active-active sharing |
+| **Relational DBMS** | PostgreSQL, MySQL, CockroachDB | Structured tables, foreign keys, normalized schemas | SQL over TCP wire protocol | Read: 1–5ms<br>Write: 2–10ms | Medium; bound by vertical compute and high-IOPS storage | Core transactional ledgers, e-commerce orders, user identity and auth schemas | Massive unstructured telemetry streams; high-throughput time-series metrics |
+| **Document NoSQL** | MongoDB, AWS DocumentDB | Semi-structured JSON / BSON documents | Driver TCP wire protocol | Read: 2–8ms<br>Write: 2–8ms | Medium; requires substantial RAM for working set index cache | Catalogs with polymorphic attributes, user profiles, content management payloads | Systems requiring complex multi-entity joins or strict global multi-table ACID guarantees |
+| **Key-Value Store** | AWS DynamoDB, Redis, KeyDB | Key $\to$ Value (String, Hash, Set, ZSet) | Redis RESP / HTTP SDK | Read: < 1ms (RAM), 3–6ms (SSD)<br>Write: < 1ms (RAM), 4–8ms (SSD) | Low to Medium; per RCU/WCU or provisioned in-memory instance | Session management, shopping carts, distributed locks, rate-limiting counters | Complex range queries across non-key attributes; graph traversals |
+| **Wide-Column Store** | Apache Cassandra, ScyllaDB | Partition Key + Clustering Columns | CQL (Cassandra Query Language) | Read: 2–8ms<br>Write: 1–3ms (append-only LSM) | Moderate; scales linearly with commodity disks | Write-heavy telemetry, activity streams, audit events, sensor tracking | Dynamic queries with arbitrary ad-hoc filters; frequent cross-row relational joins |
+| **Data Lakehouse / Columnar** | Apache Iceberg, Delta Lake, Parquet, ClickHouse | Columnar chunked data with metadata manifests | S3 API + Arrow / Trino / DuckDB | Read: 100ms–10s (OLAP batch)<br>Write: 500ms–30s | Lowest per-terabyte cost; cheap S3 storage with ephemeral compute | Business intelligence, historical analytics, machine learning training datasets | Sub-50ms point lookups; frequent single-row row-level mutations |
+
+---
+
+### 3.6 Cache Eviction Policy Decision Matrix
+
+```yaml
+eviction_axioms:
+  lru: "Evict the item that has not been accessed for the longest time"
+  lfu: "Evict the item that has been accessed the fewest number of times"
+  arc: "Self-tuning hybrid balancing between recency and frequency"
+  fifo: "Evict the oldest item regardless of access count or recency"
+  ttl: "Evict items strictly based on wall-clock expiration"
+```
+
+| Policy | Algorithmic Mechanism | Space Complexity | Time Complexity | Optimal Use Case | Vulnerabilities & Degradation Scenarios |
+|---|---|---|---|---|---|
+| **Least Recently Used (LRU)** | Doubly-linked list + Hash Map | $O(N)$ (list pointers per entry) | $O(1)$ read / update | General-purpose web APIs, user session caches | **Scan Pollution:** A single batch query or table scan flushes the entire working set out of the cache. |
+| **Least Frequently Used (LFU)** | Hash Map of frequency buckets (Min-Heap or Doubly-Linked Lists) | $O(N)$ (frequency counters) | $O(1)$ read / update (via O(1) LFU) | Long-term trending products, stable reference metadata | **Frequency Starvation:** Historical items with massive access counts linger forever, blocking new trending items. Requires decay aging. |
+| **Adaptive Replacement Cache (ARC)** | Two coupled LRU lists ($L_1$ for recency, $L_2$ for frequency) + ghost caches | $O(N)$ ($2\times$ pointer overhead for ghost lists) | $O(1)$ self-tuning | Storage controllers, database buffer pools, unpredictable production workloads | Patent restrictions in older systems; higher internal pointer manipulation complexity. |
+| **First-In, First-Out (FIFO)** | Circular queue or simple single-linked list | $O(1)$ minimal pointer overhead | $O(1)$ read / update | Sequential streaming buffers, temporary task queues | Completely ignores access frequency and recency; high cache miss rates for hot items. |
+| **Time-To-Live (TTL Only)** | Active expiration timer wheel or passive check on access | $O(1)$ timestamp per key | $O(1)$ check | Ephemeral authentication tokens, weather data, volatile pricing quotes | Does not bound RAM consumption; explosive burst of writes can trigger OOM before TTL expires. |
+
+---
+
+### 3.7 Load Balancer Algorithm Decision Matrix
+
+```yaml
+load_balancer_algorithms:
+  round_robin: "Sequential distribution across healthy upstream servers"
+  weighted_round_robin: "Distribution proportional to assigned server capacity weights"
+  least_connections: "Routes to the server with the lowest count of active in-flight requests"
+  ip_hash: "Hash of client IP modulo active server count"
+  consistent_hashing: "Client identifier or session key mapped to consistent hashing ring"
+```
+
+| Algorithm | Routing Determinism | Session Affinity | State Overhead on LB | Optimal Production Scenario | Failure Modes & Hazards |
+|---|---|---|---|---|---|
+| **Round Robin** | Deterministic cyclical | None | $O(1)$ (single counter) | Homogeneous servers handling uniform, short-lived stateless requests (e.g. static CDN origins) | Server overload if request execution times have high variance (some take 5ms, others take 5000ms). |
+| **Weighted Round Robin** | Capacity-proportional | None | $O(N)$ (weights per host) | Heterogeneous server fleets (mixing 4-core and 16-core VMs) | Manual weight tuning required; does not adapt dynamically to sudden host degradation. |
+| **Least Connections** | Dynamic state-based | None | $O(N)$ (in-flight tracking per host) | Long-lived transactions, SQL connection proxies, streaming WebSocket handshakes | **Thundering herd on new node:** A newly booted server with 0 connections is slammed with all incoming traffic simultaneously. |
+| **IP Hash** | Deterministic per client IP | Sticky per IP | $O(1)$ (stateless calculation) | Legacy stateful web applications requiring sticky sessions without external session store | Behind enterprise NAT gateways, 50,000 corporate users share a single IP, overloading a single backend host. |
+| **Consistent Hashing** | Ring-based deterministic | Sticky per key / tenant | $O(N \cdot V)$ (virtual node ring in memory) | Distributed caches (Memcached), stateful game servers, sticky shopping cart routing | Rebalancing churn if nodes crash rapidly; hotspotting on popular key distribution. |
+
+---
+
+### 3.8 Access Control Selection Matrix (RBAC vs. ABAC vs. ReBAC)
+
+```yaml
+access_control_axioms:
+  rbac: "Permissions assigned to roles; roles assigned to users (coarse-grained)"
+  abac: "Permissions evaluated dynamically based on subject, resource, action, and environment attributes (fine-grained)"
+  rebac: "Permissions derived from graph relationships between entities (Google Zanzibar model)"
+```
+
+| Model | Evaluation Complexity | Granularity | Performance & Latency | Scalability | Production Use Case | Implementation Anti-Patterns |
+|---|---|---|---|---|---|---|
+| **RBAC (Role-Based Access Control)** | $O(1)$ set lookup (`user.hasRole("ADMIN")`) | Coarse-grained | Sub-millisecond ($< 0.1\text{ms}$) in memory | Degrades at enterprise scale due to "Role Explosion" | Internal enterprise backoffice, basic SaaS tiers, administrative tooling | Creating hundreds of permutations (`BILLING_ADMIN_EU_READ_ONLY`) to accommodate fine rules. |
+| **ABAC (Attribute-Based Access Control)** | $O(R)$ policy rule AST evaluation | Fine-grained (dynamic context: IP, time, tenant, amount) | 1–5ms (evaluating Open Policy Agent / Rego rules) | Scales well; policies decoupled from code | Healthcare (HIPAA), financial trading desks, multi-tenant B2B compliance | Evaluating unindexed database queries inside policy rules, causing 100ms latency spikes on every API request. |
+| **ReBAC (Relationship-Based Access Control)** | $O(\text{Path})$ graph traversal (Zanzibar tuple evaluation) | Ultra-fine-grained (object-to-object delegation) | 2–10ms (requires low-latency distributed graph cache) | Highly scalable to billions of objects via distributed consensus | Google Docs ("Can user X view Doc Y shared with Group Z?"), GitHub repo permissions, social graphs | Naive recursive SQL queries traversing deep permission trees on every HTTP request. |
+
+---
+
+
 ## 4. Architectural Anti-Patterns & Traps Playbook
 
 ```yaml

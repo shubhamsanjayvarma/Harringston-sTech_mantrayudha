@@ -366,11 +366,30 @@ where $W$ is average wait time, $C$ is compute time, and $U_{\text{target}}$ is 
 
 ---
 
-### 3.3 Database Connection Pool Physics (HikariCP Formula)
-AI agents frequently misconfigure database pools to 100+ connections, degrading database throughput via context-switch storms. Pools must be sized according to disk spindle and core physics:
+### 3.3 Database Connection Pool Physics (HikariCP Formula & Queue Contention)
+
+AI agents frequently misconfigure database pools to 100+ connections per application pod, degrading database throughput via context-switch storms and internal lock contention:
 $$\text{Max DB Pool Size} = (N_{\text{DB\_cores}} \times 2) + \text{Effective Spindle Count}$$
-- *Example:* A 16-core PostgreSQL server with SSD storage: $\text{Pool Size} = (16 \times 2) + 1 = 33 \text{ connections}$.
-- **Worker Semaphore Guardrail:** Application worker pools querying the database must be constrained by an async semaphore matching the DB pool size to prevent thread starvation.
+
+```yaml
+hikari_pool_physics:
+  core_rule: "A single CPU core can only execute ONE database thread at any microsecond instant"
+  spindle_count:
+    rotational_hdd: "1 per physical disk platter (seek time bound)"
+    enterprise_nvme_ssd: "1 to 2 (concurrent non-blocking I/O queues)"
+  calculation_example:
+    db_instance: "16-core AWS RDS PostgreSQL db.m6i.4xlarge (EBS gp3 NVMe)"
+    formula: "(16 * 2) + 1 = 33 connections TOTAL across ALL application pods"
+  oversizing_hazard:
+    consequence: "Connection thrashing, CPU cache invalidation storms, PostgreSQL ProcArrayLock / WALWriteLock contention"
+    symptom: "Higher pool size INCREASES p99 query latency while DECREASING total transaction throughput"
+```
+
+- **Distributed Application Pod Allocation Formula:**
+  If an application fleet scales to $M$ pod replicas sharing a single primary database:
+  $$\text{Pool Size Per Pod} = \max\left(2, \left\lfloor \frac{\text{Max DB Connections} \times 0.80}{M_{\text{max\_pods}}} \right\rfloor\right)$$
+  - For $M_{\text{max}} = 10$ pods on a 33-connection database, each pod must be configured with `maximumPoolSize = 2` or `3`, backed by **PgBouncer** or **AWS RDS Proxy** in transaction pooling mode.
+- **Worker Semaphore Guardrail:** Application worker pools querying the database must be constrained by an async semaphore matching the local connection pool size to prevent thread starvation.
 
 ---
 
@@ -486,3 +505,67 @@ code_smells_playbook:
     symptom: "Repository leaking ORM queries or database exceptions to application layers."
     fix: "Define clean domain exceptions and translate low-level errors in adapters."
 ```
+
+---
+
+## 6. Secondary Indexing Write Amplification & Query Optimization
+
+```yaml
+indexing_axioms:
+  write_cost: "Every secondary index adds O(TreeDepth) random writes to every INSERT, DELETE, and relevant UPDATE"
+  covering_indexes: "Use INCLUDE clauses to convert heap pointer lookups into Index-Only Scans"
+  partial_indexes: "Index only rows matching high-frequency query predicates to cut index footprint"
+```
+
+### 6.1 The Mathematical Write Amplification of Secondary Indexes
+Engineers frequently add indexes to accelerate individual queries without auditing the collective write amplification penalty:
+
+```yaml
+index_write_amplification:
+  insert_cost:
+    base_heap_write: "1 WAL append + 1 table heap block dirty"
+    index_fanout: "I secondary indexes * TreeDepth (typically 3-4 random page I/Os per index)"
+    formula: "Total I/Os = 1 + sum(TreeDepth_i) for i = 1 to I"
+  update_cost:
+    hot_eligible: "If updated columns are NOT indexed and space exists on page, PostgreSQL executes Heap-Only Tuple (HOT) update with 0 index writes"
+    non_hot: "If ANY indexed column is mutated, PostgreSQL MUST insert new index tuples into ALL secondary indexes, triggering WAL bloat and write stalls"
+```
+
+- **Index Budget Guardrail:** No relational table may exceed **5 secondary indexes** without explicit architectural approval and write-load profiling.
+
+---
+
+### 6.2 Covering Indexes (Index-Only Scan) vs. Heap Lookups
+
+When a query selects columns not present in the index leaf, the database executes an **Index Scan**, fetching row pointers and performing random I/O to read the table heap.
+
+```sql
+-- SLOW: Index Scan with random heap lookups
+CREATE INDEX idx_orders_user_status ON orders (user_id, status);
+-- Query requires reading total_cents and created_at from the table heap
+SELECT id, total_cents, created_at FROM orders WHERE user_id = :user_id AND status = 'COMPLETED';
+
+-- FAST: Covering Index enabling Index-Only Scan (0 heap lookups)
+CREATE INDEX idx_orders_user_status_covering 
+ON orders (user_id, status) 
+INCLUDE (total_cents, created_at);
+```
+- **The INCLUDE Advantage:** Columns in the `INCLUDE` clause are stored solely in the leaf pages of the B+ tree. They do not participate in root/branch node navigation, keeping index depth shallow while satisfying queries entirely within the index buffer.
+
+---
+
+### 6.3 Partial Indexes for Write Footprint Minimization
+Tables often store millions of terminal rows (e.g., `status = 'ARCHIVED'`) that are rarely queried by operational workloads:
+
+```sql
+-- INEFFICIENT: Indexes all 50,000,000 rows including completed and archived states
+CREATE INDEX idx_jobs_status_priority ON jobs (priority, created_at);
+
+-- OPTIMAL: Partial Index covering only active rows (e.g., 5,000 pending rows)
+CREATE INDEX idx_active_jobs ON jobs (priority, created_at) 
+WHERE status IN ('PENDING', 'RETRYING');
+```
+- **Benefits:**
+  1. Index size is reduced by $>95\%$, fitting completely within RAM cache.
+  2. Updates to completed jobs incur **zero** index maintenance overhead.
+

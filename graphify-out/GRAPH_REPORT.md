@@ -1,16 +1,16 @@
 # Graph Report - Project_Struct  (2026-09-04)
 
 ## Corpus Check
-- 52 files · ~84,874 words
+- 55 files · ~98,005 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 815 nodes · 763 edges · 52 communities (45 shown, 7 thin omitted)
+- 943 nodes · 888 edges · 62 communities (55 shown, 7 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `76f87403`
+- Built from commit: `ecbcc59b`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -65,18 +65,28 @@
 - [[_COMMUNITY_Community 47|Community 47]]
 - [[_COMMUNITY_Community 48|Community 48]]
 - [[_COMMUNITY_Community 49|Community 49]]
+- [[_COMMUNITY_Community 52|Community 52]]
+- [[_COMMUNITY_Community 53|Community 53]]
+- [[_COMMUNITY_Community 54|Community 54]]
+- [[_COMMUNITY_Community 55|Community 55]]
+- [[_COMMUNITY_Community 56|Community 56]]
+- [[_COMMUNITY_Community 57|Community 57]]
+- [[_COMMUNITY_Community 58|Community 58]]
+- [[_COMMUNITY_Community 59|Community 59]]
+- [[_COMMUNITY_Community 60|Community 60]]
+- [[_COMMUNITY_Community 61|Community 61]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `Code Review and Quality` - 19 edges
-2. `Security and Hardening` - 16 edges
-3. `Git Workflow and Versioning` - 15 edges
-4. `Product Requirements Document (PRD)` - 15 edges
-5. `Test-Driven Development` - 14 edges
-6. `Browser Testing with DevTools` - 13 edges
-7. `CI/CD and Automation` - 13 edges
-8. `Frontend UI Engineering` - 13 edges
-9. `Tech Stack PRD Template` - 13 edges
-10. `Debugging and Error Recovery` - 12 edges
+2. `Production-Grade System Design Reference` - 19 edges
+3. `Security and Hardening` - 16 edges
+4. `Git Workflow and Versioning` - 15 edges
+5. `Product Requirements Document (PRD)` - 15 edges
+6. `Test-Driven Development` - 14 edges
+7. `Browser Testing with DevTools` - 13 edges
+8. `CI/CD and Automation` - 13 edges
+9. `Frontend UI Engineering` - 13 edges
+10. `Tech Stack PRD Template` - 13 edges
 
 ## Surprising Connections (you probably didn't know these)
 - None detected - all connections are within the same source files.
@@ -84,15 +94,15 @@
 ## Import Cycles
 - None detected.
 
-## Communities (52 total, 7 thin omitted)
+## Communities (62 total, 7 thin omitted)
 
 ### Community 0 - "Community 0"
-Cohesion: 0.06
-Nodes (32): 1. Executive Distributed Topology, 2.1 Sharding Strategies & Skew Mitigation, 2.2 Storage Engine Internals: B+ Trees vs. LSM-Trees, 2. Data Tier & Storage Engineering, 3.1 Strict Quorums vs. Sloppy Quorums & Hinted Handoff, 3.2 Raft Consensus Safety: Pre-Vote & Lease Reads, 3.3 Data Reconciliation: Merkle Trees, HLC & CRDTs, 3. Replication, Consensus & Data Reconciliation (+24 more)
+Cohesion: 0.04
+Nodes (48): 10.1 Service Discovery Architecture, 10.2 DNS Architecture & Step-Down Migration Protocol, 10.3 CDN Cache Directives & Instant Purge Architecture, 10. Network Ingress, Proxies & Traffic Routing, 11.1 Large File Upload Pre-Signed URL Offloading, 11.2 Production Auto-Scaling Signals & Control Loops, 11. Stateless Service Design & Auto-Scaling Dynamics, 1. Executive Distributed Topology (+40 more)
 
 ### Community 1 - "Community 1"
-Cohesion: 0.06
-Nodes (31): 1. Executive Summary & Foundational Philosophy, 2.1 The Three Cardinal Axioms, 2.2 Secret Management & Cryptographic Standards, 2. Zero-Trust Architecture Core Axioms, 3. Absolute Architectural Must-Haves, 4. Absolute Architectural Must-NOT-Haves, 5.1 Liveness Probe Specification, 5.2 Readiness Probe Specification (+23 more)
+Cohesion: 0.22
+Nodes (9): 6.1 CAP & PACELC Theorems in Operational Practice, 6.2 The Eight Fallacies of Distributed Computing (Deutsch & Gosling), 6.3 Queueing Theory: Little's Law & Kingman's Formula, 6.4 Scalability Laws: Amdahl's Law vs. Gunther's Universal Scalability Law (USL), 6. Distributed Systems Laws & Theoretical Foundations, Amdahl's Law (Monotonic Speedup), Gunther's Universal Scalability Law (USL - Retrograde Collapse), Kingman's Formula for $G/G/1$ Queues (+1 more)
 
 ### Community 2 - "Community 2"
 Cohesion: 0.07
@@ -119,8 +129,8 @@ Cohesion: 0.08
 Nodes (24): Accessibility, Code Quality, Common Rationalizations, Documentation, Error Reporting, Feature Flag Strategy, Infrastructure, Monitoring and Observability (+16 more)
 
 ### Community 8 - "Community 8"
-Cohesion: 0.08
-Nodes (24): 1.1 Value Objects (VO) vs. Entities, 1.2 The Three Inviolate Laws of Aggregate Roots (AR), 1.3 CQRS at the Code Level: Repositories vs. Query Handlers, 1. Domain-Driven Design (DDD) Tactical Patterns, 2.1 Step-Builder Pattern: Compile-Time Ordering Enforcement, 2.2 Decorator Pattern: Transparent Caching & Telemetry Wrapper, 2. Gang of Four (GoF) Patterns: Enterprise Taxonomy, 3.1 Synchronization Primitives & Concurrency Control (+16 more)
+Cohesion: 0.07
+Nodes (28): 1.1 Value Objects (VO) vs. Entities, 1.2 The Three Inviolate Laws of Aggregate Roots (AR), 1.3 CQRS at the Code Level: Repositories vs. Query Handlers, 1. Domain-Driven Design (DDD) Tactical Patterns, 2.1 Step-Builder Pattern: Compile-Time Ordering Enforcement, 2.2 Decorator Pattern: Transparent Caching & Telemetry Wrapper, 2. Gang of Four (GoF) Patterns: Enterprise Taxonomy, 3.1 Synchronization Primitives & Concurrency Control (+20 more)
 
 ### Community 9 - "Community 9"
 Cohesion: 0.08
@@ -171,8 +181,8 @@ Cohesion: 0.10
 Nodes (20): Checklist: Verifying Completeness, General Rules (Apply to ALL Testing Types), Instructions, Instructions, Instructions, Instructions, Objective, Objective (+12 more)
 
 ### Community 21 - "Community 21"
-Cohesion: 0.10
-Nodes (19): 1. General Verification Workflow: Plan → Execute → Log, 2.1 Objective, 2.2 Milestone 1: Queuing & Scalability Mathematical Assertions, 2.3 Milestone 2: Memory, Storage Amplification & Bloom Filter Sizing, 2. Testing Type 1: Space & Time Complexity Testing, 3.1 Objective, 3.2 Milestone 1: DDD Aggregate Boundaries & Invariant Contracts, 3.3 Milestone 2: Asynchronous Outbox, CDC & Saga State Machines (+11 more)
+Cohesion: 0.08
+Nodes (23): 1. General Verification Workflow: Plan → Execute → Log, 2.1 Objective, 2.2 Milestone 1: Queuing & Scalability Mathematical Assertions, 2.3 Milestone 2: Memory, Storage Amplification & Bloom Filter Sizing, 2.4 Milestone 3: Query Pagination, Feature Flag & Telemetry Memory Bounds, 2. Testing Type 1: Space & Time Complexity Testing, 3.1 Objective, 3.2 Milestone 1: DDD Aggregate Boundaries & Invariant Contracts (+15 more)
 
 ### Community 22 - "Community 22"
 Cohesion: 0.11
@@ -187,8 +197,8 @@ Cohesion: 0.11
 Nodes (17): Common Rationalizations, Output Files, Overview, Parallelization Opportunities, Plan Document Template, Planning and Task Breakdown, Red Flags, See Also (+9 more)
 
 ### Community 25 - "Community 25"
-Cohesion: 0.11
-Nodes (17): 1. Macro-Architectural Archetypes: Monolith vs. Microservices vs. Serverless, 2.1 Archetype 1: Edge & Geo-Distributed / Multi-Region Architecture, 2.2 Archetype 2: Multi-Tenant SaaS Architecture, 2.3 Archetype 3: Hybrid Search & Dense Vector Retrieval (RAG) Architecture, 2.4 Archetype 4: Event-Sourced & Audit-First Ledger Architecture, 2.5 Archetype 5: Read-Heavy vs. Write-Heavy Architectures, 2.6 Archetype 6: Real-Time Streaming vs. Batch Processing Architectures, 2.7 Archetype 7: Latency-Critical (<10ms SLA) vs. High-Throughput Asynchronous Architectures (+9 more)
+Cohesion: 0.09
+Nodes (21): 1. Macro-Architectural Archetypes: Monolith vs. Microservices vs. Serverless, 2.1 Archetype 1: Edge & Geo-Distributed / Multi-Region Architecture, 2.2 Archetype 2: Multi-Tenant SaaS Architecture, 2.3 Archetype 3: Hybrid Search & Dense Vector Retrieval (RAG) Architecture, 2.4 Archetype 4: Event-Sourced & Audit-First Ledger Architecture, 2.5 Archetype 5: Read-Heavy vs. Write-Heavy Architectures, 2.6 Archetype 6: Real-Time Streaming vs. Batch Processing Architectures, 2.7 Archetype 7: Latency-Critical (<10ms SLA) vs. High-Throughput Asynchronous Architectures (+13 more)
 
 ### Community 26 - "Community 26"
 Cohesion: 0.12
@@ -258,25 +268,65 @@ Nodes (3): For git commit hook, For native CLAUDE.md integration, graphify refer
 Cohesion: 0.50
 Nodes (3): For --cluster-only, For --update (incremental re-extraction), graphify reference: incremental update and cluster-only
 
+### Community 52 - "Community 52"
+Cohesion: 0.06
+Nodes (35): 1.1 Blue/Green Deployments & Expand-Contract DDL Lock Starvation Defense, 1.2 Canary Deployments & Automated Canary Analysis (ACA), 1.3 Rolling Updates & Pod Termination Race Prevention, 1.4 Shadow / Dark Deployments & Egress Sandboxing, 1.5 Feature Flags & Cryptographically Signed Progressive Delivery, 1. Progressive Delivery & Zero-Downtime Deployment Strategies, 2.1 The 4 Disaster Recovery Tiers, 2.2 Multi-Region Active-Active Quorum & Split-Brain Prevention (+27 more)
+
+### Community 53 - "Community 53"
+Cohesion: 0.08
+Nodes (23): 0. Requirements & Constraints (do this first, always), 10. Performance, 11. Observability, 12. Deployment & Release *(missing entirely from original notes)*, 13. Storage, 14. Disaster Recovery, 15. Cost Optimization, 16. Governance & Compliance *(missing — directly relevant to your interests)* (+15 more)
+
+### Community 54 - "Community 54"
+Cohesion: 0.10
+Nodes (19): 1. Executive Observability Topology, 2.1 Multi-Window Multi-Burn-Rate Mathematical Formulation, 2.2 Low-QPS Statistical Guardrails in PromQL, 2. SRE Reliability Metrics & Multi-Burn-Rate Alerting, 3.1 The RED Method (Request-Driven Microservices), 3.2 The USE Method (Resource Utilization & Saturation), 3. Telemetry Architectural Frameworks, 4.1 W3C TraceContext Wire Standard (+11 more)
+
+### Community 55 - "Community 55"
+Cohesion: 0.18
+Nodes (10): 1. Executive Summary & Foundational Philosophy, 2.1 The Three Cardinal Axioms, 2.2 Secret Management & Cryptographic Standards, 2. Zero-Trust Architecture Core Axioms, 3. Absolute Architectural Must-Haves, 4. Absolute Architectural Must-NOT-Haves, 9.1 The Zero-SPOF Architectural Invariants, 9.2 Production Zero-SPOF Audit Checklist (+2 more)
+
+### Community 56 - "Community 56"
+Cohesion: 0.25
+Nodes (8): 8.2 Unified Physical Storage Capacity Formula, 8.3 RAM & Cache Working Set Sizing, 8.4 Network Bandwidth Sizing (Ingress & Egress), 8. Quantitative Back-of-the-Envelope Estimation Framework, A. Daily Active Working Set (DAWS), B. Cache Data Target (Pareto 80/20 Rule), C. Total Production Cache RAM Allocation ($M_{\text{cache}}$), The Unified Physical Storage Formula:
+
+### Community 57 - "Community 57"
+Cohesion: 0.33
+Nodes (6): 7.1 SOLID Principles: Operational Code Definitions & Fixes, A. Single Responsibility Principle (SRP), B. Open/Closed Principle (OCP), C. Liskov Substitution Principle (LSP), D. Interface Segregation Principle (ISP), E. Dependency Inversion Principle (DIP)
+
+### Community 58 - "Community 58"
+Cohesion: 0.40
+Nodes (5): 10.1 Mathematical Definitions & Error Budgets, 10.2 Hop-by-Hop End-to-End Latency Budget Allocation, 10.3 Tail Latency Amplification Law (Dean & Barroso), 10. SRE Reliability Axioms & Latency Budget Allocation, The Mathematical Amplification Law:
+
+### Community 59 - "Community 59"
+Cohesion: 0.40
+Nodes (5): 7.2 DRY: True Duplication vs. Incidental Duplication, 7.3 Law of Demeter (LoD) & Command-Query Separation (CQS), 7. Code-Level Engineering Principles, Command-Query Separation (Bertrand Meyer), Law of Demeter: "Tell, Don't Ask"
+
+### Community 60 - "Community 60"
+Cohesion: 0.50
+Nodes (4): 5.1 Liveness Probe Specification, 5.2 Readiness Probe Specification, 5.3 Startup Probe Specification, 5. Health Check Taxonomy & Probe Architecture
+
+### Community 61 - "Community 61"
+Cohesion: 0.50
+Nodes (4): 8.1 Traffic & Compute Estimation (QPS, ELU & Burst Math), A. Baseline Average QPS, B. Read/Write Asymmetry & Equivalent Load Units (ELU), C. Diurnal Cycles & Sub-Second Microburst Bounds
+
 ## Knowledge Gaps
-- **613 isolated node(s):** `idea-refine.sh script`, `Project Rules`, `graphify`, `Overview`, `When to Use` (+608 more)
+- **701 isolated node(s):** `idea-refine.sh script`, `Project Rules`, `graphify`, `Overview`, `When to Use` (+696 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **7 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
+- **Why does `Layer 1: Non-Negotiable System Design Rules, Axioms & Principles` connect `Community 55` to `Community 1`, `Community 56`, `Community 58`, `Community 59`, `Community 60`?**
+  _High betweenness centrality (0.002) - this node is a cross-community bridge._
+- **Why does `8. Quantitative Back-of-the-Envelope Estimation Framework` connect `Community 56` to `Community 61`, `Community 55`?**
+  _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **What connects `idea-refine.sh script`, `Project Rules`, `graphify` to the rest of the system?**
-  _613 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _701 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
-  _Cohesion score 0.06060606060606061 - nodes in this community are weakly interconnected._
-- **Should `Community 1` be split into smaller, more focused modules?**
-  _Cohesion score 0.0625 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.04081632653061224 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**
   _Cohesion score 0.06666666666666667 - nodes in this community are weakly interconnected._
 - **Should `Community 3` be split into smaller, more focused modules?**
   _Cohesion score 0.06666666666666667 - nodes in this community are weakly interconnected._
 - **Should `Community 4` be split into smaller, more focused modules?**
   _Cohesion score 0.06896551724137931 - nodes in this community are weakly interconnected._
-- **Should `Community 5` be split into smaller, more focused modules?**
-  _Cohesion score 0.07407407407407407 - nodes in this community are weakly interconnected._

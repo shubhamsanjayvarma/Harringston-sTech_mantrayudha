@@ -235,28 +235,28 @@
     "semantic_hash": ""
   },
   "spec/system_design/01_non_negotiable_rules_and_principles.md": {
-    "mtime": 1788533970.9288437,
-    "ast_hash": "0b8eeba69f5c451dbba876e69dcd770c",
+    "mtime": 1788535007.3248556,
+    "ast_hash": "a32a3ecdce26f8a30c5df63a33970c94",
     "semantic_hash": ""
   },
   "spec/system_design/02_high_level_design_and_distributed_systems.md": {
-    "mtime": 1788534112.9674072,
-    "ast_hash": "bacf7fdfe990e1abad57129e76885104",
+    "mtime": 1788535038.5483716,
+    "ast_hash": "24ed68d6c8b968864d0e6ececb3ca4b3",
     "semantic_hash": ""
   },
   "spec/system_design/03_low_level_design_and_object_oriented_architecture.md": {
-    "mtime": 1788534143.2880256,
-    "ast_hash": "0761e5f1cba253c3b689d4d33f2c8b07",
+    "mtime": 1788535070.2042606,
+    "ast_hash": "9c4e624e4e2da673208a85a208b9a783",
     "semantic_hash": ""
   },
   "spec/system_design/04_system_archetypes_and_decision_matrices.md": {
-    "mtime": 1788534185.8714323,
-    "ast_hash": "a6bbb4eafc59dbbc39d8c48c8186b2e9",
+    "mtime": 1788535095.267488,
+    "ast_hash": "4175b1da93ea053aaf94ad401ad080b0",
     "semantic_hash": ""
   },
   "spec/system_design/05_system_design_verification_and_testing_playbook.md": {
-    "mtime": 1788534226.2156787,
-    "ast_hash": "2cc8c9f44dd1b71b96b9f34d2c8c23c9",
+    "mtime": 1788535239.048252,
+    "ast_hash": "8f6ab8fd10e1de258c61c7293357a3f8",
     "semantic_hash": ""
   },
   "spec/template_testing.md": {
@@ -272,6 +272,21 @@
   "spec/the-second-brain-blueprint-how-to-build-the-ai-operating-system-that-runs-a-business (1).pdf": {
     "mtime": 1787727396.2382448,
     "ast_hash": "77583f05f4773b97d37d67793d0adf2f",
+    "semantic_hash": ""
+  },
+  "spec/system_design/06_observability_telemetry_and_reliability_engineering.md": {
+    "mtime": 1788535130.277577,
+    "ast_hash": "333ee7d0866b6da58eddcf8d04cfcea7",
+    "semantic_hash": ""
+  },
+  "spec/system_design/07_deployment_operations_governance_and_finops.md": {
+    "mtime": 1788535156.6158776,
+    "ast_hash": "36bac149e9b135be39e07e39fa2b5978",
+    "semantic_hash": ""
+  },
+  "system_design_notes.md": {
+    "mtime": 1788534021.379889,
+    "ast_hash": "c15774df67b6029d33cc2557cbb9c288",
     "semantic_hash": ""
   }
 }

@@ -470,3 +470,227 @@ tail_tolerance_mechanics:
     header: "grpc-timeout / W3C Baggage (deadline_epoch_ms)"
     policy: "If remaining_budget < local_p50_latency, abort immediately with DEADLINE_EXCEEDED"
 ```
+
+---
+
+## 9. Advanced API Design & Query Optimization
+
+```yaml
+api_design_axioms:
+  pagination: "Mandatory Keyset Cursor pagination for all collections > 1,000 rows"
+  versioning: "Semantic URI path versioning for breaking changes; expand-contract for additive"
+  deprecation: "RFC 8594 Sunset and RFC 9745 Deprecation headers with structured 4-phase brownouts"
+```
+
+### 9.1 Keyset / Cursor-Based Pagination vs. Offset Pagination
+
+#### A. The Offset B+ Tree Degradation Mechanics
+In traditional `LIMIT :limit OFFSET :offset` pagination:
+```sql
+-- ANTI-PATTERN: Catastrophic at scale
+SELECT id, title, created_at FROM articles ORDER BY created_at DESC LIMIT 20 OFFSET 1000000;
+```
+- **B+ Tree Leaf Traversal Hazard:** The storage engine cannot jump straight to row $1,000,000$. It traverses the B+ tree root to the first leaf node, and then sequentially walks $1,000,000$ leaf node tuples, reads their data from disk/buffer pool, and discards them before returning the 20 requested rows.
+- **Time Complexity:** $O(N)$ where $N = \text{OFFSET}$. At $\text{OFFSET} = 1,000,000$, query latency spikes from $2\text{ms}$ to $> 5,000\text{ms}$, exhausting database worker threads.
+
+#### B. Keyset Pagination (Index Seek)
+Keyset pagination replaces `OFFSET` with a deterministic condition evaluated directly on indexed columns:
+```sql
+-- PRODUCTION STANDARD: Sub-millisecond index seek
+SELECT id, title, created_at 
+FROM articles 
+WHERE (created_at < :last_seen_created_at) 
+   OR (created_at = :last_seen_created_at AND id < :last_seen_id)
+ORDER BY created_at DESC, id DESC 
+LIMIT 20;
+```
+- **Time Complexity:** $O(\log B + K)$ where $B$ is the B+ tree branching factor and $K$ is the page limit. It executes a single B+ tree seek to the exact cursor leaf node and reads the next 20 contiguous pointers. Execution time remains $< 1\text{ms}$ whether on page 1 or page 50,000.
+
+#### C. Multi-Column Mixed Direction & DNF Expansion
+Tuple syntax `(a, b) < (x, y)` has limited support across database engines and fails when sort orders are mixed (e.g., `created_at DESC, priority ASC`). 
+- **Disjunctive Normal Form (DNF) Rule:** Always expand multi-column cursor predicates into explicit DNF boolean clauses:
+  ```sql
+  WHERE (created_at < :last_created_at)
+     OR (created_at = :last_created_at AND priority > :last_priority)
+     OR (created_at = :last_created_at AND priority = :last_priority AND id > :last_id)
+  ORDER BY created_at DESC, priority ASC, id ASC
+  LIMIT :limit;
+  ```
+- **Mandatory NOT NULL Constraint:** Every column included in a keyset cursor MUST have a strict `NOT NULL` constraint. In SQL three-valued logic, `NULL < :value` evaluates to `UNKNOWN`, silently omitting rows from pagination.
+- **HMAC Cursor Integrity:** The cursor returned to the client must be an opaque Base64-encoded token containing the sort values and an HMAC-SHA256 signature to prevent client parameter tampering:
+  $$\text{CursorPayload} = \text{Base64URL}(\text{JSON}(\text{values}) \parallel \text{"."} \parallel \text{HMAC-SHA256}_{\text{key}}(\text{JSON}(\text{values})))$$
+
+---
+
+### 9.2 API Versioning Strategies
+
+```yaml
+versioning_tradeoffs:
+  uri_path:
+    syntax: "/api/v1/orders"
+    cdn_cacheability: "Excellent (distinct cache key per URL)"
+    developer_experience: "High (explicit, visible in browser and logs)"
+    recommendation: "MANDATORY DEFAULT FOR PUBLIC AND BOUNDED CONTEXT APIS"
+  request_header:
+    syntax: "Accept: application/vnd.company.v1+json"
+    cdn_cacheability: "Poor (requires Vary: Accept, fragments edge cache)"
+    developer_experience: "Medium (requires specialized tooling / curls)"
+  query_parameter:
+    syntax: "/api/orders?version=1"
+    cdn_cacheability: "Moderate (query strings stripped by many aggressive CDNs)"
+    developer_experience: "High risk (query string injection and accidental caching)"
+```
+
+---
+
+### 9.3 Semantic Deprecation & Sunset Lifecycle (RFC 8594 & RFC 9745)
+
+Deprecating APIs must never occur via sudden breaking changes or undocumented emails. Production APIs must implement standard HTTP response headers and a scheduled brownout lifecycle:
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+Deprecation: @1772834000
+Sunset: Wed, 11 Nov 2026 00:00:00 GMT
+Link: <https://api.company.com/v2/orders>; rel="successor-version",
+      <https://docs.company.com/api/deprecations/orders-v1>; rel="deprecation"
+```
+
+#### The 4-Phase API Brownout Schedule
+1. **Phase 1: Announcement (Month 0-3):** Inject `Deprecation` and `Sunset` headers. Monitor consumer traffic and notify offending API token owners.
+2. **Phase 2: Micro-Brownouts (Month 4):** Artificially inject high latency ($+1,500\text{ms}$) on deprecated endpoints for 15 minutes every Tuesday at 10:00 UTC to wake up unmaintained background batch callers.
+3. **Phase 3: Macro-Brownouts (Month 5):** Return `HTTP 410 Gone` with structured migration payload for 1 continuous hour weekly, escalating to 24-hour windows.
+4. **Phase 4: Terminal Sunset (Month 6):** Permanent decommission. Endpoint returns `HTTP 410 Gone` indefinitely.
+
+---
+
+## 10. Network Ingress, Proxies & Traffic Routing
+
+```yaml
+proxy_taxonomy:
+  forward_proxy:
+    location: "Internal client perimeter"
+    purpose: "Egress traffic control, corporate DLP, outbound IP masking"
+    layer: "L4 / L7"
+  reverse_proxy:
+    location: "Server / Cluster perimeter (Nginx, HAProxy)"
+    purpose: "TLS termination, edge caching, static asset delivery, HTTP compression"
+    layer: "L7"
+  api_gateway:
+    location: "Edge application perimeter (Kong, Envoy, AWS API GW)"
+    purpose: "AuthN/AuthZ token translation, rate limiting, request validation, routing"
+    layer: "L7"
+  service_mesh_sidecar:
+    location: "Colocated with container inside Pod (Envoy, Linkerd)"
+    purpose: "mTLS identity (SPIFFE), retries, circuit breaking, local telemetry"
+    layer: "L7"
+```
+
+### 10.1 Service Discovery Architecture
+
+```yaml
+service_discovery_models:
+  client_side:
+    example: "Netflix Eureka, Ribbon"
+    mechanics: "Client queries discovery registry, caches IP list, load-balances locally"
+    tradeoff: "Eliminates network hop; couples client to specific language SDKs"
+  server_side:
+    example: "AWS ALB, GCP Cloud Load Balancing"
+    mechanics: "Client routes to fixed LB DNS; LB queries instance target groups"
+    tradeoff: "Simple for clients; introduces extra network hop and cost"
+  service_mesh:
+    example: "Istio / Envoy xDS dynamic control plane"
+    mechanics: "Control plane pushes EDS/CDS endpoints directly to local Envoy sidecars"
+    tradeoff: "Zero SDK coupling, sub-millisecond local routing; high memory overhead"
+  kubernetes_ipvs:
+    example: "Kube-Proxy IPVS mode"
+    mechanics: "Netfilter IPVS kernel hash tables load-balance ClusterIPs to Pod IPs"
+    tradeoff: "O(1) kernel-level routing scaling to 100,000 services without iptables linear lag"
+```
+
+---
+
+### 10.2 DNS Architecture & Step-Down Migration Protocol
+
+```yaml
+dns_tiers:
+  recursive_resolver: "ISP / Public DNS (8.8.8.8) caching records based on TTL"
+  authoritative_resolver: "Root/TLD/NameServer (Route53, NS1) holding the canonical zone file"
+  anycast_routing: "BGP Anycast announces identical resolver IP from 300+ global edge PoPs"
+  edns_client_subnet: "RFC 7871 ECS transmits client /24 subnet to return GeoDNS localized IPs"
+```
+
+#### Production DNS Cutover Step-Down Protocol
+When migrating major domain infrastructure (e.g., changing cloud providers or primary ingress IPs):
+1. **T - 7 Days:** Step down DNS TTL from $86,400\text{s}$ (24h) to $300\text{s}$ (5m).
+2. **T - 2 Days:** Step down DNS TTL to $60\text{s}$ (1m).
+3. **Cutover Day:** Update authoritative DNS records to target new ingress IP/CNAME.
+4. **T + 2 Days (Dwell Window):** Keep legacy ingress active to service stale resolvers ignoring low TTLs.
+5. **T + 7 Days:** Step DNS TTL back up to standard $3,600\text{s}$ (1h) or $86,400\text{s}$ (24h) to minimize DNS resolver query costs.
+
+---
+
+### 10.3 CDN Cache Directives & Instant Purge Architecture
+
+```http
+Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=60, stale-if-error=86400
+Surrogate-Key: tenant_42 product_998 category_electronics
+```
+
+```yaml
+cdn_directives_breakdown:
+  s_maxage_86400: "Shared edge caches (CDN) store response for 24 hours"
+  max_age_0: "Downstream browser must never cache response; forces revalidation"
+  stale_while_revalidate_60: "Serve stale cached object while fetching background update if age < 60s past expiry"
+  stale_if_error_86400: "Serve stale cache for up to 24h if backend origin returns 500/502/503/504 errors"
+  surrogate_keys: "Space-delimited cache tags enabling sub-150ms targeted purges across global edge"
+```
+
+- **Origin Shielding & Request Collapsing:** Enable CDN Origin Shield to collapse thousands of concurrent edge cache misses for the same URL into a single outbound request to the backend origin.
+
+---
+
+## 11. Stateless Service Design & Auto-Scaling Dynamics
+
+```yaml
+stateless_service_axioms:
+  ephemeral_disk: "Containers must assume local filesystems are wiped on restart"
+  externalized_state: "All session state, user tokens, and locks live in distributed stores"
+  direct_blob_offloading: "Never stream large file uploads through application pods"
+```
+
+### 11.1 Large File Upload Pre-Signed URL Offloading
+Streaming multipart file uploads through backend microservices wastes connection threads, saturates ingress network bandwidth, and balloons memory buffers.
+1. Client requests upload ticket: `POST /api/v1/files/upload-ticket`.
+2. Service authenticates client, enforces authorization, and generates a time-limited AWS S3 / GCS Pre-Signed URL with restricted content type and size limits:
+   ```yaml
+   presigned_conditions:
+     bucket: "company-user-assets"
+     key: "uploads/{tenant_id}/{ulid}.bin"
+     acl: "private"
+     max_content_length_bytes: 104857600  # 100 MB limit
+     expires_seconds: 900                 # 15 minutes
+   ```
+3. Client issues direct `PUT` to the S3 bucket endpoint, bypassing backend compute entirely.
+4. S3 fires an asynchronous EventBridge event (`s3:ObjectCreated:Put`) to trigger asynchronous background processing (virus scanning, thumbnail generation, OCR).
+
+---
+
+### 11.2 Production Auto-Scaling Signals & Control Loops
+
+```yaml
+autoscaling_signal_matrix:
+  cpu_utilization:
+    characteristic: "Lagging indicator"
+    hazard: "Multi-threaded async I/O services saturate socket queues before hitting 60% CPU"
+    use_case: "CPU-bound cryptographic or rendering workloads only"
+  queue_lag_and_depth:
+    characteristic: "Leading indicator"
+    formula: "TargetInstances = ceil(CurrentQueueMessages / (TargetProcessingRate * SchedWindow))"
+    use_case: "MANDATORY FOR ASYNCHRONOUS CONSUMERS (KAFKA / SQS)"
+  p99_latency_derivatives:
+    characteristic: "Immediate user-impact indicator"
+    mechanics: "Scale up when p99 response time derivative d(p99)/dt > threshold over 60s"
+    use_case: "Synchronous HTTP/gRPC ingress tiers"
+```
+
