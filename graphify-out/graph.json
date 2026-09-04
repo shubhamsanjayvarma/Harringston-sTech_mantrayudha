@@ -6662,6 +6662,66 @@
       "norm_label": "doc_req.md"
     },
     {
+      "label": "00_system_design_routing_and_navigation_guide.md",
+      "file_type": "document",
+      "source_file": "spec/system_design/00_system_design_routing_and_navigation_guide.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "system_design_00_system_design_routing_and_navigation_guide",
+      "community": 1,
+      "norm_label": "00_system_design_routing_and_navigation_guide.md"
+    },
+    {
+      "label": "Layer 0: System Design Routing, Implementation Planning & Navigation Guide",
+      "file_type": "document",
+      "source_file": "spec/system_design/00_system_design_routing_and_navigation_guide.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "system_design_00_system_design_routing_and_navigation_guide_layer_0_system_design_routing_implementation_planning_navigation_guide",
+      "community": 1,
+      "norm_label": "layer 0: system design routing, implementation planning & navigation guide"
+    },
+    {
+      "label": "1. Specification Suite Map",
+      "file_type": "document",
+      "source_file": "spec/system_design/00_system_design_routing_and_navigation_guide.md",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "system_design_00_system_design_routing_and_navigation_guide_1_specification_suite_map",
+      "community": 1,
+      "norm_label": "1. specification suite map"
+    },
+    {
+      "label": "2. Implementation Plan Phase-to-Document Routing Matrix",
+      "file_type": "document",
+      "source_file": "spec/system_design/00_system_design_routing_and_navigation_guide.md",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "system_design_00_system_design_routing_and_navigation_guide_2_implementation_plan_phase_to_document_routing_matrix",
+      "community": 1,
+      "norm_label": "2. implementation plan phase-to-document routing matrix"
+    },
+    {
+      "label": "3. Requirement & Technical Keyword Quick-Lookup Table",
+      "file_type": "document",
+      "source_file": "spec/system_design/00_system_design_routing_and_navigation_guide.md",
+      "source_location": "L130",
+      "_origin": "ast",
+      "id": "system_design_00_system_design_routing_and_navigation_guide_3_requirement_technical_keyword_quick_lookup_table",
+      "community": 1,
+      "norm_label": "3. requirement & technical keyword quick-lookup table"
+    },
+    {
+      "label": "4. Agent Execution Guidelines: Anti-Context Bloat Standard",
+      "file_type": "document",
+      "source_file": "spec/system_design/00_system_design_routing_and_navigation_guide.md",
+      "source_location": "L172",
+      "_origin": "ast",
+      "id": "system_design_00_system_design_routing_and_navigation_guide_4_agent_execution_guidelines_anti_context_bloat_standard",
+      "community": 1,
+      "norm_label": "4. agent execution guidelines: anti-context bloat standard"
+    },
+    {
       "label": "01_non_negotiable_rules_and_principles.md",
       "file_type": "document",
       "source_file": "spec/system_design/01_non_negotiable_rules_and_principles.md",
@@ -6748,7 +6808,7 @@
       "source_location": "L125",
       "_origin": "ast",
       "id": "system_design_01_non_negotiable_rules_and_principles_5_health_check_taxonomy_probe_architecture",
-      "community": 60,
+      "community": 55,
       "norm_label": "5. health check taxonomy & probe architecture"
     },
     {
@@ -6758,7 +6818,7 @@
       "source_location": "L139",
       "_origin": "ast",
       "id": "system_design_01_non_negotiable_rules_and_principles_5_1_liveness_probe_specification",
-      "community": 60,
+      "community": 55,
       "norm_label": "5.1 liveness probe specification"
     },
     {
@@ -6768,7 +6828,7 @@
       "source_location": "L144",
       "_origin": "ast",
       "id": "system_design_01_non_negotiable_rules_and_principles_5_2_readiness_probe_specification",
-      "community": 60,
+      "community": 55,
       "norm_label": "5.2 readiness probe specification"
     },
     {
@@ -6778,7 +6838,7 @@
       "source_location": "L149",
       "_origin": "ast",
       "id": "system_design_01_non_negotiable_rules_and_principles_5_3_startup_probe_specification",
-      "community": 60,
+      "community": 55,
       "norm_label": "5.3 startup probe specification"
     },
     {
@@ -6788,7 +6848,7 @@
       "source_location": "L155",
       "_origin": "ast",
       "id": "system_design_01_non_negotiable_rules_and_principles_6_distributed_systems_laws_theoretical_foundations",
-      "community": 1,
+      "community": 55,
       "norm_label": "6. distributed systems laws & theoretical foundations"
     },
     {
@@ -6798,7 +6858,7 @@
       "source_location": "L168",
       "_origin": "ast",
       "id": "system_design_01_non_negotiable_rules_and_principles_6_1_cap_pacelc_theorems_in_operational_practice",
-      "community": 1,
+      "community": 55,
       "norm_label": "6.1 cap & pacelc theorems in operational practice"
     },
     {
@@ -6808,7 +6868,7 @@
       "source_location": "L179",
       "_origin": "ast",
       "id": "system_design_01_non_negotiable_rules_and_principles_6_2_the_eight_fallacies_of_distributed_computing_deutsch_gosling",
-      "community": 1,
+      "community": 55,
       "norm_label": "6.2 the eight fallacies of distributed computing (deutsch & gosling)"
     },
     {
@@ -6818,7 +6878,7 @@
       "source_location": "L196",
       "_origin": "ast",
       "id": "system_design_01_non_negotiable_rules_and_principles_6_3_queueing_theory_little_s_law_kingman_s_formula",
-      "community": 1,
+      "community": 55,
       "norm_label": "6.3 queueing theory: little's law & kingman's formula"
     },
     {
@@ -6828,7 +6888,7 @@
       "source_location": "L198",
       "_origin": "ast",
       "id": "system_design_01_non_negotiable_rules_and_principles_little_s_law_stationarity_bounds",
-      "community": 1,
+      "community": 55,
       "norm_label": "little's law stationarity bounds"
     },
     {
@@ -6838,7 +6898,7 @@
       "source_location": "L208",
       "_origin": "ast",
       "id": "system_design_01_non_negotiable_rules_and_principles_kingman_s_formula_for_g_g_1_queues",
-      "community": 1,
+      "community": 55,
       "norm_label": "kingman's formula for $g/g/1$ queues"
     },
     {
@@ -6848,7 +6908,7 @@
       "source_location": "L240",
       "_origin": "ast",
       "id": "system_design_01_non_negotiable_rules_and_principles_6_4_scalability_laws_amdahl_s_law_vs_gunther_s_universal_scalability_law_usl",
-      "community": 1,
+      "community": 55,
       "norm_label": "6.4 scalability laws: amdahl's law vs. gunther's universal scalability law (usl)"
     },
     {
@@ -6858,7 +6918,7 @@
       "source_location": "L242",
       "_origin": "ast",
       "id": "system_design_01_non_negotiable_rules_and_principles_amdahl_s_law_monotonic_speedup",
-      "community": 1,
+      "community": 55,
       "norm_label": "amdahl's law (monotonic speedup)"
     },
     {
@@ -6868,7 +6928,7 @@
       "source_location": "L246",
       "_origin": "ast",
       "id": "system_design_01_non_negotiable_rules_and_principles_gunther_s_universal_scalability_law_usl_retrograde_collapse",
-      "community": 1,
+      "community": 55,
       "norm_label": "gunther's universal scalability law (usl - retrograde collapse)"
     },
     {
@@ -6878,7 +6938,7 @@
       "source_location": "L277",
       "_origin": "ast",
       "id": "system_design_01_non_negotiable_rules_and_principles_7_code_level_engineering_principles",
-      "community": 59,
+      "community": 55,
       "norm_label": "7. code-level engineering principles"
     },
     {
@@ -6888,7 +6948,7 @@
       "source_location": "L279",
       "_origin": "ast",
       "id": "system_design_01_non_negotiable_rules_and_principles_7_1_solid_principles_operational_code_definitions_fixes",
-      "community": 57,
+      "community": 55,
       "norm_label": "7.1 solid principles: operational code definitions & fixes"
     },
     {
@@ -6898,7 +6958,7 @@
       "source_location": "L290",
       "_origin": "ast",
       "id": "system_design_01_non_negotiable_rules_and_principles_a_single_responsibility_principle_srp",
-      "community": 57,
+      "community": 55,
       "norm_label": "a. single responsibility principle (srp)"
     },
     {
@@ -6908,7 +6968,7 @@
       "source_location": "L299",
       "_origin": "ast",
       "id": "system_design_01_non_negotiable_rules_and_principles_b_open_closed_principle_ocp",
-      "community": 57,
+      "community": 55,
       "norm_label": "b. open/closed principle (ocp)"
     },
     {
@@ -6918,7 +6978,7 @@
       "source_location": "L303",
       "_origin": "ast",
       "id": "system_design_01_non_negotiable_rules_and_principles_c_liskov_substitution_principle_lsp",
-      "community": 57,
+      "community": 55,
       "norm_label": "c. liskov substitution principle (lsp)"
     },
     {
@@ -6928,7 +6988,7 @@
       "source_location": "L307",
       "_origin": "ast",
       "id": "system_design_01_non_negotiable_rules_and_principles_d_interface_segregation_principle_isp",
-      "community": 57,
+      "community": 55,
       "norm_label": "d. interface segregation principle (isp)"
     },
     {
@@ -6938,7 +6998,7 @@
       "source_location": "L311",
       "_origin": "ast",
       "id": "system_design_01_non_negotiable_rules_and_principles_e_dependency_inversion_principle_dip",
-      "community": 57,
+      "community": 55,
       "norm_label": "e. dependency inversion principle (dip)"
     },
     {
@@ -6948,7 +7008,7 @@
       "source_location": "L317",
       "_origin": "ast",
       "id": "system_design_01_non_negotiable_rules_and_principles_7_2_dry_true_duplication_vs_incidental_duplication",
-      "community": 59,
+      "community": 55,
       "norm_label": "7.2 dry: true duplication vs. incidental duplication"
     },
     {
@@ -6958,7 +7018,7 @@
       "source_location": "L324",
       "_origin": "ast",
       "id": "system_design_01_non_negotiable_rules_and_principles_7_3_law_of_demeter_lod_command_query_separation_cqs",
-      "community": 59,
+      "community": 55,
       "norm_label": "7.3 law of demeter (lod) & command-query separation (cqs)"
     },
     {
@@ -6968,7 +7028,7 @@
       "source_location": "L326",
       "_origin": "ast",
       "id": "system_design_01_non_negotiable_rules_and_principles_law_of_demeter_tell_don_t_ask",
-      "community": 59,
+      "community": 55,
       "norm_label": "law of demeter: \"tell, don't ask\""
     },
     {
@@ -6978,7 +7038,7 @@
       "source_location": "L339",
       "_origin": "ast",
       "id": "system_design_01_non_negotiable_rules_and_principles_command_query_separation_bertrand_meyer",
-      "community": 59,
+      "community": 55,
       "norm_label": "command-query separation (bertrand meyer)"
     },
     {
@@ -6998,7 +7058,7 @@
       "source_location": "L365",
       "_origin": "ast",
       "id": "system_design_01_non_negotiable_rules_and_principles_8_1_traffic_compute_estimation_qps_elu_burst_math",
-      "community": 61,
+      "community": 56,
       "norm_label": "8.1 traffic & compute estimation (qps, elu & burst math)"
     },
     {
@@ -7008,7 +7068,7 @@
       "source_location": "L367",
       "_origin": "ast",
       "id": "system_design_01_non_negotiable_rules_and_principles_a_baseline_average_qps",
-      "community": 61,
+      "community": 56,
       "norm_label": "a. baseline average qps"
     },
     {
@@ -7018,7 +7078,7 @@
       "source_location": "L371",
       "_origin": "ast",
       "id": "system_design_01_non_negotiable_rules_and_principles_b_read_write_asymmetry_equivalent_load_units_elu",
-      "community": 61,
+      "community": 56,
       "norm_label": "b. read/write asymmetry & equivalent load units (elu)"
     },
     {
@@ -7028,7 +7088,7 @@
       "source_location": "L378",
       "_origin": "ast",
       "id": "system_design_01_non_negotiable_rules_and_principles_c_diurnal_cycles_sub_second_microburst_bounds",
-      "community": 61,
+      "community": 56,
       "norm_label": "c. diurnal cycles & sub-second microburst bounds"
     },
     {
@@ -7138,7 +7198,7 @@
       "source_location": "L485",
       "_origin": "ast",
       "id": "system_design_01_non_negotiable_rules_and_principles_10_sre_reliability_axioms_latency_budget_allocation",
-      "community": 58,
+      "community": 55,
       "norm_label": "10. sre reliability axioms & latency budget allocation"
     },
     {
@@ -7148,7 +7208,7 @@
       "source_location": "L495",
       "_origin": "ast",
       "id": "system_design_01_non_negotiable_rules_and_principles_10_1_mathematical_definitions_error_budgets",
-      "community": 58,
+      "community": 55,
       "norm_label": "10.1 mathematical definitions & error budgets"
     },
     {
@@ -7158,7 +7218,7 @@
       "source_location": "L513",
       "_origin": "ast",
       "id": "system_design_01_non_negotiable_rules_and_principles_10_2_hop_by_hop_end_to_end_latency_budget_allocation",
-      "community": 58,
+      "community": 55,
       "norm_label": "10.2 hop-by-hop end-to-end latency budget allocation"
     },
     {
@@ -7168,7 +7228,7 @@
       "source_location": "L563",
       "_origin": "ast",
       "id": "system_design_01_non_negotiable_rules_and_principles_10_3_tail_latency_amplification_law_dean_barroso",
-      "community": 58,
+      "community": 55,
       "norm_label": "10.3 tail latency amplification law (dean & barroso)"
     },
     {
@@ -7178,7 +7238,7 @@
       "source_location": "L567",
       "_origin": "ast",
       "id": "system_design_01_non_negotiable_rules_and_principles_the_mathematical_amplification_law",
-      "community": 58,
+      "community": 55,
       "norm_label": "the mathematical amplification law:"
     },
     {
@@ -8980,6 +9040,46 @@
       "id": "system_design_07_deployment_operations_governance_and_finops_c_dual_phase_erasure_protocol",
       "community": 52,
       "norm_label": "c. dual-phase erasure protocol"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "spec/system_design/README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "system_design_readme",
+      "community": 57,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "System Design Specification Suite",
+      "file_type": "document",
+      "source_file": "spec/system_design/README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "system_design_readme_system_design_specification_suite",
+      "community": 57,
+      "norm_label": "system design specification suite"
+    },
+    {
+      "label": "Navigation & Routing Guide",
+      "file_type": "document",
+      "source_file": "spec/system_design/README.md",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "system_design_readme_navigation_routing_guide",
+      "community": 57,
+      "norm_label": "navigation & routing guide"
+    },
+    {
+      "label": "Suite Directory",
+      "file_type": "document",
+      "source_file": "spec/system_design/README.md",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "system_design_readme_suite_directory",
+      "community": 57,
+      "norm_label": "suite directory"
     },
     {
       "label": "template_testing.md",
@@ -15646,6 +15746,56 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "spec/system_design/00_system_design_routing_and_navigation_guide.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "system_design_00_system_design_routing_and_navigation_guide",
+      "target": "system_design_00_system_design_routing_and_navigation_guide_layer_0_system_design_routing_implementation_planning_navigation_guide",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec/system_design/00_system_design_routing_and_navigation_guide.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "system_design_00_system_design_routing_and_navigation_guide_layer_0_system_design_routing_implementation_planning_navigation_guide",
+      "target": "system_design_00_system_design_routing_and_navigation_guide_1_specification_suite_map",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec/system_design/00_system_design_routing_and_navigation_guide.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "system_design_00_system_design_routing_and_navigation_guide_layer_0_system_design_routing_implementation_planning_navigation_guide",
+      "target": "system_design_00_system_design_routing_and_navigation_guide_2_implementation_plan_phase_to_document_routing_matrix",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec/system_design/00_system_design_routing_and_navigation_guide.md",
+      "source_location": "L130",
+      "weight": 1.0,
+      "source": "system_design_00_system_design_routing_and_navigation_guide_layer_0_system_design_routing_implementation_planning_navigation_guide",
+      "target": "system_design_00_system_design_routing_and_navigation_guide_3_requirement_technical_keyword_quick_lookup_table",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec/system_design/00_system_design_routing_and_navigation_guide.md",
+      "source_location": "L172",
+      "weight": 1.0,
+      "source": "system_design_00_system_design_routing_and_navigation_guide_layer_0_system_design_routing_implementation_planning_navigation_guide",
+      "target": "system_design_00_system_design_routing_and_navigation_guide_4_agent_execution_guidelines_anti_context_bloat_standard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "spec/system_design/01_non_negotiable_rules_and_principles.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -15659,9 +15809,9 @@
       "source_file": "spec/system_design/01_non_negotiable_rules_and_principles.md",
       "source_location": "L485",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_01_non_negotiable_rules_and_principles_layer_1_non_negotiable_system_design_rules_axioms_principles",
-      "target": "system_design_01_non_negotiable_rules_and_principles_10_sre_reliability_axioms_latency_budget_allocation",
-      "confidence_score": 1.0
+      "target": "system_design_01_non_negotiable_rules_and_principles_10_sre_reliability_axioms_latency_budget_allocation"
     },
     {
       "relation": "contains",
@@ -15739,9 +15889,9 @@
       "source_file": "spec/system_design/01_non_negotiable_rules_and_principles.md",
       "source_location": "L346",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_01_non_negotiable_rules_and_principles_layer_1_non_negotiable_system_design_rules_axioms_principles",
-      "target": "system_design_01_non_negotiable_rules_and_principles_8_quantitative_back_of_the_envelope_estimation_framework",
-      "confidence_score": 1.0
+      "target": "system_design_01_non_negotiable_rules_and_principles_8_quantitative_back_of_the_envelope_estimation_framework"
     },
     {
       "relation": "contains",
@@ -15749,9 +15899,9 @@
       "source_file": "spec/system_design/01_non_negotiable_rules_and_principles.md",
       "source_location": "L448",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_01_non_negotiable_rules_and_principles_layer_1_non_negotiable_system_design_rules_axioms_principles",
-      "target": "system_design_01_non_negotiable_rules_and_principles_9_single_point_of_failure_spof_invariant_audit_checklist",
-      "confidence_score": 1.0
+      "target": "system_design_01_non_negotiable_rules_and_principles_9_single_point_of_failure_spof_invariant_audit_checklist"
     },
     {
       "relation": "contains",
@@ -15989,9 +16139,9 @@
       "source_file": "spec/system_design/01_non_negotiable_rules_and_principles.md",
       "source_location": "L365",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_01_non_negotiable_rules_and_principles_8_quantitative_back_of_the_envelope_estimation_framework",
-      "target": "system_design_01_non_negotiable_rules_and_principles_8_1_traffic_compute_estimation_qps_elu_burst_math",
-      "confidence_score": 1.0
+      "target": "system_design_01_non_negotiable_rules_and_principles_8_1_traffic_compute_estimation_qps_elu_burst_math"
     },
     {
       "relation": "contains",
@@ -15999,9 +16149,9 @@
       "source_file": "spec/system_design/01_non_negotiable_rules_and_principles.md",
       "source_location": "L387",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_01_non_negotiable_rules_and_principles_8_quantitative_back_of_the_envelope_estimation_framework",
-      "target": "system_design_01_non_negotiable_rules_and_principles_8_2_unified_physical_storage_capacity_formula",
-      "confidence_score": 1.0
+      "target": "system_design_01_non_negotiable_rules_and_principles_8_2_unified_physical_storage_capacity_formula"
     },
     {
       "relation": "contains",
@@ -16009,9 +16159,9 @@
       "source_file": "spec/system_design/01_non_negotiable_rules_and_principles.md",
       "source_location": "L412",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_01_non_negotiable_rules_and_principles_8_quantitative_back_of_the_envelope_estimation_framework",
-      "target": "system_design_01_non_negotiable_rules_and_principles_8_3_ram_cache_working_set_sizing",
-      "confidence_score": 1.0
+      "target": "system_design_01_non_negotiable_rules_and_principles_8_3_ram_cache_working_set_sizing"
     },
     {
       "relation": "contains",
@@ -16019,9 +16169,9 @@
       "source_file": "spec/system_design/01_non_negotiable_rules_and_principles.md",
       "source_location": "L438",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_01_non_negotiable_rules_and_principles_8_quantitative_back_of_the_envelope_estimation_framework",
-      "target": "system_design_01_non_negotiable_rules_and_principles_8_4_network_bandwidth_sizing_ingress_egress",
-      "confidence_score": 1.0
+      "target": "system_design_01_non_negotiable_rules_and_principles_8_4_network_bandwidth_sizing_ingress_egress"
     },
     {
       "relation": "contains",
@@ -16029,9 +16179,9 @@
       "source_file": "spec/system_design/01_non_negotiable_rules_and_principles.md",
       "source_location": "L367",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_01_non_negotiable_rules_and_principles_8_1_traffic_compute_estimation_qps_elu_burst_math",
-      "target": "system_design_01_non_negotiable_rules_and_principles_a_baseline_average_qps",
-      "confidence_score": 1.0
+      "target": "system_design_01_non_negotiable_rules_and_principles_a_baseline_average_qps"
     },
     {
       "relation": "contains",
@@ -16039,9 +16189,9 @@
       "source_file": "spec/system_design/01_non_negotiable_rules_and_principles.md",
       "source_location": "L371",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_01_non_negotiable_rules_and_principles_8_1_traffic_compute_estimation_qps_elu_burst_math",
-      "target": "system_design_01_non_negotiable_rules_and_principles_b_read_write_asymmetry_equivalent_load_units_elu",
-      "confidence_score": 1.0
+      "target": "system_design_01_non_negotiable_rules_and_principles_b_read_write_asymmetry_equivalent_load_units_elu"
     },
     {
       "relation": "contains",
@@ -16049,9 +16199,9 @@
       "source_file": "spec/system_design/01_non_negotiable_rules_and_principles.md",
       "source_location": "L378",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_01_non_negotiable_rules_and_principles_8_1_traffic_compute_estimation_qps_elu_burst_math",
-      "target": "system_design_01_non_negotiable_rules_and_principles_c_diurnal_cycles_sub_second_microburst_bounds",
-      "confidence_score": 1.0
+      "target": "system_design_01_non_negotiable_rules_and_principles_c_diurnal_cycles_sub_second_microburst_bounds"
     },
     {
       "relation": "contains",
@@ -16059,9 +16209,9 @@
       "source_file": "spec/system_design/01_non_negotiable_rules_and_principles.md",
       "source_location": "L401",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_01_non_negotiable_rules_and_principles_8_2_unified_physical_storage_capacity_formula",
-      "target": "system_design_01_non_negotiable_rules_and_principles_the_unified_physical_storage_formula",
-      "confidence_score": 1.0
+      "target": "system_design_01_non_negotiable_rules_and_principles_the_unified_physical_storage_formula"
     },
     {
       "relation": "contains",
@@ -16069,9 +16219,9 @@
       "source_file": "spec/system_design/01_non_negotiable_rules_and_principles.md",
       "source_location": "L424",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_01_non_negotiable_rules_and_principles_8_3_ram_cache_working_set_sizing",
-      "target": "system_design_01_non_negotiable_rules_and_principles_a_daily_active_working_set_daws",
-      "confidence_score": 1.0
+      "target": "system_design_01_non_negotiable_rules_and_principles_a_daily_active_working_set_daws"
     },
     {
       "relation": "contains",
@@ -16079,9 +16229,9 @@
       "source_file": "spec/system_design/01_non_negotiable_rules_and_principles.md",
       "source_location": "L427",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_01_non_negotiable_rules_and_principles_8_3_ram_cache_working_set_sizing",
-      "target": "system_design_01_non_negotiable_rules_and_principles_b_cache_data_target_pareto_80_20_rule",
-      "confidence_score": 1.0
+      "target": "system_design_01_non_negotiable_rules_and_principles_b_cache_data_target_pareto_80_20_rule"
     },
     {
       "relation": "contains",
@@ -16089,9 +16239,9 @@
       "source_file": "spec/system_design/01_non_negotiable_rules_and_principles.md",
       "source_location": "L430",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_01_non_negotiable_rules_and_principles_8_3_ram_cache_working_set_sizing",
-      "target": "system_design_01_non_negotiable_rules_and_principles_c_total_production_cache_ram_allocation_m_text_cache",
-      "confidence_score": 1.0
+      "target": "system_design_01_non_negotiable_rules_and_principles_c_total_production_cache_ram_allocation_m_text_cache"
     },
     {
       "relation": "contains",
@@ -16099,9 +16249,9 @@
       "source_file": "spec/system_design/01_non_negotiable_rules_and_principles.md",
       "source_location": "L454",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_01_non_negotiable_rules_and_principles_9_single_point_of_failure_spof_invariant_audit_checklist",
-      "target": "system_design_01_non_negotiable_rules_and_principles_9_1_the_zero_spof_architectural_invariants",
-      "confidence_score": 1.0
+      "target": "system_design_01_non_negotiable_rules_and_principles_9_1_the_zero_spof_architectural_invariants"
     },
     {
       "relation": "contains",
@@ -16109,9 +16259,9 @@
       "source_file": "spec/system_design/01_non_negotiable_rules_and_principles.md",
       "source_location": "L460",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_01_non_negotiable_rules_and_principles_9_single_point_of_failure_spof_invariant_audit_checklist",
-      "target": "system_design_01_non_negotiable_rules_and_principles_9_2_production_zero_spof_audit_checklist",
-      "confidence_score": 1.0
+      "target": "system_design_01_non_negotiable_rules_and_principles_9_2_production_zero_spof_audit_checklist"
     },
     {
       "relation": "contains",
@@ -16119,9 +16269,9 @@
       "source_file": "spec/system_design/01_non_negotiable_rules_and_principles.md",
       "source_location": "L495",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_01_non_negotiable_rules_and_principles_10_sre_reliability_axioms_latency_budget_allocation",
-      "target": "system_design_01_non_negotiable_rules_and_principles_10_1_mathematical_definitions_error_budgets",
-      "confidence_score": 1.0
+      "target": "system_design_01_non_negotiable_rules_and_principles_10_1_mathematical_definitions_error_budgets"
     },
     {
       "relation": "contains",
@@ -16129,9 +16279,9 @@
       "source_file": "spec/system_design/01_non_negotiable_rules_and_principles.md",
       "source_location": "L513",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_01_non_negotiable_rules_and_principles_10_sre_reliability_axioms_latency_budget_allocation",
-      "target": "system_design_01_non_negotiable_rules_and_principles_10_2_hop_by_hop_end_to_end_latency_budget_allocation",
-      "confidence_score": 1.0
+      "target": "system_design_01_non_negotiable_rules_and_principles_10_2_hop_by_hop_end_to_end_latency_budget_allocation"
     },
     {
       "relation": "contains",
@@ -16139,9 +16289,9 @@
       "source_file": "spec/system_design/01_non_negotiable_rules_and_principles.md",
       "source_location": "L563",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_01_non_negotiable_rules_and_principles_10_sre_reliability_axioms_latency_budget_allocation",
-      "target": "system_design_01_non_negotiable_rules_and_principles_10_3_tail_latency_amplification_law_dean_barroso",
-      "confidence_score": 1.0
+      "target": "system_design_01_non_negotiable_rules_and_principles_10_3_tail_latency_amplification_law_dean_barroso"
     },
     {
       "relation": "contains",
@@ -16149,9 +16299,9 @@
       "source_file": "spec/system_design/01_non_negotiable_rules_and_principles.md",
       "source_location": "L567",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_01_non_negotiable_rules_and_principles_10_3_tail_latency_amplification_law_dean_barroso",
-      "target": "system_design_01_non_negotiable_rules_and_principles_the_mathematical_amplification_law",
-      "confidence_score": 1.0
+      "target": "system_design_01_non_negotiable_rules_and_principles_the_mathematical_amplification_law"
     },
     {
       "relation": "contains",
@@ -16169,9 +16319,9 @@
       "source_file": "spec/system_design/02_high_level_design_and_distributed_systems.md",
       "source_location": "L567",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_02_high_level_design_and_distributed_systems_layer_2_high_level_design_hld_distributed_systems_architecture",
-      "target": "system_design_02_high_level_design_and_distributed_systems_10_network_ingress_proxies_traffic_routing",
-      "confidence_score": 1.0
+      "target": "system_design_02_high_level_design_and_distributed_systems_10_network_ingress_proxies_traffic_routing"
     },
     {
       "relation": "contains",
@@ -16179,9 +16329,9 @@
       "source_file": "spec/system_design/02_high_level_design_and_distributed_systems.md",
       "source_location": "L653",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_02_high_level_design_and_distributed_systems_layer_2_high_level_design_hld_distributed_systems_architecture",
-      "target": "system_design_02_high_level_design_and_distributed_systems_11_stateless_service_design_auto_scaling_dynamics",
-      "confidence_score": 1.0
+      "target": "system_design_02_high_level_design_and_distributed_systems_11_stateless_service_design_auto_scaling_dynamics"
     },
     {
       "relation": "contains",
@@ -16269,9 +16419,9 @@
       "source_file": "spec/system_design/02_high_level_design_and_distributed_systems.md",
       "source_location": "L476",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_02_high_level_design_and_distributed_systems_layer_2_high_level_design_hld_distributed_systems_architecture",
-      "target": "system_design_02_high_level_design_and_distributed_systems_9_advanced_api_design_query_optimization",
-      "confidence_score": 1.0
+      "target": "system_design_02_high_level_design_and_distributed_systems_9_advanced_api_design_query_optimization"
     },
     {
       "relation": "contains",
@@ -16509,9 +16659,9 @@
       "source_file": "spec/system_design/02_high_level_design_and_distributed_systems.md",
       "source_location": "L485",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_02_high_level_design_and_distributed_systems_9_advanced_api_design_query_optimization",
-      "target": "system_design_02_high_level_design_and_distributed_systems_9_1_keyset_cursor_based_pagination_vs_offset_pagination",
-      "confidence_score": 1.0
+      "target": "system_design_02_high_level_design_and_distributed_systems_9_1_keyset_cursor_based_pagination_vs_offset_pagination"
     },
     {
       "relation": "contains",
@@ -16519,9 +16669,9 @@
       "source_file": "spec/system_design/02_high_level_design_and_distributed_systems.md",
       "source_location": "L525",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_02_high_level_design_and_distributed_systems_9_advanced_api_design_query_optimization",
-      "target": "system_design_02_high_level_design_and_distributed_systems_9_2_api_versioning_strategies",
-      "confidence_score": 1.0
+      "target": "system_design_02_high_level_design_and_distributed_systems_9_2_api_versioning_strategies"
     },
     {
       "relation": "contains",
@@ -16529,9 +16679,9 @@
       "source_file": "spec/system_design/02_high_level_design_and_distributed_systems.md",
       "source_location": "L546",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_02_high_level_design_and_distributed_systems_9_advanced_api_design_query_optimization",
-      "target": "system_design_02_high_level_design_and_distributed_systems_9_3_semantic_deprecation_sunset_lifecycle_rfc_8594_rfc_9745",
-      "confidence_score": 1.0
+      "target": "system_design_02_high_level_design_and_distributed_systems_9_3_semantic_deprecation_sunset_lifecycle_rfc_8594_rfc_9745"
     },
     {
       "relation": "contains",
@@ -16539,9 +16689,9 @@
       "source_file": "spec/system_design/02_high_level_design_and_distributed_systems.md",
       "source_location": "L487",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_02_high_level_design_and_distributed_systems_9_1_keyset_cursor_based_pagination_vs_offset_pagination",
-      "target": "system_design_02_high_level_design_and_distributed_systems_a_the_offset_b_tree_degradation_mechanics",
-      "confidence_score": 1.0
+      "target": "system_design_02_high_level_design_and_distributed_systems_a_the_offset_b_tree_degradation_mechanics"
     },
     {
       "relation": "contains",
@@ -16549,9 +16699,9 @@
       "source_file": "spec/system_design/02_high_level_design_and_distributed_systems.md",
       "source_location": "L496",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_02_high_level_design_and_distributed_systems_9_1_keyset_cursor_based_pagination_vs_offset_pagination",
-      "target": "system_design_02_high_level_design_and_distributed_systems_b_keyset_pagination_index_seek",
-      "confidence_score": 1.0
+      "target": "system_design_02_high_level_design_and_distributed_systems_b_keyset_pagination_index_seek"
     },
     {
       "relation": "contains",
@@ -16559,9 +16709,9 @@
       "source_file": "spec/system_design/02_high_level_design_and_distributed_systems.md",
       "source_location": "L509",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_02_high_level_design_and_distributed_systems_9_1_keyset_cursor_based_pagination_vs_offset_pagination",
-      "target": "system_design_02_high_level_design_and_distributed_systems_c_multi_column_mixed_direction_dnf_expansion",
-      "confidence_score": 1.0
+      "target": "system_design_02_high_level_design_and_distributed_systems_c_multi_column_mixed_direction_dnf_expansion"
     },
     {
       "relation": "contains",
@@ -16569,9 +16719,9 @@
       "source_file": "spec/system_design/02_high_level_design_and_distributed_systems.md",
       "source_location": "L559",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_02_high_level_design_and_distributed_systems_9_3_semantic_deprecation_sunset_lifecycle_rfc_8594_rfc_9745",
-      "target": "system_design_02_high_level_design_and_distributed_systems_the_4_phase_api_brownout_schedule",
-      "confidence_score": 1.0
+      "target": "system_design_02_high_level_design_and_distributed_systems_the_4_phase_api_brownout_schedule"
     },
     {
       "relation": "contains",
@@ -16579,9 +16729,9 @@
       "source_file": "spec/system_design/02_high_level_design_and_distributed_systems.md",
       "source_location": "L589",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_02_high_level_design_and_distributed_systems_10_network_ingress_proxies_traffic_routing",
-      "target": "system_design_02_high_level_design_and_distributed_systems_10_1_service_discovery_architecture",
-      "confidence_score": 1.0
+      "target": "system_design_02_high_level_design_and_distributed_systems_10_1_service_discovery_architecture"
     },
     {
       "relation": "contains",
@@ -16589,9 +16739,9 @@
       "source_file": "spec/system_design/02_high_level_design_and_distributed_systems.md",
       "source_location": "L613",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_02_high_level_design_and_distributed_systems_10_network_ingress_proxies_traffic_routing",
-      "target": "system_design_02_high_level_design_and_distributed_systems_10_2_dns_architecture_step_down_migration_protocol",
-      "confidence_score": 1.0
+      "target": "system_design_02_high_level_design_and_distributed_systems_10_2_dns_architecture_step_down_migration_protocol"
     },
     {
       "relation": "contains",
@@ -16599,9 +16749,9 @@
       "source_file": "spec/system_design/02_high_level_design_and_distributed_systems.md",
       "source_location": "L633",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_02_high_level_design_and_distributed_systems_10_network_ingress_proxies_traffic_routing",
-      "target": "system_design_02_high_level_design_and_distributed_systems_10_3_cdn_cache_directives_instant_purge_architecture",
-      "confidence_score": 1.0
+      "target": "system_design_02_high_level_design_and_distributed_systems_10_3_cdn_cache_directives_instant_purge_architecture"
     },
     {
       "relation": "contains",
@@ -16609,9 +16759,9 @@
       "source_file": "spec/system_design/02_high_level_design_and_distributed_systems.md",
       "source_location": "L623",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_02_high_level_design_and_distributed_systems_10_2_dns_architecture_step_down_migration_protocol",
-      "target": "system_design_02_high_level_design_and_distributed_systems_production_dns_cutover_step_down_protocol",
-      "confidence_score": 1.0
+      "target": "system_design_02_high_level_design_and_distributed_systems_production_dns_cutover_step_down_protocol"
     },
     {
       "relation": "contains",
@@ -16619,9 +16769,9 @@
       "source_file": "spec/system_design/02_high_level_design_and_distributed_systems.md",
       "source_location": "L662",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_02_high_level_design_and_distributed_systems_11_stateless_service_design_auto_scaling_dynamics",
-      "target": "system_design_02_high_level_design_and_distributed_systems_11_1_large_file_upload_pre_signed_url_offloading",
-      "confidence_score": 1.0
+      "target": "system_design_02_high_level_design_and_distributed_systems_11_1_large_file_upload_pre_signed_url_offloading"
     },
     {
       "relation": "contains",
@@ -16629,9 +16779,9 @@
       "source_file": "spec/system_design/02_high_level_design_and_distributed_systems.md",
       "source_location": "L679",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_02_high_level_design_and_distributed_systems_11_stateless_service_design_auto_scaling_dynamics",
-      "target": "system_design_02_high_level_design_and_distributed_systems_11_2_production_auto_scaling_signals_control_loops",
-      "confidence_score": 1.0
+      "target": "system_design_02_high_level_design_and_distributed_systems_11_2_production_auto_scaling_signals_control_loops"
     },
     {
       "relation": "contains",
@@ -16699,9 +16849,9 @@
       "source_file": "spec/system_design/03_low_level_design_and_object_oriented_architecture.md",
       "source_location": "L511",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_03_low_level_design_and_object_oriented_architecture_layer_3_low_level_design_lld_object_oriented_architecture_concurrency",
-      "target": "system_design_03_low_level_design_and_object_oriented_architecture_6_secondary_indexing_write_amplification_query_optimization",
-      "confidence_score": 1.0
+      "target": "system_design_03_low_level_design_and_object_oriented_architecture_6_secondary_indexing_write_amplification_query_optimization"
     },
     {
       "relation": "contains",
@@ -16799,9 +16949,9 @@
       "source_file": "spec/system_design/03_low_level_design_and_object_oriented_architecture.md",
       "source_location": "L369",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_03_low_level_design_and_object_oriented_architecture_3_concurrency_thread_safety_resource_sizing",
-      "target": "system_design_03_low_level_design_and_object_oriented_architecture_3_3_database_connection_pool_physics_hikaricp_formula_queue_contention",
-      "confidence_score": 1.0
+      "target": "system_design_03_low_level_design_and_object_oriented_architecture_3_3_database_connection_pool_physics_hikaricp_formula_queue_contention"
     },
     {
       "relation": "contains",
@@ -16889,9 +17039,9 @@
       "source_file": "spec/system_design/03_low_level_design_and_object_oriented_architecture.md",
       "source_location": "L520",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_03_low_level_design_and_object_oriented_architecture_6_secondary_indexing_write_amplification_query_optimization",
-      "target": "system_design_03_low_level_design_and_object_oriented_architecture_6_1_the_mathematical_write_amplification_of_secondary_indexes",
-      "confidence_score": 1.0
+      "target": "system_design_03_low_level_design_and_object_oriented_architecture_6_1_the_mathematical_write_amplification_of_secondary_indexes"
     },
     {
       "relation": "contains",
@@ -16899,9 +17049,9 @@
       "source_file": "spec/system_design/03_low_level_design_and_object_oriented_architecture.md",
       "source_location": "L538",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_03_low_level_design_and_object_oriented_architecture_6_secondary_indexing_write_amplification_query_optimization",
-      "target": "system_design_03_low_level_design_and_object_oriented_architecture_6_2_covering_indexes_index_only_scan_vs_heap_lookups",
-      "confidence_score": 1.0
+      "target": "system_design_03_low_level_design_and_object_oriented_architecture_6_2_covering_indexes_index_only_scan_vs_heap_lookups"
     },
     {
       "relation": "contains",
@@ -16909,9 +17059,9 @@
       "source_file": "spec/system_design/03_low_level_design_and_object_oriented_architecture.md",
       "source_location": "L557",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_03_low_level_design_and_object_oriented_architecture_6_secondary_indexing_write_amplification_query_optimization",
-      "target": "system_design_03_low_level_design_and_object_oriented_architecture_6_3_partial_indexes_for_write_footprint_minimization",
-      "confidence_score": 1.0
+      "target": "system_design_03_low_level_design_and_object_oriented_architecture_6_3_partial_indexes_for_write_footprint_minimization"
     },
     {
       "relation": "contains",
@@ -17089,9 +17239,9 @@
       "source_file": "spec/system_design/04_system_archetypes_and_decision_matrices.md",
       "source_location": "L329",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_04_system_archetypes_and_decision_matrices_3_definitive_when_to_use_what_decision_matrices",
-      "target": "system_design_04_system_archetypes_and_decision_matrices_3_5_storage_class_selection_matrix",
-      "confidence_score": 1.0
+      "target": "system_design_04_system_archetypes_and_decision_matrices_3_5_storage_class_selection_matrix"
     },
     {
       "relation": "contains",
@@ -17099,9 +17249,9 @@
       "source_file": "spec/system_design/04_system_archetypes_and_decision_matrices.md",
       "source_location": "L352",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_04_system_archetypes_and_decision_matrices_3_definitive_when_to_use_what_decision_matrices",
-      "target": "system_design_04_system_archetypes_and_decision_matrices_3_6_cache_eviction_policy_decision_matrix",
-      "confidence_score": 1.0
+      "target": "system_design_04_system_archetypes_and_decision_matrices_3_6_cache_eviction_policy_decision_matrix"
     },
     {
       "relation": "contains",
@@ -17109,9 +17259,9 @@
       "source_file": "spec/system_design/04_system_archetypes_and_decision_matrices.md",
       "source_location": "L373",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_04_system_archetypes_and_decision_matrices_3_definitive_when_to_use_what_decision_matrices",
-      "target": "system_design_04_system_archetypes_and_decision_matrices_3_7_load_balancer_algorithm_decision_matrix",
-      "confidence_score": 1.0
+      "target": "system_design_04_system_archetypes_and_decision_matrices_3_7_load_balancer_algorithm_decision_matrix"
     },
     {
       "relation": "contains",
@@ -17119,9 +17269,9 @@
       "source_file": "spec/system_design/04_system_archetypes_and_decision_matrices.md",
       "source_location": "L394",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_04_system_archetypes_and_decision_matrices_3_definitive_when_to_use_what_decision_matrices",
-      "target": "system_design_04_system_archetypes_and_decision_matrices_3_8_access_control_selection_matrix_rbac_vs_abac_vs_rebac",
-      "confidence_score": 1.0
+      "target": "system_design_04_system_archetypes_and_decision_matrices_3_8_access_control_selection_matrix_rbac_vs_abac_vs_rebac"
     },
     {
       "relation": "contains",
@@ -17229,9 +17379,9 @@
       "source_file": "spec/system_design/05_system_design_verification_and_testing_playbook.md",
       "source_location": "L101",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_05_system_design_verification_and_testing_playbook_2_testing_type_1_space_time_complexity_testing",
-      "target": "system_design_05_system_design_verification_and_testing_playbook_2_4_milestone_3_query_pagination_feature_flag_telemetry_memory_bounds",
-      "confidence_score": 1.0
+      "target": "system_design_05_system_design_verification_and_testing_playbook_2_4_milestone_3_query_pagination_feature_flag_telemetry_memory_bounds"
     },
     {
       "relation": "contains",
@@ -17269,9 +17419,9 @@
       "source_file": "spec/system_design/05_system_design_verification_and_testing_playbook.md",
       "source_location": "L209",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_05_system_design_verification_and_testing_playbook_3_testing_type_2_logic_structural_integrity_testing",
-      "target": "system_design_05_system_design_verification_and_testing_playbook_3_4_milestone_3_schema_evolution_api_lifecycle_distributed_contracts",
-      "confidence_score": 1.0
+      "target": "system_design_05_system_design_verification_and_testing_playbook_3_4_milestone_3_schema_evolution_api_lifecycle_distributed_contracts"
     },
     {
       "relation": "contains",
@@ -17309,9 +17459,9 @@
       "source_file": "spec/system_design/05_system_design_verification_and_testing_playbook.md",
       "source_location": "L368",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_05_system_design_verification_and_testing_playbook_4_testing_type_3_integration_chaos_testing",
-      "target": "system_design_05_system_design_verification_and_testing_playbook_4_4_milestone_3_progressive_delivery_sre_alerting_multi_region_quorum_drills",
-      "confidence_score": 1.0
+      "target": "system_design_05_system_design_verification_and_testing_playbook_4_4_milestone_3_progressive_delivery_sre_alerting_multi_region_quorum_drills"
     },
     {
       "relation": "contains",
@@ -17349,9 +17499,9 @@
       "source_file": "spec/system_design/05_system_design_verification_and_testing_playbook.md",
       "source_location": "L591",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_05_system_design_verification_and_testing_playbook_5_testing_type_4_qa_security_testing_stride_owasp_top_10",
-      "target": "system_design_05_system_design_verification_and_testing_playbook_5_4_milestone_3_advanced_stride_cryptographic_exploit_verification_suite",
-      "confidence_score": 1.0
+      "target": "system_design_05_system_design_verification_and_testing_playbook_5_4_milestone_3_advanced_stride_cryptographic_exploit_verification_suite"
     },
     {
       "relation": "contains",
@@ -17359,9 +17509,9 @@
       "source_file": "spec/system_design/06_observability_telemetry_and_reliability_engineering.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_06_observability_telemetry_and_reliability_engineering",
-      "target": "system_design_06_observability_telemetry_and_reliability_engineering_layer_6_observability_telemetry_sre_reliability_engineering",
-      "confidence_score": 1.0
+      "target": "system_design_06_observability_telemetry_and_reliability_engineering_layer_6_observability_telemetry_sre_reliability_engineering"
     },
     {
       "relation": "contains",
@@ -17369,9 +17519,9 @@
       "source_file": "spec/system_design/06_observability_telemetry_and_reliability_engineering.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_06_observability_telemetry_and_reliability_engineering_layer_6_observability_telemetry_sre_reliability_engineering",
-      "target": "system_design_06_observability_telemetry_and_reliability_engineering_1_executive_observability_topology",
-      "confidence_score": 1.0
+      "target": "system_design_06_observability_telemetry_and_reliability_engineering_1_executive_observability_topology"
     },
     {
       "relation": "contains",
@@ -17379,9 +17529,9 @@
       "source_file": "spec/system_design/06_observability_telemetry_and_reliability_engineering.md",
       "source_location": "L39",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_06_observability_telemetry_and_reliability_engineering_layer_6_observability_telemetry_sre_reliability_engineering",
-      "target": "system_design_06_observability_telemetry_and_reliability_engineering_2_sre_reliability_metrics_multi_burn_rate_alerting",
-      "confidence_score": 1.0
+      "target": "system_design_06_observability_telemetry_and_reliability_engineering_2_sre_reliability_metrics_multi_burn_rate_alerting"
     },
     {
       "relation": "contains",
@@ -17389,9 +17539,9 @@
       "source_file": "spec/system_design/06_observability_telemetry_and_reliability_engineering.md",
       "source_location": "L130",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_06_observability_telemetry_and_reliability_engineering_layer_6_observability_telemetry_sre_reliability_engineering",
-      "target": "system_design_06_observability_telemetry_and_reliability_engineering_3_telemetry_architectural_frameworks",
-      "confidence_score": 1.0
+      "target": "system_design_06_observability_telemetry_and_reliability_engineering_3_telemetry_architectural_frameworks"
     },
     {
       "relation": "contains",
@@ -17399,9 +17549,9 @@
       "source_file": "spec/system_design/06_observability_telemetry_and_reliability_engineering.md",
       "source_location": "L173",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_06_observability_telemetry_and_reliability_engineering_layer_6_observability_telemetry_sre_reliability_engineering",
-      "target": "system_design_06_observability_telemetry_and_reliability_engineering_4_distributed_tracing_w3c_context_propagation",
-      "confidence_score": 1.0
+      "target": "system_design_06_observability_telemetry_and_reliability_engineering_4_distributed_tracing_w3c_context_propagation"
     },
     {
       "relation": "contains",
@@ -17409,9 +17559,9 @@
       "source_file": "spec/system_design/06_observability_telemetry_and_reliability_engineering.md",
       "source_location": "L247",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_06_observability_telemetry_and_reliability_engineering_layer_6_observability_telemetry_sre_reliability_engineering",
-      "target": "system_design_06_observability_telemetry_and_reliability_engineering_5_structured_logging_event_correlation",
-      "confidence_score": 1.0
+      "target": "system_design_06_observability_telemetry_and_reliability_engineering_5_structured_logging_event_correlation"
     },
     {
       "relation": "contains",
@@ -17419,9 +17569,9 @@
       "source_file": "spec/system_design/06_observability_telemetry_and_reliability_engineering.md",
       "source_location": "L283",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_06_observability_telemetry_and_reliability_engineering_layer_6_observability_telemetry_sre_reliability_engineering",
-      "target": "system_design_06_observability_telemetry_and_reliability_engineering_6_symptom_based_alerting_on_call_engineering",
-      "confidence_score": 1.0
+      "target": "system_design_06_observability_telemetry_and_reliability_engineering_6_symptom_based_alerting_on_call_engineering"
     },
     {
       "relation": "contains",
@@ -17429,9 +17579,9 @@
       "source_file": "spec/system_design/06_observability_telemetry_and_reliability_engineering.md",
       "source_location": "L298",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_06_observability_telemetry_and_reliability_engineering_layer_6_observability_telemetry_sre_reliability_engineering",
-      "target": "system_design_06_observability_telemetry_and_reliability_engineering_7_health_check_taxonomy_probing_protocol",
-      "confidence_score": 1.0
+      "target": "system_design_06_observability_telemetry_and_reliability_engineering_7_health_check_taxonomy_probing_protocol"
     },
     {
       "relation": "contains",
@@ -17439,9 +17589,9 @@
       "source_file": "spec/system_design/06_observability_telemetry_and_reliability_engineering.md",
       "source_location": "L49",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_06_observability_telemetry_and_reliability_engineering_2_sre_reliability_metrics_multi_burn_rate_alerting",
-      "target": "system_design_06_observability_telemetry_and_reliability_engineering_2_1_multi_window_multi_burn_rate_mathematical_formulation",
-      "confidence_score": 1.0
+      "target": "system_design_06_observability_telemetry_and_reliability_engineering_2_1_multi_window_multi_burn_rate_mathematical_formulation"
     },
     {
       "relation": "contains",
@@ -17449,9 +17599,9 @@
       "source_file": "spec/system_design/06_observability_telemetry_and_reliability_engineering.md",
       "source_location": "L84",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_06_observability_telemetry_and_reliability_engineering_2_sre_reliability_metrics_multi_burn_rate_alerting",
-      "target": "system_design_06_observability_telemetry_and_reliability_engineering_2_2_low_qps_statistical_guardrails_in_promql",
-      "confidence_score": 1.0
+      "target": "system_design_06_observability_telemetry_and_reliability_engineering_2_2_low_qps_statistical_guardrails_in_promql"
     },
     {
       "relation": "contains",
@@ -17459,9 +17609,9 @@
       "source_file": "spec/system_design/06_observability_telemetry_and_reliability_engineering.md",
       "source_location": "L53",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_06_observability_telemetry_and_reliability_engineering_2_1_multi_window_multi_burn_rate_mathematical_formulation",
-      "target": "system_design_06_observability_telemetry_and_reliability_engineering_the_burn_rate_equation",
-      "confidence_score": 1.0
+      "target": "system_design_06_observability_telemetry_and_reliability_engineering_the_burn_rate_equation"
     },
     {
       "relation": "contains",
@@ -17469,9 +17619,9 @@
       "source_file": "spec/system_design/06_observability_telemetry_and_reliability_engineering.md",
       "source_location": "L94",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_06_observability_telemetry_and_reliability_engineering_2_2_low_qps_statistical_guardrails_in_promql",
-      "target": "system_design_06_observability_telemetry_and_reliability_engineering_production_promql_alert_rules_with_statistical_guards",
-      "confidence_score": 1.0
+      "target": "system_design_06_observability_telemetry_and_reliability_engineering_production_promql_alert_rules_with_statistical_guards"
     },
     {
       "relation": "contains",
@@ -17479,9 +17629,9 @@
       "source_file": "spec/system_design/06_observability_telemetry_and_reliability_engineering.md",
       "source_location": "L86",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_06_observability_telemetry_and_reliability_engineering_2_2_low_qps_statistical_guardrails_in_promql",
-      "target": "system_design_06_observability_telemetry_and_reliability_engineering_the_low_throughput_false_page_hazard",
-      "confidence_score": 1.0
+      "target": "system_design_06_observability_telemetry_and_reliability_engineering_the_low_throughput_false_page_hazard"
     },
     {
       "relation": "contains",
@@ -17489,9 +17639,9 @@
       "source_file": "spec/system_design/06_observability_telemetry_and_reliability_engineering.md",
       "source_location": "L138",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_06_observability_telemetry_and_reliability_engineering_3_telemetry_architectural_frameworks",
-      "target": "system_design_06_observability_telemetry_and_reliability_engineering_3_1_the_red_method_request_driven_microservices",
-      "confidence_score": 1.0
+      "target": "system_design_06_observability_telemetry_and_reliability_engineering_3_1_the_red_method_request_driven_microservices"
     },
     {
       "relation": "contains",
@@ -17499,9 +17649,9 @@
       "source_file": "spec/system_design/06_observability_telemetry_and_reliability_engineering.md",
       "source_location": "L157",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_06_observability_telemetry_and_reliability_engineering_3_telemetry_architectural_frameworks",
-      "target": "system_design_06_observability_telemetry_and_reliability_engineering_3_2_the_use_method_resource_utilization_saturation",
-      "confidence_score": 1.0
+      "target": "system_design_06_observability_telemetry_and_reliability_engineering_3_2_the_use_method_resource_utilization_saturation"
     },
     {
       "relation": "contains",
@@ -17509,9 +17659,9 @@
       "source_file": "spec/system_design/06_observability_telemetry_and_reliability_engineering.md",
       "source_location": "L182",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_06_observability_telemetry_and_reliability_engineering_4_distributed_tracing_w3c_context_propagation",
-      "target": "system_design_06_observability_telemetry_and_reliability_engineering_4_1_w3c_tracecontext_wire_standard",
-      "confidence_score": 1.0
+      "target": "system_design_06_observability_telemetry_and_reliability_engineering_4_1_w3c_tracecontext_wire_standard"
     },
     {
       "relation": "contains",
@@ -17519,9 +17669,9 @@
       "source_file": "spec/system_design/06_observability_telemetry_and_reliability_engineering.md",
       "source_location": "L197",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_06_observability_telemetry_and_reliability_engineering_4_distributed_tracing_w3c_context_propagation",
-      "target": "system_design_06_observability_telemetry_and_reliability_engineering_4_2_asynchronous_messaging_invariant_spanlinks_vs_parent_spans",
-      "confidence_score": 1.0
+      "target": "system_design_06_observability_telemetry_and_reliability_engineering_4_2_asynchronous_messaging_invariant_spanlinks_vs_parent_spans"
     },
     {
       "relation": "contains",
@@ -17529,9 +17679,9 @@
       "source_file": "spec/system_design/06_observability_telemetry_and_reliability_engineering.md",
       "source_location": "L208",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_06_observability_telemetry_and_reliability_engineering_4_distributed_tracing_w3c_context_propagation",
-      "target": "system_design_06_observability_telemetry_and_reliability_engineering_4_3_tail_based_sampling_architecture_heap_sizing_formula",
-      "confidence_score": 1.0
+      "target": "system_design_06_observability_telemetry_and_reliability_engineering_4_3_tail_based_sampling_architecture_heap_sizing_formula"
     },
     {
       "relation": "contains",
@@ -17539,9 +17689,9 @@
       "source_file": "spec/system_design/06_observability_telemetry_and_reliability_engineering.md",
       "source_location": "L225",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_06_observability_telemetry_and_reliability_engineering_4_3_tail_based_sampling_architecture_heap_sizing_formula",
-      "target": "system_design_06_observability_telemetry_and_reliability_engineering_collector_heap_memory_bounding_formula",
-      "confidence_score": 1.0
+      "target": "system_design_06_observability_telemetry_and_reliability_engineering_collector_heap_memory_bounding_formula"
     },
     {
       "relation": "contains",
@@ -17549,9 +17699,9 @@
       "source_file": "spec/system_design/07_deployment_operations_governance_and_finops.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_07_deployment_operations_governance_and_finops",
-      "target": "system_design_07_deployment_operations_governance_and_finops_layer_7_deployment_strategies_operations_governance_cloud_finops",
-      "confidence_score": 1.0
+      "target": "system_design_07_deployment_operations_governance_and_finops_layer_7_deployment_strategies_operations_governance_cloud_finops"
     },
     {
       "relation": "contains",
@@ -17559,9 +17709,9 @@
       "source_file": "spec/system_design/07_deployment_operations_governance_and_finops.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_07_deployment_operations_governance_and_finops_layer_7_deployment_strategies_operations_governance_cloud_finops",
-      "target": "system_design_07_deployment_operations_governance_and_finops_1_progressive_delivery_zero_downtime_deployment_strategies",
-      "confidence_score": 1.0
+      "target": "system_design_07_deployment_operations_governance_and_finops_1_progressive_delivery_zero_downtime_deployment_strategies"
     },
     {
       "relation": "contains",
@@ -17569,9 +17719,9 @@
       "source_file": "spec/system_design/07_deployment_operations_governance_and_finops.md",
       "source_location": "L166",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_07_deployment_operations_governance_and_finops_layer_7_deployment_strategies_operations_governance_cloud_finops",
-      "target": "system_design_07_deployment_operations_governance_and_finops_2_disaster_recovery_dr_multi_region_resiliency",
-      "confidence_score": 1.0
+      "target": "system_design_07_deployment_operations_governance_and_finops_2_disaster_recovery_dr_multi_region_resiliency"
     },
     {
       "relation": "contains",
@@ -17579,9 +17729,9 @@
       "source_file": "spec/system_design/07_deployment_operations_governance_and_finops.md",
       "source_location": "L225",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_07_deployment_operations_governance_and_finops_layer_7_deployment_strategies_operations_governance_cloud_finops",
-      "target": "system_design_07_deployment_operations_governance_and_finops_3_cloud_finops_cost_optimization",
-      "confidence_score": 1.0
+      "target": "system_design_07_deployment_operations_governance_and_finops_3_cloud_finops_cost_optimization"
     },
     {
       "relation": "contains",
@@ -17589,9 +17739,9 @@
       "source_file": "spec/system_design/07_deployment_operations_governance_and_finops.md",
       "source_location": "L304",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_07_deployment_operations_governance_and_finops_layer_7_deployment_strategies_operations_governance_cloud_finops",
-      "target": "system_design_07_deployment_operations_governance_and_finops_4_governance_compliance_tamper_evident_audit_architecture",
-      "confidence_score": 1.0
+      "target": "system_design_07_deployment_operations_governance_and_finops_4_governance_compliance_tamper_evident_audit_architecture"
     },
     {
       "relation": "contains",
@@ -17599,9 +17749,9 @@
       "source_file": "spec/system_design/07_deployment_operations_governance_and_finops.md",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_07_deployment_operations_governance_and_finops_1_progressive_delivery_zero_downtime_deployment_strategies",
-      "target": "system_design_07_deployment_operations_governance_and_finops_1_1_blue_green_deployments_expand_contract_ddl_lock_starvation_defense",
-      "confidence_score": 1.0
+      "target": "system_design_07_deployment_operations_governance_and_finops_1_1_blue_green_deployments_expand_contract_ddl_lock_starvation_defense"
     },
     {
       "relation": "contains",
@@ -17609,9 +17759,9 @@
       "source_file": "spec/system_design/07_deployment_operations_governance_and_finops.md",
       "source_location": "L64",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_07_deployment_operations_governance_and_finops_1_progressive_delivery_zero_downtime_deployment_strategies",
-      "target": "system_design_07_deployment_operations_governance_and_finops_1_2_canary_deployments_automated_canary_analysis_aca",
-      "confidence_score": 1.0
+      "target": "system_design_07_deployment_operations_governance_and_finops_1_2_canary_deployments_automated_canary_analysis_aca"
     },
     {
       "relation": "contains",
@@ -17619,9 +17769,9 @@
       "source_file": "spec/system_design/07_deployment_operations_governance_and_finops.md",
       "source_location": "L91",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_07_deployment_operations_governance_and_finops_1_progressive_delivery_zero_downtime_deployment_strategies",
-      "target": "system_design_07_deployment_operations_governance_and_finops_1_3_rolling_updates_pod_termination_race_prevention",
-      "confidence_score": 1.0
+      "target": "system_design_07_deployment_operations_governance_and_finops_1_3_rolling_updates_pod_termination_race_prevention"
     },
     {
       "relation": "contains",
@@ -17629,9 +17779,9 @@
       "source_file": "spec/system_design/07_deployment_operations_governance_and_finops.md",
       "source_location": "L121",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_07_deployment_operations_governance_and_finops_1_progressive_delivery_zero_downtime_deployment_strategies",
-      "target": "system_design_07_deployment_operations_governance_and_finops_1_4_shadow_dark_deployments_egress_sandboxing",
-      "confidence_score": 1.0
+      "target": "system_design_07_deployment_operations_governance_and_finops_1_4_shadow_dark_deployments_egress_sandboxing"
     },
     {
       "relation": "contains",
@@ -17639,9 +17789,9 @@
       "source_file": "spec/system_design/07_deployment_operations_governance_and_finops.md",
       "source_location": "L145",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_07_deployment_operations_governance_and_finops_1_progressive_delivery_zero_downtime_deployment_strategies",
-      "target": "system_design_07_deployment_operations_governance_and_finops_1_5_feature_flags_cryptographically_signed_progressive_delivery",
-      "confidence_score": 1.0
+      "target": "system_design_07_deployment_operations_governance_and_finops_1_5_feature_flags_cryptographically_signed_progressive_delivery"
     },
     {
       "relation": "contains",
@@ -17649,9 +17799,9 @@
       "source_file": "spec/system_design/07_deployment_operations_governance_and_finops.md",
       "source_location": "L51",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_07_deployment_operations_governance_and_finops_1_1_blue_green_deployments_expand_contract_ddl_lock_starvation_defense",
-      "target": "system_design_07_deployment_operations_governance_and_finops_ddl_lock_starvation_defense",
-      "confidence_score": 1.0
+      "target": "system_design_07_deployment_operations_governance_and_finops_ddl_lock_starvation_defense"
     },
     {
       "relation": "contains",
@@ -17659,9 +17809,9 @@
       "source_file": "spec/system_design/07_deployment_operations_governance_and_finops.md",
       "source_location": "L39",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_07_deployment_operations_governance_and_finops_1_1_blue_green_deployments_expand_contract_ddl_lock_starvation_defense",
-      "target": "system_design_07_deployment_operations_governance_and_finops_the_expand_contract_database_migration_pattern",
-      "confidence_score": 1.0
+      "target": "system_design_07_deployment_operations_governance_and_finops_the_expand_contract_database_migration_pattern"
     },
     {
       "relation": "contains",
@@ -17669,9 +17819,9 @@
       "source_file": "spec/system_design/07_deployment_operations_governance_and_finops.md",
       "source_location": "L104",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_07_deployment_operations_governance_and_finops_1_3_rolling_updates_pod_termination_race_prevention",
-      "target": "system_design_07_deployment_operations_governance_and_finops_mandatory_pod_3_phase_shutdown_lifecycle",
-      "confidence_score": 1.0
+      "target": "system_design_07_deployment_operations_governance_and_finops_mandatory_pod_3_phase_shutdown_lifecycle"
     },
     {
       "relation": "contains",
@@ -17679,9 +17829,9 @@
       "source_file": "spec/system_design/07_deployment_operations_governance_and_finops.md",
       "source_location": "L101",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_07_deployment_operations_governance_and_finops_1_3_rolling_updates_pod_termination_race_prevention",
-      "target": "system_design_07_deployment_operations_governance_and_finops_pod_termination_race_condition_502_503_http_spikes",
-      "confidence_score": 1.0
+      "target": "system_design_07_deployment_operations_governance_and_finops_pod_termination_race_condition_502_503_http_spikes"
     },
     {
       "relation": "contains",
@@ -17689,9 +17839,9 @@
       "source_file": "spec/system_design/07_deployment_operations_governance_and_finops.md",
       "source_location": "L154",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_07_deployment_operations_governance_and_finops_1_5_feature_flags_cryptographically_signed_progressive_delivery",
-      "target": "system_design_07_deployment_operations_governance_and_finops_a_in_memory_evaluation_siphash_2_4_bucketing",
-      "confidence_score": 1.0
+      "target": "system_design_07_deployment_operations_governance_and_finops_a_in_memory_evaluation_siphash_2_4_bucketing"
     },
     {
       "relation": "contains",
@@ -17699,9 +17849,9 @@
       "source_file": "spec/system_design/07_deployment_operations_governance_and_finops.md",
       "source_location": "L158",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_07_deployment_operations_governance_and_finops_1_5_feature_flags_cryptographically_signed_progressive_delivery",
-      "target": "system_design_07_deployment_operations_governance_and_finops_b_anti_replay_control_plane_compromise_defense",
-      "confidence_score": 1.0
+      "target": "system_design_07_deployment_operations_governance_and_finops_b_anti_replay_control_plane_compromise_defense"
     },
     {
       "relation": "contains",
@@ -17709,9 +17859,9 @@
       "source_file": "spec/system_design/07_deployment_operations_governance_and_finops.md",
       "source_location": "L174",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_07_deployment_operations_governance_and_finops_2_disaster_recovery_dr_multi_region_resiliency",
-      "target": "system_design_07_deployment_operations_governance_and_finops_2_1_the_4_disaster_recovery_tiers",
-      "confidence_score": 1.0
+      "target": "system_design_07_deployment_operations_governance_and_finops_2_1_the_4_disaster_recovery_tiers"
     },
     {
       "relation": "contains",
@@ -17719,9 +17869,9 @@
       "source_file": "spec/system_design/07_deployment_operations_governance_and_finops.md",
       "source_location": "L202",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_07_deployment_operations_governance_and_finops_2_disaster_recovery_dr_multi_region_resiliency",
-      "target": "system_design_07_deployment_operations_governance_and_finops_2_2_multi_region_active_active_quorum_split_brain_prevention",
-      "confidence_score": 1.0
+      "target": "system_design_07_deployment_operations_governance_and_finops_2_2_multi_region_active_active_quorum_split_brain_prevention"
     },
     {
       "relation": "contains",
@@ -17729,9 +17879,9 @@
       "source_file": "spec/system_design/07_deployment_operations_governance_and_finops.md",
       "source_location": "L214",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_07_deployment_operations_governance_and_finops_2_disaster_recovery_dr_multi_region_resiliency",
-      "target": "system_design_07_deployment_operations_governance_and_finops_2_3_automated_ephemeral_sandbox_verification_pipeline",
-      "confidence_score": 1.0
+      "target": "system_design_07_deployment_operations_governance_and_finops_2_3_automated_ephemeral_sandbox_verification_pipeline"
     },
     {
       "relation": "contains",
@@ -17739,9 +17889,9 @@
       "source_file": "spec/system_design/07_deployment_operations_governance_and_finops.md",
       "source_location": "L206",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_07_deployment_operations_governance_and_finops_2_2_multi_region_active_active_quorum_split_brain_prevention",
-      "target": "system_design_07_deployment_operations_governance_and_finops_the_3_node_quorum_invariant",
-      "confidence_score": 1.0
+      "target": "system_design_07_deployment_operations_governance_and_finops_the_3_node_quorum_invariant"
     },
     {
       "relation": "contains",
@@ -17749,9 +17899,9 @@
       "source_file": "spec/system_design/07_deployment_operations_governance_and_finops.md",
       "source_location": "L235",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_07_deployment_operations_governance_and_finops_3_cloud_finops_cost_optimization",
-      "target": "system_design_07_deployment_operations_governance_and_finops_3_1_compute_right_sizing_linux_cgroups_cfs_throttling",
-      "confidence_score": 1.0
+      "target": "system_design_07_deployment_operations_governance_and_finops_3_1_compute_right_sizing_linux_cgroups_cfs_throttling"
     },
     {
       "relation": "contains",
@@ -17759,9 +17909,9 @@
       "source_file": "spec/system_design/07_deployment_operations_governance_and_finops.md",
       "source_location": "L253",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_07_deployment_operations_governance_and_finops_3_cloud_finops_cost_optimization",
-      "target": "system_design_07_deployment_operations_governance_and_finops_3_2_s3_storage_lifecycle_economics_break_even_math",
-      "confidence_score": 1.0
+      "target": "system_design_07_deployment_operations_governance_and_finops_3_2_s3_storage_lifecycle_economics_break_even_math"
     },
     {
       "relation": "contains",
@@ -17769,9 +17919,9 @@
       "source_file": "spec/system_design/07_deployment_operations_governance_and_finops.md",
       "source_location": "L291",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_07_deployment_operations_governance_and_finops_3_cloud_finops_cost_optimization",
-      "target": "system_design_07_deployment_operations_governance_and_finops_3_3_data_transfer_nat_gateway_bypass_architecture",
-      "confidence_score": 1.0
+      "target": "system_design_07_deployment_operations_governance_and_finops_3_3_data_transfer_nat_gateway_bypass_architecture"
     },
     {
       "relation": "contains",
@@ -17779,9 +17929,9 @@
       "source_file": "spec/system_design/07_deployment_operations_governance_and_finops.md",
       "source_location": "L241",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_07_deployment_operations_governance_and_finops_3_1_compute_right_sizing_linux_cgroups_cfs_throttling",
-      "target": "system_design_07_deployment_operations_governance_and_finops_the_multi_threaded_cfs_throttling_cliff",
-      "confidence_score": 1.0
+      "target": "system_design_07_deployment_operations_governance_and_finops_the_multi_threaded_cfs_throttling_cliff"
     },
     {
       "relation": "contains",
@@ -17789,9 +17939,9 @@
       "source_file": "spec/system_design/07_deployment_operations_governance_and_finops.md",
       "source_location": "L265",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_07_deployment_operations_governance_and_finops_3_2_s3_storage_lifecycle_economics_break_even_math",
-      "target": "system_design_07_deployment_operations_governance_and_finops_the_lifecycle_total_cost_equation",
-      "confidence_score": 1.0
+      "target": "system_design_07_deployment_operations_governance_and_finops_the_lifecycle_total_cost_equation"
     },
     {
       "relation": "contains",
@@ -17799,9 +17949,9 @@
       "source_file": "spec/system_design/07_deployment_operations_governance_and_finops.md",
       "source_location": "L270",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_07_deployment_operations_governance_and_finops_3_2_s3_storage_lifecycle_economics_break_even_math",
-      "target": "system_design_07_deployment_operations_governance_and_finops_the_small_object_trap",
-      "confidence_score": 1.0
+      "target": "system_design_07_deployment_operations_governance_and_finops_the_small_object_trap"
     },
     {
       "relation": "contains",
@@ -17809,9 +17959,9 @@
       "source_file": "spec/system_design/07_deployment_operations_governance_and_finops.md",
       "source_location": "L314",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_07_deployment_operations_governance_and_finops_4_governance_compliance_tamper_evident_audit_architecture",
-      "target": "system_design_07_deployment_operations_governance_and_finops_4_1_rfc_6962_merkle_tree_audit_transparency_logs",
-      "confidence_score": 1.0
+      "target": "system_design_07_deployment_operations_governance_and_finops_4_1_rfc_6962_merkle_tree_audit_transparency_logs"
     },
     {
       "relation": "contains",
@@ -17819,9 +17969,9 @@
       "source_file": "spec/system_design/07_deployment_operations_governance_and_finops.md",
       "source_location": "L337",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_07_deployment_operations_governance_and_finops_4_governance_compliance_tamper_evident_audit_architecture",
-      "target": "system_design_07_deployment_operations_governance_and_finops_4_2_s3_object_lock_worm_compliance_mode_root_scp_protection",
-      "confidence_score": 1.0
+      "target": "system_design_07_deployment_operations_governance_and_finops_4_2_s3_object_lock_worm_compliance_mode_root_scp_protection"
     },
     {
       "relation": "contains",
@@ -17829,9 +17979,9 @@
       "source_file": "spec/system_design/07_deployment_operations_governance_and_finops.md",
       "source_location": "L373",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_07_deployment_operations_governance_and_finops_4_governance_compliance_tamper_evident_audit_architecture",
-      "target": "system_design_07_deployment_operations_governance_and_finops_4_3_gdpr_article_17_dual_phase_crypto_shredding_architecture",
-      "confidence_score": 1.0
+      "target": "system_design_07_deployment_operations_governance_and_finops_4_3_gdpr_article_17_dual_phase_crypto_shredding_architecture"
     },
     {
       "relation": "contains",
@@ -17839,9 +17989,9 @@
       "source_file": "spec/system_design/07_deployment_operations_governance_and_finops.md",
       "source_location": "L318",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_07_deployment_operations_governance_and_finops_4_1_rfc_6962_merkle_tree_audit_transparency_logs",
-      "target": "system_design_07_deployment_operations_governance_and_finops_domain_separation_second_preimage_defense",
-      "confidence_score": 1.0
+      "target": "system_design_07_deployment_operations_governance_and_finops_domain_separation_second_preimage_defense"
     },
     {
       "relation": "contains",
@@ -17849,9 +17999,9 @@
       "source_file": "spec/system_design/07_deployment_operations_governance_and_finops.md",
       "source_location": "L323",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_07_deployment_operations_governance_and_finops_4_1_rfc_6962_merkle_tree_audit_transparency_logs",
-      "target": "system_design_07_deployment_operations_governance_and_finops_signed_tree_head_sth",
-      "confidence_score": 1.0
+      "target": "system_design_07_deployment_operations_governance_and_finops_signed_tree_head_sth"
     },
     {
       "relation": "contains",
@@ -17859,9 +18009,9 @@
       "source_file": "spec/system_design/07_deployment_operations_governance_and_finops.md",
       "source_location": "L348",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_07_deployment_operations_governance_and_finops_4_2_s3_object_lock_worm_compliance_mode_root_scp_protection",
-      "target": "system_design_07_deployment_operations_governance_and_finops_root_account_closure_kms_cmk_destruction_bypass_defense",
-      "confidence_score": 1.0
+      "target": "system_design_07_deployment_operations_governance_and_finops_root_account_closure_kms_cmk_destruction_bypass_defense"
     },
     {
       "relation": "contains",
@@ -17869,9 +18019,9 @@
       "source_file": "spec/system_design/07_deployment_operations_governance_and_finops.md",
       "source_location": "L394",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_07_deployment_operations_governance_and_finops_4_3_gdpr_article_17_dual_phase_crypto_shredding_architecture",
-      "target": "system_design_07_deployment_operations_governance_and_finops_a_the_decoupled_key_management_tier_no_backup_paradox",
-      "confidence_score": 1.0
+      "target": "system_design_07_deployment_operations_governance_and_finops_a_the_decoupled_key_management_tier_no_backup_paradox"
     },
     {
       "relation": "contains",
@@ -17879,9 +18029,9 @@
       "source_file": "spec/system_design/07_deployment_operations_governance_and_finops.md",
       "source_location": "L400",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_07_deployment_operations_governance_and_finops_4_3_gdpr_article_17_dual_phase_crypto_shredding_architecture",
-      "target": "system_design_07_deployment_operations_governance_and_finops_b_in_memory_pinning_ephemeral_cache_bounding",
-      "confidence_score": 1.0
+      "target": "system_design_07_deployment_operations_governance_and_finops_b_in_memory_pinning_ephemeral_cache_bounding"
     },
     {
       "relation": "contains",
@@ -17889,8 +18039,38 @@
       "source_file": "spec/system_design/07_deployment_operations_governance_and_finops.md",
       "source_location": "L405",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_07_deployment_operations_governance_and_finops_4_3_gdpr_article_17_dual_phase_crypto_shredding_architecture",
-      "target": "system_design_07_deployment_operations_governance_and_finops_c_dual_phase_erasure_protocol",
+      "target": "system_design_07_deployment_operations_governance_and_finops_c_dual_phase_erasure_protocol"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec/system_design/README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "system_design_readme",
+      "target": "system_design_readme_system_design_specification_suite",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec/system_design/README.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "system_design_readme_system_design_specification_suite",
+      "target": "system_design_readme_navigation_routing_guide",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec/system_design/README.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "system_design_readme_system_design_specification_suite",
+      "target": "system_design_readme_suite_directory",
       "confidence_score": 1.0
     },
     {
@@ -18099,9 +18279,9 @@
       "source_file": "system_design_notes.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_notes",
-      "target": "system_design_notes_production_grade_system_design_reference",
-      "confidence_score": 1.0
+      "target": "system_design_notes_production_grade_system_design_reference"
     },
     {
       "relation": "contains",
@@ -18109,9 +18289,9 @@
       "source_file": "system_design_notes.md",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_notes_production_grade_system_design_reference",
-      "target": "system_design_notes_0_requirements_constraints_do_this_first_always",
-      "confidence_score": 1.0
+      "target": "system_design_notes_0_requirements_constraints_do_this_first_always"
     },
     {
       "relation": "contains",
@@ -18119,9 +18299,9 @@
       "source_file": "system_design_notes.md",
       "source_location": "L132",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_notes_production_grade_system_design_reference",
-      "target": "system_design_notes_10_performance",
-      "confidence_score": 1.0
+      "target": "system_design_notes_10_performance"
     },
     {
       "relation": "contains",
@@ -18129,9 +18309,9 @@
       "source_file": "system_design_notes.md",
       "source_location": "L141",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_notes_production_grade_system_design_reference",
-      "target": "system_design_notes_11_observability",
-      "confidence_score": 1.0
+      "target": "system_design_notes_11_observability"
     },
     {
       "relation": "contains",
@@ -18139,9 +18319,9 @@
       "source_file": "system_design_notes.md",
       "source_location": "L151",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_notes_production_grade_system_design_reference",
-      "target": "system_design_notes_12_deployment_release_missing_entirely_from_original_notes",
-      "confidence_score": 1.0
+      "target": "system_design_notes_12_deployment_release_missing_entirely_from_original_notes"
     },
     {
       "relation": "contains",
@@ -18149,9 +18329,9 @@
       "source_file": "system_design_notes.md",
       "source_location": "L160",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_notes_production_grade_system_design_reference",
-      "target": "system_design_notes_13_storage",
-      "confidence_score": 1.0
+      "target": "system_design_notes_13_storage"
     },
     {
       "relation": "contains",
@@ -18159,9 +18339,9 @@
       "source_file": "system_design_notes.md",
       "source_location": "L169",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_notes_production_grade_system_design_reference",
-      "target": "system_design_notes_14_disaster_recovery",
-      "confidence_score": 1.0
+      "target": "system_design_notes_14_disaster_recovery"
     },
     {
       "relation": "contains",
@@ -18169,9 +18349,9 @@
       "source_file": "system_design_notes.md",
       "source_location": "L178",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_notes_production_grade_system_design_reference",
-      "target": "system_design_notes_15_cost_optimization",
-      "confidence_score": 1.0
+      "target": "system_design_notes_15_cost_optimization"
     },
     {
       "relation": "contains",
@@ -18179,9 +18359,9 @@
       "source_file": "system_design_notes.md",
       "source_location": "L187",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_notes_production_grade_system_design_reference",
-      "target": "system_design_notes_16_governance_compliance_missing_directly_relevant_to_your_interests",
-      "confidence_score": 1.0
+      "target": "system_design_notes_16_governance_compliance_missing_directly_relevant_to_your_interests"
     },
     {
       "relation": "contains",
@@ -18189,9 +18369,9 @@
       "source_file": "system_design_notes.md",
       "source_location": "L196",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_notes_production_grade_system_design_reference",
-      "target": "system_design_notes_17_pre_ship_checklist_condensed",
-      "confidence_score": 1.0
+      "target": "system_design_notes_17_pre_ship_checklist_condensed"
     },
     {
       "relation": "contains",
@@ -18199,9 +18379,9 @@
       "source_file": "system_design_notes.md",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_notes_production_grade_system_design_reference",
-      "target": "system_design_notes_1_architecture_design_patterns",
-      "confidence_score": 1.0
+      "target": "system_design_notes_1_architecture_design_patterns"
     },
     {
       "relation": "contains",
@@ -18209,9 +18389,9 @@
       "source_file": "system_design_notes.md",
       "source_location": "L33",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_notes_production_grade_system_design_reference",
-      "target": "system_design_notes_2_data_layer",
-      "confidence_score": 1.0
+      "target": "system_design_notes_2_data_layer"
     },
     {
       "relation": "contains",
@@ -18219,9 +18399,9 @@
       "source_file": "system_design_notes.md",
       "source_location": "L59",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_notes_production_grade_system_design_reference",
-      "target": "system_design_notes_3_api_layer",
-      "confidence_score": 1.0
+      "target": "system_design_notes_3_api_layer"
     },
     {
       "relation": "contains",
@@ -18229,9 +18409,9 @@
       "source_file": "system_design_notes.md",
       "source_location": "L68",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_notes_production_grade_system_design_reference",
-      "target": "system_design_notes_4_communication_messaging",
-      "confidence_score": 1.0
+      "target": "system_design_notes_4_communication_messaging"
     },
     {
       "relation": "contains",
@@ -18239,9 +18419,9 @@
       "source_file": "system_design_notes.md",
       "source_location": "L78",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_notes_production_grade_system_design_reference",
-      "target": "system_design_notes_5_caching",
-      "confidence_score": 1.0
+      "target": "system_design_notes_5_caching"
     },
     {
       "relation": "contains",
@@ -18249,9 +18429,9 @@
       "source_file": "system_design_notes.md",
       "source_location": "L88",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_notes_production_grade_system_design_reference",
-      "target": "system_design_notes_6_security",
-      "confidence_score": 1.0
+      "target": "system_design_notes_6_security"
     },
     {
       "relation": "contains",
@@ -18259,9 +18439,9 @@
       "source_file": "system_design_notes.md",
       "source_location": "L102",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_notes_production_grade_system_design_reference",
-      "target": "system_design_notes_7_networking_infra",
-      "confidence_score": 1.0
+      "target": "system_design_notes_7_networking_infra"
     },
     {
       "relation": "contains",
@@ -18269,9 +18449,9 @@
       "source_file": "system_design_notes.md",
       "source_location": "L114",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_notes_production_grade_system_design_reference",
-      "target": "system_design_notes_8_scalability",
-      "confidence_score": 1.0
+      "target": "system_design_notes_8_scalability"
     },
     {
       "relation": "contains",
@@ -18279,9 +18459,9 @@
       "source_file": "system_design_notes.md",
       "source_location": "L122",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_notes_production_grade_system_design_reference",
-      "target": "system_design_notes_9_reliability_resilience",
-      "confidence_score": 1.0
+      "target": "system_design_notes_9_reliability_resilience"
     },
     {
       "relation": "contains",
@@ -18289,9 +18469,9 @@
       "source_file": "system_design_notes.md",
       "source_location": "L52",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_notes_2_data_layer",
-      "target": "system_design_notes_consistency",
-      "confidence_score": 1.0
+      "target": "system_design_notes_consistency"
     },
     {
       "relation": "contains",
@@ -18299,9 +18479,9 @@
       "source_file": "system_design_notes.md",
       "source_location": "L40",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_notes_2_data_layer",
-      "target": "system_design_notes_nosql",
-      "confidence_score": 1.0
+      "target": "system_design_notes_nosql"
     },
     {
       "relation": "contains",
@@ -18309,9 +18489,9 @@
       "source_file": "system_design_notes.md",
       "source_location": "L35",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_notes_2_data_layer",
-      "target": "system_design_notes_relational_sql",
-      "confidence_score": 1.0
+      "target": "system_design_notes_relational_sql"
     },
     {
       "relation": "contains",
@@ -18319,11 +18499,11 @@
       "source_file": "system_design_notes.md",
       "source_location": "L46",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "system_design_notes_2_data_layer",
-      "target": "system_design_notes_scaling_the_data_layer",
-      "confidence_score": 1.0
+      "target": "system_design_notes_scaling_the_data_layer"
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "ecbcc59b487c3a7c1eac16ac6a42fa5652a4bfea"
+  "built_at_commit": "60569a6bffc57c68c7d221ae54687b0b0893378c"
 }

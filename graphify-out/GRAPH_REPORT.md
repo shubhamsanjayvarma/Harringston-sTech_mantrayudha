@@ -1,16 +1,16 @@
 # Graph Report - Project_Struct  (2026-09-04)
 
 ## Corpus Check
-- 55 files · ~98,005 words
+- 57 files · ~100,611 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 943 nodes · 888 edges · 62 communities (55 shown, 7 thin omitted)
+- 953 nodes · 896 edges · 58 communities (51 shown, 7 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `ecbcc59b`
+- Built from commit: `60569a6b`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -71,10 +71,6 @@
 - [[_COMMUNITY_Community 55|Community 55]]
 - [[_COMMUNITY_Community 56|Community 56]]
 - [[_COMMUNITY_Community 57|Community 57]]
-- [[_COMMUNITY_Community 58|Community 58]]
-- [[_COMMUNITY_Community 59|Community 59]]
-- [[_COMMUNITY_Community 60|Community 60]]
-- [[_COMMUNITY_Community 61|Community 61]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `Code Review and Quality` - 19 edges
@@ -94,15 +90,15 @@
 ## Import Cycles
 - None detected.
 
-## Communities (62 total, 7 thin omitted)
+## Communities (58 total, 7 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.04
 Nodes (48): 10.1 Service Discovery Architecture, 10.2 DNS Architecture & Step-Down Migration Protocol, 10.3 CDN Cache Directives & Instant Purge Architecture, 10. Network Ingress, Proxies & Traffic Routing, 11.1 Large File Upload Pre-Signed URL Offloading, 11.2 Production Auto-Scaling Signals & Control Loops, 11. Stateless Service Design & Auto-Scaling Dynamics, 1. Executive Distributed Topology (+40 more)
 
 ### Community 1 - "Community 1"
-Cohesion: 0.22
-Nodes (9): 6.1 CAP & PACELC Theorems in Operational Practice, 6.2 The Eight Fallacies of Distributed Computing (Deutsch & Gosling), 6.3 Queueing Theory: Little's Law & Kingman's Formula, 6.4 Scalability Laws: Amdahl's Law vs. Gunther's Universal Scalability Law (USL), 6. Distributed Systems Laws & Theoretical Foundations, Amdahl's Law (Monotonic Speedup), Gunther's Universal Scalability Law (USL - Retrograde Collapse), Kingman's Formula for $G/G/1$ Queues (+1 more)
+Cohesion: 0.33
+Nodes (5): 1. Specification Suite Map, 2. Implementation Plan Phase-to-Document Routing Matrix, 3. Requirement & Technical Keyword Quick-Lookup Table, 4. Agent Execution Guidelines: Anti-Context Bloat Standard, Layer 0: System Design Routing, Implementation Planning & Navigation Guide
 
 ### Community 2 - "Community 2"
 Cohesion: 0.07
@@ -281,47 +277,31 @@ Cohesion: 0.10
 Nodes (19): 1. Executive Observability Topology, 2.1 Multi-Window Multi-Burn-Rate Mathematical Formulation, 2.2 Low-QPS Statistical Guardrails in PromQL, 2. SRE Reliability Metrics & Multi-Burn-Rate Alerting, 3.1 The RED Method (Request-Driven Microservices), 3.2 The USE Method (Resource Utilization & Saturation), 3. Telemetry Architectural Frameworks, 4.1 W3C TraceContext Wire Standard (+11 more)
 
 ### Community 55 - "Community 55"
-Cohesion: 0.18
-Nodes (10): 1. Executive Summary & Foundational Philosophy, 2.1 The Three Cardinal Axioms, 2.2 Secret Management & Cryptographic Standards, 2. Zero-Trust Architecture Core Axioms, 3. Absolute Architectural Must-Haves, 4. Absolute Architectural Must-NOT-Haves, 9.1 The Zero-SPOF Architectural Invariants, 9.2 Production Zero-SPOF Audit Checklist (+2 more)
+Cohesion: 0.05
+Nodes (39): 10.1 Mathematical Definitions & Error Budgets, 10.2 Hop-by-Hop End-to-End Latency Budget Allocation, 10.3 Tail Latency Amplification Law (Dean & Barroso), 10. SRE Reliability Axioms & Latency Budget Allocation, 1. Executive Summary & Foundational Philosophy, 2.1 The Three Cardinal Axioms, 2.2 Secret Management & Cryptographic Standards, 2. Zero-Trust Architecture Core Axioms (+31 more)
 
 ### Community 56 - "Community 56"
-Cohesion: 0.25
-Nodes (8): 8.2 Unified Physical Storage Capacity Formula, 8.3 RAM & Cache Working Set Sizing, 8.4 Network Bandwidth Sizing (Ingress & Egress), 8. Quantitative Back-of-the-Envelope Estimation Framework, A. Daily Active Working Set (DAWS), B. Cache Data Target (Pareto 80/20 Rule), C. Total Production Cache RAM Allocation ($M_{\text{cache}}$), The Unified Physical Storage Formula:
+Cohesion: 0.17
+Nodes (12): 8.1 Traffic & Compute Estimation (QPS, ELU & Burst Math), 8.2 Unified Physical Storage Capacity Formula, 8.3 RAM & Cache Working Set Sizing, 8.4 Network Bandwidth Sizing (Ingress & Egress), 8. Quantitative Back-of-the-Envelope Estimation Framework, A. Baseline Average QPS, A. Daily Active Working Set (DAWS), B. Cache Data Target (Pareto 80/20 Rule) (+4 more)
 
 ### Community 57 - "Community 57"
-Cohesion: 0.33
-Nodes (6): 7.1 SOLID Principles: Operational Code Definitions & Fixes, A. Single Responsibility Principle (SRP), B. Open/Closed Principle (OCP), C. Liskov Substitution Principle (LSP), D. Interface Segregation Principle (ISP), E. Dependency Inversion Principle (DIP)
-
-### Community 58 - "Community 58"
-Cohesion: 0.40
-Nodes (5): 10.1 Mathematical Definitions & Error Budgets, 10.2 Hop-by-Hop End-to-End Latency Budget Allocation, 10.3 Tail Latency Amplification Law (Dean & Barroso), 10. SRE Reliability Axioms & Latency Budget Allocation, The Mathematical Amplification Law:
-
-### Community 59 - "Community 59"
-Cohesion: 0.40
-Nodes (5): 7.2 DRY: True Duplication vs. Incidental Duplication, 7.3 Law of Demeter (LoD) & Command-Query Separation (CQS), 7. Code-Level Engineering Principles, Command-Query Separation (Bertrand Meyer), Law of Demeter: "Tell, Don't Ask"
-
-### Community 60 - "Community 60"
 Cohesion: 0.50
-Nodes (4): 5.1 Liveness Probe Specification, 5.2 Readiness Probe Specification, 5.3 Startup Probe Specification, 5. Health Check Taxonomy & Probe Architecture
-
-### Community 61 - "Community 61"
-Cohesion: 0.50
-Nodes (4): 8.1 Traffic & Compute Estimation (QPS, ELU & Burst Math), A. Baseline Average QPS, B. Read/Write Asymmetry & Equivalent Load Units (ELU), C. Diurnal Cycles & Sub-Second Microburst Bounds
+Nodes (3): Navigation & Routing Guide, Suite Directory, System Design Specification Suite
 
 ## Knowledge Gaps
-- **701 isolated node(s):** `idea-refine.sh script`, `Project Rules`, `graphify`, `Overview`, `When to Use` (+696 more)
+- **707 isolated node(s):** `idea-refine.sh script`, `Project Rules`, `graphify`, `Overview`, `When to Use` (+702 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **7 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Layer 1: Non-Negotiable System Design Rules, Axioms & Principles` connect `Community 55` to `Community 1`, `Community 56`, `Community 58`, `Community 59`, `Community 60`?**
+- **Why does `Layer 1: Non-Negotiable System Design Rules, Axioms & Principles` connect `Community 55` to `Community 56`?**
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
-- **Why does `8. Quantitative Back-of-the-Envelope Estimation Framework` connect `Community 56` to `Community 61`, `Community 55`?**
+- **Why does `8. Quantitative Back-of-the-Envelope Estimation Framework` connect `Community 56` to `Community 55`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **What connects `idea-refine.sh script`, `Project Rules`, `graphify` to the rest of the system?**
-  _701 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _707 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.04081632653061224 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**

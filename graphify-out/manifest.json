@@ -5,8 +5,8 @@
     "semantic_hash": ""
   },
   ".agents/AGENTS.md": {
-    "mtime": 1788497585.199258,
-    "ast_hash": "fb4e70b994ca5a88394f5daf8bda3557",
+    "mtime": 1788538596.4556477,
+    "ast_hash": "3e0cd6a0fc2c2e087f39d09fa2daba5c",
     "semantic_hash": ""
   },
   ".agents/rules/graphify.md": {
@@ -287,6 +287,16 @@
   "system_design_notes.md": {
     "mtime": 1788534021.379889,
     "ast_hash": "c15774df67b6029d33cc2557cbb9c288",
+    "semantic_hash": ""
+  },
+  "spec/system_design/00_system_design_routing_and_navigation_guide.md": {
+    "mtime": 1788538579.0444171,
+    "ast_hash": "1b969de2e1329bd33d9aafa8516578ef",
+    "semantic_hash": ""
+  },
+  "spec/system_design/README.md": {
+    "mtime": 1788538585.2445562,
+    "ast_hash": "6f82ba9b08f3110b0508422499c288d0",
     "semantic_hash": ""
   }
 }
