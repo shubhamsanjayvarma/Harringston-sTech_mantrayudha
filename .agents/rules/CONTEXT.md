@@ -72,8 +72,8 @@ incident_telemetry_records: []
 ---
 
 ## 5. Operational Invariants & Runtime Caveats
-- **Local Rules Isolation:** `.agents/AGENTS.md` is strictly local and must NEVER be pushed to remote (Rule 34).
-- **Universal Specs Immutability:** `spec_universal/` contains the universal baseline and must NEVER be altered during project execution unless explicitly directed by user (Rule 35).
+- **Local Rules Isolation & Physical Guardrail:** `.agents/AGENTS.md` is strictly local and must NEVER be pushed to remote (Rule 34). Commits to it are physically blocked by `.githooks/pre-commit`.
+- **Universal Specs Immutability & Physical Guardrail:** `spec_universal/` contains the universal baseline and must NEVER be altered during project execution unless explicitly directed by user (Rule 35). Commits to it are physically blocked by `.githooks/pre-commit`.
 - **Project Specs Commit Scope:** `spec/` houses project-specific specs/PRDs and is explicitly permitted to be staged, committed, and pushed to the remote repository (Rule 35).
 - **Explicit Authorization for Git Actions:** Never commit, push, or open PRs autonomously without explicit user direction (Rule 28).
 - **Component Wrapper Closures:** Always verify matching closing parentheses `});` when wrapping React components in `memo` or HOCs (Rule 29).
