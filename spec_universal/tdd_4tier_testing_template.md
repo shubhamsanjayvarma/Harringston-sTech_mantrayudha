@@ -36,8 +36,8 @@ Every testing phase MUST follow this exact three-stage workflow without exceptio
 #### Stage 3: Log
 
 - Whenever the agent makes a mistake or encounters an unexpected error during execution:
-  - Log the error in `telemetry/error_log.md` with a description and the exact code or procedure that caused it.
-  - Immediately update the project's `AGENTS.md` (or equivalent rules file) with a new rule describing what to avoid in the future.
+  - Log the error in `.agents/rules/CONTEXT.md` with a description, root cause, and the exact code or procedure that caused it.
+  - Record the preventive remedy and lessons learned in `.agents/rules/CONTEXT.md`.
 - After all testing is complete, update the knowledge graph (`graphify update .` or equivalent).
 - Produce a final report in `spec/` summarizing results.
 
@@ -304,7 +304,7 @@ When starting a testing phase, use the following prompt structure (fill in the b
 final report should be 100% pass without any error.
 
 Testing type: [space-time-complexity | logic | security | qa]
-Refer to: spec/template_testing.md
+Refer to: spec_universal/tdd_4tier_testing_template.md
 ```
 
 ---
@@ -317,7 +317,6 @@ After each testing phase, confirm every item:
 - [ ] Tests were executed milestone-by-milestone in strict order.
 - [ ] Every failure was fixed at the source (no weakened assertions).
 - [ ] Full test suite was run at the end with 0 failures.
-- [ ] All errors encountered by the agent were logged in `telemetry/error_log.md`.
-- [ ] `AGENTS.md` was updated with any new rules learned from mistakes.
+- [ ] All errors encountered by the agent were logged in `.agents/rules/CONTEXT.md` with preventive remedies.
 - [ ] Knowledge graph was updated (`graphify update .` or equivalent).
 - [ ] Final report was written to the appropriate file in `spec/`.

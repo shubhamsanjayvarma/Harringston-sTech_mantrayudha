@@ -1,0 +1,35 @@
+#!/bin/sh
+# ==============================================================================
+# Git Pre-Commit Guardrail Hook
+# Repository: Universal_Project_Boilerplate
+# Enforces: Rule 34 (Local AGENTS.md Isolation) & Rule 35 (spec_universal Immutability)
+# ==============================================================================
+
+# Inspect staged files for protected paths
+BLOCKED_FILES=$(git diff --cached --name-only | grep -E '^(\.agents/AGENTS\.md|spec_universal/)')
+
+if [ -n "$BLOCKED_FILES" ]; then
+  echo ""
+  echo "================================================================================"
+  echo "  COMMIT REJECTED BY AUTOMATED GUARDRAIL"
+  echo "================================================================================"
+  echo "The following files are strictly protected and blocked from being committed:"
+  echo ""
+  echo "$BLOCKED_FILES"
+  echo ""
+  echo "Violations:"
+  echo "  - Rule 34: .agents/AGENTS.md is strictly local and must never be committed."
+  echo "  - Rule 35: spec_universal/ is an immutable universal foundation."
+  echo ""
+  echo "Action Required:"
+  echo "  Unstage the protected files before committing:"
+  echo "    git restore --staged .agents/AGENTS.md"
+  echo "    git restore --staged spec_universal/"
+  echo ""
+  echo "  (Project-specific specifications belong in the 'spec/' folder, which CAN be committed)."
+  echo "================================================================================"
+  echo ""
+  exit 1
+fi
+
+exit 0
