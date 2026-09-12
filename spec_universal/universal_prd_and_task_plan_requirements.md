@@ -1,15 +1,63 @@
-alright now make these-
+# Universal Documentation & Task Plan Requirements
 
-1.the tech stack prd------- stating the exact tech stack for our tool agent-preflight ,and before blinding worting a tech stack do a research that is this tech stack the best in terms of efficiency, perofrmance and speed ,
-example - there can be a btter language the code of teh tool be wriiten in for example rust instead of python etc. and even for the packages manager to use uv instead of pip etc, and even for the evrsion of packages and using the packages only from official sources/libraries etc. all the versions with teh exact name shoudl be mentioned in the tech stack and even the version numbers
+> **Scope & Authority:** This document outlines the universal, project-agnostic requirements for formulating Technical Stack PRDs and Feature Implementation Task Plans. Every software system or tool built within this workspace must adhere to these specifications before writing or touching any code.
 
-2.implemnetation prd- break th eentire monolithic work of creating the whole tool in micro-features oriented plan ,and hence separate task.md file for each plan. THE MOST IMPORTANT IS THE STRUCTURE OF THE TASK PLAN MD FILE-
-    A.the description of what the tool is 
-    B.all teh navigation of teh codebase using grpahify
-    C.the exact tests scripts,pre-comit hooks,ci/cd pipeline steup ,github action setup and evaluations scripts for testing that feature
-    D.update graphify
-    E.the guardrails of what the feature shoudl not be getting the permission of and what specifically that feature should not technical do in teh codebases liek pai calls or endpoinst etc.
-    F. all teh agnet skills you shoudl use while executing that plan
-the detailed explanation of this making the task plan astructure is wriiten in detailed in the AGENTS.md file hence you compulsorily hva eto refer that beofr emaking any plan ,and no code shoudl be touched beofre wrting the plan        
+---
 
+## 1. The Technical Stack PRD Requirements
 
+Before selecting or committing to a technical stack, conduct thorough research to ensure the proposed stack provides optimal efficiency, performance, and speed:
+
+1. **Language & Runtime Selection:**
+   - Objectively evaluate candidates (e.g., Rust vs. Go vs. Python vs. TypeScript) based on compute profile (CPU-bound, I/O-bound, memory constraints).
+   - Never pick a language by habit or default; substantiate the choice with concrete efficiency benchmarks and architectural fit.
+2. **Modern Tooling & Package Management:**
+   - Select high-performance package managers and tooling (e.g., `uv` over `pip`, `pnpm` over `npm`, `cargo` with optimized profiles).
+3. **Official Dependencies & Exact Version Pinning:**
+   - All libraries and packages must originate strictly from official, trusted registries (crates.io, PyPI, npm) — never untrusted forks, mirrors, or typosquats.
+   - Specify the exact package names and pinned version numbers (no loose wildcards).
+4. **Research Validation:**
+   - Follow the template defined in [`spec_universal/tech_stack_prd_template.md`](file:///c:/Project_Struct/spec_universal/tech_stack_prd_template.md).
+
+---
+
+## 2. Implementation PRD & Micro-Feature Task Plan Architecture
+
+Never treat a feature or tool as a monolithic implementation block. Deconstruct the entire deliverable into micro-feature-oriented implementation plans, maintaining dedicated task plan files for each independent milestone or component.
+
+### Mandatory Structure for Every Task Plan
+
+Every task plan (`task.md` or milestone plan) must strictly include the following six core sections:
+
+```yaml
+task_plan_structure:
+  section_a:
+    title: "Tool / Feature Description & Scope"
+    details: "Clear functional overview defining what is being built, user stories, and acceptance boundaries."
+  section_b:
+    title: "Codebase Navigation via Graphify"
+    details: "Query the knowledge graph (graphify query) to identify relevant symbols, dependencies, callers, and existing architectural patterns before writing code."
+  section_c:
+    title: "Automated Verification, Pre-Commit Hooks & CI/CD Setup"
+    details: "Define explicit test scripts across all 4 TDD categories (Complexity, Logic, Integration, STRIDE/OWASP), strict pre-commit hooks, GitHub Actions CI workflows, and automated evaluation scripts."
+  section_d:
+    title: "Knowledge Graph Synchronization"
+    details: "Mandatory step to execute 'graphify update .' upon completing code modifications to keep AST and community graphs current."
+  section_e:
+    title: "Security & Architectural Guardrails"
+    details: "Explicit negative permissions and constraints specifying what the feature must NOT do (e.g., forbidden endpoints, unauthorized external network calls, destructive filesystem operations, prototype pollution risks)."
+  section_f:
+    title: "Mandatory Agent Skill Mapping"
+    details: "Explicitly name and assign the designated available skills from the skills catalog to be activated during execution (e.g., test-driven-development, frontend-ui-engineering, cyber-security-frameworks, performance-optimization)."
+```
+
+---
+
+## 3. Strict Execution Protocol
+
+1. **Refer to Project Rules First:**
+   - Consult [`.agents/AGENTS.md`](file:///c:/Project_Struct/.agents/AGENTS.md) for full procedural rules and guardrails.
+2. **Zero Code Touched Before Approval:**
+   - In accordance with TDD and planning guidelines, do not create, modify, or refactor any source code until the implementation plan has been reviewed and verified.
+3. **4-Tier Testing Compliance:**
+   - All test plans must adhere strictly to [`spec_universal/tdd_4tier_testing_template.md`](file:///c:/Project_Struct/spec_universal/tdd_4tier_testing_template.md).

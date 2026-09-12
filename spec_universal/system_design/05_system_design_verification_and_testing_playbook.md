@@ -1,6 +1,6 @@
 # Layer 5: System Design Verification, Chaos Engineering & Security Playbook
 
-> **Scope & Authority:** This document defines the actionable, automated verification suites, mathematical assertions, chaos engineering drills, and STRIDE/OWASP security test harnesses required to validate systems against the specifications in Layers 1–4. All implementations must achieve a **100% pass rate with zero errors** across all four testing categories defined in `spec/template_testing.md`.
+> **Scope & Authority:** This document defines the actionable, automated verification suites, mathematical assertions, chaos engineering drills, and STRIDE/OWASP security test harnesses required to validate systems against the specifications in Layers 1–4. All implementations must achieve a **100% pass rate with zero errors** across all four testing categories defined in `spec_universal/tdd_4tier_testing_template.md`.
 
 ---
 
@@ -9,7 +9,7 @@
 Every testing and verification cycle must adhere to the three-stage standard:
 1. **Stage 1 (Plan):** Formulate milestone-based assertions with explicit quantitative thresholds and guardrails before running tests.
 2. **Stage 2 (Execute):** Execute milestones in strict sequential order (Complexity $\to$ Logic $\to$ Chaos/Integration $\to$ Security). Fix all failures at the source code before progressing.
-3. **Stage 3 (Log):** Record every unexpected defect in `telemetry/error_log.md`, dynamically update `AGENTS.md` with preventive rules, and update the Graphify knowledge graph (`graphify update .`).
+3. **Stage 3 (Log):** Record every unexpected defect in `.agents/rules/CONTEXT.md`, document preventive context and lessons learned, and update the Graphify knowledge graph (`graphify update .`).
 
 ---
 
@@ -730,6 +730,6 @@ Before marking any system implementation complete:
 - [ ] All Milestone 1, 2 & 3 Logic & Contract tests passed with zero aggregate boundary violations.
 - [ ] All Milestone 1, 2 & 3 Integration & Chaos drills executed with zero cascading failures or thundering herds.
 - [ ] All Milestone 1, 2 & 3 STRIDE & OWASP security exploit attempts passed with zero unauthorized breaches.
-- [ ] Any discovered defects logged in `telemetry/error_log.md` with preventive rules updated in `AGENTS.md`.
+- [ ] Any discovered defects logged in `.agents/rules/CONTEXT.md` with preventive remedies and lessons learned.
 - [ ] Knowledge graph updated via `graphify update .` to reflect verified production architectures.
 
