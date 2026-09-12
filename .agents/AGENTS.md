@@ -80,8 +80,10 @@ These guidelines are working if: fewer unnecessary changes in diffs, fewer rewri
    - **Strict YAML Incident Schema**: Informal tables or vague summaries are strictly forbidden. Every incident entry must adhere to the structured YAML schema (Incident ID, ISO-8601 timestamp, severity level, category taxonomy, exact error signature, triggering operation, underlying mechanism, untested assumption, immediate surgical fix, regression test created, and preventive rule/guardrail).
    - **Centralized Permanent Memory**: `.agents/rules/CONTEXT.md` is the centralized, permanent project memory: you MUST record and maintain the core mechanisms, product philosophy, design DNA, visual standards, and critical operational notes specific to this project within `.agents/rules/CONTEXT.md`. Because it resides in `.agents/rules/`, it is automatically injected into context on every session, ensuring continuous, project-wide awareness without polluting `AGENTS.md`.
 
-10. Pre-Commit Hooks and Automation
-    Whenever possible and structurally applicable, you MUST include a plan and scripts for pre-commit hooks (e.g., using Husky or native Git hooks). These hooks should automate our guardrails, testing, and formatting to ensure no code is permanently committed without passing the established validation and security checks.
+10. Pre-Commit Hooks and Automation (`.githooks/`)
+    The repository includes versioned native Git hooks in `.githooks/` configured via `git config core.hooksPath .githooks`. These hooks automate our guardrails, testing, and formatting to ensure no code is committed without passing validation.
+    - **Physical Immuntability Guard (`.githooks/pre-commit`)**: The pre-commit hook automatically inspects staged files and physically terminates any `git commit` that attempts to modify `.agents/AGENTS.md` (Rule 34) or `spec_universal/` (Rule 35). Project-specific specifications in `spec/` and source code are permitted.
+    - **Initialization Mandate**: Whenever this boilerplate is cloned to start a new project, `git config core.hooksPath .githooks` MUST be active to ensure these physical guardrails are immediately enforced.
 
 11. No Force Commits
     Under absolutely no circumstances should you ever use force commits (e.g., `git commit --no-verify`, `git push --force`) to bypass the pre-commit hooks or automated tests. If a commit is failing, the underlying code or test MUST be fixed before proceeding. If a pre-commit hook fails, you MUST stop, create a clear solving plan to address the failure, and then try again. Bypassing guardrails is strictly forbidden.
@@ -159,13 +161,14 @@ These guidelines are working if: fewer unnecessary changes in diffs, fewer rewri
 33. Strict File Extensions for JSX Test Suites
     When creating or editing test files that render React components or contain JSX elements (e.g. `<Component />`), ALWAYS use the `.tsx` file extension. Using `.ts` causes Vite/oxc parser failures because `<` is treated as a generic type argument.
 
-34. Never Push `.agents/AGENTS.md`
-    Under absolutely no circumstances should `.agents/AGENTS.md` ever be staged, committed, or pushed to the remote repository. It is a strictly local agent instruction file. Always keep all modifications to `.agents/AGENTS.md` confined to your local working directory.
+34. Never Push `.agents/AGENTS.md` (Physically Enforced by Pre-Commit Hook)
+    Under absolutely no circumstances should `.agents/AGENTS.md` ever be staged, committed, or pushed to the remote repository in any project. It is a strictly local agent instruction file. Always keep all modifications to `.agents/AGENTS.md` confined to your local working directory.
+    - **Physical Automated Enforcement**: Any attempt to commit `.agents/AGENTS.md` is automatically and physically rejected with exit code 1 by `.githooks/pre-commit` (configured via `git config core.hooksPath .githooks`).
 
 35. Universal Specifications (`spec_universal/`) vs. Project-Specific Specifications (`spec/`)
     All specifications, PRDs, architecture plans, and task plans must strictly follow this directory separation and lifecycle rule:
-    - **`spec_universal/` (Immutable Foundation)**: Houses universal, project-agnostic architecture guidelines, templates, system design layer specifications (`00_` to `07_`), testing playbooks, and PRD templates. These files are shared standards applicable across all projects. **`spec_universal/` MUST NOT be altered, edited, or modified during the course of any project unless the user specifically and explicitly instructs to do so.**
-    - **`spec/` (Project-Specific & Push-Allowed)**: Reserved strictly for **project-specific** documentation. All PRDs, technical stack specifications, feature implementation task plans, and architecture documents created specifically for this repository must be saved within `spec/`. Unlike `.agents/AGENTS.md` (which is strictly local), documents and artifacts in the `spec/` folder **are allowed to be staged, committed, and pushed** to the repository when authorized.
+    - **`spec_universal/` (Immutable Foundation & Physical Commit Block)**: Houses universal, project-agnostic architecture guidelines, templates, system design layer specifications (`00_` to `07_`), testing playbooks, and PRD templates. These files are shared standards applicable across all projects. **`spec_universal/` MUST NOT be altered, edited, or modified during the course of any project unless the user specifically and explicitly instructs to do so.** Any attempt to commit changes to `spec_universal/` during a project is physically terminated by `.githooks/pre-commit`.
+    - **`spec/` (Project-Specific & Push-Allowed)**: Reserved strictly for **project-specific** documentation. All PRDs, technical stack specifications, feature implementation task plans, and architecture documents created specifically for this repository must be saved within `spec/`. Unlike `.agents/AGENTS.md` and `spec_universal/`, documents and artifacts in the `spec/` folder **are explicitly allowed to be staged, committed, and pushed** to the repository when authorized.
 
 36. Development Lifecycle Phase-to-Spec Routing Matrix, Living Document Duty & Embedded TDD Invariant
     Whenever working on any stage of project development, the agent must NEVER perform speculative reading or dump arbitrary folders into context. Instead, route deterministically using the following specification matrix.
@@ -286,4 +289,36 @@ These guidelines are working if: fewer unnecessary changes in diffs, fewer rewri
         2_full_scope_jsx_and_hook_verification: "Per Rule 30, before pruning any destructured variable or helper, search the complete JSX tree, hooks, and styles to guarantee no remaining runtime references."
         3_abandoned_code_and_scratch_removal: "Remove all temporary console logs, scratch functions, unreached conditional branches, and commented-out experiments."
         4_surgical_boundary: "Touch only your own mess per Rule 3. Do not prune unrelated pre-existing code unless explicitly instructed."
+
+    mandatory_plan_guardrails_block:
+      mandate: "Per Rule 12, EVERY implementation plan document MUST independently and explicitly include its own 'Safety Guardrails & Operational Invariants' section before detailing task breakdowns."
+      required_guardrail_declarations:
+        1_harmful_command_boundaries: "Affirm zero destructive commands (rm -rf, format, DROP TABLE/DATABASE, git push --force per Rule 37)."
+        2_reversibility_and_rollback: "Explicitly formulate a deterministic rollback and recovery procedure for every milestone, schema change, or file refactor."
+        3_vcs_and_git_isolation: "Affirm that all modifications remain strictly confined to the local working directory and will never be committed or pushed without explicit user authorization (Rule 28, 34, 35)."
+        4_immutability_enforcement: "Re-verify that spec_universal/ and .agents/AGENTS.md are untouched and physically blocked by .githooks/pre-commit."
+        5_strict_compiler_and_typing_safety: "Enforce modern JSX TS6133 zero-unused-imports compliance (Rule 23) and .tsx extensions for all JSX test suites (Rule 33)."
     ```
+
+37. Harmful Command Prevention, Non-Negotiable Reversibility & Automated Interceptor Hook (`.agents/hooks.json`)
+    Under absolutely no circumstances should the agent execute destructive, irreversible, or high-risk commands that cause mass filesystem deletion, volume formatting, unconfirmed database drops, or VCS history loss.
+    - **Non-Negotiable Invariant of Reversibility**: Every action, schema migration, or operational script executed by the agent must have a safe, deterministic rollback path. Destructive operations without a zero-downtime recovery or backup plan are strictly prohibited.
+    - **Physical PreToolUse Command Interceptor (`.agents/hooks.json`)**: All calls to `run_command` are automatically intercepted prior to execution by `.agents/scripts/destructive_command_guard.py`. The guard de-obfuscates the input through a 4-phase forensic normalization pipeline (NFKC unicode canonicalization, shell escape stripping, quote coalescing, and flag unbundling) and matches against 6 threat categories:
+      1. *Mass Filesystem Deletion*: `rm -rf /`, `rm -rf ~`, `Remove-Item -Recurse -Force`, `rmdir /s /q`, `del /f /s /q`.
+      2. *Disk & Block Device Destruction*: `mkfs`, `dd if=/dev/...`, `diskpart clean`, `format C:`, `Clear-Disk`.
+      3. *Git Force Destruction*: `git push --force`, `git push -f`, `git push +refspec`, `git push --delete`, `git reset --hard`, `git clean -fdx`, `git branch -D`.
+      4. *Database Drops & Mass Deletes*: `DROP DATABASE`, `DROP TABLE`, `TRUNCATE TABLE`, unconstrained `DELETE FROM` (or `1=1` tautology), `FLUSHALL`/`FLUSHDB`.
+      5. *OS & System Integrity Hijack*: Fork bombs (`:(){ :|:& };:`), forced shutdowns/reboots, terminating critical Windows processes (`lsass`, `csrss`), tampering with BCD or disabling Windows Defender/Firewall.
+      6. *Privilege Escalation & Exfiltration*: Pipe-to-shell (`curl ... | bash`, `irm ... | iex`), encoded PowerShell (`-enc`), `chmod 777 /`, dumping SAM/SYSTEM hives.
+    - **Zero-Bypass Policy**: When a threat pattern is spotted, the hook physically emits `{"decision": "deny"}` with exit code interception, completely terminating the command before shell dispatch.
+
+38. Knowledge Dump Intake & Surgical Merge Protocol (`dump/`)
+    The `dump/` directory serves as a transient inbox for external reference files, rules from other projects (`AGENTS.md`), or architecture playbooks. Whenever files are placed into `dump/`, the agent must process them under the **Surgical Knowledge Merge Protocol**:
+    - **Zero Destruction / Immutability of Existing State**: Never overwrite, alter, or rewrite existing rules in `.agents/AGENTS.md`, `.agents/rules/CONTEXT.md`, or `spec_universal/`. Existing numbering, contracts, and guardrails must remain fully intact.
+    - **Forensic Deduplication**: Rigorously compare incoming content against all existing 37 rules and universal specifications. If a concept (e.g. TDD, pre-commit hooks, zero-trust, git PR workflows) is already covered, REJECT the duplicate.
+    - **High-Value Differential Extraction Only**: Extract ONLY genuinely novel capabilities, unhandled edge-case warnings, or valuable architectural patterns.
+    - **Deterministic Destination Routing**:
+      - New behavioral rules or guardrails $\to$ append incrementally as new numbered rules in `.agents/AGENTS.md`.
+      - Project DNA, runtime quirks, or mistake patterns $\to$ append to `.agents/rules/CONTEXT.md`.
+      - Architecture templates or specifications $\to$ integrate into the appropriate `spec_universal/` document.
+    - **Audit & Clean**: Provide a clear report of what was extracted vs. rejected (and why) before clearing the processed dump file.
