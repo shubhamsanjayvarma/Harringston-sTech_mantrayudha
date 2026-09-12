@@ -1,16 +1,16 @@
 # Graph Report - Project_Struct  (2026-09-12)
 
 ## Corpus Check
-- 61 files · ~108,316 words
+- 65 files · ~110,630 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1029 nodes · 968 edges · 68 communities (60 shown, 8 thin omitted)
+- 1047 nodes · 985 edges · 71 communities (63 shown, 8 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `237b4df4`
+- Built from commit: `582f7427`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -82,6 +82,9 @@
 - [[_COMMUNITY_Community 65|Community 65]]
 - [[_COMMUNITY_Community 66|Community 66]]
 - [[_COMMUNITY_Community 67|Community 67]]
+- [[_COMMUNITY_Community 68|Community 68]]
+- [[_COMMUNITY_Community 69|Community 69]]
+- [[_COMMUNITY_Community 70|Community 70]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `Code Review and Quality` - 19 edges
@@ -101,7 +104,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (68 total, 8 thin omitted)
+## Communities (71 total, 8 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.04
@@ -339,8 +342,20 @@ Nodes (4): 8.1 Traffic & Compute Estimation (QPS, ELU & Burst Math), A. Baseline
 Cohesion: 0.05
 Nodes (39): 1. Executive Summary & Core Rules, 2. The Six-Document System Taxonomy, 3. Document 01: Product Requirements Document (PRD), 4. Document 02: Technical Design Document (TDD / TRD), 5. Document 03: App Flow & State Map, 6. Document 04: UI/UX Design Brief, 7. Document 05: Backend Design & Data Model, 8. Document 06: Engineering Implementation Plan (+31 more)
 
+### Community 68 - "Community 68"
+Cohesion: 0.47
+Nodes (5): evaluate_command(), main(), normalize_command(), De-obfuscates command strings across 4 phases to prevent regex evasion:     Phas, Evaluates command against forensic patterns after normalization.     Returns Ant
+
+### Community 69 - "Community 69"
+Cohesion: 0.50
+Nodes (3): destructive-command-guard, enabled, PreToolUse
+
+### Community 70 - "Community 70"
+Cohesion: 0.25
+Nodes (7): 1. Zero Direct Overwrite & Preservation Invariant, 2. Forensic Deduplication & Overlap Detection, 3. Extraction of High-Value Differentials Only, 4. Deterministic Destination Routing, 5. Automatic Cleanup, Knowledge & Reference Dump Inbox (`dump/`), The Surgical Knowledge Merge Protocol
+
 ## Knowledge Gaps
-- **763 isolated node(s):** `idea-refine.sh script`, `Project Rules`, `1. Product Philosophy & Core Vision`, `2. Core Mechanisms & System Architecture`, `3. Design DNA & Visual / Interaction Standards` (+758 more)
+- **770 isolated node(s):** `enabled`, `PreToolUse`, `idea-refine.sh script`, `Project Rules`, `1. Product Philosophy & Core Vision` (+765 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **8 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -349,15 +364,15 @@ _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Layer 1: Non-Negotiable System Design Rules, Axioms & Principles` connect `Community 55` to `Community 51`, `Community 56`, `Community 59`, `Community 60`, `Community 61`?**
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
-- **What connects `idea-refine.sh script`, `Project Rules`, `1. Product Philosophy & Core Vision` to the rest of the system?**
-  _763 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Why does `7. Code-Level Engineering Principles` connect `Community 60` to `Community 58`, `Community 55`?**
+  _High betweenness centrality (0.001) - this node is a cross-community bridge._
+- **Why does `8. Quantitative Back-of-the-Envelope Estimation Framework` connect `Community 56` to `Community 66`, `Community 55`?**
+  _High betweenness centrality (0.001) - this node is a cross-community bridge._
+- **What connects `enabled`, `PreToolUse`, `De-obfuscates command strings across 4 phases to prevent regex evasion:     Phas` to the rest of the system?**
+  _772 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.04081632653061224 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**
   _Cohesion score 0.06666666666666667 - nodes in this community are weakly interconnected._
 - **Should `Community 3` be split into smaller, more focused modules?**
   _Cohesion score 0.06666666666666667 - nodes in this community are weakly interconnected._
-- **Should `Community 4` be split into smaller, more focused modules?**
-  _Cohesion score 0.06896551724137931 - nodes in this community are weakly interconnected._
-- **Should `Community 5` be split into smaller, more focused modules?**
-  _Cohesion score 0.07407407407407407 - nodes in this community are weakly interconnected._

@@ -5,8 +5,8 @@
     "semantic_hash": ""
   },
   ".agents/AGENTS.md": {
-    "mtime": 1789226871.23261,
-    "ast_hash": "57bf91baf0979106448c20e9b0bb1284",
+    "mtime": 1789232348.9251568,
+    "ast_hash": "8ce4e08432cccbf4d873faedaa5582fe",
     "semantic_hash": ""
   },
   ".agents/rules/graphify.md": {
@@ -230,8 +230,8 @@
     "semantic_hash": ""
   },
   ".agents/rules/CONTEXT.md": {
-    "mtime": 1789226867.7331767,
-    "ast_hash": "2aa7225d4902d0cb20c7ca502582858e",
+    "mtime": 1789232354.8880486,
+    "ast_hash": "d2cde209de7b5804e52ca218450632c2",
     "semantic_hash": ""
   },
   "spec/README.md": {
@@ -322,6 +322,26 @@
   "spec_universal/project_architecture_initialization.md": {
     "mtime": 1789225556.8552225,
     "ast_hash": "fce5c26314a4ae50d0f1f4bf2dca481f",
+    "semantic_hash": ""
+  },
+  ".githooks/pre-commit": {
+    "mtime": 1789230562.5051053,
+    "ast_hash": "5d48154d851b99c5f206011b00e2b42c",
+    "semantic_hash": ""
+  },
+  ".agents/hooks.json": {
+    "mtime": 1789231695.1951091,
+    "ast_hash": "2520f62d74f8dfc54380cf56404e0f03",
+    "semantic_hash": ""
+  },
+  ".agents/scripts/destructive_command_guard.py": {
+    "mtime": 1789231690.037118,
+    "ast_hash": "5bbd38b629d04f57f8e3a4abfd0e29bd",
+    "semantic_hash": ""
+  },
+  "dump/README.md": {
+    "mtime": 1789232340.4576004,
+    "ast_hash": "9d8926280fb696531e7f5efc566fc2a8",
     "semantic_hash": ""
   }
 }

@@ -4,6 +4,106 @@
   "graph": {},
   "nodes": [
     {
+      "label": "hooks.json",
+      "file_type": "code",
+      "source_file": ".agents/hooks.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "agents_hooks",
+      "community": 69,
+      "norm_label": "hooks.json"
+    },
+    {
+      "label": "destructive-command-guard",
+      "file_type": "code",
+      "source_file": ".agents/hooks.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "agents_hooks_destructive_command_guard",
+      "community": 69,
+      "norm_label": "destructive-command-guard"
+    },
+    {
+      "label": "enabled",
+      "file_type": "code",
+      "source_file": ".agents/hooks.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "agents_hooks_destructive_command_guard_enabled",
+      "community": 69,
+      "norm_label": "enabled"
+    },
+    {
+      "label": "PreToolUse",
+      "file_type": "code",
+      "source_file": ".agents/hooks.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "agents_hooks_destructive_command_guard_pretooluse",
+      "community": 69,
+      "norm_label": "pretooluse"
+    },
+    {
+      "label": "destructive_command_guard.py",
+      "file_type": "code",
+      "source_file": ".agents/scripts/destructive_command_guard.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "scripts_destructive_command_guard",
+      "community": 68,
+      "norm_label": "destructive_command_guard.py"
+    },
+    {
+      "label": "normalize_command()",
+      "file_type": "code",
+      "source_file": ".agents/scripts/destructive_command_guard.py",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "scripts_destructive_command_guard_normalize_command",
+      "community": 68,
+      "norm_label": "normalize_command()"
+    },
+    {
+      "label": "evaluate_command()",
+      "file_type": "code",
+      "source_file": ".agents/scripts/destructive_command_guard.py",
+      "source_location": "L257",
+      "_origin": "ast",
+      "id": "scripts_destructive_command_guard_evaluate_command",
+      "community": 68,
+      "norm_label": "evaluate_command()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": ".agents/scripts/destructive_command_guard.py",
+      "source_location": "L292",
+      "_origin": "ast",
+      "id": "scripts_destructive_command_guard_main",
+      "community": 68,
+      "norm_label": "main()"
+    },
+    {
+      "label": "De-obfuscates command strings across 4 phases to prevent regex evasion:     Phas",
+      "file_type": "rationale",
+      "source_file": ".agents/scripts/destructive_command_guard.py",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "scripts_destructive_command_guard_rationale_19",
+      "community": 68,
+      "norm_label": "de-obfuscates command strings across 4 phases to prevent regex evasion:     phas"
+    },
+    {
+      "label": "Evaluates command against forensic patterns after normalization.     Returns Ant",
+      "file_type": "rationale",
+      "source_file": ".agents/scripts/destructive_command_guard.py",
+      "source_location": "L258",
+      "_origin": "ast",
+      "id": "scripts_destructive_command_guard_rationale_258",
+      "community": 68,
+      "norm_label": "evaluates command against forensic patterns after normalization.     returns ant"
+    },
+    {
       "label": "idea-refine.sh",
       "file_type": "code",
       "source_file": ".agents/skills/idea-refine/scripts/idea-refine.sh",
@@ -95,7 +195,7 @@
       "label": "3. Design DNA & Visual / Interaction Standards",
       "file_type": "document",
       "source_file": ".agents/rules/CONTEXT.md",
-      "source_location": "L31",
+      "source_location": "L32",
       "_origin": "ast",
       "id": "rules_context_3_design_dna_visual_interaction_standards",
       "community": 65,
@@ -105,7 +205,7 @@
       "label": "4. Error Log, Incident Telemetry & Root Cause Analyses",
       "file_type": "document",
       "source_file": ".agents/rules/CONTEXT.md",
-      "source_location": "L41",
+      "source_location": "L42",
       "_origin": "ast",
       "id": "rules_context_4_error_log_incident_telemetry_root_cause_analyses",
       "community": 65,
@@ -115,7 +215,7 @@
       "label": "5. Operational Invariants & Runtime Caveats",
       "file_type": "document",
       "source_file": ".agents/rules/CONTEXT.md",
-      "source_location": "L74",
+      "source_location": "L75",
       "_origin": "ast",
       "id": "rules_context_5_operational_invariants_runtime_caveats",
       "community": 65,
@@ -6424,6 +6524,86 @@
     {
       "label": "README.md",
       "file_type": "document",
+      "source_file": "dump/README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "dump_readme",
+      "community": 70,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "Knowledge & Reference Dump Inbox (`dump/`)",
+      "file_type": "document",
+      "source_file": "dump/README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "dump_readme_knowledge_reference_dump_inbox_dump",
+      "community": 70,
+      "norm_label": "knowledge & reference dump inbox (`dump/`)"
+    },
+    {
+      "label": "The Surgical Knowledge Merge Protocol",
+      "file_type": "document",
+      "source_file": "dump/README.md",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "dump_readme_the_surgical_knowledge_merge_protocol",
+      "community": 70,
+      "norm_label": "the surgical knowledge merge protocol"
+    },
+    {
+      "label": "1. Zero Direct Overwrite & Preservation Invariant",
+      "file_type": "document",
+      "source_file": "dump/README.md",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "dump_readme_1_zero_direct_overwrite_preservation_invariant",
+      "community": 70,
+      "norm_label": "1. zero direct overwrite & preservation invariant"
+    },
+    {
+      "label": "2. Forensic Deduplication & Overlap Detection",
+      "file_type": "document",
+      "source_file": "dump/README.md",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "dump_readme_2_forensic_deduplication_overlap_detection",
+      "community": 70,
+      "norm_label": "2. forensic deduplication & overlap detection"
+    },
+    {
+      "label": "3. Extraction of High-Value Differentials Only",
+      "file_type": "document",
+      "source_file": "dump/README.md",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "dump_readme_3_extraction_of_high_value_differentials_only",
+      "community": 70,
+      "norm_label": "3. extraction of high-value differentials only"
+    },
+    {
+      "label": "4. Deterministic Destination Routing",
+      "file_type": "document",
+      "source_file": "dump/README.md",
+      "source_location": "L30",
+      "_origin": "ast",
+      "id": "dump_readme_4_deterministic_destination_routing",
+      "community": 70,
+      "norm_label": "4. deterministic destination routing"
+    },
+    {
+      "label": "5. Automatic Cleanup",
+      "file_type": "document",
+      "source_file": "dump/README.md",
+      "source_location": "L36",
+      "_origin": "ast",
+      "id": "dump_readme_5_automatic_cleanup",
+      "community": 70,
+      "norm_label": "5. automatic cleanup"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
       "source_file": "spec/README.md",
       "source_location": "L1",
       "_origin": "ast",
@@ -10303,6 +10483,108 @@
     }
   ],
   "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/hooks.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_hooks",
+      "target": "agents_hooks_destructive_command_guard"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/hooks.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_hooks_destructive_command_guard",
+      "target": "agents_hooks_destructive_command_guard_enabled"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/hooks.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_hooks_destructive_command_guard",
+      "target": "agents_hooks_destructive_command_guard_pretooluse"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/scripts/destructive_command_guard.py",
+      "source_location": "L257",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_destructive_command_guard",
+      "target": "scripts_destructive_command_guard_evaluate_command"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/scripts/destructive_command_guard.py",
+      "source_location": "L292",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_destructive_command_guard",
+      "target": "scripts_destructive_command_guard_main"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/scripts/destructive_command_guard.py",
+      "source_location": "L18",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_destructive_command_guard",
+      "target": "scripts_destructive_command_guard_normalize_command"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/scripts/destructive_command_guard.py",
+      "source_location": "L263",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_destructive_command_guard_evaluate_command",
+      "target": "scripts_destructive_command_guard_normalize_command"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/scripts/destructive_command_guard.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_destructive_command_guard_rationale_19",
+      "target": "scripts_destructive_command_guard_normalize_command"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/scripts/destructive_command_guard.py",
+      "source_location": "L308",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_destructive_command_guard_main",
+      "target": "scripts_destructive_command_guard_evaluate_command"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/scripts/destructive_command_guard.py",
+      "source_location": "L258",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_destructive_command_guard_rationale_258",
+      "target": "scripts_destructive_command_guard_evaluate_command"
+    },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
@@ -16286,6 +16568,76 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "dump/README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "dump_readme",
+      "target": "dump_readme_knowledge_reference_dump_inbox_dump",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dump/README.md",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "dump_readme_knowledge_reference_dump_inbox_dump",
+      "target": "dump_readme_the_surgical_knowledge_merge_protocol",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dump/README.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "dump_readme_the_surgical_knowledge_merge_protocol",
+      "target": "dump_readme_1_zero_direct_overwrite_preservation_invariant",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dump/README.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "dump_readme_the_surgical_knowledge_merge_protocol",
+      "target": "dump_readme_2_forensic_deduplication_overlap_detection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dump/README.md",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "dump_readme_the_surgical_knowledge_merge_protocol",
+      "target": "dump_readme_3_extraction_of_high_value_differentials_only",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dump/README.md",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "dump_readme_the_surgical_knowledge_merge_protocol",
+      "target": "dump_readme_4_deterministic_destination_routing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dump/README.md",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "dump_readme_the_surgical_knowledge_merge_protocol",
+      "target": "dump_readme_5_automatic_cleanup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "spec/README.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -19985,5 +20337,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "237b4df4f540c5996c5534974168320b329fc3a2"
+  "built_at_commit": "582f742705f847fc6c3269e73dda74fd01b1e76c"
 }
