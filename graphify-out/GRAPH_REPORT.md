@@ -1,16 +1,16 @@
-# Graph Report - Project_Struct  (2026-09-04)
+# Graph Report - Project_Struct  (2026-09-12)
 
 ## Corpus Check
-- 57 files · ~100,611 words
+- 61 files · ~108,316 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 953 nodes · 896 edges · 58 communities (51 shown, 7 thin omitted)
+- 1029 nodes · 968 edges · 68 communities (60 shown, 8 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `60569a6b`
+- Built from commit: `237b4df4`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -65,12 +65,23 @@
 - [[_COMMUNITY_Community 47|Community 47]]
 - [[_COMMUNITY_Community 48|Community 48]]
 - [[_COMMUNITY_Community 49|Community 49]]
+- [[_COMMUNITY_Community 50|Community 50]]
+- [[_COMMUNITY_Community 51|Community 51]]
 - [[_COMMUNITY_Community 52|Community 52]]
 - [[_COMMUNITY_Community 53|Community 53]]
 - [[_COMMUNITY_Community 54|Community 54]]
 - [[_COMMUNITY_Community 55|Community 55]]
 - [[_COMMUNITY_Community 56|Community 56]]
 - [[_COMMUNITY_Community 57|Community 57]]
+- [[_COMMUNITY_Community 58|Community 58]]
+- [[_COMMUNITY_Community 59|Community 59]]
+- [[_COMMUNITY_Community 60|Community 60]]
+- [[_COMMUNITY_Community 61|Community 61]]
+- [[_COMMUNITY_Community 62|Community 62]]
+- [[_COMMUNITY_Community 63|Community 63]]
+- [[_COMMUNITY_Community 65|Community 65]]
+- [[_COMMUNITY_Community 66|Community 66]]
+- [[_COMMUNITY_Community 67|Community 67]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `Code Review and Quality` - 19 edges
@@ -90,7 +101,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (58 total, 7 thin omitted)
+## Communities (68 total, 8 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.04
@@ -173,8 +184,8 @@ Cohesion: 0.10
 Nodes (20): Common Rationalizations, Core Web Vitals Targets, Large Bundle Size, Missing Caching (Backend), Missing Image Optimization (Frontend), N+1 Queries (Backend), Overview, Performance Budget (+12 more)
 
 ### Community 20 - "Community 20"
-Cohesion: 0.10
-Nodes (20): Checklist: Verifying Completeness, General Rules (Apply to ALL Testing Types), Instructions, Instructions, Instructions, Instructions, Objective, Objective (+12 more)
+Cohesion: 0.09
+Nodes (21): 1.1 ePrivacy Directive & Cookie Law (EU / UK), 1.2 GDPR (EU 2016/679) & UK GDPR, 1.3 Digital Personal Data Protection Act 2023 (DPDP - India), 1.4 CCPA / CPRA (California, USA), 1.5 Legal Documentation & Open Source Licensing, 1. Law & Governance, 2. Accessibility (a11y), 3. Progressive Web App (PWA) & Offline Reliability (+13 more)
 
 ### Community 21 - "Community 21"
 Cohesion: 0.08
@@ -201,8 +212,8 @@ Cohesion: 0.12
 Nodes (15): Common Rationalizations, Cross-model escalation, Doubt-Driven Development, Interaction with Other Skills, Loading Constraints, Overview, Red Flags, Step 1: CLAIM — Surface what stands (+7 more)
 
 ### Community 27 - "Community 27"
-Cohesion: 0.12
-Nodes (15): 10. Assumptions & Constraints, 11. Dependencies, 12. Risks & Open Questions, 13. Timeline / Milestones, 14. Appendix, 1. Title & Summary, 2. Problem Statement, 3. Goals & Success Metrics (+7 more)
+Cohesion: 0.10
+Nodes (20): Checklist: Verifying Completeness, General Rules (Apply to ALL Testing Types), Instructions, Instructions, Instructions, Instructions, Objective, Objective (+12 more)
 
 ### Community 28 - "Community 28"
 Cohesion: 0.13
@@ -217,8 +228,8 @@ Cohesion: 0.13
 Nodes (14): 1. Surface Assumptions, 2. Manage Confusion Actively, 3. Push Back When Warranted, 4. Enforce Simplicity, 5. Maintain Scope Discipline, 6. Verify, Don't Assume, Core Operating Behaviors, Failure Modes to Avoid (+6 more)
 
 ### Community 31 - "Community 31"
-Cohesion: 0.14
-Nodes (13): 10. Alternatives Rejected (Decision Log), 11. Open Questions / Risks, 12. Research Log, 1. Overview, 2. Selection Criteria, 3. Research Checklist, 4. Language & Runtime, 5. Package / Dependency Manager (+5 more)
+Cohesion: 0.12
+Nodes (15): 10. Assumptions & Constraints, 11. Dependencies, 12. Risks & Open Questions, 13. Timeline / Milestones, 14. Appendix, 1. Title & Summary, 2. Problem Statement, 3. Goals & Success Metrics (+7 more)
 
 ### Community 32 - "Community 32"
 Cohesion: 0.15
@@ -264,6 +275,14 @@ Nodes (3): For git commit hook, For native CLAUDE.md integration, graphify refer
 Cohesion: 0.50
 Nodes (3): For --cluster-only, For --update (incremental re-extraction), graphify reference: incremental update and cluster-only
 
+### Community 50 - "Community 50"
+Cohesion: 0.14
+Nodes (13): 10. Alternatives Rejected (Decision Log), 11. Open Questions / Risks, 12. Research Log, 1. Overview, 2. Selection Criteria, 3. Research Checklist, 4. Language & Runtime, 5. Package / Dependency Manager (+5 more)
+
+### Community 51 - "Community 51"
+Cohesion: 0.22
+Nodes (9): 6.1 CAP & PACELC Theorems in Operational Practice, 6.2 The Eight Fallacies of Distributed Computing (Deutsch & Gosling), 6.3 Queueing Theory: Little's Law & Kingman's Formula, 6.4 Scalability Laws: Amdahl's Law vs. Gunther's Universal Scalability Law (USL), 6. Distributed Systems Laws & Theoretical Foundations, Amdahl's Law (Monotonic Speedup), Gunther's Universal Scalability Law (USL - Retrograde Collapse), Kingman's Formula for $G/G/1$ Queues (+1 more)
+
 ### Community 52 - "Community 52"
 Cohesion: 0.06
 Nodes (35): 1.1 Blue/Green Deployments & Expand-Contract DDL Lock Starvation Defense, 1.2 Canary Deployments & Automated Canary Analysis (ACA), 1.3 Rolling Updates & Pod Termination Race Prevention, 1.4 Shadow / Dark Deployments & Egress Sandboxing, 1.5 Feature Flags & Cryptographically Signed Progressive Delivery, 1. Progressive Delivery & Zero-Downtime Deployment Strategies, 2.1 The 4 Disaster Recovery Tiers, 2.2 Multi-Region Active-Active Quorum & Split-Brain Prevention (+27 more)
@@ -277,31 +296,61 @@ Cohesion: 0.10
 Nodes (19): 1. Executive Observability Topology, 2.1 Multi-Window Multi-Burn-Rate Mathematical Formulation, 2.2 Low-QPS Statistical Guardrails in PromQL, 2. SRE Reliability Metrics & Multi-Burn-Rate Alerting, 3.1 The RED Method (Request-Driven Microservices), 3.2 The USE Method (Resource Utilization & Saturation), 3. Telemetry Architectural Frameworks, 4.1 W3C TraceContext Wire Standard (+11 more)
 
 ### Community 55 - "Community 55"
-Cohesion: 0.05
-Nodes (39): 10.1 Mathematical Definitions & Error Budgets, 10.2 Hop-by-Hop End-to-End Latency Budget Allocation, 10.3 Tail Latency Amplification Law (Dean & Barroso), 10. SRE Reliability Axioms & Latency Budget Allocation, 1. Executive Summary & Foundational Philosophy, 2.1 The Three Cardinal Axioms, 2.2 Secret Management & Cryptographic Standards, 2. Zero-Trust Architecture Core Axioms (+31 more)
+Cohesion: 0.18
+Nodes (10): 1. Executive Summary & Foundational Philosophy, 2.1 The Three Cardinal Axioms, 2.2 Secret Management & Cryptographic Standards, 2. Zero-Trust Architecture Core Axioms, 3. Absolute Architectural Must-Haves, 4. Absolute Architectural Must-NOT-Haves, 9.1 The Zero-SPOF Architectural Invariants, 9.2 Production Zero-SPOF Audit Checklist (+2 more)
 
 ### Community 56 - "Community 56"
-Cohesion: 0.17
-Nodes (12): 8.1 Traffic & Compute Estimation (QPS, ELU & Burst Math), 8.2 Unified Physical Storage Capacity Formula, 8.3 RAM & Cache Working Set Sizing, 8.4 Network Bandwidth Sizing (Ingress & Egress), 8. Quantitative Back-of-the-Envelope Estimation Framework, A. Baseline Average QPS, A. Daily Active Working Set (DAWS), B. Cache Data Target (Pareto 80/20 Rule) (+4 more)
+Cohesion: 0.25
+Nodes (8): 8.2 Unified Physical Storage Capacity Formula, 8.3 RAM & Cache Working Set Sizing, 8.4 Network Bandwidth Sizing (Ingress & Egress), 8. Quantitative Back-of-the-Envelope Estimation Framework, A. Daily Active Working Set (DAWS), B. Cache Data Target (Pareto 80/20 Rule), C. Total Production Cache RAM Allocation ($M_{\text{cache}}$), The Unified Physical Storage Formula:
 
 ### Community 57 - "Community 57"
 Cohesion: 0.50
 Nodes (3): Navigation & Routing Guide, Suite Directory, System Design Specification Suite
 
+### Community 58 - "Community 58"
+Cohesion: 0.33
+Nodes (6): 7.1 SOLID Principles: Operational Code Definitions & Fixes, A. Single Responsibility Principle (SRP), B. Open/Closed Principle (OCP), C. Liskov Substitution Principle (LSP), D. Interface Segregation Principle (ISP), E. Dependency Inversion Principle (DIP)
+
+### Community 59 - "Community 59"
+Cohesion: 0.40
+Nodes (5): 10.1 Mathematical Definitions & Error Budgets, 10.2 Hop-by-Hop End-to-End Latency Budget Allocation, 10.3 Tail Latency Amplification Law (Dean & Barroso), 10. SRE Reliability Axioms & Latency Budget Allocation, The Mathematical Amplification Law:
+
+### Community 60 - "Community 60"
+Cohesion: 0.40
+Nodes (5): 7.2 DRY: True Duplication vs. Incidental Duplication, 7.3 Law of Demeter (LoD) & Command-Query Separation (CQS), 7. Code-Level Engineering Principles, Command-Query Separation (Bertrand Meyer), Law of Demeter: "Tell, Don't Ask"
+
+### Community 61 - "Community 61"
+Cohesion: 0.50
+Nodes (4): 5.1 Liveness Probe Specification, 5.2 Readiness Probe Specification, 5.3 Startup Probe Specification, 5. Health Check Taxonomy & Probe Architecture
+
+### Community 62 - "Community 62"
+Cohesion: 0.33
+Nodes (5): 1. The Technical Stack PRD Requirements, 2. Implementation PRD & Micro-Feature Task Plan Architecture, 3. Strict Execution Protocol, Mandatory Structure for Every Task Plan, Universal Documentation & Task Plan Requirements
+
+### Community 65 - "Community 65"
+Cohesion: 0.29
+Nodes (6): 1. Product Philosophy & Core Vision, 2. Core Mechanisms & System Architecture, 3. Design DNA & Visual / Interaction Standards, 4. Error Log, Incident Telemetry & Root Cause Analyses, 5. Operational Invariants & Runtime Caveats, Project Context, Core Philosophy, Design DNA & Incident Telemetry
+
+### Community 66 - "Community 66"
+Cohesion: 0.50
+Nodes (4): 8.1 Traffic & Compute Estimation (QPS, ELU & Burst Math), A. Baseline Average QPS, B. Read/Write Asymmetry & Equivalent Load Units (ELU), C. Diurnal Cycles & Sub-Second Microburst Bounds
+
+### Community 67 - "Community 67"
+Cohesion: 0.05
+Nodes (39): 1. Executive Summary & Core Rules, 2. The Six-Document System Taxonomy, 3. Document 01: Product Requirements Document (PRD), 4. Document 02: Technical Design Document (TDD / TRD), 5. Document 03: App Flow & State Map, 6. Document 04: UI/UX Design Brief, 7. Document 05: Backend Design & Data Model, 8. Document 06: Engineering Implementation Plan (+31 more)
+
 ## Knowledge Gaps
-- **707 isolated node(s):** `idea-refine.sh script`, `Project Rules`, `graphify`, `Overview`, `When to Use` (+702 more)
+- **763 isolated node(s):** `idea-refine.sh script`, `Project Rules`, `1. Product Philosophy & Core Vision`, `2. Core Mechanisms & System Architecture`, `3. Design DNA & Visual / Interaction Standards` (+758 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **7 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **8 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Layer 1: Non-Negotiable System Design Rules, Axioms & Principles` connect `Community 55` to `Community 56`?**
+- **Why does `Layer 1: Non-Negotiable System Design Rules, Axioms & Principles` connect `Community 55` to `Community 51`, `Community 56`, `Community 59`, `Community 60`, `Community 61`?**
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
-- **Why does `8. Quantitative Back-of-the-Envelope Estimation Framework` connect `Community 56` to `Community 55`?**
-  _High betweenness centrality (0.001) - this node is a cross-community bridge._
-- **What connects `idea-refine.sh script`, `Project Rules`, `graphify` to the rest of the system?**
-  _707 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `idea-refine.sh script`, `Project Rules`, `1. Product Philosophy & Core Vision` to the rest of the system?**
+  _763 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.04081632653061224 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**
@@ -310,3 +359,5 @@ _Questions this graph is uniquely positioned to answer:_
   _Cohesion score 0.06666666666666667 - nodes in this community are weakly interconnected._
 - **Should `Community 4` be split into smaller, more focused modules?**
   _Cohesion score 0.06896551724137931 - nodes in this community are weakly interconnected._
+- **Should `Community 5` be split into smaller, more focused modules?**
+  _Cohesion score 0.07407407407407407 - nodes in this community are weakly interconnected._

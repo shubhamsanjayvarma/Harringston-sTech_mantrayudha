@@ -5,8 +5,8 @@
     "semantic_hash": ""
   },
   ".agents/AGENTS.md": {
-    "mtime": 1788638234.5509293,
-    "ast_hash": "64ddf60d0c036bcf9a48853ad54f4516",
+    "mtime": 1789226871.23261,
+    "ast_hash": "57bf91baf0979106448c20e9b0bb1284",
     "semantic_hash": ""
   },
   ".agents/rules/graphify.md": {
@@ -219,84 +219,109 @@
     "ast_hash": "e7e050c59116cd007f9ca4addf22cf07",
     "semantic_hash": ""
   },
-  "spec/PRD_Template.md": {
-    "mtime": 1784565733.9444294,
-    "ast_hash": "0c0d783299edec0444a58fc1c0fb4b17",
-    "semantic_hash": ""
-  },
-  "spec/TechStack_PRD_Template.md": {
-    "mtime": 1784991433.2211223,
-    "ast_hash": "97ac9163826d3816175a0e27f31e8f89",
-    "semantic_hash": ""
-  },
-  "spec/doc_req.md": {
-    "mtime": 1784564208.8622577,
-    "ast_hash": "fbc16b31e720e79f094b8ba327d1a3f6",
-    "semantic_hash": ""
-  },
-  "spec/system_design/01_non_negotiable_rules_and_principles.md": {
-    "mtime": 1788535007.3248556,
-    "ast_hash": "a32a3ecdce26f8a30c5df63a33970c94",
-    "semantic_hash": ""
-  },
-  "spec/system_design/02_high_level_design_and_distributed_systems.md": {
-    "mtime": 1788535038.5483716,
-    "ast_hash": "24ed68d6c8b968864d0e6ececb3ca4b3",
-    "semantic_hash": ""
-  },
-  "spec/system_design/03_low_level_design_and_object_oriented_architecture.md": {
-    "mtime": 1788535070.2042606,
-    "ast_hash": "9c4e624e4e2da673208a85a208b9a783",
-    "semantic_hash": ""
-  },
-  "spec/system_design/04_system_archetypes_and_decision_matrices.md": {
-    "mtime": 1788535095.267488,
-    "ast_hash": "4175b1da93ea053aaf94ad401ad080b0",
-    "semantic_hash": ""
-  },
-  "spec/system_design/05_system_design_verification_and_testing_playbook.md": {
-    "mtime": 1788535239.048252,
-    "ast_hash": "8f6ab8fd10e1de258c61c7293357a3f8",
-    "semantic_hash": ""
-  },
-  "spec/template_testing.md": {
-    "mtime": 1784958987.5091424,
-    "ast_hash": "dc4a34fc2680f8ed4216860b4eda2160",
-    "semantic_hash": ""
-  },
-  "spec/the-second-brain-blueprint-how-to-build-the-ai-operating-system-that-runs-a-business (1).md": {
-    "mtime": 1787845477.416257,
-    "ast_hash": "a59dc3b1f9510567034ee92994f0ae96",
-    "semantic_hash": ""
-  },
-  "spec/the-second-brain-blueprint-how-to-build-the-ai-operating-system-that-runs-a-business (1).pdf": {
-    "mtime": 1787727396.2382448,
-    "ast_hash": "77583f05f4773b97d37d67793d0adf2f",
-    "semantic_hash": ""
-  },
-  "spec/system_design/06_observability_telemetry_and_reliability_engineering.md": {
-    "mtime": 1788535130.277577,
-    "ast_hash": "333ee7d0866b6da58eddcf8d04cfcea7",
-    "semantic_hash": ""
-  },
-  "spec/system_design/07_deployment_operations_governance_and_finops.md": {
-    "mtime": 1788535156.6158776,
-    "ast_hash": "36bac149e9b135be39e07e39fa2b5978",
-    "semantic_hash": ""
-  },
   "system_design_notes.md": {
     "mtime": 1788534021.379889,
     "ast_hash": "c15774df67b6029d33cc2557cbb9c288",
     "semantic_hash": ""
   },
-  "spec/system_design/00_system_design_routing_and_navigation_guide.md": {
-    "mtime": 1788538579.0444171,
-    "ast_hash": "1b969de2e1329bd33d9aafa8516578ef",
+  ".agents/rules/context.md": {
+    "mtime": 1789200516.1937573,
+    "ast_hash": "b9ca29d2e8e508e5c4dece5a2ed5738f",
     "semantic_hash": ""
   },
-  "spec/system_design/README.md": {
-    "mtime": 1788538585.2445562,
-    "ast_hash": "6f82ba9b08f3110b0508422499c288d0",
+  ".agents/rules/CONTEXT.md": {
+    "mtime": 1789226867.7331767,
+    "ast_hash": "2aa7225d4902d0cb20c7ca502582858e",
+    "semantic_hash": ""
+  },
+  "spec/README.md": {
+    "mtime": 1789224179.6135974,
+    "ast_hash": "2f7ffc23933fae948f6e6aa216e6eb51",
+    "semantic_hash": ""
+  },
+  "spec_universal/product_requirements_document_template.md": {
+    "mtime": 1784565733.9444294,
+    "ast_hash": "0c0d783299edec0444a58fc1c0fb4b17",
+    "semantic_hash": ""
+  },
+  "spec_universal/production_software_engineering_pillars_and_gap_analysis.md": {
+    "mtime": 1788621750.3606064,
+    "ast_hash": "39a8bbdda490c1137adb61f8169187c0",
+    "semantic_hash": ""
+  },
+  "spec_universal/second_brain_ai_operating_system_blueprint.md": {
+    "mtime": 1787845477.416257,
+    "ast_hash": "a59dc3b1f9510567034ee92994f0ae96",
+    "semantic_hash": ""
+  },
+  "spec_universal/system_design/00_system_design_routing_and_navigation_guide.md": {
+    "mtime": 1789224315.8529155,
+    "ast_hash": "6a76ee555df67cb3882fa52e9deeb968",
+    "semantic_hash": ""
+  },
+  "spec_universal/system_design/01_non_negotiable_rules_and_principles.md": {
+    "mtime": 1788535007.3248556,
+    "ast_hash": "a32a3ecdce26f8a30c5df63a33970c94",
+    "semantic_hash": ""
+  },
+  "spec_universal/system_design/02_high_level_design_and_distributed_systems.md": {
+    "mtime": 1788535038.5483716,
+    "ast_hash": "24ed68d6c8b968864d0e6ececb3ca4b3",
+    "semantic_hash": ""
+  },
+  "spec_universal/system_design/03_low_level_design_and_object_oriented_architecture.md": {
+    "mtime": 1788535070.2042606,
+    "ast_hash": "9c4e624e4e2da673208a85a208b9a783",
+    "semantic_hash": ""
+  },
+  "spec_universal/system_design/04_system_archetypes_and_decision_matrices.md": {
+    "mtime": 1788535095.267488,
+    "ast_hash": "4175b1da93ea053aaf94ad401ad080b0",
+    "semantic_hash": ""
+  },
+  "spec_universal/system_design/05_system_design_verification_and_testing_playbook.md": {
+    "mtime": 1789224255.6073112,
+    "ast_hash": "efdd77ae1bcf48a8de8f646dfa15577b",
+    "semantic_hash": ""
+  },
+  "spec_universal/system_design/06_observability_telemetry_and_reliability_engineering.md": {
+    "mtime": 1788535130.277577,
+    "ast_hash": "333ee7d0866b6da58eddcf8d04cfcea7",
+    "semantic_hash": ""
+  },
+  "spec_universal/system_design/07_deployment_operations_governance_and_finops.md": {
+    "mtime": 1788535156.6158776,
+    "ast_hash": "36bac149e9b135be39e07e39fa2b5978",
+    "semantic_hash": ""
+  },
+  "spec_universal/system_design/README.md": {
+    "mtime": 1789224269.0864902,
+    "ast_hash": "7c560b4ffde7fa93d41eefe2af63b9a1",
+    "semantic_hash": ""
+  },
+  "spec_universal/tdd_4tier_testing_template.md": {
+    "mtime": 1789224247.8416092,
+    "ast_hash": "46a90ef2a46eaffbdf253ddbff141968",
+    "semantic_hash": ""
+  },
+  "spec_universal/tech_stack_prd_template.md": {
+    "mtime": 1784991433.2211223,
+    "ast_hash": "97ac9163826d3816175a0e27f31e8f89",
+    "semantic_hash": ""
+  },
+  "spec_universal/universal_prd_and_task_plan_requirements.md": {
+    "mtime": 1789224238.6168897,
+    "ast_hash": "2bbe16b5a8ddaa27a7f5f0b6f079dc0e",
+    "semantic_hash": ""
+  },
+  "spec_universal/second_brain_ai_operating_system_blueprint.pdf": {
+    "mtime": 1787727396.2382448,
+    "ast_hash": "77583f05f4773b97d37d67793d0adf2f",
+    "semantic_hash": ""
+  },
+  "spec_universal/project_architecture_initialization.md": {
+    "mtime": 1789225556.8552225,
+    "ast_hash": "fce5c26314a4ae50d0f1f4bf2dca481f",
     "semantic_hash": ""
   }
 }
