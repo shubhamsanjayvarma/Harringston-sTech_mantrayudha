@@ -25,6 +25,7 @@
 - **Proactive Living Document Duty (Rule 36):** The agent has an autonomous duty to prepare Anchor documents during initialization and proactively maintain/synchronize Living documents (PRD, ADRs, App Flow, Data Model, Implementation Plans) throughout execution without requiring explicit user prompting.
 - **Embedded Pre-Code TDD Invariant:** TDD is not a separate phase; test harness formulation across all 4 tiers is an embedded pre-requisite gate before any code writing or error remediation.
 - **Mandatory Post-Code Dead Code & Orphan Sweep:** Between writing code and executing test verification, the agent MUST explicitly sweep for and eliminate any dead code, unused imports, orphaned types, or temporary stubs directly or indirectly caused by the changes (skills: `code-simplification`, `code-review-and-quality`).
+- **Mandatory Plan Guardrails Block (Rule 12 & Rule 36):** Every implementation plan must independently state its safety guardrails (reversibility paths, zero harmful commands, local git isolation, and type strictness) before task breakdowns.
 
 ---
 
@@ -79,3 +80,5 @@ incident_telemetry_records: []
 - **Component Wrapper Closures:** Always verify matching closing parentheses `});` when wrapping React components in `memo` or HOCs (Rule 29).
 - **State Scope Verification:** Never prune destructured variables without complete JSX tree reference validation (Rule 30).
 - **Test File Extensions:** JSX test files must strictly use `.tsx` to prevent parser ambiguity (Rule 33).
+- **Automated Harmful Command Interceptor:** Calls to `run_command` are automatically inspected by `.agents/scripts/destructive_command_guard.py` via `.agents/hooks.json` (Rule 37). Destructive operations (mass deletion, raw block format, git force push, drop database) are physically blocked.
+- **Knowledge Dump Intake & Merge Protocol:** External files in `dump/` must be processed via Rule 38 with strict deduplication, zero overwrite of existing rules, and extraction of novel differentials only.
