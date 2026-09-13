@@ -4,28 +4,66 @@
 
 ---
 
+## 0. Active Hackathon Ground Truth & Anti-Drift Context (Injected)
+> **Permanent Operational Memory:** When Phase 1 Milestone 0 completes hackathon reconnaissance (reading PDFs/portal), the agent writes the active competition parameters below. Because this file is located in `.agents/rules/`, these constraints are permanently injected across every turn and cannot be forgotten.
+
+```yaml
+active_hackathon_context:
+  status: "INITIALIZING / RECONNAISSANCE"
+  hackathon_name: "TBD (Populated during Phase 1 Milestone 0)"
+  competition_tier: "STANDARD | ELITE_INSTITUTIONAL"
+  submission_deadline_iso: "TBD"
+  primary_track_or_problem: "TBD"
+  judging_rubric_weights:
+    innovation_and_wedge: "TBD"
+    technical_depth: "TBD"
+    demo_and_polish: "TBD"
+    track_alignment: "TBD"
+  mandatory_sponsor_tech_to_integrate:
+    - sponsor: "TBD"
+      required_sdk: "TBD"
+      target_bounty: "TBD"
+  non_negotiable_constraints:
+    - "Must be greenfield (built during the event)"
+    - "All code committed to public GitHub"
+  elite_intelligence:
+    status: "NOT_APPLICABLE | ACTIVE_AUDIT"
+    target_jury_archetype: "ACADEMIC | STATUTORY_PSU | ENTERPRISE_ARCHITECT | VC_COMMERCIAL"
+    audited_past_winner_count: 0
+    enforced_winning_patterns: []
+    prohibited_fatal_traps: []
+    round_by_round_delta_log: []
+```
+
+---
+
 ## 1. Product Philosophy & Core Vision
-- **Product Identity:** Universal, robust, production-grade software foundation engineered for uncompromising reliability, security, and velocity.
+- **Product Identity:** The High-Velocity Hackathon & Venture Build Operating System, engineered to autonomously discover real user pain, dismantle incumbents, build high-performance MVPs via the Golden Demo Path, and win competitions through flawless live demos.
 - **Guiding Principles:**
-  - *Zero Speculative Bloat:* Minimum code to solve the verified requirement; reject unrequested abstractions.
-  - *Empirical Verification Over Assumption:* Every architectural claim, performance bound, and functional flow must be provable via automated tests.
-  - *Defensive Engineering by Default:* Zero-Trust input boundaries, strict typed contracts, and secure session management.
+  - *The Golden Demo Path Razor:* If a feature is not on the 2-minute judge path, it is strictly banned from being built.
+  - *Sentiment Arbitrage:* Every product wedge must trace to verifiable 1-star to 3-star user complaints from G2, Reddit, or Trustpilot.
+  - *Zero Speculative Bloat:* Mandatory mocking of commodity layers (auth, billing); maximum velocity on the differentiating core.
+  - *Defensive Engineering by Default:* Zero-Trust input boundaries, offline fallback caches, and automated destructive command interception.
 
 ---
 
 ## 2. Core Mechanisms & System Architecture
-- **Layered System Design Hierarchy:** 7-layer architecture codified under `spec_universal/system_design/` (routed via `00_system_design_routing_and_navigation_guide.md`).
+- **The 7-Phase Hackathon Pipeline (`spec_universal/hackathon_pipeline/`):**
+  1. *Idea Discovery & Scoring (`01_`)*: Parallel 4-subagent research (YC/a16z/Reddit/VCs) with 9-parameter matrix.
+  2. *Competitor Teardown & Sentiment Mining (`02_`)*: Incumbent audit, 1-3 star review scraping, and flaw inversion.
+  3. *MVP Scoping & Demo Razor (`03_`)*: 12h/24h/48h brackets, Golden Path razor, P0/P1/P2 triaging, and offline shields.
+  4. *Lean 7-Layer Architecture (`04_`)*: Consolidated PRD, BaaS decisions, typed API contracts, and FSM state models.
+  5. *Rapid UI Scaffolding (`05_`)*: 21st.dev component assembly, dark mode DNA, and the "⚡ Load Judge Demo" preset.
+  6. *Lean 4-Tier TDD & Security (`06_`)*: $<30s test suites across execution bounds, logic, UI, and STRIDE input fuzzing.
+  7. *Demo Pitch & Judge Proofing (`07_`)*: 3-minute pitch formula and tri-layer fail-safe shields (JSON fallback, demo mode, 60fps video backup).
+- **Layered System Design Hierarchy:** Universal 7-layer architecture codified under `spec_universal/system_design/`.
 - **Knowledge Graph as Ground Truth:** AST-based code understanding via Graphify (`graphify-out/`). Always queried before reading raw source code, and refreshed with `graphify update .` post-implementation.
-- **Strict 4-Tier Testing Pipeline:** All features and refactors must clear:
-  1. Space & Time Complexity Testing (Big-O scaling & performance bounds).
-  2. Logic & State Transition Testing.
-  3. UI, Contract & Integration Chaos Drills.
-  4. STRIDE / OWASP Top 10 Security & Sandbox Attack Scenarios.
-- **Specification Governance:** Universal requirements and system design specifications are codified under `spec_universal/` and are strictly **immutable** during project execution unless explicitly requested. Project-specific PRDs, architecture docs, and task plans reside in `spec/` and are **allowed to be pushed** to the repository (Rule 35).
-- **Proactive Living Document Duty (Rule 36):** The agent has an autonomous duty to prepare Anchor documents during initialization and proactively maintain/synchronize Living documents (PRD, ADRs, App Flow, Data Model, Implementation Plans) throughout execution without requiring explicit user prompting.
-- **Embedded Pre-Code TDD Invariant:** TDD is not a separate phase; test harness formulation across all 4 tiers is an embedded pre-requisite gate before any code writing or error remediation.
-- **Mandatory Post-Code Dead Code & Orphan Sweep:** Between writing code and executing test verification, the agent MUST explicitly sweep for and eliminate any dead code, unused imports, orphaned types, or temporary stubs directly or indirectly caused by the changes (skills: `code-simplification`, `code-review-and-quality`).
-- **Mandatory Plan Guardrails Block (Rule 12 & Rule 36):** Every implementation plan must independently state its safety guardrails (reversibility paths, zero harmful commands, local git isolation, and type strictness) before task breakdowns.
+- **Strict 4-Tier Testing Pipeline:** Space/Time bounds, Functional Logic, UI/Integration, and STRIDE/OWASP Top 10.
+- **Specification Governance:** Reusable framework templates reside in `spec_universal/`. Active hackathon artifacts reside in `spec/` and can be pushed (Rule 35).
+- **Proactive Living Document Duty (Rule 36):** Autonomous preparation and maintenance of living specs without user prompting.
+- **Harmful Command Prevention Hook (Rule 37):** Physical interceptor `.agents/scripts/destructive_command_guard.py` active via `.agents/hooks.json`.
+- **Knowledge Dump Intake (Rule 38):** Surgical intake and deduplication protocol via `dump/`.
+- **Hackathon Speedrun Execution (Rule 39):** Mandatory execution through the 7-phase hackathon pipeline.
 
 ---
 
