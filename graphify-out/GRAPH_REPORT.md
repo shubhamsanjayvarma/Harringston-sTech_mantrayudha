@@ -1,7 +1,7 @@
-# Graph Report - Project_Struct  (2026-09-12)
+# Graph Report - Project_Struct  (2026-09-13)
 
 ## Corpus Check
-- 65 files · ~110,630 words
+- 65 files · ~110,856 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `582f7427`
+- Built from commit: `8013bdd9`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -344,7 +344,7 @@ Nodes (39): 1. Executive Summary & Core Rules, 2. The Six-Document System Taxono
 
 ### Community 68 - "Community 68"
 Cohesion: 0.47
-Nodes (5): evaluate_command(), main(), normalize_command(), De-obfuscates command strings across 4 phases to prevent regex evasion:     Phas, Evaluates command against forensic patterns after normalization.     Returns Ant
+Nodes (5): evaluate_command(), main(), normalize_command(), De-obfuscates command strings across 4 phases to prevent regex evasion:     Pha, Evaluates command against forensic patterns after normalization.     Returns An
 
 ### Community 69 - "Community 69"
 Cohesion: 0.50
@@ -368,7 +368,7 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **Why does `8. Quantitative Back-of-the-Envelope Estimation Framework` connect `Community 56` to `Community 66`, `Community 55`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
-- **What connects `enabled`, `PreToolUse`, `De-obfuscates command strings across 4 phases to prevent regex evasion:     Phas` to the rest of the system?**
+- **What connects `enabled`, `PreToolUse`, `De-obfuscates command strings across 4 phases to prevent regex evasion:     Pha` to the rest of the system?**
   _772 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.04081632653061224 - nodes in this community are weakly interconnected._

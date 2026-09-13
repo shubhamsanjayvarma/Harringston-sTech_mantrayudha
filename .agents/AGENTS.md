@@ -59,11 +59,37 @@ These guidelines are working if: fewer unnecessary changes in diffs, fewer rewri
 - Every implementation plan MUST explicitly start the search phase with Graphify.
 - At the end of implementation, when changes are made, the plan MUST explicitly mention updating the Graphify knowledge graph.
 
-6. Specifications Format
-   All specs must ONLY use the `.md` extension and the file structure when cross 3rd degree nesting should be then made into yaml format.
+6. Mandatory Hybrid YAML Architecture for Specifications & Plans
+   All specifications, architectural blueprints, task plans, and execution workflows MUST strictly adhere to the **Hybrid YAML Standard** within `.md` files:
+   - **Markdown Envelope (`.md`)**: Use standard `#` and `##` headings purely for high-level visual navigation, titles, and section boundaries.
+   - **Zero Prose Bloat**: Long conversational paragraphs, rambling narrative explanations, and unstructured bulleted essays are STRICTLY FORBIDDEN for operational instructions. Limit prose to a maximum of 1–2 sentence contextual summaries per section.
+   - **Strict Fenced YAML Blocks (` ```yaml `) for All Operational Substance**: ALL milestone procedures, execution sequences, feature breakdowns, API contracts, domain state machines, scoring rubrics, and guardrail checklists MUST be written in syntax-valid, structured YAML code blocks.
+   - **Mandatory Milestone YAML Schema**: Every milestone across all planning and specification documents must strictly conform to this keyed structure:
+     ```yaml
+     milestone_id: "M[Index]_[Descriptor]"
+     phase_name: "Actionable Phase Name"
+     objective: "Clear, verifiable definition of done in 1 sentence"
+     designated_skills:
+       - "exact-skill-name-1"
+       - "exact-skill-name-2"
+     input_contracts:
+       prerequisite_files:
+         - "spec/path/to/input.md"
+       required_context: "Required environmental state or prior outputs"
+     autonomous_execution_steps:
+       1_step_action: "Deterministic, unambiguous instruction"
+       2_step_action: "Deterministic, unambiguous instruction"
+     output_artifacts:
+       primary_target: "spec/path/to/output.md"
+       schema_definition: "Explicit YAML schema of the generated output"
+     validation_gate:
+       exit_criteria:
+         - "Objective, verifiable condition 1"
+         - "Objective, verifiable condition 2"
+     ```
 
-7. Structure and Features Detailing
-   During the detailed explanation of features and when creating structures, ALWAYS use YAML instead of JSON.
+7. Strict YAML Primacy for Data Modeling, Structures & Incident Records
+   During the detailed explanation of features, structures, system state machines, telemetry, and error logging, ALWAYS use YAML instead of JSON (except where JSON is strictly required by third-party tool contracts, such as `hooks.json` or `package.json`). JSON for human/agent operational specifications is strictly prohibited.
 
 8. Strict Test-Driven Development (TDD), Testing Template & Security
    Before writing, changing, or touching even a single line of code, you MUST create a proper plan for implementation.
@@ -161,9 +187,9 @@ These guidelines are working if: fewer unnecessary changes in diffs, fewer rewri
 33. Strict File Extensions for JSX Test Suites
     When creating or editing test files that render React components or contain JSX elements (e.g. `<Component />`), ALWAYS use the `.tsx` file extension. Using `.ts` causes Vite/oxc parser failures because `<` is treated as a generic type argument.
 
-34. Never Push `.agents/AGENTS.md` (Physically Enforced by Pre-Commit Hook)
-    Under absolutely no circumstances should `.agents/AGENTS.md` ever be staged, committed, or pushed to the remote repository in any project. It is a strictly local agent instruction file. Always keep all modifications to `.agents/AGENTS.md` confined to your local working directory.
-    - **Physical Automated Enforcement**: Any attempt to commit `.agents/AGENTS.md` is automatically and physically rejected with exit code 1 by `.githooks/pre-commit` (configured via `git config core.hooksPath .githooks`).
+34. Master Boilerplate AGENTS.md vs Downstream Cloned Project Isolation
+    In this master boilerplate repository (`Universal_Project_Boilerplate`), `.agents/AGENTS.md` is versioned and maintained on `main` as the authoritative agent operating system, guaranteeing that whenever this repository is cloned into a new project (`git clone`), the cloned workspace inherits the full 38-rule architecture and automated safety hooks out of the box.
+    - **Downstream Cloned Isolation**: Once cloned to start a specific product or application, `.agents/AGENTS.md` should remain confined to the local workspace to avoid polluting downstream product codebases, unless explicitly updating the master boilerplate standard itself.
 
 35. Universal Specifications (`spec_universal/`) vs. Project-Specific Specifications (`spec/`)
     All specifications, PRDs, architecture plans, and task plans must strictly follow this directory separation and lifecycle rule:
