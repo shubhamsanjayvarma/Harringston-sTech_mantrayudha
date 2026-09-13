@@ -84,24 +84,24 @@
       "norm_label": "main()"
     },
     {
-      "label": "De-obfuscates command strings across 4 phases to prevent regex evasion:     Phas",
+      "label": "De-obfuscates command strings across 4 phases to prevent regex evasion:     Pha",
       "file_type": "rationale",
       "source_file": ".agents/scripts/destructive_command_guard.py",
       "source_location": "L19",
       "_origin": "ast",
       "id": "scripts_destructive_command_guard_rationale_19",
       "community": 68,
-      "norm_label": "de-obfuscates command strings across 4 phases to prevent regex evasion:     phas"
+      "norm_label": "de-obfuscates command strings across 4 phases to prevent regex evasion:     pha"
     },
     {
-      "label": "Evaluates command against forensic patterns after normalization.     Returns Ant",
+      "label": "Evaluates command against forensic patterns after normalization.     Returns An",
       "file_type": "rationale",
       "source_file": ".agents/scripts/destructive_command_guard.py",
       "source_location": "L258",
       "_origin": "ast",
       "id": "scripts_destructive_command_guard_rationale_258",
       "community": 68,
-      "norm_label": "evaluates command against forensic patterns after normalization.     returns ant"
+      "norm_label": "evaluates command against forensic patterns after normalization.     returns an"
     },
     {
       "label": "idea-refine.sh",
@@ -127,7 +127,7 @@
         "kind": "bash_entrypoint"
       },
       "_origin": "ast",
-      "id": "c_project_struct_agents_skills_idea_refine_scripts_idea_refine_sh__entry",
+      "id": "c_project_hackathon_hackathon_boilerplate_agents_skills_idea_refine_scripts_idea_refine_sh__entry",
       "community": 46,
       "norm_label": "idea-refine.sh script"
     },
@@ -172,10 +172,20 @@
       "norm_label": "project context, core philosophy, design dna & incident telemetry"
     },
     {
-      "label": "1. Product Philosophy & Core Vision",
+      "label": "0. Active Hackathon Ground Truth & Anti-Drift Context (Injected)",
       "file_type": "document",
       "source_file": ".agents/rules/CONTEXT.md",
       "source_location": "L7",
+      "_origin": "ast",
+      "id": "rules_context_0_active_hackathon_ground_truth_anti_drift_context_injected",
+      "community": 65,
+      "norm_label": "0. active hackathon ground truth & anti-drift context (injected)"
+    },
+    {
+      "label": "1. Product Philosophy & Core Vision",
+      "file_type": "document",
+      "source_file": ".agents/rules/CONTEXT.md",
+      "source_location": "L40",
       "_origin": "ast",
       "id": "rules_context_1_product_philosophy_core_vision",
       "community": 65,
@@ -185,7 +195,7 @@
       "label": "2. Core Mechanisms & System Architecture",
       "file_type": "document",
       "source_file": ".agents/rules/CONTEXT.md",
-      "source_location": "L16",
+      "source_location": "L50",
       "_origin": "ast",
       "id": "rules_context_2_core_mechanisms_system_architecture",
       "community": 65,
@@ -195,7 +205,7 @@
       "label": "3. Design DNA & Visual / Interaction Standards",
       "file_type": "document",
       "source_file": ".agents/rules/CONTEXT.md",
-      "source_location": "L32",
+      "source_location": "L70",
       "_origin": "ast",
       "id": "rules_context_3_design_dna_visual_interaction_standards",
       "community": 65,
@@ -205,7 +215,7 @@
       "label": "4. Error Log, Incident Telemetry & Root Cause Analyses",
       "file_type": "document",
       "source_file": ".agents/rules/CONTEXT.md",
-      "source_location": "L42",
+      "source_location": "L80",
       "_origin": "ast",
       "id": "rules_context_4_error_log_incident_telemetry_root_cause_analyses",
       "community": 65,
@@ -215,7 +225,7 @@
       "label": "5. Operational Invariants & Runtime Caveats",
       "file_type": "document",
       "source_file": ".agents/rules/CONTEXT.md",
-      "source_location": "L75",
+      "source_location": "L113",
       "_origin": "ast",
       "id": "rules_context_5_operational_invariants_runtime_caveats",
       "community": 65,
@@ -6432,6 +6442,76 @@
       "norm_label": "workflow: graphify"
     },
     {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "readme",
+      "community": 78,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "\ud83c\udfc6 Hackathon_Boilerplate",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "readme_hackathon_boilerplate",
+      "community": 78,
+      "norm_label": "\ud83c\udfc6 hackathon_boilerplate"
+    },
+    {
+      "label": "\u26a1 Overview & Philosophy",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "readme_overview_philosophy",
+      "community": 78,
+      "norm_label": "\u26a1 overview & philosophy"
+    },
+    {
+      "label": "\ud83d\udcc2 The 7-Phase Hackathon Pipeline",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "readme_the_7_phase_hackathon_pipeline",
+      "community": 78,
+      "norm_label": "\ud83d\udcc2 the 7-phase hackathon pipeline"
+    },
+    {
+      "label": "\u23f1\ufe0f Time-Budget Brackets",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L41",
+      "_origin": "ast",
+      "id": "readme_time_budget_brackets",
+      "community": 78,
+      "norm_label": "\u23f1\ufe0f time-budget brackets"
+    },
+    {
+      "label": "\ud83d\udee1\ufe0f Non-Negotiable Operational Invariants",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L63",
+      "_origin": "ast",
+      "id": "readme_non_negotiable_operational_invariants",
+      "community": 78,
+      "norm_label": "\ud83d\udee1\ufe0f non-negotiable operational invariants"
+    },
+    {
+      "label": "\ud83d\ude80 Quickstart: Starting a New Hackathon",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L73",
+      "_origin": "ast",
+      "id": "readme_quickstart_starting_a_new_hackathon",
+      "community": 78,
+      "norm_label": "\ud83d\ude80 quickstart: starting a new hackathon"
+    },
+    {
       "label": "discovery-agent-spec.md",
       "file_type": "document",
       "source_file": "discovery-agent-spec.md",
@@ -6620,6 +6700,876 @@
       "id": "spec_readme_project_specifications_spec",
       "community": 63,
       "norm_label": "project specifications (`spec/`)"
+    },
+    {
+      "label": "00_master_hackathon_operating_system.md",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/00_master_hackathon_operating_system.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_00_master_hackathon_operating_system",
+      "community": 79,
+      "norm_label": "00_master_hackathon_operating_system.md"
+    },
+    {
+      "label": "Master Hackathon Operating System & Speedrun Protocol",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/00_master_hackathon_operating_system.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_00_master_hackathon_operating_system_master_hackathon_operating_system_speedrun_protocol",
+      "community": 79,
+      "norm_label": "master hackathon operating system & speedrun protocol"
+    },
+    {
+      "label": "\u26a1 The 7-Phase Hackathon Operating Pipeline",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/00_master_hackathon_operating_system.md",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_00_master_hackathon_operating_system_the_7_phase_hackathon_operating_pipeline",
+      "community": 79,
+      "norm_label": "\u26a1 the 7-phase hackathon operating pipeline"
+    },
+    {
+      "label": "\ud83e\udded Time-Budget Brackets & Execution Velocity",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/00_master_hackathon_operating_system.md",
+      "source_location": "L78",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_00_master_hackathon_operating_system_time_budget_brackets_execution_velocity",
+      "community": 79,
+      "norm_label": "\ud83e\udded time-budget brackets & execution velocity"
+    },
+    {
+      "label": "\ud83d\udee1\ufe0f Non-Negotiable Operational Invariants",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/00_master_hackathon_operating_system.md",
+      "source_location": "L103",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_00_master_hackathon_operating_system_non_negotiable_operational_invariants",
+      "community": 79,
+      "norm_label": "\ud83d\udee1\ufe0f non-negotiable operational invariants"
+    },
+    {
+      "label": "01_idea_discovery_and_scoring.md",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/01_idea_discovery_and_scoring.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_01_idea_discovery_and_scoring",
+      "community": 72,
+      "norm_label": "01_idea_discovery_and_scoring.md"
+    },
+    {
+      "label": "Phase 1: Idea Discovery, Validation & Scoring Specification",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/01_idea_discovery_and_scoring.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_01_idea_discovery_and_scoring_phase_1_idea_discovery_validation_scoring_specification",
+      "community": 72,
+      "norm_label": "phase 1: idea discovery, validation & scoring specification"
+    },
+    {
+      "label": "\ud83c\udfaf Objective & Intake Modes",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/01_idea_discovery_and_scoring.md",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_01_idea_discovery_and_scoring_objective_intake_modes",
+      "community": 72,
+      "norm_label": "\ud83c\udfaf objective & intake modes"
+    },
+    {
+      "label": "\ud83d\udccb Milestone Execution Contracts (Strict Hybrid YAML)",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/01_idea_discovery_and_scoring.md",
+      "source_location": "L43",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_01_idea_discovery_and_scoring_milestone_execution_contracts_strict_hybrid_yaml",
+      "community": 72,
+      "norm_label": "\ud83d\udccb milestone execution contracts (strict hybrid yaml)"
+    },
+    {
+      "label": "Milestone 0: Hackathon Reconnaissance & Anti-Drift Context Lock",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/01_idea_discovery_and_scoring.md",
+      "source_location": "L45",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_01_idea_discovery_and_scoring_milestone_0_hackathon_reconnaissance_anti_drift_context_lock",
+      "community": 72,
+      "norm_label": "milestone 0: hackathon reconnaissance & anti-drift context lock"
+    },
+    {
+      "label": "Milestone 0.5: Elite-Tier Historical Hackathon Intelligence & Past Winner Forensic Audit",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/01_idea_discovery_and_scoring.md",
+      "source_location": "L121",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_01_idea_discovery_and_scoring_milestone_0_5_elite_tier_historical_hackathon_intelligence_past_winner_forensic_audit",
+      "community": 72,
+      "norm_label": "milestone 0.5: elite-tier historical hackathon intelligence & past winner forensic audit"
+    },
+    {
+      "label": "Milestone 0.8: Multi-Modal Problem Statement Hunting & Compulsory HITL Selection Funnel",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/01_idea_discovery_and_scoring.md",
+      "source_location": "L233",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_01_idea_discovery_and_scoring_milestone_0_8_multi_modal_problem_statement_hunting_compulsory_hitl_selection_funnel",
+      "community": 72,
+      "norm_label": "milestone 0.8: multi-modal problem statement hunting & compulsory hitl selection funnel"
+    },
+    {
+      "label": "Milestone 0.9: Domain Scope Assessment & Micro-Wedge Niching",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/01_idea_discovery_and_scoring.md",
+      "source_location": "L313",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_01_idea_discovery_and_scoring_milestone_0_9_domain_scope_assessment_micro_wedge_niching",
+      "community": 72,
+      "norm_label": "milestone 0.9: domain scope assessment & micro-wedge niching"
+    },
+    {
+      "label": "Milestone 1: Scope Lock & Source Matrix Definition",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/01_idea_discovery_and_scoring.md",
+      "source_location": "L358",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_01_idea_discovery_and_scoring_milestone_1_scope_lock_source_matrix_definition",
+      "community": 72,
+      "norm_label": "milestone 1: scope lock & source matrix definition"
+    },
+    {
+      "label": "Milestone 2: Parallel Subagent Research Spawning",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/01_idea_discovery_and_scoring.md",
+      "source_location": "L400",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_01_idea_discovery_and_scoring_milestone_2_parallel_subagent_research_spawning",
+      "community": 72,
+      "norm_label": "milestone 2: parallel subagent research spawning"
+    },
+    {
+      "label": "Milestone 3: Consolidation, Deduplication & Quality Filtering",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/01_idea_discovery_and_scoring.md",
+      "source_location": "L437",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_01_idea_discovery_and_scoring_milestone_3_consolidation_deduplication_quality_filtering",
+      "community": 72,
+      "norm_label": "milestone 3: consolidation, deduplication & quality filtering"
+    },
+    {
+      "label": "Milestone 4: 9-Parameter Hackathon Scoring & Validation Matrix",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/01_idea_discovery_and_scoring.md",
+      "source_location": "L477",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_01_idea_discovery_and_scoring_milestone_4_9_parameter_hackathon_scoring_validation_matrix",
+      "community": 72,
+      "norm_label": "milestone 4: 9-parameter hackathon scoring & validation matrix"
+    },
+    {
+      "label": "Milestone 5: Final Top 10 Ranked Output & Pitch Synthesis",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/01_idea_discovery_and_scoring.md",
+      "source_location": "L521",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_01_idea_discovery_and_scoring_milestone_5_final_top_10_ranked_output_pitch_synthesis",
+      "community": 72,
+      "norm_label": "milestone 5: final top 10 ranked output & pitch synthesis"
+    },
+    {
+      "label": "\ud83d\udd12 Security & Anti-Evasion Guardrails",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/01_idea_discovery_and_scoring.md",
+      "source_location": "L563",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_01_idea_discovery_and_scoring_security_anti_evasion_guardrails",
+      "community": 72,
+      "norm_label": "\ud83d\udd12 security & anti-evasion guardrails"
+    },
+    {
+      "label": "02_competitor_teardown_and_sentiment_mining.md",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/02_competitor_teardown_and_sentiment_mining.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_02_competitor_teardown_and_sentiment_mining",
+      "community": 73,
+      "norm_label": "02_competitor_teardown_and_sentiment_mining.md"
+    },
+    {
+      "label": "Phase 2: Available Product Search, Competitor Teardown & Sentiment Mining Specification",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/02_competitor_teardown_and_sentiment_mining.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_02_competitor_teardown_and_sentiment_mining_phase_2_available_product_search_competitor_teardown_sentiment_mining_specification",
+      "community": 73,
+      "norm_label": "phase 2: available product search, competitor teardown & sentiment mining specification"
+    },
+    {
+      "label": "\ud83c\udfaf Objective & The Parity + Leverage Formula",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/02_competitor_teardown_and_sentiment_mining.md",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_02_competitor_teardown_and_sentiment_mining_objective_the_parity_leverage_formula",
+      "community": 73,
+      "norm_label": "\ud83c\udfaf objective & the parity + leverage formula"
+    },
+    {
+      "label": "\ud83d\udccb Milestone Execution Contracts (Strict Hybrid YAML)",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/02_competitor_teardown_and_sentiment_mining.md",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_02_competitor_teardown_and_sentiment_mining_milestone_execution_contracts_strict_hybrid_yaml",
+      "community": 73,
+      "norm_label": "\ud83d\udccb milestone execution contracts (strict hybrid yaml)"
+    },
+    {
+      "label": "Milestone 1: Actual Available Product, Incumbent & Past Winner Multi-Channel Discovery",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/02_competitor_teardown_and_sentiment_mining.md",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_02_competitor_teardown_and_sentiment_mining_milestone_1_actual_available_product_incumbent_past_winner_multi_channel_discovery",
+      "community": 73,
+      "norm_label": "milestone 1: actual available product, incumbent & past winner multi-channel discovery"
+    },
+    {
+      "label": "Milestone 2: Product Workflow, Pricing & Codebase Forensic Teardown",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/02_competitor_teardown_and_sentiment_mining.md",
+      "source_location": "L165",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_02_competitor_teardown_and_sentiment_mining_milestone_2_product_workflow_pricing_codebase_forensic_teardown",
+      "community": 73,
+      "norm_label": "milestone 2: product workflow, pricing & codebase forensic teardown"
+    },
+    {
+      "label": "Milestone 3: Negative Review & Sentiment Mining",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/02_competitor_teardown_and_sentiment_mining.md",
+      "source_location": "L243",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_02_competitor_teardown_and_sentiment_mining_milestone_3_negative_review_sentiment_mining",
+      "community": 73,
+      "norm_label": "milestone 3: negative review & sentiment mining"
+    },
+    {
+      "label": "Milestone 4: Complaint-to-Leverage Translation (The \"Flaw Inversion\")",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/02_competitor_teardown_and_sentiment_mining.md",
+      "source_location": "L294",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_02_competitor_teardown_and_sentiment_mining_milestone_4_complaint_to_leverage_translation_the_flaw_inversion",
+      "community": 73,
+      "norm_label": "milestone 4: complaint-to-leverage translation (the \"flaw inversion\")"
+    },
+    {
+      "label": "Milestone 5: The Hackathon Differentiation Blueprint & Pitch Contrast",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/02_competitor_teardown_and_sentiment_mining.md",
+      "source_location": "L334",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_02_competitor_teardown_and_sentiment_mining_milestone_5_the_hackathon_differentiation_blueprint_pitch_contrast",
+      "community": 73,
+      "norm_label": "milestone 5: the hackathon differentiation blueprint & pitch contrast"
+    },
+    {
+      "label": "\ud83d\udd12 Security & Anti-Evasion Guardrails",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/02_competitor_teardown_and_sentiment_mining.md",
+      "source_location": "L383",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_02_competitor_teardown_and_sentiment_mining_security_anti_evasion_guardrails",
+      "community": 73,
+      "norm_label": "\ud83d\udd12 security & anti-evasion guardrails"
+    },
+    {
+      "label": "03_mvp_scoping_and_demo_razor.md",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/03_mvp_scoping_and_demo_razor.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_03_mvp_scoping_and_demo_razor",
+      "community": 75,
+      "norm_label": "03_mvp_scoping_and_demo_razor.md"
+    },
+    {
+      "label": "Phase 3: MVP Scoping, Triaging & Golden Demo Razor Specification",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/03_mvp_scoping_and_demo_razor.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_03_mvp_scoping_and_demo_razor_phase_3_mvp_scoping_triaging_golden_demo_razor_specification",
+      "community": 75,
+      "norm_label": "phase 3: mvp scoping, triaging & golden demo razor specification"
+    },
+    {
+      "label": "\ud83c\udfaf Objective & Core Invariants",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/03_mvp_scoping_and_demo_razor.md",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_03_mvp_scoping_and_demo_razor_objective_core_invariants",
+      "community": 75,
+      "norm_label": "\ud83c\udfaf objective & core invariants"
+    },
+    {
+      "label": "\ud83d\udccb Milestone Execution Contracts (Strict Hybrid YAML)",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/03_mvp_scoping_and_demo_razor.md",
+      "source_location": "L30",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_03_mvp_scoping_and_demo_razor_milestone_execution_contracts_strict_hybrid_yaml",
+      "community": 75,
+      "norm_label": "\ud83d\udccb milestone execution contracts (strict hybrid yaml)"
+    },
+    {
+      "label": "Milestone 1: Time-Budget Mapping & Capacity Sizing (The 70% Buildable Rule)",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/03_mvp_scoping_and_demo_razor.md",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_03_mvp_scoping_and_demo_razor_milestone_1_time_budget_mapping_capacity_sizing_the_70_buildable_rule",
+      "community": 75,
+      "norm_label": "milestone 1: time-budget mapping & capacity sizing (the 70% buildable rule)"
+    },
+    {
+      "label": "Milestone 2: The \"Golden Demo Path\" Razor (Rule 2 Invariant)",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/03_mvp_scoping_and_demo_razor.md",
+      "source_location": "L88",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_03_mvp_scoping_and_demo_razor_milestone_2_the_golden_demo_path_razor_rule_2_invariant",
+      "community": 75,
+      "norm_label": "milestone 2: the \"golden demo path\" razor (rule 2 invariant)"
+    },
+    {
+      "label": "Milestone 3: 3-Tier Feature Triaging & Authentic Visual Mocking",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/03_mvp_scoping_and_demo_razor.md",
+      "source_location": "L158",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_03_mvp_scoping_and_demo_razor_milestone_3_3_tier_feature_triaging_authentic_visual_mocking",
+      "community": 75,
+      "norm_label": "milestone 3: 3-tier feature triaging & authentic visual mocking"
+    },
+    {
+      "label": "Milestone 4: Local-First SQLite Architecture & Free-Tier Cloud Staging",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/03_mvp_scoping_and_demo_razor.md",
+      "source_location": "L238",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_03_mvp_scoping_and_demo_razor_milestone_4_local_first_sqlite_architecture_free_tier_cloud_staging",
+      "community": 75,
+      "norm_label": "milestone 4: local-first sqlite architecture & free-tier cloud staging"
+    },
+    {
+      "label": "Milestone 5: Covert Demo-Proofing & Anti-Crash Offline Fallback",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/03_mvp_scoping_and_demo_razor.md",
+      "source_location": "L312",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_03_mvp_scoping_and_demo_razor_milestone_5_covert_demo_proofing_anti_crash_offline_fallback",
+      "community": 75,
+      "norm_label": "milestone 5: covert demo-proofing & anti-crash offline fallback"
+    },
+    {
+      "label": "\ud83d\udd12 Verification & Anti-Bloat Guardrails",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/03_mvp_scoping_and_demo_razor.md",
+      "source_location": "L376",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_03_mvp_scoping_and_demo_razor_verification_anti_bloat_guardrails",
+      "community": 75,
+      "norm_label": "\ud83d\udd12 verification & anti-bloat guardrails"
+    },
+    {
+      "label": "04_lean_7layer_architecture.md",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/04_lean_7layer_architecture.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_04_lean_7layer_architecture",
+      "community": 71,
+      "norm_label": "04_lean_7layer_architecture.md"
+    },
+    {
+      "label": "Phase 4: Lean 7-Layer Architecture & Specification Suite",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/04_lean_7layer_architecture.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_04_lean_7layer_architecture_phase_4_lean_7_layer_architecture_specification_suite",
+      "community": 71,
+      "norm_label": "phase 4: lean 7-layer architecture & specification suite"
+    },
+    {
+      "label": "\ud83c\udfaf Objective",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/04_lean_7layer_architecture.md",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_04_lean_7layer_architecture_objective",
+      "community": 71,
+      "norm_label": "\ud83c\udfaf objective"
+    },
+    {
+      "label": "\ud83c\udfd7\ufe0f The Lean 7-Layer Architecture Suite",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/04_lean_7layer_architecture.md",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_04_lean_7layer_architecture_the_lean_7_layer_architecture_suite",
+      "community": 71,
+      "norm_label": "\ud83c\udfd7\ufe0f the lean 7-layer architecture suite"
+    },
+    {
+      "label": "\ud83d\udccb The Unified Architecture Specification Template",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/04_lean_7layer_architecture.md",
+      "source_location": "L52",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_04_lean_7layer_architecture_the_unified_architecture_specification_template",
+      "community": 71,
+      "norm_label": "\ud83d\udccb the unified architecture specification template"
+    },
+    {
+      "label": "Section 1: Lean Product Requirements (PRD)",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/04_lean_7layer_architecture.md",
+      "source_location": "L56",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_04_lean_7layer_architecture_section_1_lean_product_requirements_prd",
+      "community": 71,
+      "norm_label": "section 1: lean product requirements (prd)"
+    },
+    {
+      "label": "Section 2: Technology Stack & ADR",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/04_lean_7layer_architecture.md",
+      "source_location": "L67",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_04_lean_7layer_architecture_section_2_technology_stack_adr",
+      "community": 71,
+      "norm_label": "section 2: technology stack & adr"
+    },
+    {
+      "label": "Section 3: Macro Architecture & Typed API Contracts",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/04_lean_7layer_architecture.md",
+      "source_location": "L85",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_04_lean_7layer_architecture_section_3_macro_architecture_typed_api_contracts",
+      "community": 71,
+      "norm_label": "section 3: macro architecture & typed api contracts"
+    },
+    {
+      "label": "Section 4: Domain Model & State Transitions",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/04_lean_7layer_architecture.md",
+      "source_location": "L128",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_04_lean_7layer_architecture_section_4_domain_model_state_transitions",
+      "community": 71,
+      "norm_label": "section 4: domain model & state transitions"
+    },
+    {
+      "label": "Section 5: 4-Tier Verification & Test Plan",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/04_lean_7layer_architecture.md",
+      "source_location": "L149",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_04_lean_7layer_architecture_section_5_4_tier_verification_test_plan",
+      "community": 71,
+      "norm_label": "section 5: 4-tier verification & test plan"
+    },
+    {
+      "label": "Section 6: Demo Telemetry & Visual SRE",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/04_lean_7layer_architecture.md",
+      "source_location": "L156",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_04_lean_7layer_architecture_section_6_demo_telemetry_visual_sre",
+      "community": 71,
+      "norm_label": "section 6: demo telemetry & visual sre"
+    },
+    {
+      "label": "Section 7: Deployment & Live Production URL",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/04_lean_7layer_architecture.md",
+      "source_location": "L162",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_04_lean_7layer_architecture_section_7_deployment_live_production_url",
+      "community": 71,
+      "norm_label": "section 7: deployment & live production url"
+    },
+    {
+      "label": "\ud83d\udd12 Verification Checklist",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/04_lean_7layer_architecture.md",
+      "source_location": "L168",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_04_lean_7layer_architecture_verification_checklist",
+      "community": 71,
+      "norm_label": "\ud83d\udd12 verification checklist"
+    },
+    {
+      "label": "05_rapid_ui_scaffolding.md",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/05_rapid_ui_scaffolding.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_05_rapid_ui_scaffolding",
+      "community": 74,
+      "norm_label": "05_rapid_ui_scaffolding.md"
+    },
+    {
+      "label": "Phase 5: Rapid UI Scaffolding & Component Assembly Specification",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/05_rapid_ui_scaffolding.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_05_rapid_ui_scaffolding_phase_5_rapid_ui_scaffolding_component_assembly_specification",
+      "community": 74,
+      "norm_label": "phase 5: rapid ui scaffolding & component assembly specification"
+    },
+    {
+      "label": "\ud83c\udfaf Objective",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/05_rapid_ui_scaffolding.md",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_05_rapid_ui_scaffolding_objective",
+      "community": 74,
+      "norm_label": "\ud83c\udfaf objective"
+    },
+    {
+      "label": "\ud83c\udfa8 Visual DNA & Hackathon Design Standards",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/05_rapid_ui_scaffolding.md",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_05_rapid_ui_scaffolding_visual_dna_hackathon_design_standards",
+      "community": 74,
+      "norm_label": "\ud83c\udfa8 visual dna & hackathon design standards"
+    },
+    {
+      "label": "\u26a1 The 4-Component Core UI Layout",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/05_rapid_ui_scaffolding.md",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_05_rapid_ui_scaffolding_the_4_component_core_ui_layout",
+      "community": 74,
+      "norm_label": "\u26a1 the 4-component core ui layout"
+    },
+    {
+      "label": "\ud83d\udee0\ufe0f Step-by-Step Rapid UI Assembly Workflow",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/05_rapid_ui_scaffolding.md",
+      "source_location": "L72",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_05_rapid_ui_scaffolding_step_by_step_rapid_ui_assembly_workflow",
+      "community": 74,
+      "norm_label": "\ud83d\udee0\ufe0f step-by-step rapid ui assembly workflow"
+    },
+    {
+      "label": "Step 1: Initialize Component Engine",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/05_rapid_ui_scaffolding.md",
+      "source_location": "L74",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_05_rapid_ui_scaffolding_step_1_initialize_component_engine",
+      "community": 74,
+      "norm_label": "step 1: initialize component engine"
+    },
+    {
+      "label": "Step 2: Scaffold Core Layout via 21st-ui-build Skill",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/05_rapid_ui_scaffolding.md",
+      "source_location": "L83",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_05_rapid_ui_scaffolding_step_2_scaffold_core_layout_via_21st_ui_build_skill",
+      "community": 74,
+      "norm_label": "step 2: scaffold core layout via 21st-ui-build skill"
+    },
+    {
+      "label": "Step 3: Integrate Real-Time Visual Feedback",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/05_rapid_ui_scaffolding.md",
+      "source_location": "L93",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_05_rapid_ui_scaffolding_step_3_integrate_real_time_visual_feedback",
+      "community": 74,
+      "norm_label": "step 3: integrate real-time visual feedback"
+    },
+    {
+      "label": "Step 4: Add the \"Demo Preset Button\"",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/05_rapid_ui_scaffolding.md",
+      "source_location": "L103",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_05_rapid_ui_scaffolding_step_4_add_the_demo_preset_button",
+      "community": 74,
+      "norm_label": "step 4: add the \"demo preset button\""
+    },
+    {
+      "label": "\ud83d\udd12 Quality & Accessibility Standards",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/05_rapid_ui_scaffolding.md",
+      "source_location": "L109",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_05_rapid_ui_scaffolding_quality_accessibility_standards",
+      "community": 74,
+      "norm_label": "\ud83d\udd12 quality & accessibility standards"
+    },
+    {
+      "label": "06_lean_4tier_tdd_and_security.md",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/06_lean_4tier_tdd_and_security.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_06_lean_4tier_tdd_and_security",
+      "community": 76,
+      "norm_label": "06_lean_4tier_tdd_and_security.md"
+    },
+    {
+      "label": "Phase 6: Lean 4-Tier TDD & Security Verification Specification",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/06_lean_4tier_tdd_and_security.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_06_lean_4tier_tdd_and_security_phase_6_lean_4_tier_tdd_security_verification_specification",
+      "community": 76,
+      "norm_label": "phase 6: lean 4-tier tdd & security verification specification"
+    },
+    {
+      "label": "\ud83c\udfaf Objective",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/06_lean_4tier_tdd_and_security.md",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_06_lean_4tier_tdd_and_security_objective",
+      "community": 76,
+      "norm_label": "\ud83c\udfaf objective"
+    },
+    {
+      "label": "\ud83e\uddea The 4-Tier Hackathon Testing Matrix",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/06_lean_4tier_tdd_and_security.md",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_06_lean_4tier_tdd_and_security_the_4_tier_hackathon_testing_matrix",
+      "community": 76,
+      "norm_label": "\ud83e\uddea the 4-tier hackathon testing matrix"
+    },
+    {
+      "label": "\ud83d\udcbb Concrete Test Suite Templates",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/06_lean_4tier_tdd_and_security.md",
+      "source_location": "L59",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_06_lean_4tier_tdd_and_security_concrete_test_suite_templates",
+      "community": 76,
+      "norm_label": "\ud83d\udcbb concrete test suite templates"
+    },
+    {
+      "label": "1. Type 1 Performance Bounds Test (`tests/performance/latency.perf.test.ts`)",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/06_lean_4tier_tdd_and_security.md",
+      "source_location": "L61",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_06_lean_4tier_tdd_and_security_1_type_1_performance_bounds_test_tests_performance_latency_perf_test_ts",
+      "community": 76,
+      "norm_label": "1. type 1 performance bounds test (`tests/performance/latency.perf.test.ts`)"
+    },
+    {
+      "label": "2. Type 2 Logic & Edge Case Test (`tests/unit/workflow.test.ts`)",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/06_lean_4tier_tdd_and_security.md",
+      "source_location": "L79",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_06_lean_4tier_tdd_and_security_2_type_2_logic_edge_case_test_tests_unit_workflow_test_ts",
+      "community": 76,
+      "norm_label": "2. type 2 logic & edge case test (`tests/unit/workflow.test.ts`)"
+    },
+    {
+      "label": "3. Type 3 UI & Offline Fallback Integration Test (`tests/integration/demo_shield.test.tsx`)",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/06_lean_4tier_tdd_and_security.md",
+      "source_location": "L101",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_06_lean_4tier_tdd_and_security_3_type_3_ui_offline_fallback_integration_test_tests_integration_demo_shield_test_tsx",
+      "community": 76,
+      "norm_label": "3. type 3 ui & offline fallback integration test (`tests/integration/demo_shield.test.tsx`)"
+    },
+    {
+      "label": "4. Type 4 STRIDE / OWASP Security Fuzzing Test (`tests/security/input_hardening.security.test.ts`)",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/06_lean_4tier_tdd_and_security.md",
+      "source_location": "L117",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_06_lean_4tier_tdd_and_security_4_type_4_stride_owasp_security_fuzzing_test_tests_security_input_hardening_security_test_ts",
+      "community": 76,
+      "norm_label": "4. type 4 stride / owasp security fuzzing test (`tests/security/input_hardening.security.test.ts`)"
+    },
+    {
+      "label": "\ud83d\ude80 Execution & Verification Commands",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/06_lean_4tier_tdd_and_security.md",
+      "source_location": "L140",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_06_lean_4tier_tdd_and_security_execution_verification_commands",
+      "community": 76,
+      "norm_label": "\ud83d\ude80 execution & verification commands"
+    },
+    {
+      "label": "07_demo_pitch_and_judge_proofing.md",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/07_demo_pitch_and_judge_proofing.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_07_demo_pitch_and_judge_proofing",
+      "community": 77,
+      "norm_label": "07_demo_pitch_and_judge_proofing.md"
+    },
+    {
+      "label": "Phase 7: Demo Pitch, Storyboarding & Judge-Proofing Specification",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/07_demo_pitch_and_judge_proofing.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_07_demo_pitch_and_judge_proofing_phase_7_demo_pitch_storyboarding_judge_proofing_specification",
+      "community": 77,
+      "norm_label": "phase 7: demo pitch, storyboarding & judge-proofing specification"
+    },
+    {
+      "label": "\ud83c\udfaf Objective",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/07_demo_pitch_and_judge_proofing.md",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_07_demo_pitch_and_judge_proofing_objective",
+      "community": 77,
+      "norm_label": "\ud83c\udfaf objective"
+    },
+    {
+      "label": "\u23f1\ufe0f The 3-Minute Pitch Script Formula",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/07_demo_pitch_and_judge_proofing.md",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_07_demo_pitch_and_judge_proofing_the_3_minute_pitch_script_formula",
+      "community": 77,
+      "norm_label": "\u23f1\ufe0f the 3-minute pitch script formula"
+    },
+    {
+      "label": "\ud83d\udee1\ufe0f The Tri-Layer Fail-Safe Demo Shield",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/07_demo_pitch_and_judge_proofing.md",
+      "source_location": "L54",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_07_demo_pitch_and_judge_proofing_the_tri_layer_fail_safe_demo_shield",
+      "community": 77,
+      "norm_label": "\ud83d\udee1\ufe0f the tri-layer fail-safe demo shield"
+    },
+    {
+      "label": "\ud83c\udfaf Judge Q&A Defense Matrix",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/07_demo_pitch_and_judge_proofing.md",
+      "source_location": "L89",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_07_demo_pitch_and_judge_proofing_judge_q_a_defense_matrix",
+      "community": 77,
+      "norm_label": "\ud83c\udfaf judge q&a defense matrix"
+    },
+    {
+      "label": "Question 1: \"How is this different from [Incumbent]?\"",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/07_demo_pitch_and_judge_proofing.md",
+      "source_location": "L93",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_07_demo_pitch_and_judge_proofing_question_1_how_is_this_different_from_incumbent",
+      "community": 77,
+      "norm_label": "question 1: \"how is this different from [incumbent]?\""
+    },
+    {
+      "label": "Question 2: \"What happens if external APIs or network calls fail?\"",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/07_demo_pitch_and_judge_proofing.md",
+      "source_location": "L96",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_07_demo_pitch_and_judge_proofing_question_2_what_happens_if_external_apis_or_network_calls_fail",
+      "community": 77,
+      "norm_label": "question 2: \"what happens if external apis or network calls fail?\""
+    },
+    {
+      "label": "Question 3: \"How does this scale to production?\"",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/07_demo_pitch_and_judge_proofing.md",
+      "source_location": "L99",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_07_demo_pitch_and_judge_proofing_question_3_how_does_this_scale_to_production",
+      "community": 77,
+      "norm_label": "question 3: \"how does this scale to production?\""
+    },
+    {
+      "label": "\ud83d\udd12 Final Pre-Flight Pitch Checklist",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/07_demo_pitch_and_judge_proofing.md",
+      "source_location": "L104",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_07_demo_pitch_and_judge_proofing_final_pre_flight_pitch_checklist",
+      "community": 77,
+      "norm_label": "\ud83d\udd12 final pre-flight pitch checklist"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_readme",
+      "community": 80,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "\ud83c\udfc6 Hackathon Operating System & Speedrun Framework",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_readme_hackathon_operating_system_speedrun_framework",
+      "community": 80,
+      "norm_label": "\ud83c\udfc6 hackathon operating system & speedrun framework"
+    },
+    {
+      "label": "\ud83d\udcd1 Specification Navigation Index",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/README.md",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_readme_specification_navigation_index",
+      "community": 80,
+      "norm_label": "\ud83d\udcd1 specification navigation index"
+    },
+    {
+      "label": "\ud83d\ude80 How to Execute in an Active Hackathon",
+      "file_type": "document",
+      "source_file": "spec_universal/hackathon_pipeline/README.md",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "hackathon_pipeline_readme_how_to_execute_in_an_active_hackathon",
+      "community": 80,
+      "norm_label": "\ud83d\ude80 how to execute in an active hackathon"
     },
     {
       "label": "product_requirements_document_template.md",
@@ -10593,7 +11543,7 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "scripts_idea_refine",
-      "target": "c_project_struct_agents_skills_idea_refine_scripts_idea_refine_sh__entry"
+      "target": "c_project_hackathon_hackathon_boilerplate_agents_skills_idea_refine_scripts_idea_refine_sh__entry"
     },
     {
       "relation": "contains",
@@ -10614,6 +11564,16 @@
       "confidence_score": 1.0,
       "source": "rules_context",
       "target": "rules_context_project_context_core_philosophy_design_dna_incident_telemetry"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/rules/CONTEXT.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "rules_context_project_context_core_philosophy_design_dna_incident_telemetry",
+      "target": "rules_context_0_active_hackathon_ground_truth_anti_drift_context_injected"
     },
     {
       "relation": "contains",
@@ -16488,6 +17448,66 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme",
+      "target": "readme_hackathon_boilerplate"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L63",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_hackathon_boilerplate",
+      "target": "readme_non_negotiable_operational_invariants"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_hackathon_boilerplate",
+      "target": "readme_overview_philosophy"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L73",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_hackathon_boilerplate",
+      "target": "readme_quickstart_starting_a_new_hackathon"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L24",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_hackathon_boilerplate",
+      "target": "readme_the_7_phase_hackathon_pipeline"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L41",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_hackathon_boilerplate",
+      "target": "readme_time_budget_brackets"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "discovery-agent-spec.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -16571,9 +17591,9 @@
       "source_file": "dump/README.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "dump_readme",
-      "target": "dump_readme_knowledge_reference_dump_inbox_dump",
-      "confidence_score": 1.0
+      "target": "dump_readme_knowledge_reference_dump_inbox_dump"
     },
     {
       "relation": "contains",
@@ -16581,9 +17601,9 @@
       "source_file": "dump/README.md",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "dump_readme_knowledge_reference_dump_inbox_dump",
-      "target": "dump_readme_the_surgical_knowledge_merge_protocol",
-      "confidence_score": 1.0
+      "target": "dump_readme_the_surgical_knowledge_merge_protocol"
     },
     {
       "relation": "contains",
@@ -16591,9 +17611,9 @@
       "source_file": "dump/README.md",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "dump_readme_the_surgical_knowledge_merge_protocol",
-      "target": "dump_readme_1_zero_direct_overwrite_preservation_invariant",
-      "confidence_score": 1.0
+      "target": "dump_readme_1_zero_direct_overwrite_preservation_invariant"
     },
     {
       "relation": "contains",
@@ -16601,9 +17621,9 @@
       "source_file": "dump/README.md",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "dump_readme_the_surgical_knowledge_merge_protocol",
-      "target": "dump_readme_2_forensic_deduplication_overlap_detection",
-      "confidence_score": 1.0
+      "target": "dump_readme_2_forensic_deduplication_overlap_detection"
     },
     {
       "relation": "contains",
@@ -16611,9 +17631,9 @@
       "source_file": "dump/README.md",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "dump_readme_the_surgical_knowledge_merge_protocol",
-      "target": "dump_readme_3_extraction_of_high_value_differentials_only",
-      "confidence_score": 1.0
+      "target": "dump_readme_3_extraction_of_high_value_differentials_only"
     },
     {
       "relation": "contains",
@@ -16621,9 +17641,9 @@
       "source_file": "dump/README.md",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "dump_readme_the_surgical_knowledge_merge_protocol",
-      "target": "dump_readme_4_deterministic_destination_routing",
-      "confidence_score": 1.0
+      "target": "dump_readme_4_deterministic_destination_routing"
     },
     {
       "relation": "contains",
@@ -16631,9 +17651,9 @@
       "source_file": "dump/README.md",
       "source_location": "L36",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "dump_readme_the_surgical_knowledge_merge_protocol",
-      "target": "dump_readme_5_automatic_cleanup",
-      "confidence_score": 1.0
+      "target": "dump_readme_5_automatic_cleanup"
     },
     {
       "relation": "contains",
@@ -16644,6 +17664,786 @@
       "confidence_score": 1.0,
       "source": "spec_readme",
       "target": "spec_readme_project_specifications_spec"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/00_master_hackathon_operating_system.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_00_master_hackathon_operating_system",
+      "target": "hackathon_pipeline_00_master_hackathon_operating_system_master_hackathon_operating_system_speedrun_protocol"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/00_master_hackathon_operating_system.md",
+      "source_location": "L101",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_00_master_hackathon_operating_system_master_hackathon_operating_system_speedrun_protocol",
+      "target": "hackathon_pipeline_00_master_hackathon_operating_system_non_negotiable_operational_invariants"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/00_master_hackathon_operating_system.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_00_master_hackathon_operating_system_master_hackathon_operating_system_speedrun_protocol",
+      "target": "hackathon_pipeline_00_master_hackathon_operating_system_the_7_phase_hackathon_operating_pipeline"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/00_master_hackathon_operating_system.md",
+      "source_location": "L76",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_00_master_hackathon_operating_system_master_hackathon_operating_system_speedrun_protocol",
+      "target": "hackathon_pipeline_00_master_hackathon_operating_system_time_budget_brackets_execution_velocity"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/01_idea_discovery_and_scoring.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_01_idea_discovery_and_scoring",
+      "target": "hackathon_pipeline_01_idea_discovery_and_scoring_phase_1_idea_discovery_validation_scoring_specification"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/01_idea_discovery_and_scoring.md",
+      "source_location": "L43",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_01_idea_discovery_and_scoring_phase_1_idea_discovery_validation_scoring_specification",
+      "target": "hackathon_pipeline_01_idea_discovery_and_scoring_milestone_execution_contracts_strict_hybrid_yaml"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/01_idea_discovery_and_scoring.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_01_idea_discovery_and_scoring_phase_1_idea_discovery_validation_scoring_specification",
+      "target": "hackathon_pipeline_01_idea_discovery_and_scoring_objective_intake_modes"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/01_idea_discovery_and_scoring.md",
+      "source_location": "L416",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_01_idea_discovery_and_scoring_phase_1_idea_discovery_validation_scoring_specification",
+      "target": "hackathon_pipeline_01_idea_discovery_and_scoring_security_anti_evasion_guardrails"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/01_idea_discovery_and_scoring.md",
+      "source_location": "L99",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_01_idea_discovery_and_scoring_milestone_execution_contracts_strict_hybrid_yaml",
+      "target": "hackathon_pipeline_01_idea_discovery_and_scoring_milestone_0_5_elite_tier_historical_hackathon_intelligence_past_winner_forensic_audit"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/01_idea_discovery_and_scoring.md",
+      "source_location": "L233",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_01_idea_discovery_and_scoring_milestone_execution_contracts_strict_hybrid_yaml",
+      "target": "hackathon_pipeline_01_idea_discovery_and_scoring_milestone_0_8_multi_modal_problem_statement_hunting_compulsory_hitl_selection_funnel"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/01_idea_discovery_and_scoring.md",
+      "source_location": "L313",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_01_idea_discovery_and_scoring_milestone_execution_contracts_strict_hybrid_yaml",
+      "target": "hackathon_pipeline_01_idea_discovery_and_scoring_milestone_0_9_domain_scope_assessment_micro_wedge_niching"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/01_idea_discovery_and_scoring.md",
+      "source_location": "L45",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_01_idea_discovery_and_scoring_milestone_execution_contracts_strict_hybrid_yaml",
+      "target": "hackathon_pipeline_01_idea_discovery_and_scoring_milestone_0_hackathon_reconnaissance_anti_drift_context_lock"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/01_idea_discovery_and_scoring.md",
+      "source_location": "L211",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_01_idea_discovery_and_scoring_milestone_execution_contracts_strict_hybrid_yaml",
+      "target": "hackathon_pipeline_01_idea_discovery_and_scoring_milestone_1_scope_lock_source_matrix_definition"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/01_idea_discovery_and_scoring.md",
+      "source_location": "L253",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_01_idea_discovery_and_scoring_milestone_execution_contracts_strict_hybrid_yaml",
+      "target": "hackathon_pipeline_01_idea_discovery_and_scoring_milestone_2_parallel_subagent_research_spawning"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/01_idea_discovery_and_scoring.md",
+      "source_location": "L290",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_01_idea_discovery_and_scoring_milestone_execution_contracts_strict_hybrid_yaml",
+      "target": "hackathon_pipeline_01_idea_discovery_and_scoring_milestone_3_consolidation_deduplication_quality_filtering"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/01_idea_discovery_and_scoring.md",
+      "source_location": "L330",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_01_idea_discovery_and_scoring_milestone_execution_contracts_strict_hybrid_yaml",
+      "target": "hackathon_pipeline_01_idea_discovery_and_scoring_milestone_4_9_parameter_hackathon_scoring_validation_matrix"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/01_idea_discovery_and_scoring.md",
+      "source_location": "L374",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_01_idea_discovery_and_scoring_milestone_execution_contracts_strict_hybrid_yaml",
+      "target": "hackathon_pipeline_01_idea_discovery_and_scoring_milestone_5_final_top_10_ranked_output_pitch_synthesis"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/02_competitor_teardown_and_sentiment_mining.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_02_competitor_teardown_and_sentiment_mining",
+      "target": "hackathon_pipeline_02_competitor_teardown_and_sentiment_mining_phase_2_available_product_search_competitor_teardown_sentiment_mining_specification"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/02_competitor_teardown_and_sentiment_mining.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_02_competitor_teardown_and_sentiment_mining_phase_2_available_product_search_competitor_teardown_sentiment_mining_specification",
+      "target": "hackathon_pipeline_02_competitor_teardown_and_sentiment_mining_milestone_execution_contracts_strict_hybrid_yaml"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/02_competitor_teardown_and_sentiment_mining.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_02_competitor_teardown_and_sentiment_mining_phase_2_available_product_search_competitor_teardown_sentiment_mining_specification",
+      "target": "hackathon_pipeline_02_competitor_teardown_and_sentiment_mining_objective_the_parity_leverage_formula"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/02_competitor_teardown_and_sentiment_mining.md",
+      "source_location": "L270",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_02_competitor_teardown_and_sentiment_mining_phase_2_available_product_search_competitor_teardown_sentiment_mining_specification",
+      "target": "hackathon_pipeline_02_competitor_teardown_and_sentiment_mining_security_anti_evasion_guardrails"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/02_competitor_teardown_and_sentiment_mining.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_02_competitor_teardown_and_sentiment_mining_milestone_execution_contracts_strict_hybrid_yaml",
+      "target": "hackathon_pipeline_02_competitor_teardown_and_sentiment_mining_milestone_1_actual_available_product_incumbent_past_winner_multi_channel_discovery"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/02_competitor_teardown_and_sentiment_mining.md",
+      "source_location": "L86",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_02_competitor_teardown_and_sentiment_mining_milestone_execution_contracts_strict_hybrid_yaml",
+      "target": "hackathon_pipeline_02_competitor_teardown_and_sentiment_mining_milestone_2_product_workflow_pricing_codebase_forensic_teardown"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/02_competitor_teardown_and_sentiment_mining.md",
+      "source_location": "L130",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_02_competitor_teardown_and_sentiment_mining_milestone_execution_contracts_strict_hybrid_yaml",
+      "target": "hackathon_pipeline_02_competitor_teardown_and_sentiment_mining_milestone_3_negative_review_sentiment_mining"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/02_competitor_teardown_and_sentiment_mining.md",
+      "source_location": "L181",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_02_competitor_teardown_and_sentiment_mining_milestone_execution_contracts_strict_hybrid_yaml",
+      "target": "hackathon_pipeline_02_competitor_teardown_and_sentiment_mining_milestone_4_complaint_to_leverage_translation_the_flaw_inversion"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/02_competitor_teardown_and_sentiment_mining.md",
+      "source_location": "L221",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_02_competitor_teardown_and_sentiment_mining_milestone_execution_contracts_strict_hybrid_yaml",
+      "target": "hackathon_pipeline_02_competitor_teardown_and_sentiment_mining_milestone_5_the_hackathon_differentiation_blueprint_pitch_contrast"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/03_mvp_scoping_and_demo_razor.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_03_mvp_scoping_and_demo_razor",
+      "target": "hackathon_pipeline_03_mvp_scoping_and_demo_razor_phase_3_mvp_scoping_triaging_golden_demo_razor_specification"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/03_mvp_scoping_and_demo_razor.md",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "hackathon_pipeline_03_mvp_scoping_and_demo_razor_phase_3_mvp_scoping_triaging_golden_demo_razor_specification",
+      "target": "hackathon_pipeline_03_mvp_scoping_and_demo_razor_milestone_execution_contracts_strict_hybrid_yaml",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/03_mvp_scoping_and_demo_razor.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "hackathon_pipeline_03_mvp_scoping_and_demo_razor_phase_3_mvp_scoping_triaging_golden_demo_razor_specification",
+      "target": "hackathon_pipeline_03_mvp_scoping_and_demo_razor_objective_core_invariants",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/03_mvp_scoping_and_demo_razor.md",
+      "source_location": "L376",
+      "weight": 1.0,
+      "source": "hackathon_pipeline_03_mvp_scoping_and_demo_razor_phase_3_mvp_scoping_triaging_golden_demo_razor_specification",
+      "target": "hackathon_pipeline_03_mvp_scoping_and_demo_razor_verification_anti_bloat_guardrails",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/03_mvp_scoping_and_demo_razor.md",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "hackathon_pipeline_03_mvp_scoping_and_demo_razor_milestone_execution_contracts_strict_hybrid_yaml",
+      "target": "hackathon_pipeline_03_mvp_scoping_and_demo_razor_milestone_1_time_budget_mapping_capacity_sizing_the_70_buildable_rule",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/03_mvp_scoping_and_demo_razor.md",
+      "source_location": "L88",
+      "weight": 1.0,
+      "source": "hackathon_pipeline_03_mvp_scoping_and_demo_razor_milestone_execution_contracts_strict_hybrid_yaml",
+      "target": "hackathon_pipeline_03_mvp_scoping_and_demo_razor_milestone_2_the_golden_demo_path_razor_rule_2_invariant",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/03_mvp_scoping_and_demo_razor.md",
+      "source_location": "L158",
+      "weight": 1.0,
+      "source": "hackathon_pipeline_03_mvp_scoping_and_demo_razor_milestone_execution_contracts_strict_hybrid_yaml",
+      "target": "hackathon_pipeline_03_mvp_scoping_and_demo_razor_milestone_3_3_tier_feature_triaging_authentic_visual_mocking",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/03_mvp_scoping_and_demo_razor.md",
+      "source_location": "L238",
+      "weight": 1.0,
+      "source": "hackathon_pipeline_03_mvp_scoping_and_demo_razor_milestone_execution_contracts_strict_hybrid_yaml",
+      "target": "hackathon_pipeline_03_mvp_scoping_and_demo_razor_milestone_4_local_first_sqlite_architecture_free_tier_cloud_staging",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/03_mvp_scoping_and_demo_razor.md",
+      "source_location": "L312",
+      "weight": 1.0,
+      "source": "hackathon_pipeline_03_mvp_scoping_and_demo_razor_milestone_execution_contracts_strict_hybrid_yaml",
+      "target": "hackathon_pipeline_03_mvp_scoping_and_demo_razor_milestone_5_covert_demo_proofing_anti_crash_offline_fallback",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/04_lean_7layer_architecture.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_04_lean_7layer_architecture",
+      "target": "hackathon_pipeline_04_lean_7layer_architecture_phase_4_lean_7_layer_architecture_specification_suite"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/04_lean_7layer_architecture.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_04_lean_7layer_architecture_phase_4_lean_7_layer_architecture_specification_suite",
+      "target": "hackathon_pipeline_04_lean_7layer_architecture_objective"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/04_lean_7layer_architecture.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_04_lean_7layer_architecture_phase_4_lean_7_layer_architecture_specification_suite",
+      "target": "hackathon_pipeline_04_lean_7layer_architecture_the_lean_7_layer_architecture_suite"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/04_lean_7layer_architecture.md",
+      "source_location": "L52",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_04_lean_7layer_architecture_phase_4_lean_7_layer_architecture_specification_suite",
+      "target": "hackathon_pipeline_04_lean_7layer_architecture_the_unified_architecture_specification_template"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/04_lean_7layer_architecture.md",
+      "source_location": "L168",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_04_lean_7layer_architecture_phase_4_lean_7_layer_architecture_specification_suite",
+      "target": "hackathon_pipeline_04_lean_7layer_architecture_verification_checklist"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/04_lean_7layer_architecture.md",
+      "source_location": "L56",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_04_lean_7layer_architecture_the_unified_architecture_specification_template",
+      "target": "hackathon_pipeline_04_lean_7layer_architecture_section_1_lean_product_requirements_prd"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/04_lean_7layer_architecture.md",
+      "source_location": "L67",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_04_lean_7layer_architecture_the_unified_architecture_specification_template",
+      "target": "hackathon_pipeline_04_lean_7layer_architecture_section_2_technology_stack_adr"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/04_lean_7layer_architecture.md",
+      "source_location": "L85",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_04_lean_7layer_architecture_the_unified_architecture_specification_template",
+      "target": "hackathon_pipeline_04_lean_7layer_architecture_section_3_macro_architecture_typed_api_contracts"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/04_lean_7layer_architecture.md",
+      "source_location": "L128",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_04_lean_7layer_architecture_the_unified_architecture_specification_template",
+      "target": "hackathon_pipeline_04_lean_7layer_architecture_section_4_domain_model_state_transitions"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/04_lean_7layer_architecture.md",
+      "source_location": "L149",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_04_lean_7layer_architecture_the_unified_architecture_specification_template",
+      "target": "hackathon_pipeline_04_lean_7layer_architecture_section_5_4_tier_verification_test_plan"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/04_lean_7layer_architecture.md",
+      "source_location": "L156",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_04_lean_7layer_architecture_the_unified_architecture_specification_template",
+      "target": "hackathon_pipeline_04_lean_7layer_architecture_section_6_demo_telemetry_visual_sre"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/04_lean_7layer_architecture.md",
+      "source_location": "L162",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_04_lean_7layer_architecture_the_unified_architecture_specification_template",
+      "target": "hackathon_pipeline_04_lean_7layer_architecture_section_7_deployment_live_production_url"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/05_rapid_ui_scaffolding.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_05_rapid_ui_scaffolding",
+      "target": "hackathon_pipeline_05_rapid_ui_scaffolding_phase_5_rapid_ui_scaffolding_component_assembly_specification"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/05_rapid_ui_scaffolding.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_05_rapid_ui_scaffolding_phase_5_rapid_ui_scaffolding_component_assembly_specification",
+      "target": "hackathon_pipeline_05_rapid_ui_scaffolding_objective"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/05_rapid_ui_scaffolding.md",
+      "source_location": "L109",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_05_rapid_ui_scaffolding_phase_5_rapid_ui_scaffolding_component_assembly_specification",
+      "target": "hackathon_pipeline_05_rapid_ui_scaffolding_quality_accessibility_standards"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/05_rapid_ui_scaffolding.md",
+      "source_location": "L72",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_05_rapid_ui_scaffolding_phase_5_rapid_ui_scaffolding_component_assembly_specification",
+      "target": "hackathon_pipeline_05_rapid_ui_scaffolding_step_by_step_rapid_ui_assembly_workflow"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/05_rapid_ui_scaffolding.md",
+      "source_location": "L39",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_05_rapid_ui_scaffolding_phase_5_rapid_ui_scaffolding_component_assembly_specification",
+      "target": "hackathon_pipeline_05_rapid_ui_scaffolding_the_4_component_core_ui_layout"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/05_rapid_ui_scaffolding.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_05_rapid_ui_scaffolding_phase_5_rapid_ui_scaffolding_component_assembly_specification",
+      "target": "hackathon_pipeline_05_rapid_ui_scaffolding_visual_dna_hackathon_design_standards"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/05_rapid_ui_scaffolding.md",
+      "source_location": "L74",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_05_rapid_ui_scaffolding_step_by_step_rapid_ui_assembly_workflow",
+      "target": "hackathon_pipeline_05_rapid_ui_scaffolding_step_1_initialize_component_engine"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/05_rapid_ui_scaffolding.md",
+      "source_location": "L83",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_05_rapid_ui_scaffolding_step_by_step_rapid_ui_assembly_workflow",
+      "target": "hackathon_pipeline_05_rapid_ui_scaffolding_step_2_scaffold_core_layout_via_21st_ui_build_skill"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/05_rapid_ui_scaffolding.md",
+      "source_location": "L93",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_05_rapid_ui_scaffolding_step_by_step_rapid_ui_assembly_workflow",
+      "target": "hackathon_pipeline_05_rapid_ui_scaffolding_step_3_integrate_real_time_visual_feedback"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/05_rapid_ui_scaffolding.md",
+      "source_location": "L103",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_05_rapid_ui_scaffolding_step_by_step_rapid_ui_assembly_workflow",
+      "target": "hackathon_pipeline_05_rapid_ui_scaffolding_step_4_add_the_demo_preset_button"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/06_lean_4tier_tdd_and_security.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_06_lean_4tier_tdd_and_security",
+      "target": "hackathon_pipeline_06_lean_4tier_tdd_and_security_phase_6_lean_4_tier_tdd_security_verification_specification"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/06_lean_4tier_tdd_and_security.md",
+      "source_location": "L59",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_06_lean_4tier_tdd_and_security_phase_6_lean_4_tier_tdd_security_verification_specification",
+      "target": "hackathon_pipeline_06_lean_4tier_tdd_and_security_concrete_test_suite_templates"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/06_lean_4tier_tdd_and_security.md",
+      "source_location": "L140",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_06_lean_4tier_tdd_and_security_phase_6_lean_4_tier_tdd_security_verification_specification",
+      "target": "hackathon_pipeline_06_lean_4tier_tdd_and_security_execution_verification_commands"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/06_lean_4tier_tdd_and_security.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_06_lean_4tier_tdd_and_security_phase_6_lean_4_tier_tdd_security_verification_specification",
+      "target": "hackathon_pipeline_06_lean_4tier_tdd_and_security_objective"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/06_lean_4tier_tdd_and_security.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_06_lean_4tier_tdd_and_security_phase_6_lean_4_tier_tdd_security_verification_specification",
+      "target": "hackathon_pipeline_06_lean_4tier_tdd_and_security_the_4_tier_hackathon_testing_matrix"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/06_lean_4tier_tdd_and_security.md",
+      "source_location": "L61",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_06_lean_4tier_tdd_and_security_concrete_test_suite_templates",
+      "target": "hackathon_pipeline_06_lean_4tier_tdd_and_security_1_type_1_performance_bounds_test_tests_performance_latency_perf_test_ts"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/06_lean_4tier_tdd_and_security.md",
+      "source_location": "L79",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_06_lean_4tier_tdd_and_security_concrete_test_suite_templates",
+      "target": "hackathon_pipeline_06_lean_4tier_tdd_and_security_2_type_2_logic_edge_case_test_tests_unit_workflow_test_ts"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/06_lean_4tier_tdd_and_security.md",
+      "source_location": "L101",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_06_lean_4tier_tdd_and_security_concrete_test_suite_templates",
+      "target": "hackathon_pipeline_06_lean_4tier_tdd_and_security_3_type_3_ui_offline_fallback_integration_test_tests_integration_demo_shield_test_tsx"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/06_lean_4tier_tdd_and_security.md",
+      "source_location": "L117",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_06_lean_4tier_tdd_and_security_concrete_test_suite_templates",
+      "target": "hackathon_pipeline_06_lean_4tier_tdd_and_security_4_type_4_stride_owasp_security_fuzzing_test_tests_security_input_hardening_security_test_ts"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/07_demo_pitch_and_judge_proofing.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_07_demo_pitch_and_judge_proofing",
+      "target": "hackathon_pipeline_07_demo_pitch_and_judge_proofing_phase_7_demo_pitch_storyboarding_judge_proofing_specification"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/07_demo_pitch_and_judge_proofing.md",
+      "source_location": "L104",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_07_demo_pitch_and_judge_proofing_phase_7_demo_pitch_storyboarding_judge_proofing_specification",
+      "target": "hackathon_pipeline_07_demo_pitch_and_judge_proofing_final_pre_flight_pitch_checklist"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/07_demo_pitch_and_judge_proofing.md",
+      "source_location": "L89",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_07_demo_pitch_and_judge_proofing_phase_7_demo_pitch_storyboarding_judge_proofing_specification",
+      "target": "hackathon_pipeline_07_demo_pitch_and_judge_proofing_judge_q_a_defense_matrix"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/07_demo_pitch_and_judge_proofing.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_07_demo_pitch_and_judge_proofing_phase_7_demo_pitch_storyboarding_judge_proofing_specification",
+      "target": "hackathon_pipeline_07_demo_pitch_and_judge_proofing_objective"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/07_demo_pitch_and_judge_proofing.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_07_demo_pitch_and_judge_proofing_phase_7_demo_pitch_storyboarding_judge_proofing_specification",
+      "target": "hackathon_pipeline_07_demo_pitch_and_judge_proofing_the_3_minute_pitch_script_formula"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/07_demo_pitch_and_judge_proofing.md",
+      "source_location": "L54",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_07_demo_pitch_and_judge_proofing_phase_7_demo_pitch_storyboarding_judge_proofing_specification",
+      "target": "hackathon_pipeline_07_demo_pitch_and_judge_proofing_the_tri_layer_fail_safe_demo_shield"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/07_demo_pitch_and_judge_proofing.md",
+      "source_location": "L93",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_07_demo_pitch_and_judge_proofing_judge_q_a_defense_matrix",
+      "target": "hackathon_pipeline_07_demo_pitch_and_judge_proofing_question_1_how_is_this_different_from_incumbent"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/07_demo_pitch_and_judge_proofing.md",
+      "source_location": "L96",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_07_demo_pitch_and_judge_proofing_judge_q_a_defense_matrix",
+      "target": "hackathon_pipeline_07_demo_pitch_and_judge_proofing_question_2_what_happens_if_external_apis_or_network_calls_fail"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/07_demo_pitch_and_judge_proofing.md",
+      "source_location": "L99",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_07_demo_pitch_and_judge_proofing_judge_q_a_defense_matrix",
+      "target": "hackathon_pipeline_07_demo_pitch_and_judge_proofing_question_3_how_does_this_scale_to_production"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_readme",
+      "target": "hackathon_pipeline_readme_hackathon_operating_system_speedrun_framework"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/README.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_readme_hackathon_operating_system_speedrun_framework",
+      "target": "hackathon_pipeline_readme_how_to_execute_in_an_active_hackathon"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "spec_universal/hackathon_pipeline/README.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "hackathon_pipeline_readme_hackathon_operating_system_speedrun_framework",
+      "target": "hackathon_pipeline_readme_specification_navigation_index"
     },
     {
       "relation": "contains",
@@ -20337,5 +22137,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "582f742705f847fc6c3269e73dda74fd01b1e76c"
+  "built_at_commit": "8013bdd95a838a13dfe10f036fcae0a083825142"
 }

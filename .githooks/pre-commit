@@ -1,12 +1,14 @@
 #!/bin/sh
 # ==============================================================================
 # Git Pre-Commit Guardrail Hook
-# Repository: Universal_Project_Boilerplate
-# Enforces: Rule 34 (Local AGENTS.md Isolation) & Rule 35 (spec_universal Immutability)
+# Repository: Hackathon_Boilerplate
+# Enforces: Rule 34 (Local AGENTS.md Isolation) & Rule 35 (Universal Foundation Immutability)
 # ==============================================================================
 
-# Inspect staged files for protected paths
-BLOCKED_FILES=$(git diff --cached --name-only | grep -E '^(\.agents/AGENTS\.md|spec_universal/)')
+# Inspect staged files for protected paths:
+# Protects .agents/AGENTS.md, spec_universal/system_design/, and base universal templates.
+# Permits spec_universal/hackathon_pipeline/ (the core hackathon operating system).
+BLOCKED_FILES=$(git diff --cached --name-only | grep -E '^(\.agents/AGENTS\.md|spec_universal/system_design/|spec_universal/[^/]+\.(md|pdf)$)')
 
 if [ -n "$BLOCKED_FILES" ]; then
   echo ""
