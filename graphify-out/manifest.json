@@ -5,7 +5,7 @@
     "semantic_hash": ""
   },
   ".agents/AGENTS.md": {
-    "mtime": 1789287025.7814784,
+    "mtime": 1789287358.4446783,
     "ast_hash": "96ad9f17d89a12c54142a6d7bdb32a6d",
     "semantic_hash": ""
   },
@@ -325,7 +325,7 @@
     "semantic_hash": ""
   },
   ".githooks/pre-commit": {
-    "mtime": 1789287018.4772685,
+    "mtime": 1789287360.3685153,
     "ast_hash": "ef384da7defbab52fde0738bdadbab38",
     "semantic_hash": ""
   },
