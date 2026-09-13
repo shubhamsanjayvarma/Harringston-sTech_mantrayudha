@@ -188,8 +188,8 @@ These guidelines are working if: fewer unnecessary changes in diffs, fewer rewri
     When creating or editing test files that render React components or contain JSX elements (e.g. `<Component />`), ALWAYS use the `.tsx` file extension. Using `.ts` causes Vite/oxc parser failures because `<` is treated as a generic type argument.
 
 34. Master Boilerplate AGENTS.md vs Downstream Cloned Project Isolation
-    In this master boilerplate repository (`Hackathon_Boilerplate`), `.agents/AGENTS.md` is versioned and maintained on `main` as the authoritative agent operating system, guaranteeing that whenever this repository is cloned into a new hackathon project (`git clone`), the cloned workspace inherits the full 39-rule architecture, 7-phase speedrun pipeline, and automated safety hooks out of the box.
-    - **Downstream Cloned Isolation**: Once cloned to start a specific competition product, `.agents/AGENTS.md` should remain confined to the local workspace to avoid polluting downstream product codebases, unless explicitly updating the master boilerplate standard itself.
+    In this master boilerplate repository (`Universal_Project_Boilerplate`), `.agents/AGENTS.md` is versioned and maintained on `main` as the authoritative agent operating system, guaranteeing that whenever this repository is cloned into a new project (`git clone`), the cloned workspace inherits the full 38-rule architecture and automated safety hooks out of the box.
+    - **Downstream Cloned Isolation**: Once cloned to start a specific product or application, `.agents/AGENTS.md` should remain confined to the local workspace to avoid polluting downstream product codebases, unless explicitly updating the master boilerplate standard itself.
 
 35. Universal Specifications (`spec_universal/`) vs. Project-Specific Specifications (`spec/`)
     All specifications, PRDs, architecture plans, and task plans must strictly follow this directory separation and lifecycle rule:
@@ -349,89 +349,15 @@ These guidelines are working if: fewer unnecessary changes in diffs, fewer rewri
       - Architecture templates or specifications $\to$ integrate into the appropriate `spec_universal/` document.
     - **Audit & Clean**: Provide a clear report of what was extracted vs. rejected (and why) before clearing the processed dump file.
 
-39. The 7-Phase Hackathon Speedrun Pipeline & Golden Demo Razor (`spec_universal/hackathon_pipeline/`)
-    Whenever operating in a hackathon, competition, or venture sprint context within this repository, the agent MUST strictly execute through the **7-Phase Hackathon Operating System** formatted under the Hybrid YAML Standard:
-
-    ```yaml
-    hackathon_pipeline_execution_contract:
-      phase_1_reconnaissance_and_discovery:
-        designated_spec: "spec_universal/hackathon_pipeline/01_idea_discovery_and_scoring.md"
-        primary_skills:
-          - "kimi-webbridge"
-          - "research subagent"
-          - "idea-refine"
-          - "doubt-driven-development"
-        mandates:
-          - "Ingest local PDFs/docs and scrape portal via kimi-webbridge."
-          - "Dual-Storage Mandate: Compile exhaustive spec/[hackathon_name]_brief.md AND immediately sync active_hackathon_context into .agents/rules/CONTEXT.md Section 0."
-          - "Elite Hackathon Intelligence (Milestone 0.5): For elite/institutional competitions, forensically audit 5-10 past winners (strengths vs unsolved gaps), profile jury archetypes, codify winning vs fatal patterns, and enforce the Round-by-Round Delta Protocol."
-          - "PS Hunting & Compulsory HITL Gate (Milestone 0.8): Ingest softcopy/hardcopy photos, intake team tech stack, triage down to Top 5 shortlist in spec/01_ps_hunting_shortlist.md; halt execution until explicit user selection of P0 and P1."
-          - "Domain Scope & Niching (Milestone 0.9): For broad PSs, niche down to a killer micro-wedge with 2-minute visual demo viability; for narrow PSs, proceed directly to product hunting."
-          - "Spawn 4 subagents across YC/a16z/Reddit/VCs; score on 9 parameters; output Top 10 Idea Bank."
-
-      phase_2_competitor_teardown_and_sentiment_mining:
-        designated_spec: "spec_universal/hackathon_pipeline/02_competitor_teardown_and_sentiment_mining.md"
-        primary_skills:
-          - "kimi-webbridge"
-          - "context-engineering"
-          - "idea-refine"
-          - "doubt-driven-development"
-        mandates:
-          - "Identify candidate commercial incumbents AND search past winners across Devpost galleries, Kaggle competition solutions, X (Twitter) winner threads, and GitHub repos."
-          - "Extract 'What Made Them Win' (killer demo moment, architecture leap, or juror hook) alongside product names, URLs, and GitHub links into spec/03_candidate_products_and_repos.md BEFORE starting deep surgical analysis."
-          - "Audit pricing, workflow friction, and past winner codebase dependencies/shortcuts."
-          - "Mine 1-3 star negative reviews on G2, Capterra, Trustpilot, Reddit, and GitHub under zero-trust sanitization."
-          - "Invert flaws into product leverage (Baseline Parity + Kill Feature)."
-          - "Formulate the pitch contrast statement and dual-layer scope in spec/03_competitor_leverage_report.md."
-
-      phase_3_mvp_scoping_and_demo_razor:
-        designated_spec: "spec_universal/hackathon_pipeline/03_mvp_scoping_and_demo_razor.md"
-        primary_skills:
-          - "planning-and-task-breakdown"
-          - "doubt-driven-development"
-          - "code-simplification"
-        mandates:
-          - "Golden Demo Path Razor: Any feature off the 2-minute judge path is STRICTLY BANNED (Rule 2)."
-          - "Enforce the 70% buildable time rule (30% reserved for testing, polish, and pitch rehearsal)."
-          - "Authentic Visual Mocking: Backend mocks for auth/payments/SMS, but UI rendered 100% authentic and production-grade."
-          - "Localhost & SQLite First: Product must be 100% functional on localhost and local SQLite BEFORE any cloud deployment is attempted."
-          - "Free-Tier Only Cloud Staging: Deployment is strictly limited to free services (Vercel, Supabase, Railway/Render) with zero paid dependencies."
-          - "Covert Demo Protection: Offline fallback JSON fixtures and scenario selectors must NEVER be labeled as 'Demo' or 'Mock'."
-          - "Compile finalized contract into spec/04_mvp_execution_blueprint.md."
-
-      phase_4_lean_7layer_architecture:
-        designated_spec: "spec_universal/hackathon_pipeline/04_lean_7layer_architecture.md"
-        primary_skills:
-          - "spec-driven-development"
-          - "api-and-interface-design"
-        mandates:
-          - "Consolidate PRD, BaaS decisions (Supabase/Convex), Mermaid sequence flow, typed contracts, and FSM into spec/05_system_architecture.md."
-
-      phase_5_rapid_ui_scaffolding:
-        designated_spec: "spec_universal/hackathon_pipeline/05_rapid_ui_scaffolding.md"
-        primary_skills:
-          - "21st-ui-build"
-          - "frontend-ui-engineering"
-        mandates:
-          - "Assemble the 4-component layout using 21st.dev components and Tailwind CSS."
-          - "Implement split-screen baseline vs leverage views."
-          - "Integrate the 'Load Judge Demo' preset button."
-
-      phase_6_lean_4tier_tdd_and_security:
-        designated_spec: "spec_universal/hackathon_pipeline/06_lean_4tier_tdd_and_security.md"
-        primary_skills:
-          - "test-driven-development"
-          - "cyber-security-frameworks"
-          - "systematic-debugging"
-        mandates:
-          - "Automated <30s test suite across all 4 tiers (Execution bounds <4000ms, Golden Path logic, UI rendering contracts, and STRIDE/OWASP input fuzzing)."
-
-      phase_7_demo_pitch_and_judge_proofing:
-        designated_spec: "spec_universal/hackathon_pipeline/07_demo_pitch_and_judge_proofing.md"
-        primary_skills:
-          - "shipping-and-launch"
-          - "verification-before-completion"
-        mandates:
-          - "Script 3-minute presentation (Hook, Contrast, Live Demo, Technical Depth, Close)."
-          - "Deploy Tri-Layer Fail-Safe Shield (JSON fallback, demo mode, and 60fps silent backup video)."
-    ```
+39. Universal Frontend Design Bible, Design Token Primacy & Anti-Slop Enforcement Protocol (`spec_universal/frontend_design_bible.md`)
+    Whenever implementing, refactoring, or reviewing frontend interfaces, components, or styles, the agent MUST strictly adhere to the **Universal Frontend Design Bible** located at `spec_universal/frontend_design_bible.md`.
+    - **Anchored Root DESIGN.md Prerequisite**: Before writing, modifying, or refactoring frontend code, verify or initialize a canonical root `DESIGN.md` capturing primitive, semantic, and component tokens. Components must NEVER ingest raw color hex codes, hardcoded pixel spacings, or arbitrary z-indices (Zero-Primitive Ingestion Invariant).
+    - **Watertight 5-Layer Tool Stack Pipeline**:
+      1. *Layer 1 (Reference Grounding)*: Use `awesome-design-md` to extract structural design tokens and layout mechanics from production design systems without copying trademarked branding.
+      2. *Layer 2 (Aesthetic Governor)*: Anchor to `frontend-design` as the baseline and activate strictly ONE mutually exclusive aesthetic governor (`minimalist-ui`, `industrial-brutalist-ui`, `gpt-taste`, `design-taste-frontend`, or `high-end-visual-design`). Never combine competing aesthetic governors.
+      3. *Layer 3 (Production Builders)*: Build accessible HTML5/React component architectures via `frontend-ui-engineering`, accelerate primitives with `21st-ui-build`, and sandbox WebGL/Three.js assets via `img2threejs`.
+      4. *Layer 4 (Preflight Polish)*: Audit micro-typography, tabular figures, optical alignment, and zero-data states with `impeccable` and `21st-ui-review`.
+      5. *Layer 5 (Physical Verification)*: Validate runtime performance and accessibility in real browsers using `playwright-cli` and `browser-testing-with-devtools`.
+    - **Zero Tolerance for Visual Slop**: Strictly enforce the 6-Category Anti-Slop Codex (banning generic purple radial glows, floating isometric cubes, monotonous 3-column cards, AI buzzword salads, trapless modals, and layout shifts).
+    - **Core Web Vitals & Render Bounds**: Mandate p75 CWV standards (LCP $\le 2.0\text{s}$, INP $\le 150\text{ms}$, CLS $\le 0.05$), 60/120fps frame budgets (GPU compositor properties only), WOFF2 fonts $\le 35\text{KB}$ with `font-display: swap`, and DOM budgets ($\le 1200$ nodes, depth $\le 24$, virtualize $\ge 60$ rows).
+    - **Mandatory 4-Tier TDD Testing Matrix**: All frontend task plans must explicitly include Type 1 Complexity, Type 2 Logic/State Machine, Type 3 UI/Integration Chaos, and Type 4 QA/Security (STRIDE & OWASP Top 10 client-side defenses).
