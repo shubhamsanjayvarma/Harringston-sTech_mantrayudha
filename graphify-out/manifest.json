@@ -5,8 +5,8 @@
     "semantic_hash": ""
   },
   ".agents/AGENTS.md": {
-    "mtime": 1789286177.9652047,
-    "ast_hash": "c4665930fa01b6dc9ba32ff2a521841f",
+    "mtime": 1789287025.7814784,
+    "ast_hash": "96ad9f17d89a12c54142a6d7bdb32a6d",
     "semantic_hash": ""
   },
   ".agents/rules/graphify.md": {
@@ -230,7 +230,7 @@
     "semantic_hash": ""
   },
   ".agents/rules/CONTEXT.md": {
-    "mtime": 1789281543.6816022,
+    "mtime": 1789286922.103728,
     "ast_hash": "2cdc22ba487f09ae5373741b6f7d66e0",
     "semantic_hash": ""
   },
@@ -325,12 +325,12 @@
     "semantic_hash": ""
   },
   ".githooks/pre-commit": {
-    "mtime": 1789243346.0189824,
-    "ast_hash": "058f67387169da91d9a3cb8510a1118d",
+    "mtime": 1789287018.4772685,
+    "ast_hash": "ef384da7defbab52fde0738bdadbab38",
     "semantic_hash": ""
   },
   ".agents/hooks.json": {
-    "mtime": 1789280202.6407664,
+    "mtime": 1789286922.1026607,
     "ast_hash": "f340d866619f9cad4e69954d11f425a2",
     "semantic_hash": ""
   },
@@ -345,53 +345,53 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1789244139.64069,
-    "ast_hash": "e44acb60b61f49c02608a6a30d475e90",
+    "mtime": 1789286922.1053333,
+    "ast_hash": "3af53e3329efafc830fdb3aa3b4fdb34",
     "semantic_hash": ""
   },
   "spec_universal/hackathon_pipeline/00_master_hackathon_operating_system.md": {
-    "mtime": 1789286169.4522088,
-    "ast_hash": "4dc773f0412b501410b69c402f7ff906",
+    "mtime": 1789286922.1191318,
+    "ast_hash": "a74bf72de6bd61dfb491077e49575202",
     "semantic_hash": ""
   },
   "spec_universal/hackathon_pipeline/01_idea_discovery_and_scoring.md": {
-    "mtime": 1789285236.2923489,
-    "ast_hash": "63b309735f3e8414c7617becda6548e7",
+    "mtime": 1789286922.1201315,
+    "ast_hash": "84d53e6ff070d3241d13a6271e569ca6",
     "semantic_hash": ""
   },
   "spec_universal/hackathon_pipeline/02_competitor_teardown_and_sentiment_mining.md": {
-    "mtime": 1789285475.0788043,
-    "ast_hash": "8ca566527294b463a91dc94556a59ef4",
+    "mtime": 1789286922.1299922,
+    "ast_hash": "2f352154a562f56e1b71acd25a75526c",
     "semantic_hash": ""
   },
   "spec_universal/hackathon_pipeline/03_mvp_scoping_and_demo_razor.md": {
-    "mtime": 1789286162.2228212,
-    "ast_hash": "59944badc0b02d42da638035137fe49f",
+    "mtime": 1789286922.1299922,
+    "ast_hash": "da217af8dfa0de543886a72da6f565d5",
     "semantic_hash": ""
   },
   "spec_universal/hackathon_pipeline/04_lean_7layer_architecture.md": {
-    "mtime": 1789244054.7794664,
-    "ast_hash": "bc1a150b6b409eaca116ece8eca9c0a4",
+    "mtime": 1789286922.1309936,
+    "ast_hash": "b6c7d496617132aa1b538658f9342f08",
     "semantic_hash": ""
   },
   "spec_universal/hackathon_pipeline/05_rapid_ui_scaffolding.md": {
-    "mtime": 1789244062.959474,
-    "ast_hash": "bdc0da26266c7bac6ebd1bee66335447",
+    "mtime": 1789286922.1319928,
+    "ast_hash": "114695bfd0a0bad1d220317bc23351ce",
     "semantic_hash": ""
   },
   "spec_universal/hackathon_pipeline/06_lean_4tier_tdd_and_security.md": {
-    "mtime": 1789244070.8468053,
-    "ast_hash": "a890a0501891a60f62257139800cc624",
+    "mtime": 1789286922.1325986,
+    "ast_hash": "3a79115a02d79d2ba46d2efe1c84227a",
     "semantic_hash": ""
   },
   "spec_universal/hackathon_pipeline/07_demo_pitch_and_judge_proofing.md": {
-    "mtime": 1789244080.1534262,
-    "ast_hash": "f88bd4c72f04624c835ad5d2acc779a9",
+    "mtime": 1789286922.1325986,
+    "ast_hash": "2e6bab48df5a6976c77679fd68aac315",
     "semantic_hash": ""
   },
   "spec_universal/hackathon_pipeline/README.md": {
-    "mtime": 1789286183.0751514,
-    "ast_hash": "d6b161e6b6012a8398ce1a5264fcc207",
+    "mtime": 1789286922.133606,
+    "ast_hash": "7fe3f54b5e8c7781005c10b47d82bf7d",
     "semantic_hash": ""
   }
 }
