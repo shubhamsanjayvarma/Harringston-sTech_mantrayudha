@@ -59,11 +59,37 @@ These guidelines are working if: fewer unnecessary changes in diffs, fewer rewri
 - Every implementation plan MUST explicitly start the search phase with Graphify.
 - At the end of implementation, when changes are made, the plan MUST explicitly mention updating the Graphify knowledge graph.
 
-6. Specifications Format
-   All specs must ONLY use the `.md` extension and the file structure when cross 3rd degree nesting should be then made into yaml format.
+6. Mandatory Hybrid YAML Architecture for Specifications & Plans
+   All specifications, architectural blueprints, task plans, and execution workflows MUST strictly adhere to the **Hybrid YAML Standard** within `.md` files:
+   - **Markdown Envelope (`.md`)**: Use standard `#` and `##` headings purely for high-level visual navigation, titles, and section boundaries.
+   - **Zero Prose Bloat**: Long conversational paragraphs, rambling narrative explanations, and unstructured bulleted essays are STRICTLY FORBIDDEN for operational instructions. Limit prose to a maximum of 1–2 sentence contextual summaries per section.
+   - **Strict Fenced YAML Blocks (` ```yaml `) for All Operational Substance**: ALL milestone procedures, execution sequences, feature breakdowns, API contracts, domain state machines, scoring rubrics, and guardrail checklists MUST be written in syntax-valid, structured YAML code blocks.
+   - **Mandatory Milestone YAML Schema**: Every milestone across all planning and specification documents must strictly conform to this keyed structure:
+     ```yaml
+     milestone_id: "M[Index]_[Descriptor]"
+     phase_name: "Actionable Phase Name"
+     objective: "Clear, verifiable definition of done in 1 sentence"
+     designated_skills:
+       - "exact-skill-name-1"
+       - "exact-skill-name-2"
+     input_contracts:
+       prerequisite_files:
+         - "spec/path/to/input.md"
+       required_context: "Required environmental state or prior outputs"
+     autonomous_execution_steps:
+       1_step_action: "Deterministic, unambiguous instruction"
+       2_step_action: "Deterministic, unambiguous instruction"
+     output_artifacts:
+       primary_target: "spec/path/to/output.md"
+       schema_definition: "Explicit YAML schema of the generated output"
+     validation_gate:
+       exit_criteria:
+         - "Objective, verifiable condition 1"
+         - "Objective, verifiable condition 2"
+     ```
 
-7. Structure and Features Detailing
-   During the detailed explanation of features and when creating structures, ALWAYS use YAML instead of JSON.
+7. Strict YAML Primacy for Data Modeling, Structures & Incident Records
+   During the detailed explanation of features, structures, system state machines, telemetry, and error logging, ALWAYS use YAML instead of JSON (except where JSON is strictly required by third-party tool contracts, such as `hooks.json` or `package.json`). JSON for human/agent operational specifications is strictly prohibited.
 
 8. Strict Test-Driven Development (TDD), Testing Template & Security
    Before writing, changing, or touching even a single line of code, you MUST create a proper plan for implementation.
@@ -161,9 +187,9 @@ These guidelines are working if: fewer unnecessary changes in diffs, fewer rewri
 33. Strict File Extensions for JSX Test Suites
     When creating or editing test files that render React components or contain JSX elements (e.g. `<Component />`), ALWAYS use the `.tsx` file extension. Using `.ts` causes Vite/oxc parser failures because `<` is treated as a generic type argument.
 
-34. Never Push `.agents/AGENTS.md` (Physically Enforced by Pre-Commit Hook)
-    Under absolutely no circumstances should `.agents/AGENTS.md` ever be staged, committed, or pushed to the remote repository in any project. It is a strictly local agent instruction file. Always keep all modifications to `.agents/AGENTS.md` confined to your local working directory.
-    - **Physical Automated Enforcement**: Any attempt to commit `.agents/AGENTS.md` is automatically and physically rejected with exit code 1 by `.githooks/pre-commit` (configured via `git config core.hooksPath .githooks`).
+34. Master Boilerplate AGENTS.md vs Downstream Cloned Project Isolation
+    In this master boilerplate repository (`Hackathon_Boilerplate`), `.agents/AGENTS.md` is versioned and maintained on `main` as the authoritative agent operating system, guaranteeing that whenever this repository is cloned into a new hackathon project (`git clone`), the cloned workspace inherits the full 39-rule architecture, 7-phase speedrun pipeline, and automated safety hooks out of the box.
+    - **Downstream Cloned Isolation**: Once cloned to start a specific competition product, `.agents/AGENTS.md` should remain confined to the local workspace to avoid polluting downstream product codebases, unless explicitly updating the master boilerplate standard itself.
 
 35. Universal Specifications (`spec_universal/`) vs. Project-Specific Specifications (`spec/`)
     All specifications, PRDs, architecture plans, and task plans must strictly follow this directory separation and lifecycle rule:
@@ -322,3 +348,90 @@ These guidelines are working if: fewer unnecessary changes in diffs, fewer rewri
       - Project DNA, runtime quirks, or mistake patterns $\to$ append to `.agents/rules/CONTEXT.md`.
       - Architecture templates or specifications $\to$ integrate into the appropriate `spec_universal/` document.
     - **Audit & Clean**: Provide a clear report of what was extracted vs. rejected (and why) before clearing the processed dump file.
+
+39. The 7-Phase Hackathon Speedrun Pipeline & Golden Demo Razor (`spec_universal/hackathon_pipeline/`)
+    Whenever operating in a hackathon, competition, or venture sprint context within this repository, the agent MUST strictly execute through the **7-Phase Hackathon Operating System** formatted under the Hybrid YAML Standard:
+
+    ```yaml
+    hackathon_pipeline_execution_contract:
+      phase_1_reconnaissance_and_discovery:
+        designated_spec: "spec_universal/hackathon_pipeline/01_idea_discovery_and_scoring.md"
+        primary_skills:
+          - "kimi-webbridge"
+          - "research subagent"
+          - "idea-refine"
+          - "doubt-driven-development"
+        mandates:
+          - "Ingest local PDFs/docs and scrape portal via kimi-webbridge."
+          - "Dual-Storage Mandate: Compile exhaustive spec/[hackathon_name]_brief.md AND immediately sync active_hackathon_context into .agents/rules/CONTEXT.md Section 0."
+          - "Elite Hackathon Intelligence (Milestone 0.5): For elite/institutional competitions, forensically audit 5-10 past winners (strengths vs unsolved gaps), profile jury archetypes, codify winning vs fatal patterns, and enforce the Round-by-Round Delta Protocol."
+          - "PS Hunting & Compulsory HITL Gate (Milestone 0.8): Ingest softcopy/hardcopy photos, intake team tech stack, triage down to Top 5 shortlist in spec/01_ps_hunting_shortlist.md; halt execution until explicit user selection of P0 and P1."
+          - "Domain Scope & Niching (Milestone 0.9): For broad PSs, niche down to a killer micro-wedge with 2-minute visual demo viability; for narrow PSs, proceed directly to product hunting."
+          - "Spawn 4 subagents across YC/a16z/Reddit/VCs; score on 9 parameters; output Top 10 Idea Bank."
+
+      phase_2_competitor_teardown_and_sentiment_mining:
+        designated_spec: "spec_universal/hackathon_pipeline/02_competitor_teardown_and_sentiment_mining.md"
+        primary_skills:
+          - "kimi-webbridge"
+          - "context-engineering"
+          - "idea-refine"
+          - "doubt-driven-development"
+        mandates:
+          - "Identify candidate commercial incumbents AND search past winners across Devpost galleries, Kaggle competition solutions, X (Twitter) winner threads, and GitHub repos."
+          - "Extract 'What Made Them Win' (killer demo moment, architecture leap, or juror hook) alongside product names, URLs, and GitHub links into spec/03_candidate_products_and_repos.md BEFORE starting deep surgical analysis."
+          - "Audit pricing, workflow friction, and past winner codebase dependencies/shortcuts."
+          - "Mine 1-3 star negative reviews on G2, Capterra, Trustpilot, Reddit, and GitHub under zero-trust sanitization."
+          - "Invert flaws into product leverage (Baseline Parity + Kill Feature)."
+          - "Formulate the pitch contrast statement and dual-layer scope in spec/03_competitor_leverage_report.md."
+
+      phase_3_mvp_scoping_and_demo_razor:
+        designated_spec: "spec_universal/hackathon_pipeline/03_mvp_scoping_and_demo_razor.md"
+        primary_skills:
+          - "planning-and-task-breakdown"
+          - "doubt-driven-development"
+          - "code-simplification"
+        mandates:
+          - "Golden Demo Path Razor: Any feature off the 2-minute judge path is STRICTLY BANNED (Rule 2)."
+          - "Enforce the 70% buildable time rule (30% reserved for testing, polish, and pitch rehearsal)."
+          - "Authentic Visual Mocking: Backend mocks for auth/payments/SMS, but UI rendered 100% authentic and production-grade."
+          - "Localhost & SQLite First: Product must be 100% functional on localhost and local SQLite BEFORE any cloud deployment is attempted."
+          - "Free-Tier Only Cloud Staging: Deployment is strictly limited to free services (Vercel, Supabase, Railway/Render) with zero paid dependencies."
+          - "Covert Demo Protection: Offline fallback JSON fixtures and scenario selectors must NEVER be labeled as 'Demo' or 'Mock'."
+          - "Compile finalized contract into spec/04_mvp_execution_blueprint.md."
+
+      phase_4_lean_7layer_architecture:
+        designated_spec: "spec_universal/hackathon_pipeline/04_lean_7layer_architecture.md"
+        primary_skills:
+          - "spec-driven-development"
+          - "api-and-interface-design"
+        mandates:
+          - "Consolidate PRD, BaaS decisions (Supabase/Convex), Mermaid sequence flow, typed contracts, and FSM into spec/05_system_architecture.md."
+
+      phase_5_rapid_ui_scaffolding:
+        designated_spec: "spec_universal/hackathon_pipeline/05_rapid_ui_scaffolding.md"
+        primary_skills:
+          - "21st-ui-build"
+          - "frontend-ui-engineering"
+        mandates:
+          - "Assemble the 4-component layout using 21st.dev components and Tailwind CSS."
+          - "Implement split-screen baseline vs leverage views."
+          - "Integrate the 'Load Judge Demo' preset button."
+
+      phase_6_lean_4tier_tdd_and_security:
+        designated_spec: "spec_universal/hackathon_pipeline/06_lean_4tier_tdd_and_security.md"
+        primary_skills:
+          - "test-driven-development"
+          - "cyber-security-frameworks"
+          - "systematic-debugging"
+        mandates:
+          - "Automated <30s test suite across all 4 tiers (Execution bounds <4000ms, Golden Path logic, UI rendering contracts, and STRIDE/OWASP input fuzzing)."
+
+      phase_7_demo_pitch_and_judge_proofing:
+        designated_spec: "spec_universal/hackathon_pipeline/07_demo_pitch_and_judge_proofing.md"
+        primary_skills:
+          - "shipping-and-launch"
+          - "verification-before-completion"
+        mandates:
+          - "Script 3-minute presentation (Hook, Contrast, Live Demo, Technical Depth, Close)."
+          - "Deploy Tri-Layer Fail-Safe Shield (JSON fallback, demo mode, and 60fps silent backup video)."
+    ```
