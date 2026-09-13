@@ -84,24 +84,24 @@
       "norm_label": "main()"
     },
     {
-      "label": "De-obfuscates command strings across 4 phases to prevent regex evasion:     Phas",
+      "label": "De-obfuscates command strings across 4 phases to prevent regex evasion:     Pha",
       "file_type": "rationale",
       "source_file": ".agents/scripts/destructive_command_guard.py",
       "source_location": "L19",
       "_origin": "ast",
       "id": "scripts_destructive_command_guard_rationale_19",
       "community": 68,
-      "norm_label": "de-obfuscates command strings across 4 phases to prevent regex evasion:     phas"
+      "norm_label": "de-obfuscates command strings across 4 phases to prevent regex evasion:     pha"
     },
     {
-      "label": "Evaluates command against forensic patterns after normalization.     Returns Ant",
+      "label": "Evaluates command against forensic patterns after normalization.     Returns An",
       "file_type": "rationale",
       "source_file": ".agents/scripts/destructive_command_guard.py",
       "source_location": "L258",
       "_origin": "ast",
       "id": "scripts_destructive_command_guard_rationale_258",
       "community": 68,
-      "norm_label": "evaluates command against forensic patterns after normalization.     returns ant"
+      "norm_label": "evaluates command against forensic patterns after normalization.     returns an"
     },
     {
       "label": "idea-refine.sh",
@@ -16571,9 +16571,9 @@
       "source_file": "dump/README.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "dump_readme",
-      "target": "dump_readme_knowledge_reference_dump_inbox_dump",
-      "confidence_score": 1.0
+      "target": "dump_readme_knowledge_reference_dump_inbox_dump"
     },
     {
       "relation": "contains",
@@ -16581,9 +16581,9 @@
       "source_file": "dump/README.md",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "dump_readme_knowledge_reference_dump_inbox_dump",
-      "target": "dump_readme_the_surgical_knowledge_merge_protocol",
-      "confidence_score": 1.0
+      "target": "dump_readme_the_surgical_knowledge_merge_protocol"
     },
     {
       "relation": "contains",
@@ -16591,9 +16591,9 @@
       "source_file": "dump/README.md",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "dump_readme_the_surgical_knowledge_merge_protocol",
-      "target": "dump_readme_1_zero_direct_overwrite_preservation_invariant",
-      "confidence_score": 1.0
+      "target": "dump_readme_1_zero_direct_overwrite_preservation_invariant"
     },
     {
       "relation": "contains",
@@ -16601,9 +16601,9 @@
       "source_file": "dump/README.md",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "dump_readme_the_surgical_knowledge_merge_protocol",
-      "target": "dump_readme_2_forensic_deduplication_overlap_detection",
-      "confidence_score": 1.0
+      "target": "dump_readme_2_forensic_deduplication_overlap_detection"
     },
     {
       "relation": "contains",
@@ -16611,9 +16611,9 @@
       "source_file": "dump/README.md",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "dump_readme_the_surgical_knowledge_merge_protocol",
-      "target": "dump_readme_3_extraction_of_high_value_differentials_only",
-      "confidence_score": 1.0
+      "target": "dump_readme_3_extraction_of_high_value_differentials_only"
     },
     {
       "relation": "contains",
@@ -16621,9 +16621,9 @@
       "source_file": "dump/README.md",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "dump_readme_the_surgical_knowledge_merge_protocol",
-      "target": "dump_readme_4_deterministic_destination_routing",
-      "confidence_score": 1.0
+      "target": "dump_readme_4_deterministic_destination_routing"
     },
     {
       "relation": "contains",
@@ -16631,9 +16631,9 @@
       "source_file": "dump/README.md",
       "source_location": "L36",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "dump_readme_the_surgical_knowledge_merge_protocol",
-      "target": "dump_readme_5_automatic_cleanup",
-      "confidence_score": 1.0
+      "target": "dump_readme_5_automatic_cleanup"
     },
     {
       "relation": "contains",
@@ -20337,5 +20337,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "582f742705f847fc6c3269e73dda74fd01b1e76c"
+  "built_at_commit": "8013bdd95a838a13dfe10f036fcae0a083825142"
 }

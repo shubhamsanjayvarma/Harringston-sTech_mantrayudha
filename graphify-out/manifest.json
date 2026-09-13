@@ -5,8 +5,8 @@
     "semantic_hash": ""
   },
   ".agents/AGENTS.md": {
-    "mtime": 1789232348.9251568,
-    "ast_hash": "8ce4e08432cccbf4d873faedaa5582fe",
+    "mtime": 1789287249.2729077,
+    "ast_hash": "c473e6d1dfdddc392f2cbc7709ec3286",
     "semantic_hash": ""
   },
   ".agents/rules/graphify.md": {
@@ -220,8 +220,8 @@
     "semantic_hash": ""
   },
   "system_design_notes.md": {
-    "mtime": 1788534021.379889,
-    "ast_hash": "c15774df67b6029d33cc2557cbb9c288",
+    "mtime": 1789233365.410104,
+    "ast_hash": "05a45ed1e5d4512f65d8e99e54db2093",
     "semantic_hash": ""
   },
   ".agents/rules/context.md": {
@@ -230,118 +230,118 @@
     "semantic_hash": ""
   },
   ".agents/rules/CONTEXT.md": {
-    "mtime": 1789232354.8880486,
-    "ast_hash": "d2cde209de7b5804e52ca218450632c2",
+    "mtime": 1789233365.3381703,
+    "ast_hash": "42f4907fefa5978dbb6bbb1ce9a1525e",
     "semantic_hash": ""
   },
   "spec/README.md": {
-    "mtime": 1789224179.6135974,
-    "ast_hash": "2f7ffc23933fae948f6e6aa216e6eb51",
+    "mtime": 1789233365.3649187,
+    "ast_hash": "8c3956facaba4c563e133b78e4a252ed",
     "semantic_hash": ""
   },
   "spec_universal/product_requirements_document_template.md": {
-    "mtime": 1784565733.9444294,
-    "ast_hash": "0c0d783299edec0444a58fc1c0fb4b17",
+    "mtime": 1789233365.3696191,
+    "ast_hash": "d3445039742f59b1e8be764db4461329",
     "semantic_hash": ""
   },
   "spec_universal/production_software_engineering_pillars_and_gap_analysis.md": {
-    "mtime": 1788621750.3606064,
-    "ast_hash": "39a8bbdda490c1137adb61f8169187c0",
+    "mtime": 1789233365.3718321,
+    "ast_hash": "e9837033f37583728b9be25791c93f77",
     "semantic_hash": ""
   },
   "spec_universal/second_brain_ai_operating_system_blueprint.md": {
-    "mtime": 1787845477.416257,
+    "mtime": 1789233365.3746643,
     "ast_hash": "a59dc3b1f9510567034ee92994f0ae96",
     "semantic_hash": ""
   },
   "spec_universal/system_design/00_system_design_routing_and_navigation_guide.md": {
-    "mtime": 1789224315.8529155,
-    "ast_hash": "6a76ee555df67cb3882fa52e9deeb968",
+    "mtime": 1789233365.395629,
+    "ast_hash": "f96c2f3c331214063caddbf8dbe50c40",
     "semantic_hash": ""
   },
   "spec_universal/system_design/01_non_negotiable_rules_and_principles.md": {
-    "mtime": 1788535007.3248556,
-    "ast_hash": "a32a3ecdce26f8a30c5df63a33970c94",
+    "mtime": 1789233365.3976762,
+    "ast_hash": "ddf7c828662c23c04c22eb5808a7b43d",
     "semantic_hash": ""
   },
   "spec_universal/system_design/02_high_level_design_and_distributed_systems.md": {
-    "mtime": 1788535038.5483716,
-    "ast_hash": "24ed68d6c8b968864d0e6ececb3ca4b3",
+    "mtime": 1789233365.3976762,
+    "ast_hash": "8a0d71a025cab4f1ded794940af73892",
     "semantic_hash": ""
   },
   "spec_universal/system_design/03_low_level_design_and_object_oriented_architecture.md": {
-    "mtime": 1788535070.2042606,
-    "ast_hash": "9c4e624e4e2da673208a85a208b9a783",
+    "mtime": 1789233365.4011128,
+    "ast_hash": "fbbc907a8f983b8fb86858abd96136d0",
     "semantic_hash": ""
   },
   "spec_universal/system_design/04_system_archetypes_and_decision_matrices.md": {
-    "mtime": 1788535095.267488,
-    "ast_hash": "4175b1da93ea053aaf94ad401ad080b0",
+    "mtime": 1789233365.4011128,
+    "ast_hash": "14fff0473a856a4e2bb1a575685653b6",
     "semantic_hash": ""
   },
   "spec_universal/system_design/05_system_design_verification_and_testing_playbook.md": {
-    "mtime": 1789224255.6073112,
-    "ast_hash": "efdd77ae1bcf48a8de8f646dfa15577b",
+    "mtime": 1789233365.4011128,
+    "ast_hash": "e3364e0cbc7dd5fca973412991eac936",
     "semantic_hash": ""
   },
   "spec_universal/system_design/06_observability_telemetry_and_reliability_engineering.md": {
-    "mtime": 1788535130.277577,
-    "ast_hash": "333ee7d0866b6da58eddcf8d04cfcea7",
+    "mtime": 1789233365.4011128,
+    "ast_hash": "0599390727e0e03ec76c8d04f0612ff5",
     "semantic_hash": ""
   },
   "spec_universal/system_design/07_deployment_operations_governance_and_finops.md": {
-    "mtime": 1788535156.6158776,
-    "ast_hash": "36bac149e9b135be39e07e39fa2b5978",
+    "mtime": 1789233365.4053195,
+    "ast_hash": "cd6ba8c55cb14eb2964aacca0335b63c",
     "semantic_hash": ""
   },
   "spec_universal/system_design/README.md": {
-    "mtime": 1789224269.0864902,
-    "ast_hash": "7c560b4ffde7fa93d41eefe2af63b9a1",
+    "mtime": 1789233365.4057388,
+    "ast_hash": "8ee7cf16a07bd559def3cd811abcccf3",
     "semantic_hash": ""
   },
   "spec_universal/tdd_4tier_testing_template.md": {
-    "mtime": 1789224247.8416092,
-    "ast_hash": "46a90ef2a46eaffbdf253ddbff141968",
+    "mtime": 1789233365.4057388,
+    "ast_hash": "3ef3b55cfbd3ef92cfe9eda573a340d7",
     "semantic_hash": ""
   },
   "spec_universal/tech_stack_prd_template.md": {
-    "mtime": 1784991433.2211223,
-    "ast_hash": "97ac9163826d3816175a0e27f31e8f89",
+    "mtime": 1789233365.4078817,
+    "ast_hash": "b168c3fa0e88288b9590e7af0e780eb8",
     "semantic_hash": ""
   },
   "spec_universal/universal_prd_and_task_plan_requirements.md": {
-    "mtime": 1789224238.6168897,
-    "ast_hash": "2bbe16b5a8ddaa27a7f5f0b6f079dc0e",
+    "mtime": 1789233365.4089966,
+    "ast_hash": "b391680c76515003866b78eb023caeda",
     "semantic_hash": ""
   },
   "spec_universal/second_brain_ai_operating_system_blueprint.pdf": {
-    "mtime": 1787727396.2382448,
+    "mtime": 1789233365.391955,
     "ast_hash": "77583f05f4773b97d37d67793d0adf2f",
     "semantic_hash": ""
   },
   "spec_universal/project_architecture_initialization.md": {
-    "mtime": 1789225556.8552225,
-    "ast_hash": "fce5c26314a4ae50d0f1f4bf2dca481f",
+    "mtime": 1789233365.3732321,
+    "ast_hash": "edc48f647bffbd9e1426e9d21eea268b",
     "semantic_hash": ""
   },
   ".githooks/pre-commit": {
-    "mtime": 1789230562.5051053,
-    "ast_hash": "5d48154d851b99c5f206011b00e2b42c",
+    "mtime": 1789287255.160229,
+    "ast_hash": "2635211aadb142ecb42ad7430fa741ae",
     "semantic_hash": ""
   },
   ".agents/hooks.json": {
-    "mtime": 1789231695.1951091,
-    "ast_hash": "2520f62d74f8dfc54380cf56404e0f03",
+    "mtime": 1789280196.329066,
+    "ast_hash": "af71d0cf025f240aa2e4a8969e34e11a",
     "semantic_hash": ""
   },
   ".agents/scripts/destructive_command_guard.py": {
-    "mtime": 1789231690.037118,
-    "ast_hash": "5bbd38b629d04f57f8e3a4abfd0e29bd",
+    "mtime": 1789233365.33975,
+    "ast_hash": "d8051eb3936f85f77f718dd9849f64ab",
     "semantic_hash": ""
   },
   "dump/README.md": {
-    "mtime": 1789232340.4576004,
-    "ast_hash": "9d8926280fb696531e7f5efc566fc2a8",
+    "mtime": 1789233365.3432386,
+    "ast_hash": "8dddc107422735de5e27de0476ca8d96",
     "semantic_hash": ""
   }
 }
