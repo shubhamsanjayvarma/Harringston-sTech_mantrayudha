@@ -1,3 +1,7 @@
 graphify-out/cache/
 __pycache__/
 *.py[cod]
+
+# Platform-specific binaries (downloaded on demand per OS)
+**/scripts/bin/
+*.exe
