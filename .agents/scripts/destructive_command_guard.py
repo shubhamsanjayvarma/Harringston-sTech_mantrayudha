@@ -2,7 +2,7 @@
 """
 Destructive Command Guard & Threat Interception Hook
 Repository: Universal_Project_Boilerplate
-Enforces: Rule 37 (Harmful Command Prevention & Non-Negotiable Reversibility)
+Enforces: Rule 32 (Harmful Command Prevention & Non-Negotiable Reversibility)
 Platform: Cross-platform (Windows pwsh/cmd & POSIX bash/zsh)
 Protocol: Antigravity PreToolUse Contract (stdin JSON -> stdout JSON)
 """
@@ -273,7 +273,7 @@ def evaluate_command(command_line: str) -> dict:
                 f"\nCategory: {threat['category']}"
                 f"\nThreat:   {threat['name']}"
                 f"\nTrigger:  {matched_segment}"
-                f"\n\nViolation: Rule 37 (Harmful Command Prevention & Invariant of Reversibility)."
+                f"\n\nViolation: Rule 32 (Harmful Command Prevention & Invariant of Reversibility)."
                 f"\nUnder no circumstances may an agent execute unconfirmed destructive operations,"
                 f"\nforce overwrites, filesystem root wipes, or irreversible block/system changes."
                 f"\n================================================================================"

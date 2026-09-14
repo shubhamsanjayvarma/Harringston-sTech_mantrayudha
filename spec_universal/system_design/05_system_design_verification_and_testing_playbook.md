@@ -75,7 +75,7 @@ type_1_milestone_2:
         -beta * delta * ln(U) > Delta.
         Measure computational overhead using performance.now().
       assertions:
-        - "assert mean computation overhead is < 0.005ms per read (local baseline; allow up to 0.025ms (5x) on shared CI runners to eliminate flakiness per Rule 18)"
+        - "assert mean computation overhead is < 0.005ms per read (local baseline; allow up to 0.025ms (5x) on shared CI runners to eliminate flakiness per Rule 15)"
         - "assert auxiliary memory allocations per check are O(1) with 0 bytes heap garbage"
 
     - test_id: "TC-COMPLEXITY-06"
@@ -111,7 +111,7 @@ type_1_milestone_3:
         (A) SELECT * FROM table ORDER BY created_at DESC LIMIT 20 OFFSET 1000000;
         (B) Keyset pagination with WHERE (created_at < :last_ts) OR (created_at = :last_ts AND id < :last_id).
       assertions:
-        - "assert Keyset pagination query latency is <= 1.5ms (local baseline; allow <= 7.5ms on CI runners per Rule 18)"
+        - "assert Keyset pagination query latency is <= 1.5ms (local baseline; allow <= 7.5ms on CI runners per Rule 15)"
         - "assert Offset pagination query latency is >= 2,000ms or times out due to O(N) leaf scanning"
         - "assert Keyset pagination disk buffer reads are O(log_B N + K) while Offset reads are O(N)"
 

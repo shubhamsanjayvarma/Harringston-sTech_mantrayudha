@@ -2,7 +2,7 @@
 # ==============================================================================
 # Git Pre-Commit Guardrail Hook
 # Repository: Universal_Project_Boilerplate
-# Enforces: Rule 34 (Local AGENTS.md Isolation) & Rule 35 (spec_universal Immutability)
+# Enforces: Rule 29 (Local AGENTS.md Isolation) & Rule 30 (spec_universal Immutability)
 # ==============================================================================
 
 # Inspect staged files for protected foundation paths:
@@ -28,8 +28,8 @@ if [ -n "$BLOCKED_FILES" ]; then
   echo "$BLOCKED_FILES"
   echo ""
   echo "Violations:"
-  echo "  - Rule 34: .agents/AGENTS.md is isolated and protected."
-  echo "  - Rule 35: spec_universal/ foundation templates are immutable downstream."
+  echo "  - Rule 29: .agents/AGENTS.md is isolated and protected."
+  echo "  - Rule 30: spec_universal/ foundation templates are immutable downstream."
   echo ""
   echo "Action Required:"
   echo "  Unstage the protected files before committing:"

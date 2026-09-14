@@ -65,8 +65,8 @@ time_budget_matrix:
 1. **The Golden Demo Path Razor (Rule 2):** If a feature or setting does not sit directly on the 2-minute judging script, it is strictly banned from being coded.
 2. **Mandatory Mocking of Commodities:** Never waste hackathon hours writing custom OAuth flows, password reset emails, or Stripe payment webhooks. Always use mock sessions and hardcoded enterprise tier badges.
 3. **Offline Resilience:** Every external LLM or API integration must have a deterministic local fallback JSON cache to survive venue Wi-Fi drops.
-4. **Physical Harmful Command Prevention Hook (Rule 37):** All terminal commands are guarded by `.agents/scripts/destructive_command_guard.py` via `.agents/hooks.json`.
-5. **Physical Immuntability Guard (Rule 34 & 35):** Pre-commit hook (`.githooks/pre-commit`) prevents accidental commits to protected templates.
+4. **Physical Harmful Command Prevention Hook (Rule 32):** All terminal commands are guarded by `.agents/scripts/destructive_command_guard.py` via `.agents/hooks.json`.
+5. **Physical Immuntability Guard (Rule 29 & 30):** Pre-commit hook (`.githooks/pre-commit`) prevents accidental commits to protected templates.
 
 ---
 

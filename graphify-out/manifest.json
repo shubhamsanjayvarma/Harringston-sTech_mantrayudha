@@ -5,8 +5,8 @@
     "semantic_hash": ""
   },
   ".agents/AGENTS.md": {
-    "mtime": 1789370200.283389,
-    "ast_hash": "562aebff1f3a21b79548763a7628dcb4",
+    "mtime": 1789371094.1444404,
+    "ast_hash": "2d7c42c10b1277215a5865a976d7dd80",
     "semantic_hash": ""
   },
   ".agents/rules/graphify.md": {
@@ -230,8 +230,8 @@
     "semantic_hash": ""
   },
   ".agents/rules/CONTEXT.md": {
-    "mtime": 1789369718.3976786,
-    "ast_hash": "a92a6b0bc510c4fb8470975a7fff5eb5",
+    "mtime": 1789371109.7657597,
+    "ast_hash": "57b4ed0de26905b062fea59fe14f5f80",
     "semantic_hash": ""
   },
   "spec/README.md": {
@@ -255,8 +255,8 @@
     "semantic_hash": ""
   },
   "spec_universal/system_design/00_system_design_routing_and_navigation_guide.md": {
-    "mtime": 1789243346.0846086,
-    "ast_hash": "f96c2f3c331214063caddbf8dbe50c40",
+    "mtime": 1789370978.3337367,
+    "ast_hash": "5c71c01f61018ee9c122d7d3e7e87c83",
     "semantic_hash": ""
   },
   "spec_universal/system_design/01_non_negotiable_rules_and_principles.md": {
@@ -280,8 +280,8 @@
     "semantic_hash": ""
   },
   "spec_universal/system_design/05_system_design_verification_and_testing_playbook.md": {
-    "mtime": 1789243346.0913477,
-    "ast_hash": "e3364e0cbc7dd5fca973412991eac936",
+    "mtime": 1789370978.3337367,
+    "ast_hash": "9a0deca8c62f08e89120dd67c2f5841c",
     "semantic_hash": ""
   },
   "spec_universal/system_design/06_observability_telemetry_and_reliability_engineering.md": {
@@ -325,8 +325,8 @@
     "semantic_hash": ""
   },
   ".githooks/pre-commit": {
-    "mtime": 1789328543.9458408,
-    "ast_hash": "d12c14c5bdeea389a1c70d88409e504c",
+    "mtime": 1789370978.3327363,
+    "ast_hash": "6b98057298a02ab047b984cc63ff9b13",
     "semantic_hash": ""
   },
   ".agents/hooks.json": {
@@ -335,8 +335,8 @@
     "semantic_hash": ""
   },
   ".agents/scripts/destructive_command_guard.py": {
-    "mtime": 1789243345.9661822,
-    "ast_hash": "d8051eb3936f85f77f718dd9849f64ab",
+    "mtime": 1789370978.3327363,
+    "ast_hash": "cce5273638acab741c79cdc7cefd01d4",
     "semantic_hash": ""
   },
   "dump/README.md": {
@@ -345,8 +345,8 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1789286922.1053333,
-    "ast_hash": "3af53e3329efafc830fdb3aa3b4fdb34",
+    "mtime": 1789370978.3347363,
+    "ast_hash": "9c52314a05c23e9b81ab768c5fd905dc",
     "semantic_hash": ""
   },
   "spec_universal/hackathon_pipeline/00_master_hackathon_operating_system.md": {
