@@ -1,7 +1,7 @@
 # Graph Report - Hackathon_Boilerplate  (2026-09-14)
 
 ## Corpus Check
-- 180 files · ~375,076 words
+- 180 files · ~375,803 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `0c2909c8`
+- Built from commit: `20531dec`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -591,27 +591,27 @@ Nodes (3): 🏆 Hackathon Operating System & Speedrun Framework, 🚀 How to Exe
 
 ### Community 81 - "Community 81"
 Cohesion: 0.03
-Nodes (100): applyGlobalBarLabelState(), applyPlaceholderSizingStyles(), averageRgb01(), bindEditBadgeProxy(), buildAnnotationsForCapture(), buildInsertPlaceholderSnapshotFromDom(), buildPinElement(), buildPlaceholderResizeHandles() (+92 more)
+Nodes (107): applyGlobalBarLabelState(), applyPlaceholderSizingStyles(), averageRgb01(), bindEditBadgeProxy(), buildAnnotationsForCapture(), buildInsertPlaceholderSnapshotFromDom(), buildPickedAnchorSnapshot(), buildPinElement() (+99 more)
 
 ### Community 82 - "Community 82"
 Cohesion: 0.03
-Nodes (107): applyGlobalBarLabelState(), applyPlaceholderSizingStyles(), averageRgb01(), bindEditBadgeProxy(), buildAnnotationsForCapture(), buildInsertPlaceholderSnapshotFromDom(), buildPickedAnchorSnapshot(), buildPinElement() (+99 more)
+Nodes (116): applyGlobalBarLabelState(), applyPlaceholderSizingStyles(), averageRgb01(), buildAnnotationsForCapture(), buildCollapsible(), buildColorModels(), buildInsertPlaceholderSnapshotFromDom(), buildPickedAnchorSnapshot() (+108 more)
 
 ### Community 83 - "Community 83"
-Cohesion: 0.05
-Nodes (73): abortSvelteComponentInjection(), applyOriginalAttrsToSvelteAnchor(), applySavedSessionMeta(), clampVariantIndex(), clearHandled(), commitAcceptedSvelteComponentToDom(), commitAcceptedVariantToDom(), completeParameterGenerationIfReady() (+65 more)
+Cohesion: 0.06
+Nodes (61): abortSvelteComponentInjection(), applySavedSessionMeta(), clampVariantIndex(), clearHandled(), commitAcceptedVariantToDom(), completeParameterGenerationIfReady(), completeParameterPublication(), completeSourceInjection() (+53 more)
 
 ### Community 84 - "Community 84"
 Cohesion: 0.08
 Nodes (71): beginNewLiveConfiguration(), cancelEditing(), cancelEditingToPicking(), cancelInsertConfigure(), cleanup(), cleanupAcceptedSession(), clearAnnotations(), clearInsertPicking() (+63 more)
 
 ### Community 85 - "Community 85"
-Cohesion: 0.09
-Nodes (64): beginNewLiveConfiguration(), buildPickedAnchorSnapshot(), cancelEditing(), cancelEditingToPicking(), cancelInsertConfigure(), cleanup(), cleanupAcceptedSession(), clearAnnotations() (+56 more)
+Cohesion: 0.08
+Nodes (71): beginNewLiveConfiguration(), cancelEditing(), cancelEditingToPicking(), cancelInsertConfigure(), cleanup(), cleanupAcceptedSession(), clearAnnotations(), clearInsertPicking() (+63 more)
 
 ### Community 86 - "Community 86"
-Cohesion: 0.06
-Nodes (61): abortSvelteComponentInjection(), applySavedSessionMeta(), clampVariantIndex(), clearHandled(), commitAcceptedVariantToDom(), completeParameterGenerationIfReady(), completeParameterPublication(), completeSourceInjection() (+53 more)
+Cohesion: 0.05
+Nodes (73): abortSvelteComponentInjection(), applyOriginalAttrsToSvelteAnchor(), applySavedSessionMeta(), clampVariantIndex(), clearHandled(), commitAcceptedSvelteComponentToDom(), commitAcceptedVariantToDom(), completeParameterGenerationIfReady() (+65 more)
 
 ### Community 87 - "Community 87"
 Cohesion: 0.09
@@ -642,8 +642,8 @@ Cohesion: 0.08
 Nodes (36): abandonForeignSession(), addManualContextText(), applyEditing(), buildLocatorForLeaf(), canRestoreManualEditElement(), contextElementForManualEdit(), copyEditContainerContext(), copyEditLeafContext() (+28 more)
 
 ### Community 94 - "Community 94"
-Cohesion: 0.13
-Nodes (29): armPageChatForTyping(), attachSteerFocusDebug(), clearSteerAwaitTimer(), collapsePageChat(), expandPageChat(), focusConfigureInput(), focusPageChatInput(), focusSteerChat() (+21 more)
+Cohesion: 0.15
+Nodes (26): armPageChatForTyping(), attachSteerFocusDebug(), collapsePageChat(), expandPageChat(), focusConfigureInput(), focusPageChatInput(), focusSteerChat(), lockSteerChat() (+18 more)
 
 ### Community 95 - "Community 95"
 Cohesion: 0.18
@@ -654,8 +654,8 @@ Cohesion: 0.07
 Nodes (44): agentHasWorkInFlight(), agentStatusText(), attachSteerFocusGuard(), barPaletteForTheme(), brandMarkSvg(), buildDesignHeader(), buildSteerProcessingDots(), buildSteerQueueHint() (+36 more)
 
 ### Community 97 - "Community 97"
-Cohesion: 0.10
-Nodes (29): buildCollapsible(), buildColorModels(), buildRadiiModels(), buildTypographyModels(), cssSafe(), designEmptyMessage(), escapeHtml(), fontStack() (+21 more)
+Cohesion: 0.12
+Nodes (23): applyOriginalAttrsToSvelteAnchor(), captureAndEmit(), checkpointPayload(), commitAcceptedSvelteComponentToDom(), compileShader(), componentModuleCandidates(), describeMountFailure(), detectDevServerBase() (+15 more)
 
 ### Community 98 - "Community 98"
 Cohesion: 0.06
@@ -710,8 +710,8 @@ Cohesion: 0.10
 Nodes (29): buildCollapsible(), buildColorModels(), buildRadiiModels(), buildTypographyModels(), cssSafe(), designEmptyMessage(), escapeHtml(), fontStack() (+21 more)
 
 ### Community 111 - "Community 111"
-Cohesion: 0.12
-Nodes (23): applyOriginalAttrsToSvelteAnchor(), captureAndEmit(), checkpointPayload(), commitAcceptedSvelteComponentToDom(), compileShader(), componentModuleCandidates(), describeMountFailure(), detectDevServerBase() (+15 more)
+Cohesion: 0.31
+Nodes (9): bindEditBadgeProxy(), editBadgeProxyTargets(), initEditBadge(), initEditBadgeHitProxies(), positionEditBadge(), setImportantStyle(), styleEditBadgeProxy(), syncEditBadgeHitProxies() (+1 more)
 
 ### Community 112 - "Community 112"
 Cohesion: 0.17
@@ -1106,11 +1106,11 @@ Cohesion: 0.50
 Nodes (3): hooks, postToolUse, version
 
 ### Community 210 - "Community 210"
-Cohesion: 0.67
+Cohesion: 0.50
 Nodes (3): adapt, argumentHint, description
 
 ### Community 211 - "Community 211"
-Cohesion: 0.50
+Cohesion: 0.67
 Nodes (3): animate, argumentHint, description
 
 ### Community 212 - "Community 212"

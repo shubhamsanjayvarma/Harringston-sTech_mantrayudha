@@ -361,3 +361,91 @@ These guidelines are working if: fewer unnecessary changes in diffs, fewer rewri
     - **Zero Tolerance for Visual Slop**: Strictly enforce the 6-Category Anti-Slop Codex (banning generic purple radial glows, floating isometric cubes, monotonous 3-column cards, AI buzzword salads, trapless modals, and layout shifts).
     - **Core Web Vitals & Render Bounds**: Mandate p75 CWV standards (LCP $\le 2.0\text{s}$, INP $\le 150\text{ms}$, CLS $\le 0.05$), 60/120fps frame budgets (GPU compositor properties only), WOFF2 fonts $\le 35\text{KB}$ with `font-display: swap`, and DOM budgets ($\le 1200$ nodes, depth $\le 24$, virtualize $\ge 60$ rows).
     - **Mandatory 4-Tier TDD Testing Matrix**: All frontend task plans must explicitly include Type 1 Complexity, Type 2 Logic/State Machine, Type 3 UI/Integration Chaos, and Type 4 QA/Security (STRIDE & OWASP Top 10 client-side defenses).
+
+40. The 7-Phase Hackathon Speedrun Pipeline & Golden Demo Razor (`spec_universal/hackathon_pipeline/`)
+    Whenever operating in a hackathon, competition, or venture sprint context within this repository, the agent MUST strictly execute through the **7-Phase Hackathon Operating System** formatted under the Hybrid YAML Standard:
+
+    ```yaml
+    hackathon_pipeline_execution_contract:
+      phase_1_reconnaissance_and_discovery:
+        designated_spec: "spec_universal/hackathon_pipeline/01_idea_discovery_and_scoring.md"
+        primary_skills:
+          - "kimi-webbridge"
+          - "research subagent"
+          - "idea-refine"
+          - "doubt-driven-development"
+        mandates:
+          - "Ingest local PDFs/docs and scrape portal via kimi-webbridge."
+          - "Dual-Storage Mandate: Compile exhaustive spec/[hackathon_name]_brief.md AND immediately sync active_hackathon_context into .agents/rules/CONTEXT.md Section 0."
+          - "Elite Hackathon Intelligence (Milestone 0.5): For elite/institutional competitions, forensically audit 5-10 past winners (strengths vs unsolved gaps), profile jury archetypes, codify winning vs fatal patterns, and enforce the Round-by-Round Delta Protocol."
+          - "PS Hunting & Compulsory HITL Gate (Milestone 0.8): Ingest softcopy/hardcopy photos, intake team tech stack, triage down to Top 5 shortlist in spec/01_ps_hunting_shortlist.md; halt execution until explicit user selection of P0 and P1."
+          - "Domain Scope & Niching (Milestone 0.9): For broad PSs, niche down to a killer micro-wedge with 2-minute visual demo viability; for narrow PSs, proceed directly to product hunting."
+          - "Spawn 4 subagents across YC/a16z/Reddit/VCs; score on 9 parameters; output Top 10 Idea Bank."
+
+      phase_2_competitor_teardown_and_sentiment_mining:
+        designated_spec: "spec_universal/hackathon_pipeline/02_competitor_teardown_and_sentiment_mining.md"
+        primary_skills:
+          - "kimi-webbridge"
+          - "context-engineering"
+          - "idea-refine"
+          - "doubt-driven-development"
+        mandates:
+          - "Identify candidate commercial incumbents AND search past winners across Devpost galleries, Kaggle competition solutions, X (Twitter) winner threads, and GitHub repos."
+          - "Extract 'What Made Them Win' (killer demo moment, architecture leap, or juror hook) alongside product names, URLs, and GitHub links into spec/03_candidate_products_and_repos.md BEFORE starting deep surgical analysis."
+          - "Audit pricing, workflow friction, and past winner codebase dependencies/shortcuts."
+          - "Mine 1-3 star negative reviews on G2, Capterra, Trustpilot, Reddit, and GitHub under zero-trust sanitization."
+          - "Invert flaws into product leverage (Baseline Parity + Kill Feature)."
+          - "Formulate the pitch contrast statement and dual-layer scope in spec/03_competitor_leverage_report.md."
+
+      phase_3_mvp_scoping_and_demo_razor:
+        designated_spec: "spec_universal/hackathon_pipeline/03_mvp_scoping_and_demo_razor.md"
+        primary_skills:
+          - "planning-and-task-breakdown"
+          - "doubt-driven-development"
+          - "code-simplification"
+        mandates:
+          - "Golden Demo Path Razor: Any feature off the 2-minute judge path is STRICTLY BANNED (Rule 2)."
+          - "Enforce the 70% buildable time rule (30% reserved for testing, polish, and pitch rehearsal)."
+          - "Authentic Visual Mocking: Backend mocks for auth/payments/SMS, but UI rendered 100% authentic and production-grade."
+          - "Localhost & SQLite First: Product must be 100% functional on localhost and local SQLite BEFORE any cloud deployment is attempted."
+          - "Free-Tier Only Cloud Staging: Deployment is strictly limited to free services (Vercel, Supabase, Railway/Render) with zero paid dependencies."
+          - "Covert Demo Protection: Offline fallback JSON fixtures and scenario selectors must NEVER be labeled as 'Demo' or 'Mock'."
+          - "Compile finalized contract into spec/04_mvp_execution_blueprint.md."
+
+      phase_4_lean_7layer_architecture:
+        designated_spec: "spec_universal/hackathon_pipeline/04_lean_7layer_architecture.md"
+        primary_skills:
+          - "spec-driven-development"
+          - "api-and-interface-design"
+        mandates:
+          - "Consolidate PRD, BaaS decisions (Supabase/Convex), Mermaid sequence flow, typed contracts, and FSM into spec/05_system_architecture.md."
+
+      phase_5_rapid_ui_scaffolding:
+        designated_spec: "spec_universal/hackathon_pipeline/05_rapid_ui_scaffolding.md"
+        primary_skills:
+          - "21st-ui-build"
+          - "frontend-ui-engineering"
+        mandates:
+          - "Assemble the 4-component layout using 21st.dev components and Tailwind CSS."
+          - "Implement split-screen baseline vs leverage views."
+          - "Integrate the 'Load Judge Demo' preset button."
+
+      phase_6_lean_4tier_tdd_and_security:
+        designated_spec: "spec_universal/hackathon_pipeline/06_lean_4tier_tdd_and_security.md"
+        primary_skills:
+          - "test-driven-development"
+          - "cyber-security-frameworks"
+          - "systematic-debugging"
+        mandates:
+          - "Automated <30s test suite across all 4 tiers (Execution bounds <4000ms, Golden Path logic, UI rendering contracts, and STRIDE/OWASP input fuzzing)."
+
+      phase_7_demo_pitch_and_judge_proofing:
+        designated_spec: "spec_universal/hackathon_pipeline/07_demo_pitch_and_judge_proofing.md"
+        primary_skills:
+          - "shipping-and-launch"
+          - "verification-before-completion"
+        mandates:
+          - "Script 3-minute presentation (Hook, Contrast, Live Demo, Technical Depth, Close)."
+          - "Deploy Tri-Layer Fail-Safe Shield (JSON fallback, demo mode, and 60fps silent backup video)."
+    ```
+

@@ -138,7 +138,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "agents_skills_impeccable_scripts_command_metadata_json_scripts_command_metadata",
-      "community": 211,
+      "community": 210,
       "norm_label": "command-metadata.json"
     },
     {
@@ -2328,7 +2328,7 @@
       "source_location": "L3140",
       "_origin": "ast",
       "id": "agents_skills_impeccable_scripts_live_browser_js_scripts_live_browser_getmountedsveltecomponentanchor",
-      "community": 111,
+      "community": 86,
       "norm_label": "getmountedsveltecomponentanchor()"
     },
     {
@@ -2338,7 +2338,7 @@
       "source_location": "L3146",
       "_origin": "ast",
       "id": "agents_skills_impeccable_scripts_live_browser_js_scripts_live_browser_resolvesveltecomponentanchor",
-      "community": 111,
+      "community": 86,
       "norm_label": "resolvesveltecomponentanchor()"
     },
     {
@@ -3408,7 +3408,7 @@
       "source_location": "L5043",
       "_origin": "ast",
       "id": "agents_skills_impeccable_scripts_live_browser_js_scripts_live_browser_buildpickedanchorsnapshot",
-      "community": 85,
+      "community": 81,
       "norm_label": "buildpickedanchorsnapshot()"
     },
     {
@@ -3508,7 +3508,7 @@
       "source_location": "L5225",
       "_origin": "ast",
       "id": "agents_skills_impeccable_scripts_live_browser_js_scripts_live_browser_detectdevserverbase",
-      "community": 111,
+      "community": 86,
       "norm_label": "detectdevserverbase()"
     },
     {
@@ -3518,7 +3518,7 @@
       "source_location": "L5238",
       "_origin": "ast",
       "id": "agents_skills_impeccable_scripts_live_browser_js_scripts_live_browser_componentmodulecandidates",
-      "community": 111,
+      "community": 86,
       "norm_label": "componentmodulecandidates()"
     },
     {
@@ -3528,7 +3528,7 @@
       "source_location": "L5253",
       "_origin": "ast",
       "id": "agents_skills_impeccable_scripts_live_browser_js_scripts_live_browser_importfirstreachable",
-      "community": 111,
+      "community": 86,
       "norm_label": "importfirstreachable()"
     },
     {
@@ -3538,7 +3538,7 @@
       "source_location": "L5271",
       "_origin": "ast",
       "id": "agents_skills_impeccable_scripts_live_browser_js_scripts_live_browser_probepreviewtree",
-      "community": 111,
+      "community": 86,
       "norm_label": "probepreviewtree()"
     },
     {
@@ -3548,7 +3548,7 @@
       "source_location": "L5282",
       "_origin": "ast",
       "id": "agents_skills_impeccable_scripts_live_browser_js_scripts_live_browser_loadsvelteruntime",
-      "community": 111,
+      "community": 86,
       "norm_label": "loadsvelteruntime()"
     },
     {
@@ -3568,7 +3568,7 @@
       "source_location": "L5324",
       "_origin": "ast",
       "id": "agents_skills_impeccable_scripts_live_browser_js_scripts_live_browser_removesveltecomponentvariantstyle",
-      "community": 111,
+      "community": 86,
       "norm_label": "removesveltecomponentvariantstyle()"
     },
     {
@@ -3708,7 +3708,7 @@
       "source_location": "L5619",
       "_origin": "ast",
       "id": "agents_skills_impeccable_scripts_live_browser_js_scripts_live_browser_mountsveltecomponentvariant",
-      "community": 111,
+      "community": 86,
       "norm_label": "mountsveltecomponentvariant()"
     },
     {
@@ -3718,7 +3718,7 @@
       "source_location": "L5704",
       "_origin": "ast",
       "id": "agents_skills_impeccable_scripts_live_browser_js_scripts_live_browser_describemountfailure",
-      "community": 111,
+      "community": 86,
       "norm_label": "describemountfailure()"
     },
     {
@@ -3738,7 +3738,7 @@
       "source_location": "L5732",
       "_origin": "ast",
       "id": "agents_skills_impeccable_scripts_live_browser_js_scripts_live_browser_applyoriginalattrstosvelteanchor",
-      "community": 111,
+      "community": 86,
       "norm_label": "applyoriginalattrstosvelteanchor()"
     },
     {
@@ -3748,7 +3748,7 @@
       "source_location": "L5747",
       "_origin": "ast",
       "id": "agents_skills_impeccable_scripts_live_browser_js_scripts_live_browser_commitacceptedsveltecomponenttodom",
-      "community": 111,
+      "community": 86,
       "norm_label": "commitacceptedsveltecomponenttodom()"
     },
     {
@@ -3778,7 +3778,7 @@
       "source_location": "L5960",
       "_origin": "ast",
       "id": "agents_skills_impeccable_scripts_live_browser_js_scripts_live_browser_reportvariantmounted",
-      "community": 111,
+      "community": 81,
       "norm_label": "reportvariantmounted()"
     },
     {
@@ -3788,7 +3788,7 @@
       "source_location": "L5971",
       "_origin": "ast",
       "id": "agents_skills_impeccable_scripts_live_browser_js_scripts_live_browser_reportvariantmountfailed",
-      "community": 111,
+      "community": 81,
       "norm_label": "reportvariantmountfailed()"
     },
     {
@@ -4078,7 +4078,7 @@
       "source_location": "L6696",
       "_origin": "ast",
       "id": "agents_skills_impeccable_scripts_live_browser_js_scripts_live_browser_discardstatestyleid",
-      "community": 81,
+      "community": 85,
       "norm_label": "discardstatestyleid()"
     },
     {
@@ -4088,7 +4088,7 @@
       "source_location": "L6700",
       "_origin": "ast",
       "id": "agents_skills_impeccable_scripts_live_browser_js_scripts_live_browser_showoriginalduringdiscard",
-      "community": 81,
+      "community": 85,
       "norm_label": "showoriginalduringdiscard()"
     },
     {
@@ -4098,7 +4098,7 @@
       "source_location": "L6714",
       "_origin": "ast",
       "id": "agents_skills_impeccable_scripts_live_browser_js_scripts_live_browser_removediscardstatestylesheet",
-      "community": 81,
+      "community": 85,
       "norm_label": "removediscardstatestylesheet()"
     },
     {
@@ -4108,7 +4108,7 @@
       "source_location": "L6724",
       "_origin": "ast",
       "id": "agents_skills_impeccable_scripts_live_browser_js_scripts_live_browser_discardedwrappers",
-      "community": 81,
+      "community": 85,
       "norm_label": "discardedwrappers()"
     },
     {
@@ -4118,7 +4118,7 @@
       "source_location": "L6729",
       "_origin": "ast",
       "id": "agents_skills_impeccable_scripts_live_browser_js_scripts_live_browser_releasediscardedstaticwrapper",
-      "community": 81,
+      "community": 85,
       "norm_label": "releasediscardedstaticwrapper()"
     },
     {
@@ -4128,7 +4128,7 @@
       "source_location": "L6746",
       "_origin": "ast",
       "id": "agents_skills_impeccable_scripts_live_browser_js_scripts_live_browser_releasediscardedstaticwrappers",
-      "community": 81,
+      "community": 85,
       "norm_label": "releasediscardedstaticwrappers()"
     },
     {
@@ -4138,7 +4138,7 @@
       "source_location": "L6752",
       "_origin": "ast",
       "id": "agents_skills_impeccable_scripts_live_browser_js_scripts_live_browser_watchfordiscardedframeworkwrapperremoval",
-      "community": 81,
+      "community": 85,
       "norm_label": "watchfordiscardedframeworkwrapperremoval()"
     },
     {
@@ -4258,7 +4258,7 @@
       "source_location": "L7354",
       "_origin": "ast",
       "id": "agents_skills_impeccable_scripts_live_browser_js_scripts_live_browser_sendevent",
-      "community": 111,
+      "community": 81,
       "norm_label": "sendevent()"
     },
     {
@@ -4278,7 +4278,7 @@
       "source_location": "L7405",
       "_origin": "ast",
       "id": "agents_skills_impeccable_scripts_live_browser_js_scripts_live_browser_checkpointpayload",
-      "community": 111,
+      "community": 81,
       "norm_label": "checkpointpayload()"
     },
     {
@@ -4288,7 +4288,7 @@
       "source_location": "L7425",
       "_origin": "ast",
       "id": "agents_skills_impeccable_scripts_live_browser_js_scripts_live_browser_sendcheckpoint",
-      "community": 111,
+      "community": 81,
       "norm_label": "sendcheckpoint()"
     },
     {
@@ -4298,7 +4298,7 @@
       "source_location": "L7430",
       "_origin": "ast",
       "id": "agents_skills_impeccable_scripts_live_browser_js_scripts_live_browser_sendsteercheckpoint",
-      "community": 111,
+      "community": 81,
       "norm_label": "sendsteercheckpoint()"
     },
     {
@@ -4348,7 +4348,7 @@
       "source_location": "L7636",
       "_origin": "ast",
       "id": "agents_skills_impeccable_scripts_live_browser_js_scripts_live_browser_maybeprefetchpage",
-      "community": 111,
+      "community": 81,
       "norm_label": "maybeprefetchpage()"
     },
     {
@@ -4538,7 +4538,7 @@
       "source_location": "L8230",
       "_origin": "ast",
       "id": "agents_skills_impeccable_scripts_live_browser_js_scripts_live_browser_captureandemit",
-      "community": 111,
+      "community": 81,
       "norm_label": "captureandemit()"
     },
     {
@@ -4618,7 +4618,7 @@
       "source_location": "L8504",
       "_origin": "ast",
       "id": "agents_skills_impeccable_scripts_live_browser_js_scripts_live_browser_compileshader",
-      "community": 111,
+      "community": 81,
       "norm_label": "compileshader()"
     },
     {
@@ -4658,7 +4658,7 @@
       "source_location": "L8551",
       "_origin": "ast",
       "id": "agents_skills_impeccable_scripts_live_browser_js_scripts_live_browser_showshaderbitmapfallback",
-      "community": 111,
+      "community": 81,
       "norm_label": "showshaderbitmapfallback()"
     },
     {
@@ -4668,7 +4668,7 @@
       "source_location": "L8570",
       "_origin": "ast",
       "id": "agents_skills_impeccable_scripts_live_browser_js_scripts_live_browser_showshaderoverlay",
-      "community": 111,
+      "community": 81,
       "norm_label": "showshaderoverlay()"
     },
     {
@@ -5328,7 +5328,7 @@
       "source_location": "L10067",
       "_origin": "ast",
       "id": "agents_skills_impeccable_scripts_live_browser_js_scripts_live_browser_pagehashosttextselection",
-      "community": 81,
+      "community": 85,
       "norm_label": "pagehashosttextselection()"
     },
     {
@@ -5518,7 +5518,7 @@
       "source_location": "L10357",
       "_origin": "ast",
       "id": "agents_skills_impeccable_scripts_live_browser_js_scripts_live_browser_clearsteerawaittimer",
-      "community": 94,
+      "community": 81,
       "norm_label": "clearsteerawaittimer()"
     },
     {
@@ -5528,7 +5528,7 @@
       "source_location": "L10364",
       "_origin": "ast",
       "id": "agents_skills_impeccable_scripts_live_browser_js_scripts_live_browser_schedulesteerawaittimeout",
-      "community": 94,
+      "community": 81,
       "norm_label": "schedulesteerawaittimeout()"
     },
     {
@@ -5698,7 +5698,7 @@
       "source_location": "L10691",
       "_origin": "ast",
       "id": "agents_skills_impeccable_scripts_live_browser_js_scripts_live_browser_submitsteermessage",
-      "community": 94,
+      "community": 81,
       "norm_label": "submitsteermessage()"
     },
     {
@@ -9188,7 +9188,7 @@
       "source_location": "L3140",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_getmountedsveltecomponentanchor",
-      "community": 83,
+      "community": 97,
       "norm_label": "getmountedsveltecomponentanchor()"
     },
     {
@@ -9198,7 +9198,7 @@
       "source_location": "L3146",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_resolvesveltecomponentanchor",
-      "community": 83,
+      "community": 97,
       "norm_label": "resolvesveltecomponentanchor()"
     },
     {
@@ -9948,7 +9948,7 @@
       "source_location": "L4493",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_usesshadowchromeroot",
-      "community": 82,
+      "community": 111,
       "norm_label": "usesshadowchromeroot()"
     },
     {
@@ -9958,7 +9958,7 @@
       "source_location": "L4498",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_setimportantstyle",
-      "community": 82,
+      "community": 111,
       "norm_label": "setimportantstyle()"
     },
     {
@@ -9968,7 +9968,7 @@
       "source_location": "L4502",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_initeditbadgehitproxies",
-      "community": 82,
+      "community": 111,
       "norm_label": "initeditbadgehitproxies()"
     },
     {
@@ -9978,7 +9978,7 @@
       "source_location": "L4524",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_styleeditbadgeproxy",
-      "community": 82,
+      "community": 111,
       "norm_label": "styleeditbadgeproxy()"
     },
     {
@@ -9998,7 +9998,7 @@
       "source_location": "L4572",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_bindeditbadgeproxy",
-      "community": 82,
+      "community": 111,
       "norm_label": "bindeditbadgeproxy()"
     },
     {
@@ -10008,7 +10008,7 @@
       "source_location": "L4603",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_editbadgeproxytargets",
-      "community": 82,
+      "community": 111,
       "norm_label": "editbadgeproxytargets()"
     },
     {
@@ -10018,7 +10018,7 @@
       "source_location": "L4614",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_synceditbadgehitproxies",
-      "community": 82,
+      "community": 111,
       "norm_label": "synceditbadgehitproxies()"
     },
     {
@@ -10028,7 +10028,7 @@
       "source_location": "L4648",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_initeditbadge",
-      "community": 82,
+      "community": 111,
       "norm_label": "initeditbadge()"
     },
     {
@@ -10038,7 +10038,7 @@
       "source_location": "L4676",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_positioneditbadge",
-      "community": 82,
+      "community": 111,
       "norm_label": "positioneditbadge()"
     },
     {
@@ -10368,7 +10368,7 @@
       "source_location": "L5225",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_detectdevserverbase",
-      "community": 83,
+      "community": 97,
       "norm_label": "detectdevserverbase()"
     },
     {
@@ -10378,7 +10378,7 @@
       "source_location": "L5238",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_componentmodulecandidates",
-      "community": 83,
+      "community": 97,
       "norm_label": "componentmodulecandidates()"
     },
     {
@@ -10388,7 +10388,7 @@
       "source_location": "L5253",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_importfirstreachable",
-      "community": 83,
+      "community": 97,
       "norm_label": "importfirstreachable()"
     },
     {
@@ -10398,7 +10398,7 @@
       "source_location": "L5271",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_probepreviewtree",
-      "community": 83,
+      "community": 97,
       "norm_label": "probepreviewtree()"
     },
     {
@@ -10408,7 +10408,7 @@
       "source_location": "L5282",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_loadsvelteruntime",
-      "community": 83,
+      "community": 97,
       "norm_label": "loadsvelteruntime()"
     },
     {
@@ -10428,7 +10428,7 @@
       "source_location": "L5324",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_removesveltecomponentvariantstyle",
-      "community": 83,
+      "community": 97,
       "norm_label": "removesveltecomponentvariantstyle()"
     },
     {
@@ -10568,7 +10568,7 @@
       "source_location": "L5619",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_mountsveltecomponentvariant",
-      "community": 83,
+      "community": 97,
       "norm_label": "mountsveltecomponentvariant()"
     },
     {
@@ -10578,7 +10578,7 @@
       "source_location": "L5704",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_describemountfailure",
-      "community": 83,
+      "community": 97,
       "norm_label": "describemountfailure()"
     },
     {
@@ -10598,7 +10598,7 @@
       "source_location": "L5732",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_applyoriginalattrstosvelteanchor",
-      "community": 83,
+      "community": 97,
       "norm_label": "applyoriginalattrstosvelteanchor()"
     },
     {
@@ -10608,7 +10608,7 @@
       "source_location": "L5747",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_commitacceptedsveltecomponenttodom",
-      "community": 83,
+      "community": 97,
       "norm_label": "commitacceptedsveltecomponenttodom()"
     },
     {
@@ -10638,7 +10638,7 @@
       "source_location": "L5960",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_reportvariantmounted",
-      "community": 82,
+      "community": 97,
       "norm_label": "reportvariantmounted()"
     },
     {
@@ -10648,7 +10648,7 @@
       "source_location": "L5971",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_reportvariantmountfailed",
-      "community": 82,
+      "community": 97,
       "norm_label": "reportvariantmountfailed()"
     },
     {
@@ -11118,7 +11118,7 @@
       "source_location": "L7354",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_sendevent",
-      "community": 82,
+      "community": 97,
       "norm_label": "sendevent()"
     },
     {
@@ -11138,7 +11138,7 @@
       "source_location": "L7405",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_checkpointpayload",
-      "community": 82,
+      "community": 97,
       "norm_label": "checkpointpayload()"
     },
     {
@@ -11148,7 +11148,7 @@
       "source_location": "L7425",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_sendcheckpoint",
-      "community": 82,
+      "community": 97,
       "norm_label": "sendcheckpoint()"
     },
     {
@@ -11158,7 +11158,7 @@
       "source_location": "L7430",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_sendsteercheckpoint",
-      "community": 82,
+      "community": 97,
       "norm_label": "sendsteercheckpoint()"
     },
     {
@@ -11208,7 +11208,7 @@
       "source_location": "L7636",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_maybeprefetchpage",
-      "community": 82,
+      "community": 97,
       "norm_label": "maybeprefetchpage()"
     },
     {
@@ -11398,7 +11398,7 @@
       "source_location": "L8230",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_captureandemit",
-      "community": 82,
+      "community": 97,
       "norm_label": "captureandemit()"
     },
     {
@@ -11478,7 +11478,7 @@
       "source_location": "L8504",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_compileshader",
-      "community": 82,
+      "community": 97,
       "norm_label": "compileshader()"
     },
     {
@@ -11518,7 +11518,7 @@
       "source_location": "L8551",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_showshaderbitmapfallback",
-      "community": 82,
+      "community": 97,
       "norm_label": "showshaderbitmapfallback()"
     },
     {
@@ -11528,7 +11528,7 @@
       "source_location": "L8570",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_showshaderoverlay",
-      "community": 82,
+      "community": 97,
       "norm_label": "showshaderoverlay()"
     },
     {
@@ -12878,7 +12878,7 @@
       "source_location": "L12247",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_renderdesignbody",
-      "community": 97,
+      "community": 82,
       "norm_label": "renderdesignbody()"
     },
     {
@@ -12888,7 +12888,7 @@
       "source_location": "L12281",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_msgdiv",
-      "community": 97,
+      "community": 82,
       "norm_label": "msgdiv()"
     },
     {
@@ -12898,7 +12898,7 @@
       "source_location": "L12288",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_renderstalehint",
-      "community": 97,
+      "community": 82,
       "norm_label": "renderstalehint()"
     },
     {
@@ -12908,7 +12908,7 @@
       "source_location": "L12298",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_renderparsedmdcta",
-      "community": 97,
+      "community": 82,
       "norm_label": "renderparsedmdcta()"
     },
     {
@@ -12918,7 +12918,7 @@
       "source_location": "L12314",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_designemptymessage",
-      "community": 97,
+      "community": 82,
       "norm_label": "designemptymessage()"
     },
     {
@@ -12928,7 +12928,7 @@
       "source_location": "L12324",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_renderdesignvisual",
-      "community": 97,
+      "community": 82,
       "norm_label": "renderdesignvisual()"
     },
     {
@@ -12938,7 +12938,7 @@
       "source_location": "L12364",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_buildcolormodels",
-      "community": 97,
+      "community": 82,
       "norm_label": "buildcolormodels()"
     },
     {
@@ -12948,7 +12948,7 @@
       "source_location": "L12380",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_buildtypographymodels",
-      "community": 97,
+      "community": 82,
       "norm_label": "buildtypographymodels()"
     },
     {
@@ -12958,7 +12958,7 @@
       "source_location": "L12403",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_buildradiimodels",
-      "community": 97,
+      "community": 82,
       "norm_label": "buildradiimodels()"
     },
     {
@@ -12998,7 +12998,7 @@
       "source_location": "L12432",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_synthesizenarrative",
-      "community": 97,
+      "community": 82,
       "norm_label": "synthesizenarrative()"
     },
     {
@@ -13008,7 +13008,7 @@
       "source_location": "L12451",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_rendercolortiles",
-      "community": 97,
+      "community": 82,
       "norm_label": "rendercolortiles()"
     },
     {
@@ -13018,7 +13018,7 @@
       "source_location": "L12486",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_synthesizeramp",
-      "community": 97,
+      "community": 82,
       "norm_label": "synthesizeramp()"
     },
     {
@@ -13028,7 +13028,7 @@
       "source_location": "L12496",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_rendertypetiles",
-      "community": 97,
+      "community": 82,
       "norm_label": "rendertypetiles()"
     },
     {
@@ -13038,7 +13038,7 @@
       "source_location": "L12540",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_fontstack",
-      "community": 97,
+      "community": 82,
       "norm_label": "fontstack()"
     },
     {
@@ -13048,7 +13048,7 @@
       "source_location": "L12549",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_renderradiitile",
-      "community": 97,
+      "community": 82,
       "norm_label": "renderradiitile()"
     },
     {
@@ -13058,7 +13058,7 @@
       "source_location": "L12580",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_rendershadowtiles",
-      "community": 97,
+      "community": 82,
       "norm_label": "rendershadowtiles()"
     },
     {
@@ -13068,7 +13068,7 @@
       "source_location": "L12610",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_rendercomponenttiles",
-      "community": 97,
+      "community": 82,
       "norm_label": "rendercomponenttiles()"
     },
     {
@@ -13078,7 +13078,7 @@
       "source_location": "L12667",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_groupbykind",
-      "community": 97,
+      "community": 82,
       "norm_label": "groupbykind()"
     },
     {
@@ -13088,7 +13088,7 @@
       "source_location": "L12680",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_titleforkind",
-      "community": 97,
+      "community": 82,
       "norm_label": "titleforkind()"
     },
     {
@@ -13098,7 +13098,7 @@
       "source_location": "L12694",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_buildcollapsible",
-      "community": 97,
+      "community": 82,
       "norm_label": "buildcollapsible()"
     },
     {
@@ -13108,7 +13108,7 @@
       "source_location": "L12719",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_renderrulescollapsible",
-      "community": 97,
+      "community": 82,
       "norm_label": "renderrulescollapsible()"
     },
     {
@@ -13118,7 +13118,7 @@
       "source_location": "L12737",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_renderdosdontscollapsible",
-      "community": 97,
+      "community": 82,
       "norm_label": "renderdosdontscollapsible()"
     },
     {
@@ -13128,7 +13128,7 @@
       "source_location": "L12758",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_renderoverviewcollapsible",
-      "community": 97,
+      "community": 82,
       "norm_label": "renderoverviewcollapsible()"
     },
     {
@@ -13138,7 +13138,7 @@
       "source_location": "L12782",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_csssafe",
-      "community": 97,
+      "community": 82,
       "norm_label": "csssafe()"
     },
     {
@@ -13158,7 +13158,7 @@
       "source_location": "L12802",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_renderrawtab",
-      "community": 97,
+      "community": 82,
       "norm_label": "renderrawtab()"
     },
     {
@@ -13168,7 +13168,7 @@
       "source_location": "L12809",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_rendermarkdown",
-      "community": 97,
+      "community": 82,
       "norm_label": "rendermarkdown()"
     },
     {
@@ -13188,7 +13188,7 @@
       "source_location": "L12898",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_inlinemd",
-      "community": 97,
+      "community": 82,
       "norm_label": "inlinemd()"
     },
     {
@@ -13198,7 +13198,7 @@
       "source_location": "L12912",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_highlightbold",
-      "community": 97,
+      "community": 82,
       "norm_label": "highlightbold()"
     },
     {
@@ -13208,7 +13208,7 @@
       "source_location": "L12916",
       "_origin": "ast",
       "id": "github_skills_impeccable_scripts_live_browser_js_scripts_live_browser_escapehtml",
-      "community": 97,
+      "community": 82,
       "norm_label": "escapehtml()"
     },
     {
@@ -13845,7 +13845,7 @@
       "label": "3. Design DNA & Visual / Interaction Standards",
       "file_type": "document",
       "source_file": ".agents/rules/CONTEXT.md",
-      "source_location": "L70",
+      "source_location": "L71",
       "_origin": "ast",
       "id": "rules_context_3_design_dna_visual_interaction_standards",
       "community": 65,
@@ -13855,7 +13855,7 @@
       "label": "4. Error Log, Incident Telemetry & Root Cause Analyses",
       "file_type": "document",
       "source_file": ".agents/rules/CONTEXT.md",
-      "source_location": "L80",
+      "source_location": "L81",
       "_origin": "ast",
       "id": "rules_context_4_error_log_incident_telemetry_root_cause_analyses",
       "community": 65,
@@ -13865,7 +13865,7 @@
       "label": "5. Operational Invariants & Runtime Caveats",
       "file_type": "document",
       "source_file": ".agents/rules/CONTEXT.md",
-      "source_location": "L113",
+      "source_location": "L132",
       "_origin": "ast",
       "id": "rules_context_5_operational_invariants_runtime_caveats",
       "community": 65,
@@ -89673,9 +89673,9 @@
       "source_file": "spec_universal/frontend_design_bible.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "spec_universal_frontend_design_bible",
-      "target": "spec_universal_frontend_design_bible_universal_frontend_design_bible_anti_slop_architectural_standard",
-      "confidence_score": 1.0
+      "target": "spec_universal_frontend_design_bible_universal_frontend_design_bible_anti_slop_architectural_standard"
     },
     {
       "relation": "contains",
@@ -89683,9 +89683,9 @@
       "source_file": "spec_universal/frontend_design_bible.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "spec_universal_frontend_design_bible_universal_frontend_design_bible_anti_slop_architectural_standard",
-      "target": "spec_universal_frontend_design_bible_1_executive_summary_design_system_philosophy",
-      "confidence_score": 1.0
+      "target": "spec_universal_frontend_design_bible_1_executive_summary_design_system_philosophy"
     },
     {
       "relation": "contains",
@@ -89693,9 +89693,9 @@
       "source_file": "spec_universal/frontend_design_bible.md",
       "source_location": "L32",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "spec_universal_frontend_design_bible_universal_frontend_design_bible_anti_slop_architectural_standard",
-      "target": "spec_universal_frontend_design_bible_2_watertight_5_layer_frontend_tool_stack_execution_lifecycle",
-      "confidence_score": 1.0
+      "target": "spec_universal_frontend_design_bible_2_watertight_5_layer_frontend_tool_stack_execution_lifecycle"
     },
     {
       "relation": "contains",
@@ -89703,9 +89703,9 @@
       "source_file": "spec_universal/frontend_design_bible.md",
       "source_location": "L110",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "spec_universal_frontend_design_bible_universal_frontend_design_bible_anti_slop_architectural_standard",
-      "target": "spec_universal_frontend_design_bible_3_the_6_category_anti_slop_codex_what_not_to_use",
-      "confidence_score": 1.0
+      "target": "spec_universal_frontend_design_bible_3_the_6_category_anti_slop_codex_what_not_to_use"
     },
     {
       "relation": "contains",
@@ -89713,9 +89713,9 @@
       "source_file": "spec_universal/frontend_design_bible.md",
       "source_location": "L191",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "spec_universal_frontend_design_bible_universal_frontend_design_bible_anti_slop_architectural_standard",
-      "target": "spec_universal_frontend_design_bible_4_token_architecture_root_design_md_contract",
-      "confidence_score": 1.0
+      "target": "spec_universal_frontend_design_bible_4_token_architecture_root_design_md_contract"
     },
     {
       "relation": "contains",
@@ -89723,9 +89723,9 @@
       "source_file": "spec_universal/frontend_design_bible.md",
       "source_location": "L280",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "spec_universal_frontend_design_bible_universal_frontend_design_bible_anti_slop_architectural_standard",
-      "target": "spec_universal_frontend_design_bible_5_core_web_vitals_render_physics_performance_budgets",
-      "confidence_score": 1.0
+      "target": "spec_universal_frontend_design_bible_5_core_web_vitals_render_physics_performance_budgets"
     },
     {
       "relation": "contains",
@@ -89733,9 +89733,9 @@
       "source_file": "spec_universal/frontend_design_bible.md",
       "source_location": "L348",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "spec_universal_frontend_design_bible_universal_frontend_design_bible_anti_slop_architectural_standard",
-      "target": "spec_universal_frontend_design_bible_6_client_side_security_threat_hardening_stride_owasp",
-      "confidence_score": 1.0
+      "target": "spec_universal_frontend_design_bible_6_client_side_security_threat_hardening_stride_owasp"
     },
     {
       "relation": "contains",
@@ -89743,9 +89743,9 @@
       "source_file": "spec_universal/frontend_design_bible.md",
       "source_location": "L431",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "spec_universal_frontend_design_bible_universal_frontend_design_bible_anti_slop_architectural_standard",
-      "target": "spec_universal_frontend_design_bible_7_legacy_strangler_fig_refactoring_design_drift_prevention",
-      "confidence_score": 1.0
+      "target": "spec_universal_frontend_design_bible_7_legacy_strangler_fig_refactoring_design_drift_prevention"
     },
     {
       "relation": "contains",
@@ -89753,9 +89753,9 @@
       "source_file": "spec_universal/frontend_design_bible.md",
       "source_location": "L459",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "spec_universal_frontend_design_bible_universal_frontend_design_bible_anti_slop_architectural_standard",
-      "target": "spec_universal_frontend_design_bible_8_mandatory_4_tier_tdd_testing_matrix_for_frontend",
-      "confidence_score": 1.0
+      "target": "spec_universal_frontend_design_bible_8_mandatory_4_tier_tdd_testing_matrix_for_frontend"
     },
     {
       "relation": "contains",
@@ -89763,9 +89763,9 @@
       "source_file": "spec_universal/frontend_design_bible.md",
       "source_location": "L514",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "spec_universal_frontend_design_bible_universal_frontend_design_bible_anti_slop_architectural_standard",
-      "target": "spec_universal_frontend_design_bible_9_canonical_root_design_md_schema",
-      "confidence_score": 1.0
+      "target": "spec_universal_frontend_design_bible_9_canonical_root_design_md_schema"
     },
     {
       "relation": "contains",
@@ -94239,5 +94239,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "0c2909c83c05ee920073b7de84bb929cd5f870c7"
+  "built_at_commit": "20531decc2f087a877464a93af4f32d3c21ce690"
 }
