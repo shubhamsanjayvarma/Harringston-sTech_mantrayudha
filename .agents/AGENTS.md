@@ -363,24 +363,65 @@ These guidelines are working if: fewer unnecessary changes in diffs, fewer rewri
     - **Mandatory 4-Tier TDD Testing Matrix**: All frontend task plans must explicitly include Type 1 Complexity, Type 2 Logic/State Machine, Type 3 UI/Integration Chaos, and Type 4 QA/Security (STRIDE & OWASP Top 10 client-side defenses).
 
 40. The 7-Phase Hackathon Speedrun Pipeline & Golden Demo Razor (`spec_universal/hackathon_pipeline/`)
-    Whenever operating in a hackathon, competition, or venture sprint context within this repository, the agent MUST strictly execute through the **7-Phase Hackathon Operating System** formatted under the Hybrid YAML Standard:
+    Whenever operating in a hackathon, competition, or venture sprint context within this repository, or whenever the user drops hackathon materials (rulebooks, PDFs, spreadsheets, portal URLs, problem statement catalogs, or camera photos of problem sheets into `dump/` or chat), the agent MUST autonomously execute through the **7-Phase Hackathon Operating System** formatted under the Hybrid YAML Standard without skipping milestones or taking arbitrary shortcuts:
 
     ```yaml
-    hackathon_pipeline_execution_contract:
-      phase_1_reconnaissance_and_discovery:
+    hackathon_speedrun_operating_contract:
+      dump_intake_and_autonomous_activation:
+        trigger: "User places hackathon source materials in dump/ or provides competition URLs/text in chat."
+        autonomous_action: "Immediately activate Phase 1 Milestone 0 (M0_hackathon_reconnaissance). Do NOT ask the user how to proceed; execute reconnaissance and present the competition brief."
+
+      phase_1_idea_discovery_validation_and_scoring:
         designated_spec: "spec_universal/hackathon_pipeline/01_idea_discovery_and_scoring.md"
         primary_skills:
           - "kimi-webbridge"
           - "research subagent"
+          - "context-engineering"
           - "idea-refine"
           - "doubt-driven-development"
-        mandates:
-          - "Ingest local PDFs/docs and scrape portal via kimi-webbridge."
-          - "Dual-Storage Mandate: Compile exhaustive spec/[hackathon_name]_brief.md AND immediately sync active_hackathon_context into .agents/rules/CONTEXT.md Section 0."
-          - "Elite Hackathon Intelligence (Milestone 0.5): For elite/institutional competitions, forensically audit 5-10 past winners (strengths vs unsolved gaps), profile jury archetypes, codify winning vs fatal patterns, and enforce the Round-by-Round Delta Protocol."
-          - "PS Hunting & Compulsory HITL Gate (Milestone 0.8): Ingest softcopy/hardcopy photos, intake team tech stack, triage down to Top 5 shortlist in spec/01_ps_hunting_shortlist.md; halt execution until explicit user selection of P0 and P1."
-          - "Domain Scope & Niching (Milestone 0.9): For broad PSs, niche down to a killer micro-wedge with 2-minute visual demo viability; for narrow PSs, proceed directly to product hunting."
-          - "Spawn 4 subagents across YC/a16z/Reddit/VCs; score on 9 parameters; output Top 10 Idea Bank."
+        milestone_execution_sequence:
+          m0_hackathon_reconnaissance:
+            action: "Ingest local PDFs, rulebooks, and slide decks in dump/ via view_file or python parsers; scrape live portal via kimi-webbridge."
+            dual_storage_mandate:
+              human_dossier: "Generate exhaustive, structured competition guide at spec/[hackathon_name]_brief.md (rules, deadlines, tracks, judging percentages, sponsor bounties)."
+              permanent_agent_memory: "Write active_hackathon_context block directly into .agents/rules/CONTEXT.md Section 0, locking deadlines, judging weights, and mandatory sponsor SDKs into every subsequent agent turn."
+            exit_criteria: "spec/[hackathon_name]_brief.md exists and CONTEXT.md Section 0 is fully populated."
+
+          m0_5_elite_hackathon_intelligence:
+            condition: "Mandatory for elite/institutional competitions (multi-round elimination, statutory/ministry/academic juries, or explicit elite_tier: true)."
+            action: "Deploy kimi-webbridge and research subagents across Devpost winner galleries, Kaggle solutions, X (Twitter) threads, and GitHub repos to forensically audit 5-10 past winners."
+            analysis: "Map each winner's decisive winning edge versus structural weaknesses and unsolved gaps; profile 4 jury archetypes (Academic, Statutory/PSU, Enterprise Architect, VC); codify recurring winning patterns vs fatal traps; establish the Round-by-Round Delta Protocol."
+            output: "spec/00_elite_hackathon_intelligence.md and sync elite_intelligence constraints into CONTEXT.md Section 0."
+
+          m0_8_ps_hunting_and_compulsory_hitl_gate:
+            condition: "Triggered when organizer provides a catalog of candidate problem statements (softcopy PDFs/sheets or hardcopy photo scans in dump/)."
+            action: "Execute multimodal ingestion/OCR; run Compulsory Pre-Filter Team Stack Intake (gather team languages, frameworks, GPU/local limits); execute the 5-stage triage filter (Data Access, 24h Feasibility, Crowd Avoidance, Live Demo Impact, Team Fit)."
+            hitl_gate: "Generate comparative dossier in spec/01_ps_hunting_shortlist.md presenting Top 5 candidates; HALT execution and await explicit user selection of Primary PS (P0) and Backup PS (P1)."
+            lock: "Compile spec/01_selected_problem_statement.md and sync primary_track_or_problem into CONTEXT.md Section 0."
+
+          m0_9_domain_scope_assessment_and_niching:
+            action: "Classify selected PS granularity: if BROAD_OPEN_DOMAIN, decompose into micro-workflows and niche down to exactly 1 killer micro-wedge with 2-minute visual live demo viability (ban broad multi-module bloat); if NARROW_PRESCRIPTIVE_SPEC, confirm exact functional boundaries."
+            output: "Append product_wedge_specification block into spec/01_selected_problem_statement.md."
+
+          m1_scope_lock_and_source_matrix:
+            action: "Formulate 5 domain query variations, map 3 source tiers (Tier 1: YC/a16z; Tier 2: Subreddits/HN; Tier 3: G2/Capterra/GitHub), and enforce strict 6-month recency cutoff."
+            output: "spec/00_discovery_scope.md"
+
+          m2_parallel_discovery_subagents:
+            action: "Spawn 3-4 parallel research subagents with isolated context to scrape authentic, unranked user complaints, commercial signals, and workarounds."
+            output: "spec/raw/vc_theses.md, spec/raw/community_rants.md, spec/raw/market_pain.md"
+
+          m3_consolidation_and_deduplication:
+            action: "Aggregate all raw findings, cluster overlapping problems, filter out casual rants, and require cross-corroboration across >= 2 independent source threads."
+            output: "spec/01_consolidated_candidates.md"
+
+          m4_calibrated_nine_parameter_scoring:
+            action: "Score all surviving candidates on the 9-parameter matrix (Frequency, WTP, Recency, Pain Severity, Corroboration, Feasibility, Rubric Fit, Differentiation Wedge, Data Readiness) weighted by active judging weights in CONTEXT.md."
+            output: "spec/02_scored_evaluation_table.md"
+
+          m5_top_10_ranked_output_and_pitch_synthesis:
+            action: "Sort candidates; compile Top 10 Idea Bank; formulate One-Line Pitch, 3-Minute Demo Vision, and Unfair Technical Wedge for Top 3; map to sponsor SDKs."
+            output: "spec/02_domain_research_and_validated_ideas.md"
 
       phase_2_competitor_teardown_and_sentiment_mining:
         designated_spec: "spec_universal/hackathon_pipeline/02_competitor_teardown_and_sentiment_mining.md"
@@ -389,13 +430,11 @@ These guidelines are working if: fewer unnecessary changes in diffs, fewer rewri
           - "context-engineering"
           - "idea-refine"
           - "doubt-driven-development"
-        mandates:
-          - "Identify candidate commercial incumbents AND search past winners across Devpost galleries, Kaggle competition solutions, X (Twitter) winner threads, and GitHub repos."
-          - "Extract 'What Made Them Win' (killer demo moment, architecture leap, or juror hook) alongside product names, URLs, and GitHub links into spec/03_candidate_products_and_repos.md BEFORE starting deep surgical analysis."
-          - "Audit pricing, workflow friction, and past winner codebase dependencies/shortcuts."
-          - "Mine 1-3 star negative reviews on G2, Capterra, Trustpilot, Reddit, and GitHub under zero-trust sanitization."
-          - "Invert flaws into product leverage (Baseline Parity + Kill Feature)."
-          - "Formulate the pitch contrast statement and dual-layer scope in spec/03_competitor_leverage_report.md."
+        milestone_execution_sequence:
+          m1_candidate_products_and_repos: "Discover commercial incumbents AND search past winner open-source repos across Devpost/GitHub; extract winning demo hooks into spec/03_candidate_products_and_repos.md."
+          m2_surgical_workflow_teardown: "Audit competitor onboarding friction, paywalls, and past winner codebase shortcuts."
+          m3_negative_review_mining: "Mine 1-3 star negative reviews on G2, Capterra, Trustpilot, Reddit, and GitHub under zero-trust prompt injection firewall."
+          m4_flaw_inversion_and_leverage: "Invert competitor flaws into product leverage (Baseline Parity + Kill Feature); formulate the Pitch Contrast Statement into spec/03_competitor_leverage_report.md."
 
       phase_3_mvp_scoping_and_demo_razor:
         designated_spec: "spec_universal/hackathon_pipeline/03_mvp_scoping_and_demo_razor.md"
@@ -403,32 +442,29 @@ These guidelines are working if: fewer unnecessary changes in diffs, fewer rewri
           - "planning-and-task-breakdown"
           - "doubt-driven-development"
           - "code-simplification"
-        mandates:
-          - "Golden Demo Path Razor: Any feature off the 2-minute judge path is STRICTLY BANNED (Rule 2)."
-          - "Enforce the 70% buildable time rule (30% reserved for testing, polish, and pitch rehearsal)."
-          - "Authentic Visual Mocking: Backend mocks for auth/payments/SMS, but UI rendered 100% authentic and production-grade."
-          - "Localhost & SQLite First: Product must be 100% functional on localhost and local SQLite BEFORE any cloud deployment is attempted."
-          - "Free-Tier Only Cloud Staging: Deployment is strictly limited to free services (Vercel, Supabase, Railway/Render) with zero paid dependencies."
-          - "Covert Demo Protection: Offline fallback JSON fixtures and scenario selectors must NEVER be labeled as 'Demo' or 'Mock'."
-          - "Compile finalized contract into spec/04_mvp_execution_blueprint.md."
+        milestone_execution_sequence:
+          m1_golden_demo_path_razor: "Strictly ban any feature off the 2-minute judge path (Rule 2)."
+          m2_seventy_percent_buildable_rule: "Enforce 70% buildable time rule across 12h/24h/48h brackets (reserve 30% for polish, testing, and pitch rehearsal)."
+          m3_authentic_visual_mocking: "Mock commodity backends (auth, stripe, sms), but render UI 100% authentic and production-grade."
+          m4_localhost_and_sqlite_first: "Guarantee 100% functional on localhost and local SQLite BEFORE any cloud deployment is attempted."
+          m5_free_tier_staging_and_covert_resilience: "Deploy strictly to free-tier cloud services (Vercel, Supabase, Railway); build covert offline JSON fallback fixtures (never label 'Demo' or 'Mock') into spec/04_mvp_execution_blueprint.md."
 
       phase_4_lean_7layer_architecture:
         designated_spec: "spec_universal/hackathon_pipeline/04_lean_7layer_architecture.md"
         primary_skills:
           - "spec-driven-development"
           - "api-and-interface-design"
-        mandates:
-          - "Consolidate PRD, BaaS decisions (Supabase/Convex), Mermaid sequence flow, typed contracts, and FSM into spec/05_system_architecture.md."
+        milestone_execution_sequence:
+          m1_consolidated_architecture_spec: "Draft Lean PRD, BaaS tech stack decisions (Supabase/Convex), Mermaid sequence data flow, typed TypeScript API contracts, and domain FSM state machines into spec/05_system_architecture.md."
 
       phase_5_rapid_ui_scaffolding:
         designated_spec: "spec_universal/hackathon_pipeline/05_rapid_ui_scaffolding.md"
         primary_skills:
           - "21st-ui-build"
           - "frontend-ui-engineering"
-        mandates:
-          - "Assemble the 4-component layout using 21st.dev components and Tailwind CSS."
-          - "Implement split-screen baseline vs leverage views."
-          - "Integrate the 'Load Judge Demo' preset button."
+        milestone_execution_sequence:
+          m1_component_assembly: "Assemble the 4-component layout using 21st.dev components, Tailwind CSS, Lucide icons, and pre-built design tokens."
+          m2_split_screen_and_presets: "Implement split-screen baseline vs leverage views and embed the '⚡ Load Judge Demo' preset button."
 
       phase_6_lean_4tier_tdd_and_security:
         designated_spec: "spec_universal/hackathon_pipeline/06_lean_4tier_tdd_and_security.md"
@@ -436,16 +472,16 @@ These guidelines are working if: fewer unnecessary changes in diffs, fewer rewri
           - "test-driven-development"
           - "cyber-security-frameworks"
           - "systematic-debugging"
-        mandates:
-          - "Automated <30s test suite across all 4 tiers (Execution bounds <4000ms, Golden Path logic, UI rendering contracts, and STRIDE/OWASP input fuzzing)."
+        milestone_execution_sequence:
+          m1_rapid_test_automation: "Automated <30s test suite across all 4 tiers (Execution bounds <4000ms, Golden Path nominal logic, UI contracts, and STRIDE/OWASP input fuzzing on demo fields)."
 
       phase_7_demo_pitch_and_judge_proofing:
         designated_spec: "spec_universal/hackathon_pipeline/07_demo_pitch_and_judge_proofing.md"
         primary_skills:
           - "shipping-and-launch"
           - "verification-before-completion"
-        mandates:
-          - "Script 3-minute presentation (Hook, Contrast, Live Demo, Technical Depth, Close)."
-          - "Deploy Tri-Layer Fail-Safe Shield (JSON fallback, demo mode, and 60fps silent backup video)."
+        milestone_execution_sequence:
+          m1_pitch_script_formulation: "Script 3-minute presentation formula (Hook, Contrast, Live Demo, Technical Depth, Close)."
+          m2_tri_layer_fail_safe_shields: "Deploy Tri-Layer Fail-Safe Shield (instant JSON fallback, demo mode preset, and 60fps silent backup video recording) to guarantee zero live demo crashes."
     ```
 

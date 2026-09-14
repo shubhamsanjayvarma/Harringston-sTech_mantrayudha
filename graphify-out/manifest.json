@@ -5,8 +5,8 @@
     "semantic_hash": ""
   },
   ".agents/AGENTS.md": {
-    "mtime": 1789369614.8540807,
-    "ast_hash": "c5ab227a8b5a3fd05df1c6051d4885e8",
+    "mtime": 1789370200.283389,
+    "ast_hash": "562aebff1f3a21b79548763a7628dcb4",
     "semantic_hash": ""
   },
   ".agents/rules/graphify.md": {
@@ -230,7 +230,7 @@
     "semantic_hash": ""
   },
   ".agents/rules/CONTEXT.md": {
-    "mtime": 1789369636.9527805,
+    "mtime": 1789369718.3976786,
     "ast_hash": "a92a6b0bc510c4fb8470975a7fff5eb5",
     "semantic_hash": ""
   },
