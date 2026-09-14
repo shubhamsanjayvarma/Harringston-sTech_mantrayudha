@@ -1,16 +1,16 @@
 # Graph Report - Hackathon_Boilerplate  (2026-09-14)
 
 ## Corpus Check
-- 180 files · ~375,803 words
+- 180 files · ~376,128 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 3508 nodes · 5679 edges · 263 communities (253 shown, 10 thin omitted)
+- 3508 nodes · 5679 edges · 264 communities (254 shown, 10 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `20531dec`
+- Built from commit: `4ce3cc30`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -271,6 +271,7 @@
 - [[_COMMUNITY_Community 254|Community 254]]
 - [[_COMMUNITY_Community 257|Community 257]]
 - [[_COMMUNITY_Community 262|Community 262]]
+- [[_COMMUNITY_Community 263|Community 263]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `_()` - 55 edges
@@ -299,7 +300,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (263 total, 10 thin omitted)
+## Communities (264 total, 10 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.04
@@ -499,7 +500,7 @@ Nodes (10): 1. Executive Summary & Foundational Philosophy, 2.1 The Three Cardin
 
 ### Community 56 - "Community 56"
 Cohesion: 0.25
-Nodes (8): 8.2 Unified Physical Storage Capacity Formula, 8.3 RAM & Cache Working Set Sizing, 8.4 Network Bandwidth Sizing (Ingress & Egress), 8. Quantitative Back-of-the-Envelope Estimation Framework, A. Daily Active Working Set (DAWS), B. Cache Data Target (Pareto 80/20 Rule), C. Total Production Cache RAM Allocation ($M_{\text{cache}}$), The Unified Physical Storage Formula:
+Nodes (8): 8.1 Traffic & Compute Estimation (QPS, ELU & Burst Math), 8.2 Unified Physical Storage Capacity Formula, 8.4 Network Bandwidth Sizing (Ingress & Egress), 8. Quantitative Back-of-the-Envelope Estimation Framework, A. Baseline Average QPS, B. Read/Write Asymmetry & Equivalent Load Units (ELU), C. Diurnal Cycles & Sub-Second Microburst Bounds, The Unified Physical Storage Formula:
 
 ### Community 57 - "Community 57"
 Cohesion: 0.50
@@ -530,8 +531,8 @@ Cohesion: 0.25
 Nodes (7): 0. Active Hackathon Ground Truth & Anti-Drift Context (Injected), 1. Product Philosophy & Core Vision, 2. Core Mechanisms & System Architecture, 3. Design DNA & Visual / Interaction Standards, 4. Error Log, Incident Telemetry & Root Cause Analyses, 5. Operational Invariants & Runtime Caveats, Project Context, Core Philosophy, Design DNA & Incident Telemetry
 
 ### Community 66 - "Community 66"
-Cohesion: 0.50
-Nodes (4): 8.1 Traffic & Compute Estimation (QPS, ELU & Burst Math), A. Baseline Average QPS, B. Read/Write Asymmetry & Equivalent Load Units (ELU), C. Diurnal Cycles & Sub-Second Microburst Bounds
+Cohesion: 0.10
+Nodes (29): buildCollapsible(), buildColorModels(), buildRadiiModels(), buildTypographyModels(), cssSafe(), designEmptyMessage(), escapeHtml(), fontStack() (+21 more)
 
 ### Community 67 - "Community 67"
 Cohesion: 0.05
@@ -539,7 +540,7 @@ Nodes (39): 1. Executive Summary & Core Rules, 2. The Six-Document System Taxono
 
 ### Community 68 - "Community 68"
 Cohesion: 0.47
-Nodes (5): evaluate_command(), main(), normalize_command(), De-obfuscates command strings across 4 phases to prevent regex evasion:     Pha, Evaluates command against forensic patterns after normalization.     Returns An
+Nodes (5): evaluate_command(), main(), normalize_command(), De-obfuscates command strings across 4 phases to prevent regex evasion:     Phas, Evaluates command against forensic patterns after normalization.     Returns Ant
 
 ### Community 69 - "Community 69"
 Cohesion: 0.50
@@ -591,27 +592,27 @@ Nodes (3): 🏆 Hackathon Operating System & Speedrun Framework, 🚀 How to Exe
 
 ### Community 81 - "Community 81"
 Cohesion: 0.03
-Nodes (107): applyGlobalBarLabelState(), applyPlaceholderSizingStyles(), averageRgb01(), bindEditBadgeProxy(), buildAnnotationsForCapture(), buildInsertPlaceholderSnapshotFromDom(), buildPickedAnchorSnapshot(), buildPinElement() (+99 more)
+Nodes (103): applyGlobalBarLabelState(), applyPlaceholderSizingStyles(), averageRgb01(), buildAnnotationsForCapture(), buildCollapsible(), buildColorModels(), buildInsertPlaceholderSnapshotFromDom(), buildPickedAnchorSnapshot() (+95 more)
 
 ### Community 82 - "Community 82"
 Cohesion: 0.03
-Nodes (116): applyGlobalBarLabelState(), applyPlaceholderSizingStyles(), averageRgb01(), buildAnnotationsForCapture(), buildCollapsible(), buildColorModels(), buildInsertPlaceholderSnapshotFromDom(), buildPickedAnchorSnapshot() (+108 more)
+Nodes (100): applyGlobalBarLabelState(), applyPlaceholderSizingStyles(), averageRgb01(), bindEditBadgeProxy(), buildAnnotationsForCapture(), buildInsertPlaceholderSnapshotFromDom(), buildPinElement(), buildPlaceholderResizeHandles() (+92 more)
 
 ### Community 83 - "Community 83"
 Cohesion: 0.06
 Nodes (61): abortSvelteComponentInjection(), applySavedSessionMeta(), clampVariantIndex(), clearHandled(), commitAcceptedVariantToDom(), completeParameterGenerationIfReady(), completeParameterPublication(), completeSourceInjection() (+53 more)
 
 ### Community 84 - "Community 84"
-Cohesion: 0.08
-Nodes (71): beginNewLiveConfiguration(), cancelEditing(), cancelEditingToPicking(), cancelInsertConfigure(), cleanup(), cleanupAcceptedSession(), clearAnnotations(), clearInsertPicking() (+63 more)
+Cohesion: 0.09
+Nodes (64): beginNewLiveConfiguration(), buildPickedAnchorSnapshot(), cancelEditing(), cancelEditingToPicking(), cancelInsertConfigure(), cleanup(), cleanupAcceptedSession(), clearAnnotations() (+56 more)
 
 ### Community 85 - "Community 85"
 Cohesion: 0.08
-Nodes (71): beginNewLiveConfiguration(), cancelEditing(), cancelEditingToPicking(), cancelInsertConfigure(), cleanup(), cleanupAcceptedSession(), clearAnnotations(), clearInsertPicking() (+63 more)
+Nodes (69): beginNewLiveConfiguration(), cancelEditing(), cancelEditingToPicking(), cancelInsertConfigure(), cleanup(), cleanupAcceptedSession(), clearAnnotations(), clearInsertPicking() (+61 more)
 
 ### Community 86 - "Community 86"
-Cohesion: 0.05
-Nodes (73): abortSvelteComponentInjection(), applyOriginalAttrsToSvelteAnchor(), applySavedSessionMeta(), clampVariantIndex(), clearHandled(), commitAcceptedSvelteComponentToDom(), commitAcceptedVariantToDom(), completeParameterGenerationIfReady() (+65 more)
+Cohesion: 0.06
+Nodes (61): abortSvelteComponentInjection(), applySavedSessionMeta(), clampVariantIndex(), clearHandled(), commitAcceptedVariantToDom(), completeParameterGenerationIfReady(), completeParameterPublication(), completeSourceInjection() (+53 more)
 
 ### Community 87 - "Community 87"
 Cohesion: 0.09
@@ -634,16 +635,16 @@ Cohesion: 0.07
 Nodes (44): agentHasWorkInFlight(), agentStatusText(), attachSteerFocusGuard(), barPaletteForTheme(), brandMarkSvg(), buildDesignHeader(), buildSteerProcessingDots(), buildSteerQueueHint() (+36 more)
 
 ### Community 92 - "Community 92"
-Cohesion: 0.15
-Nodes (26): armPageChatForTyping(), attachSteerFocusDebug(), collapsePageChat(), expandPageChat(), focusConfigureInput(), focusPageChatInput(), focusSteerChat(), lockSteerChat() (+18 more)
+Cohesion: 0.13
+Nodes (29): armPageChatForTyping(), attachSteerFocusDebug(), clearSteerAwaitTimer(), collapsePageChat(), expandPageChat(), focusConfigureInput(), focusPageChatInput(), focusSteerChat() (+21 more)
 
 ### Community 93 - "Community 93"
-Cohesion: 0.08
-Nodes (36): abandonForeignSession(), addManualContextText(), applyEditing(), buildLocatorForLeaf(), canRestoreManualEditElement(), contextElementForManualEdit(), copyEditContainerContext(), copyEditLeafContext() (+28 more)
+Cohesion: 0.10
+Nodes (29): addManualContextText(), applyEditing(), buildLocatorForLeaf(), canRestoreManualEditElement(), contextElementForManualEdit(), copyEditContainerContext(), copyEditLeafContext(), directMixedTextRestoreNodes() (+21 more)
 
 ### Community 94 - "Community 94"
-Cohesion: 0.15
-Nodes (26): armPageChatForTyping(), attachSteerFocusDebug(), collapsePageChat(), expandPageChat(), focusConfigureInput(), focusPageChatInput(), focusSteerChat(), lockSteerChat() (+18 more)
+Cohesion: 0.13
+Nodes (29): armPageChatForTyping(), attachSteerFocusDebug(), clearSteerAwaitTimer(), collapsePageChat(), expandPageChat(), focusConfigureInput(), focusPageChatInput(), focusSteerChat() (+21 more)
 
 ### Community 95 - "Community 95"
 Cohesion: 0.18
@@ -706,8 +707,8 @@ Cohesion: 0.10
 Nodes (20): Animate complex properties, Assess What "Extraordinary" Means Here, For data-heavy interfaces, For functional UI, For performance-critical UI, For visual/marketing surfaces, Implement with Discipline, Interact with the device (+12 more)
 
 ### Community 110 - "Community 110"
-Cohesion: 0.10
-Nodes (29): buildCollapsible(), buildColorModels(), buildRadiiModels(), buildTypographyModels(), cssSafe(), designEmptyMessage(), escapeHtml(), fontStack() (+21 more)
+Cohesion: 0.12
+Nodes (22): abandonForeignSession(), configureVoiceContext(), copyToClipboard(), discardOrphanedSession(), dismissToast(), finishVoiceSession(), isEmbeddedPreviewBrowser(), markSessionHandled() (+14 more)
 
 ### Community 111 - "Community 111"
 Cohesion: 0.31
@@ -734,8 +735,8 @@ Cohesion: 0.13
 Nodes (14): 1. Decide what is already true, 2. Ask what will change the work, 3. Choose the right amount of invention, 4. Commit the world, 5. Record the decision, 6. Build with full commitment, 7. Inspect and finish, Both paths (+6 more)
 
 ### Community 117 - "Community 117"
-Cohesion: 0.18
-Nodes (17): applyParamDefaults(), applyParamValue(), buildParamsPanel(), closedClipPath(), formatRangeValue(), getVisibleVariantEl(), hideParamsPanel(), openTunePopover() (+9 more)
+Cohesion: 0.08
+Nodes (37): applyOriginalAttrsToSvelteAnchor(), applyParamDefaults(), applyParamValue(), buildParamsPanel(), captureAndEmit(), checkpointPayload(), closedClipPath(), commitAcceptedSvelteComponentToDom() (+29 more)
 
 ### Community 118 - "Community 118"
 Cohesion: 0.13
@@ -1098,7 +1099,7 @@ Cohesion: 0.50
 Nodes (3): Command guidance, No-argument routing: the context-aware menu, Workflow questions
 
 ### Community 208 - "Community 208"
-Cohesion: 0.50
+Cohesion: 0.67
 Nodes (3): adapt, argumentHint, description
 
 ### Community 209 - "Community 209"
@@ -1266,7 +1267,7 @@ Cohesion: 0.67
 Nodes (3): overdrive, argumentHint, description
 
 ### Community 250 - "Community 250"
-Cohesion: 0.67
+Cohesion: 0.50
 Nodes (3): polish, argumentHint, description
 
 ### Community 251 - "Community 251"
@@ -1285,6 +1286,10 @@ Nodes (3): typeset, argumentHint, description
 Cohesion: 0.18
 Nodes (10): 1. Executive Summary & Design System Philosophy, 2. Watertight 5-Layer Frontend Tool Stack & Execution Lifecycle, 3. The 6-Category Anti-Slop Codex (What NOT to Use), 4. Token Architecture & Root `DESIGN.md` Contract, 5. Core Web Vitals, Render Physics & Performance Budgets, 6. Client-Side Security & Threat Hardening (STRIDE & OWASP), 7. Legacy Strangler Fig Refactoring & Design Drift Prevention, 8. Mandatory 4-Tier TDD Testing Matrix for Frontend (+2 more)
 
+### Community 263 - "Community 263"
+Cohesion: 0.50
+Nodes (4): 8.3 RAM & Cache Working Set Sizing, A. Daily Active Working Set (DAWS), B. Cache Data Target (Pareto 80/20 Rule), C. Total Production Cache RAM Allocation ($M_{\text{cache}}$)
+
 ## Knowledge Gaps
 - **1726 isolated node(s):** `enabled`, `PreToolUse`, `idea-refine.sh script`, `description`, `argumentHint` (+1721 more)
   These have ≤1 connection - possible missing edges or undocumented components.
@@ -1295,7 +1300,7 @@ _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Reference Material` connect `Community 206` to `Community 166`, `Community 182`, `Community 127`?**
   _High betweenness centrality (0.000) - this node is a cross-community bridge._
-- **What connects `enabled`, `PreToolUse`, `De-obfuscates command strings across 4 phases to prevent regex evasion:     Pha` to the rest of the system?**
+- **What connects `enabled`, `PreToolUse`, `De-obfuscates command strings across 4 phases to prevent regex evasion:     Phas` to the rest of the system?**
   _1728 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.04081632653061224 - nodes in this community are weakly interconnected._
