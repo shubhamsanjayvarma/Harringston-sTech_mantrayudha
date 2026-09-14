@@ -63,7 +63,8 @@ active_hackathon_context:
 - **Proactive Living Document Duty (Rule 36):** Autonomous preparation and maintenance of living specs without user prompting.
 - **Harmful Command Prevention Hook (Rule 37):** Physical interceptor `.agents/scripts/destructive_command_guard.py` active via `.agents/hooks.json`.
 - **Knowledge Dump Intake (Rule 38):** Surgical intake and deduplication protocol via `dump/`.
-- **Hackathon Speedrun Execution (Rule 39):** Mandatory execution through the 7-phase hackathon pipeline.
+- **Frontend Design Bible & Token Primacy (Rule 39):** Mandatory adherence to spec_universal/frontend_design_bible.md.
+- **Hackathon Speedrun Execution (Rule 40):** Mandatory execution through the 7-phase hackathon pipeline.
 
 ---
 
@@ -105,7 +106,25 @@ incident_telemetry_schema:
     preventive_rule_or_guardrail: "Rule reference in AGENTS.md or pre-commit hook"
     status: "RESOLVED_AND_FORTIFIED | MITIGATED | INVESTIGATING"
 
-incident_telemetry_records: []
+incident_telemetry_records:
+  - incident_id: "INC-20260914-01"
+    timestamp: "2026-09-14T12:35:00+05:30"
+    severity: "HIGH"
+    category: "RULE_COLLISION_AND_OVERWRITE"
+    symptom_and_error_signature:
+      description: "Syncing AGENTS.md from Universal_Project_Boilerplate overwrote Hackathon_Boilerplate Rule 39 (Hackathon Speedrun Pipeline) with Frontend Design Bible instead of appending sequentially as Rule 40."
+      exact_error_output: |
+        Overwriting existing Rule 39 in Hackathon_Boilerplate during cross-repo sync.
+      triggering_operation: "Copy-Item from Universal_Project_Boilerplate/.agents/AGENTS.md to Hackathon_Boilerplate/.agents/AGENTS.md"
+    root_cause_analysis:
+      trigger_action: "Whole-file copy of AGENTS.md without verifying downstream repo rule numbering differences."
+      underlying_mechanism: "Universal_Project_Boilerplate had 38 rules prior to adding Rule 39, whereas Hackathon_Boilerplate had already codified the 7-Phase Hackathon Speedrun Pipeline as Rule 39."
+      untested_assumption: "Assumed both repositories shared the exact same rule index and contents prior to the commit."
+    remediation_and_hardening:
+      immediate_fix: "Codified Rule 39 as Universal Frontend Design Bible and preserved the 7-Phase Hackathon Speedrun Pipeline as Rule 40 in Hackathon_Boilerplate/.agents/AGENTS.md, updated CONTEXT.md cross-references."
+      regression_test_created: "Sequential rule index validation verifying 40 continuous rules in AGENTS.md."
+      preventive_rule_or_guardrail: "Rule 38 Surgical Knowledge Merge Protocol & Zero Destruction / Immutability Invariant: NEVER overwrite existing numbered rules; always inspect diff and append sequentially."
+      status: "RESOLVED_AND_FORTIFIED"
 ```
 
 ---
