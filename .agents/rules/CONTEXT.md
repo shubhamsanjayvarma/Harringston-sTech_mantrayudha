@@ -60,11 +60,11 @@ active_hackathon_context:
 - **Knowledge Graph as Ground Truth:** AST-based code understanding via Graphify (`graphify-out/`). Always queried before reading raw source code, and refreshed with `graphify update .` post-implementation.
 - **Strict 4-Tier Testing Pipeline:** Space/Time bounds, Functional Logic, UI/Integration, and STRIDE/OWASP Top 10.
 - **Specification Governance:** Reusable framework templates reside in `spec_universal/`. Active hackathon artifacts reside in `spec/` and can be pushed (Rule 35).
-- **Proactive Living Document Duty (Rule 36):** Autonomous preparation and maintenance of living specs without user prompting.
-- **Harmful Command Prevention Hook (Rule 37):** Physical interceptor `.agents/scripts/destructive_command_guard.py` active via `.agents/hooks.json`.
-- **Knowledge Dump Intake (Rule 38):** Surgical intake and deduplication protocol via `dump/`.
-- **Frontend Design Bible & Token Primacy (Rule 39):** Mandatory adherence to spec_universal/frontend_design_bible.md.
-- **Hackathon Speedrun Execution (Rule 40):** Mandatory execution through the 7-phase hackathon pipeline.
+- **Proactive Living Document Duty (Rule 31):** Autonomous preparation and maintenance of living specs without user prompting.
+- **Harmful Command Prevention Hook (Rule 32):** Physical interceptor `.agents/scripts/destructive_command_guard.py` active via `.agents/hooks.json`.
+- **Knowledge Dump Intake (Rule 33):** Surgical intake and deduplication protocol via `dump/`.
+- **Frontend Design Bible & Token Primacy (Rule 34):** Mandatory adherence to spec_universal/frontend_design_bible.md.
+- **Hackathon Speedrun Execution (Rule 35):** Mandatory execution through the 7-phase hackathon pipeline.
 
 ---
 
@@ -130,12 +130,12 @@ incident_telemetry_records:
 ---
 
 ## 5. Operational Invariants & Runtime Caveats
-- **Local Rules Isolation & Physical Guardrail:** `.agents/AGENTS.md` is strictly local and must NEVER be pushed to remote (Rule 34). Commits to it are physically blocked by `.githooks/pre-commit`.
-- **Universal Specs Immutability & Physical Guardrail:** `spec_universal/` contains the universal baseline and must NEVER be altered during project execution unless explicitly directed by user (Rule 35). Commits to it are physically blocked by `.githooks/pre-commit`.
-- **Project Specs Commit Scope:** `spec/` houses project-specific specs/PRDs and is explicitly permitted to be staged, committed, and pushed to the remote repository (Rule 35).
-- **Explicit Authorization for Git Actions:** Never commit, push, or open PRs autonomously without explicit user direction (Rule 28).
-- **Component Wrapper Closures:** Always verify matching closing parentheses `});` when wrapping React components in `memo` or HOCs (Rule 29).
-- **State Scope Verification:** Never prune destructured variables without complete JSX tree reference validation (Rule 30).
-- **Test File Extensions:** JSX test files must strictly use `.tsx` to prevent parser ambiguity (Rule 33).
-- **Automated Harmful Command Interceptor:** Calls to `run_command` are automatically inspected by `.agents/scripts/destructive_command_guard.py` via `.agents/hooks.json` (Rule 37). Destructive operations (mass deletion, raw block format, git force push, drop database) are physically blocked.
-- **Knowledge Dump Intake & Merge Protocol:** External files in `dump/` must be processed via Rule 38 with strict deduplication, zero overwrite of existing rules, and extraction of novel differentials only.
+- **Local Rules Isolation & Physical Guardrail:** `.agents/AGENTS.md` is strictly local and must NEVER be pushed to remote (Rule 29). Commits to it are physically blocked by `.githooks/pre-commit`.
+- **Universal Specs Immutability & Physical Guardrail:** `spec_universal/` contains the universal baseline and must NEVER be altered during project execution unless explicitly directed by user (Rule 30). Commits to it are physically blocked by `.githooks/pre-commit`.
+- **Project Specs Commit Scope:** `spec/` houses project-specific specs/PRDs and is explicitly permitted to be staged, committed, and pushed to the remote repository (Rule 30).
+- **Explicit Authorization for Git Actions:** Never commit, push, or open PRs autonomously without explicit user direction (Rule 24).
+- **Component Wrapper Closures:** Always verify matching closing parentheses `});` when wrapping React components in `memo` or HOCs (Rule 25).
+- **State Scope Verification:** Never prune destructured variables without complete JSX tree reference validation (Rule 26).
+- **Test File Extensions:** JSX test files must strictly use `.tsx` to prevent parser ambiguity (Rule 28).
+- **Automated Harmful Command Interceptor:** Calls to `run_command` are automatically inspected by `.agents/scripts/destructive_command_guard.py` via `.agents/hooks.json` (Rule 32). Destructive operations (mass deletion, raw block format, git force push, drop database) are physically blocked.
+- **Knowledge Dump Intake & Merge Protocol:** External files in `dump/` must be processed via Rule 33 with strict deduplication, zero overwrite of existing rules, and extraction of novel differentials only.
