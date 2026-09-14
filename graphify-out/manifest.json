@@ -5,8 +5,8 @@
     "semantic_hash": ""
   },
   ".agents/AGENTS.md": {
-    "mtime": 1789327697.5634947,
-    "ast_hash": "488e3793d629949cfedc4b330b13a9da",
+    "mtime": 1789369614.8540807,
+    "ast_hash": "c5ab227a8b5a3fd05df1c6051d4885e8",
     "semantic_hash": ""
   },
   ".agents/rules/graphify.md": {
@@ -230,8 +230,8 @@
     "semantic_hash": ""
   },
   ".agents/rules/CONTEXT.md": {
-    "mtime": 1789286922.103728,
-    "ast_hash": "2cdc22ba487f09ae5373741b6f7d66e0",
+    "mtime": 1789369636.9527805,
+    "ast_hash": "a92a6b0bc510c4fb8470975a7fff5eb5",
     "semantic_hash": ""
   },
   "spec/README.md": {
@@ -325,7 +325,7 @@
     "semantic_hash": ""
   },
   ".githooks/pre-commit": {
-    "mtime": 1789327711.0239046,
+    "mtime": 1789328543.9458408,
     "ast_hash": "d12c14c5bdeea389a1c70d88409e504c",
     "semantic_hash": ""
   },
@@ -920,8 +920,8 @@
     "semantic_hash": ""
   },
   "spec_universal/frontend_design_bible.md": {
-    "mtime": 1789327658.8512053,
-    "ast_hash": "ba5cd1ec2003f7e5705e7e43c8e44217",
+    "mtime": 1789328543.993464,
+    "ast_hash": "8bb657a42f5079af2bc1d8a452963ca7",
     "semantic_hash": ""
   }
 }
