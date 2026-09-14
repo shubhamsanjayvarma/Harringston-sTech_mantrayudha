@@ -2,7 +2,7 @@
 
 > **Purpose & Anti-Context Bloat Protocol:** This document is the **authoritative navigation switchboard** for the 7-layer System Design Specification Suite. AI coding agents and systems architects must consult this guide to determine **which specific document, section, and formula to reference** during each phase of creating an implementation plan or addressing specific technical requirements. 
 > 
-> **CRITICAL AGENT RULE:** **NEVER** indiscriminately read or inject all 7 specification files into your prompt context simultaneously. Doing so triggers catastrophic context bloat, degrades reasoning quality, and violates Rule #27. Instead, follow the precision routing tables below to retrieve only the exact section required for your active task.
+> **CRITICAL AGENT RULE:** **NEVER** indiscriminately read or inject all 7 specification files into your prompt context simultaneously. Doing so triggers catastrophic context bloat, degrades reasoning quality, and violates Rule #23. Instead, follow the precision routing tables below to retrieve only the exact section required for your active task.
 
 ---
 
@@ -120,7 +120,7 @@ implementation_planning_lifecycle:
       - "Section 5: Testing Type 4: QA & Security Testing - STRIDE / OWASP (TC-SEC-STRIDE-01..15, TC-SEC-OWASP-01..14)"
     deliverables:
       - "Complete 4-category test suite embedded directly into component plans"
-      - "Specific mathematical assertions using performance.now() with Rule 18 CI margins"
+      - "Specific mathematical assertions using performance.now() with Rule 15 CI margins"
       - "Chaos injection scenarios (canary rollback, spot preemption drain, probe isolation)"
       - "STRIDE exploit scripts (crypto-shredding verification, WORM deletion block, Merkle preimage rejection)"
 ```
