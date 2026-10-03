@@ -17,6 +17,7 @@ class ChatRequest(BaseModel):
     conversation_id: Optional[str] = Field(default=None, description="Optional active conversation ID")
     reference_time: Optional[str] = Field(default=None, description="ISO-8601 simulated conversation timestamp")
     offline_mode: bool = Field(default=False, description="Force offline rule execution")
+    history: Optional[List[Dict[str, Any]]] = Field(default=None, description="Prior conversation dialogue turns")
 
 
 class ChatResponse(BaseModel):
@@ -45,6 +46,7 @@ async def process_chat(req: ChatRequest) -> ChatResponse:
             conversation_id=req.conversation_id,
             reference_time=ref_dt,
             offline_mode=req.offline_mode,
+            history=req.history,
         )
         return ChatResponse(**result)
     except Exception as e:
