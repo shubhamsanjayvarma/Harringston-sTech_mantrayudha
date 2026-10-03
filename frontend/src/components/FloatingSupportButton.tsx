@@ -130,7 +130,11 @@ export function FloatingSupportButton() {
       }
     }
     window.addEventListener('open-support-chat', handleOpenEvent);
-    return () => window.removeEventListener('open-support-chat', handleOpenEvent);
+    window.addEventListener('open_nova_assist', handleOpenEvent);
+    return () => {
+      window.removeEventListener('open-support-chat', handleOpenEvent);
+      window.removeEventListener('open_nova_assist', handleOpenEvent);
+    };
   }, [activeCustomer]);
 
   // Close on Escape key press

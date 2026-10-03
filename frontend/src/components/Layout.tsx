@@ -20,8 +20,10 @@ import {
 } from 'lucide-react';
 import { FloatingSupportButton } from './FloatingSupportButton';
 import { Footer } from './Footer';
+import { useCart } from '../context/CartContext';
 
 export default function Layout() {
+  const { cartCount } = useCart();
   return (
     <div className="min-h-screen bg-white flex flex-col">
       {/* Top Banner */}
@@ -82,13 +84,19 @@ export default function Layout() {
                 className="text-gray-700 hover:text-[#198038] p-1.5 rounded-full hover:bg-gray-50 transition-colors"
                 title="My Account"
               >
-                <User size={24} />
+                <User size={22} className="stroke-[1.8]" />
               </Link>
-              <Link to="/cart" className="text-gray-700 hover:text-black relative" title="View Cart">
-                <ShoppingCart size={24} />
-                <span className="absolute -top-1 -right-2 bg-[#198038] text-white text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center">
-                  2
-                </span>
+              <Link
+                to="/cart"
+                className="text-gray-700 hover:text-black relative p-1.5 rounded-full hover:bg-gray-100 transition-colors"
+                title="View Cart"
+              >
+                <ShoppingCart size={22} className="stroke-[1.8]" />
+                {cartCount > 0 && (
+                  <span className="absolute -top-0.5 -right-1 min-w-[20px] h-5 px-1 bg-[#198038] text-white text-[11px] font-bold rounded-full flex items-center justify-center leading-none border-2 border-white shadow-2xs transition-transform">
+                    {cartCount}
+                  </span>
+                )}
               </Link>
             </div>
           </div>
