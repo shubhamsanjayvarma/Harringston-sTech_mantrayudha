@@ -234,6 +234,20 @@ class NovaMartAgentLoop:
                 ctx.response_text = "For security and privacy reasons, I can only assist with orders placed under your authenticated account."
                 return self._build_result(ctx, start_time)
         else:
+            # Check if customer inquiry is a general policy/FAQ/catalog query before checking customer orders
+            early_faq = resolve_general_policy_query(
+                sanitized_message=sanitized,
+                customer_id=customer_id,
+                active_order=None,
+                customer_record=customer,
+            )
+            if early_faq:
+                move, reply_text = early_faq
+                ctx.terminal_move = move
+                ctx.response_text = reply_text
+                ctx.log_stage(WorkflowStage.RETRIEVE_POLICY, "Answered via NovaMart Policy Knowledge Base", {"query": sanitized})
+                return self._build_result(ctx, start_time)
+
             # No explicit order ID in message. Check if customer has multiple orders matching category/product keyword
             orders = fetch_all(
                 "SELECT o.*, p.product_name, p.category, oi.final_price, oi.order_item_id FROM orders o "
@@ -246,7 +260,16 @@ class NovaMartAgentLoop:
             # Filter by message keywords (e.g. headphones, earbuds, laptop, phone)
             keywords = ["headphone", "earbud", "audio", "laptop", "tablet", "camera", "monitor", "watch", "speaker", "mouse", "keyboard", "phone"]
             detected_kw = [k for k in keywords if k in sanitized.lower()]
-            if detected_kw:
+            has_order_action_intent = bool(
+                re.search(
+                    r"\b(i\s+bought|i\s+ordered|i\s+purchased|my\s+(order|item|package|parcel|headphones?|earbuds?|laptop|phone|tablet|camera|monitor|watch|speaker|mouse|keyboard)|"
+                    r"want\s+to\s+return|return\s+the|refund\s+the|cancel\s+the|where\s+is\s+(my|the)|status\s+of\s+(my|the)|tracking\s+for\s+(my|the)|"
+                    r"arrived\s+damaged|is\s+broken|defective\s+unit|didn't\s+work)\b",
+                    sanitized,
+                    re.IGNORECASE,
+                )
+            )
+            if detected_kw and has_order_action_intent:
                 seen_orders = set()
                 matching_orders = []
                 for o in orders:
@@ -274,8 +297,8 @@ class NovaMartAgentLoop:
                 elif len(matching_orders) == 1:
                     order_record = matching_orders[0]
                     order_id = order_record["order_id"]
-            elif orders:
-                # Default to latest order if single recent order exists
+            elif orders and has_order_action_intent:
+                # Default to latest order if single recent order exists and user asked to act on it
                 if len(orders) == 1:
                     order_record = orders[0]
                     order_id = order_record["order_id"]
@@ -614,13 +637,30 @@ class NovaMartAgentLoop:
             )
             return self._build_result(ctx, start_time)
 
-        # Fallback general query with helpful guidance
+        # Fallback general query with helpful domain guidance
         ctx.terminal_move = TerminalMove.ANSWER
         cust_name = customer.get("first_name") or "there"
+        
+        # Check if customer has recent orders to provide quick reference
+        recent_orders = fetch_all(
+            "SELECT order_id, order_status, total_amount, actual_delivery_date, order_date FROM orders WHERE customer_id = ? ORDER BY order_date DESC LIMIT 2",
+            (customer_id,),
+        )
+        order_hint = ""
+        if recent_orders:
+            order_lines = [f"• **{o['order_id']}** (Status: `{o['order_status']}`, Total: ₹{int(o['total_amount']):,})" for o in recent_orders]
+            order_hint = "\n\n📦 **Your Recent Orders**:\n" + "\n".join(order_lines) + "\n*(Share any Order ID above to track, cancel, or initiate a return)*"
+
         ctx.response_text = (
-            f"Hello {cust_name}, I'm here to help! Could you please clarify your question? "
-            "You can provide your **Order ID** (e.g. `ORD-001042`) to track or return a package, "
-            "or ask about our **delivery timelines**, **return policy**, **warranty**, or **products**."
+            f"Hello {cust_name}! I'm happy to help you with your inquiry. "
+            "I can assist you with:\n"
+            "• **Delivery & Shipping**: Timelines across India (3–5 days metro, 10–15 min quick groceries), charges (free over ₹1,000), and OTP verification.\n"
+            "• **Returns & Refunds**: 7-day change-of-mind / 10-day defect windows, restocking fee rules, and refund status.\n"
+            "• **Orders & Tracking**: Live status, courier details, and pre-shipment cancellations.\n"
+            "• **Products & Warranty**: Official brand warranty (12–24 months) and catalog recommendations.\n"
+            "• **Customer Care**: Toll-free helpline (1800-419-NOVA) and escalation to human specialists."
+            f"{order_hint}\n\n"
+            "Could you please share a bit more detail about what you need assistance with?"
         )
         return self._build_result(ctx, start_time)
 
