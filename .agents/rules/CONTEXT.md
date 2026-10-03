@@ -54,17 +54,17 @@ active_hackathon_context:
   3. *MVP Scoping & Demo Razor (`03_`)*: 12h/24h/48h brackets, Golden Path razor, P0/P1/P2 triaging, and offline shields.
   4. *Lean 7-Layer Architecture (`04_`)*: Consolidated PRD, BaaS decisions, typed API contracts, and FSM state models.
   5. *Rapid UI Scaffolding (`05_`)*: 21st.dev component assembly, dark mode DNA, and the "⚡ Load Judge Demo" preset.
-  6. *Lean 4-Tier TDD & Security (`06_`)*: $<30s test suites across execution bounds, logic, UI, and STRIDE input fuzzing.
+  6. *Golden-Path Smoke Verification (`06_`)*: Build cleanly (`npm run build` or `tsc --noEmit`) and verify the 2-minute judge walkthrough with zero console errors. Enterprise 4-tier TDD and STRIDE threat testing are strictly disabled.
   7. *Demo Pitch & Judge Proofing (`07_`)*: 3-minute pitch formula and tri-layer fail-safe shields (JSON fallback, demo mode, 60fps video backup).
-- **Layered System Design Hierarchy:** Universal 7-layer architecture codified under `spec_universal/system_design/`.
+- **Layered System Design Hierarchy:** Lean Hackathon Architecture (Frontend + Serverless/BaaS/Local SQLite + Model API + Local Mock Fixtures).
 - **Knowledge Graph as Ground Truth:** AST-based code understanding via Graphify (`graphify-out/`). Always queried before reading raw source code, and refreshed with `graphify update .` post-implementation.
-- **Strict 4-Tier Testing Pipeline:** Space/Time bounds, Functional Logic, UI/Integration, and STRIDE/OWASP Top 10.
-- **Specification Governance:** Reusable framework templates reside in `spec_universal/`. Active hackathon artifacts reside in `spec/` and can be pushed (Rule 35).
+- **Golden-Path Smoke Verification Gate:** Clean compilation and zero-crash browser verification. Dedicated security fuzzing and Big-O testing are disabled.
+- **Specification Governance:** Reusable framework templates reside in `spec_universal/`. Active hackathon artifacts reside in `spec/` and can be pushed (Rule 30).
 - **Proactive Living Document Duty (Rule 31):** Autonomous preparation and maintenance of living specs without user prompting.
 - **Harmful Command Prevention Hook (Rule 32):** Physical interceptor `.agents/scripts/destructive_command_guard.py` active via `.agents/hooks.json`.
 - **Knowledge Dump Intake (Rule 33):** Surgical intake and deduplication protocol via `dump/`.
 - **Frontend Design Bible & Token Primacy (Rule 34):** Mandatory adherence to spec_universal/frontend_design_bible.md.
-- **Hackathon Speedrun Execution (Rule 35):** Mandatory execution through the 7-phase hackathon pipeline.
+- **Hackathon Speedrun Execution (Rule 35):** Execution through the streamlined hackathon speedrun pipeline.
 
 ---
 
@@ -78,9 +78,11 @@ active_hackathon_context:
 
 ---
 
-## 4. Error Log, Incident Telemetry & Root Cause Analyses
+## 4. Error Recovery & Rapid Bug Triage
 
-Whenever an execution mistake, test regression, compilation error, or operational failure occurs, record it immediately in this section under `incident_telemetry_records` using the strict schema below. Do not use informal tables.
+During the ~6-hour hackathon speedrun, logging formal YAML incident telemetry records on every routine runtime bug or compiler warning is **suspended**. Fix bugs immediately and surgically in place, verify via smoke test, and proceed with the build.
+
+The structured incident schema below is reserved only for post-hackathon post-mortems or permanent cross-repo synchronization collisions:
 
 ```yaml
 incident_telemetry_schema:

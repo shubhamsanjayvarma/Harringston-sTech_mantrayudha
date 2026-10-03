@@ -7,7 +7,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python C:/Project/Hackathon/Hackathon_Boilerplate/.agents/scripts/destructive_command_guard.py",
+            "command": "python C:/Project/Hackathon/Hackathon_Boilerplate_speedrun/.agents/scripts/destructive_command_guard.py",
             "timeout": 15
           }
         ]
