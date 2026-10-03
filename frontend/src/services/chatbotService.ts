@@ -80,13 +80,23 @@ export async function processUserMessage(
 
   // 0. Primary Engine: Query FastAPI Hybrid Agent Gateway
   try {
+    const formattedHistory = history
+      .filter((m) => m.text && m.text.trim().length > 0)
+      .slice(-10)
+      .map((m) => ({
+        role: m.sender === 'user' ? 'user' : 'model',
+        content: m.text,
+      }));
+
     const res = await fetch('/api/chat', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         customer_id: CURRENT_CUSTOMER.customerId || 'CUST-00001',
         message: text,
-        reference_time: '2026-10-03T14:00:00+05:30'
+        conversation_id: 'conv-session-active',
+        reference_time: '2026-10-03T14:00:00+05:30',
+        history: formattedHistory,
       })
     });
 

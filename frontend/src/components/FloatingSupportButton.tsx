@@ -736,6 +736,7 @@ export function FloatingSupportButton() {
                                       <img 
                                         src={ord.items[0].image} 
                                         alt={ord.items[0].productName} 
+                                        onError={(e) => { (e.target as HTMLElement).style.display = 'none'; }}
                                         className="w-12 h-12 object-contain rounded-lg bg-gray-50 border border-gray-100 p-1 shrink-0"
                                       />
                                     )}
@@ -816,6 +817,7 @@ export function FloatingSupportButton() {
                                   <img 
                                     src={prod.image} 
                                     alt={prod.name} 
+                                    onError={(e) => { (e.target as HTMLElement).style.display = 'none'; }}
                                     className="w-14 h-14 object-contain rounded-xl bg-gray-50 border border-gray-100 p-1 shrink-0"
                                   />
                                   <div className="flex-1 min-w-0 text-xs">
