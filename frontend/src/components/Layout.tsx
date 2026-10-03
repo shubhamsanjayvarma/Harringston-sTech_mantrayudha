@@ -13,6 +13,7 @@ import {
   Droplet,
   Percent
 } from 'lucide-react';
+import { FloatingSupportButton } from './FloatingSupportButton';
 
 export default function Layout() {
   return (
@@ -109,6 +110,9 @@ export default function Layout() {
       <main className="flex-1">
         <Outlet />
       </main>
+
+      {/* Floating Customer Support Button */}
+      <FloatingSupportButton />
     </div>
   );
 }
