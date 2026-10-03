@@ -110,6 +110,20 @@ export function FloatingSupportButton() {
     }, 850);
   };
 
+  // Allow other pages to open Nova Assist with a preset query
+  useEffect(() => {
+    const handleOpenAssist = (event: Event) => {
+      const customEvent = event as CustomEvent<{ query?: string }>;
+      setIsOpen(true);
+      if (customEvent.detail?.query) {
+        setViewMode('chat');
+        sendMessage(customEvent.detail.query);
+      }
+    };
+    window.addEventListener('open_nova_assist', handleOpenAssist);
+    return () => window.removeEventListener('open_nova_assist', handleOpenAssist);
+  }, []);
+
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!chatInput.trim()) return;

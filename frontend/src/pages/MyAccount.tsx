@@ -2,11 +2,17 @@ import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Home, Package, MapPin, CreditCard, Heart, HelpCircle, LogOut, ChevronRight, Box, Star, Truck, CheckCircle2 } from 'lucide-react';
 import { CURRENT_CUSTOMER, CURRENT_CUSTOMER_ORDERS } from '../data/storeData';
+import { logoutUser } from '../data/authHelper';
 
 export default function MyAccount() {
   const navigate = useNavigate();
   const customer = CURRENT_CUSTOMER;
   const orders = CURRENT_CUSTOMER_ORDERS;
+
+  const handleSignOut = () => {
+    logoutUser();
+    navigate('/login');
+  };
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -68,6 +74,17 @@ export default function MyAccount() {
                 <HelpCircle size={18} className="text-gray-400" />
                 Help & policies
               </Link>
+
+              <div className="my-1 border-t border-gray-100"></div>
+
+              <button
+                onClick={handleSignOut}
+                className="flex items-center gap-3.5 px-6 py-3.5 text-red-600 hover:bg-red-50/80 font-semibold border-l-4 border-transparent hover:border-red-500 w-full text-left transition-colors cursor-pointer"
+                title="Sign out of your account"
+              >
+                <LogOut size={18} className="text-red-500" />
+                Sign out
+              </button>
             </nav>
           </div>
 
@@ -149,13 +166,14 @@ export default function MyAccount() {
                     {order.items.map((item) => (
                       <div key={item.orderItemId} className="flex items-center justify-between gap-4 py-1">
                         <div className="flex items-center gap-3">
-                          {item.image && (
-                            <img
-                              src={item.image}
-                              alt={item.productName}
-                              className="w-12 h-12 object-contain rounded-lg bg-gray-50 p-1 border border-gray-100"
-                            />
-                          )}
+                          <img
+                            src={item.image || '/assets/headphones.jpg'}
+                            alt={item.productName}
+                            onError={(e) => {
+                              (e.target as HTMLImageElement).src = '/assets/headphones.jpg';
+                            }}
+                            className="w-12 h-12 object-contain rounded-lg bg-gray-50 p-1 border border-gray-100"
+                          />
                           <div>
                             <Link to={`/product?id=${item.productId}`} className="font-bold text-sm text-gray-900 hover:text-[#198038] transition-colors">
                               {item.productName}
@@ -179,12 +197,18 @@ export default function MyAccount() {
                     <p className="text-xs text-gray-500">
                       Delivered to: <span className="text-gray-700 font-medium">{order.shippingAddress}</span>
                     </p>
-                    <Link
-                      to="/help"
-                      className="text-xs font-bold text-[#198038] hover:underline"
+                    <button
+                      onClick={() => {
+                        window.dispatchEvent(
+                          new CustomEvent('open_nova_assist', {
+                            detail: { query: `I need help with my order ${order.orderId}` }
+                          })
+                        );
+                      }}
+                      className="text-xs font-bold text-[#198038] hover:underline cursor-pointer"
                     >
                       Need Help with this order?
-                    </Link>
+                    </button>
                   </div>
                 </div>
               ))}
