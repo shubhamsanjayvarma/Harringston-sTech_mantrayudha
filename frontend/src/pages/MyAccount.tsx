@@ -196,11 +196,29 @@ export default function MyAccount() {
                   </div>
                   
                   <div className="flex flex-col gap-2 w-full md:w-auto">
-                    <button onClick={() => navigate('/order-confirmed')} className="bg-[#198038] hover:bg-[#125A27] text-white font-semibold py-2 px-6 rounded-lg text-sm transition-colors whitespace-nowrap">
+                    <button 
+                      onClick={() => {
+                        window.dispatchEvent(
+                          new CustomEvent('open-support-chat', {
+                            detail: { query: 'Where is my order ORD-001042?', tab: 'chat' }
+                          })
+                        );
+                      }} 
+                      className="bg-[#198038] hover:bg-[#125A27] text-white font-semibold py-2 px-6 rounded-lg text-sm transition-colors whitespace-nowrap"
+                    >
                       Track order
                     </button>
-                    <button onClick={() => navigate('/account')} className="bg-white border border-[#198038] hover:bg-[#eef8f1] text-[#198038] font-semibold py-2 px-6 rounded-lg text-sm transition-colors whitespace-nowrap">
-                      View order
+                    <button 
+                      onClick={() => {
+                        window.dispatchEvent(
+                          new CustomEvent('open-support-chat', {
+                            detail: { query: 'I need help with order ORD-001042', tab: 'chat' }
+                          })
+                        );
+                      }} 
+                      className="bg-white border border-[#198038] hover:bg-[#eef8f1] text-[#198038] font-semibold py-2 px-6 rounded-lg text-sm transition-colors whitespace-nowrap"
+                    >
+                      Get Agent Help
                     </button>
                   </div>
                 </div>

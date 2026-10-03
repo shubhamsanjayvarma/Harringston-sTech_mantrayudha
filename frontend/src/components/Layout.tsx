@@ -11,7 +11,8 @@ import {
   Smartphone,
   Home,
   Droplet,
-  Percent
+  Percent,
+  Headset
 } from 'lucide-react';
 import { FloatingSupportButton } from './FloatingSupportButton';
 
@@ -62,11 +63,19 @@ export default function Layout() {
             </div>
 
             {/* Icons */}
-            <div className="flex items-center gap-6">
-              <Link to="/account" className="text-gray-700 hover:text-black">
+            <div className="flex items-center gap-5 sm:gap-6">
+              <Link 
+                to="/help" 
+                className="text-gray-700 hover:text-[#198038] flex items-center gap-1.5 transition-colors"
+                title="Help & Support"
+              >
+                <Headset size={22} className="stroke-[2]" />
+                <span className="hidden sm:inline text-xs font-semibold">Support</span>
+              </Link>
+              <Link to="/account" className="text-gray-700 hover:text-black transition-colors" title="My Account">
                 <User size={24} />
               </Link>
-              <Link to="/cart" className="text-gray-700 hover:text-black relative">
+              <Link to="/cart" className="text-gray-700 hover:text-black relative transition-colors" title="Cart">
                 <ShoppingCart size={24} />
                 <span className="absolute -top-1 -right-2 bg-[#198038] text-white text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center">
                   2
