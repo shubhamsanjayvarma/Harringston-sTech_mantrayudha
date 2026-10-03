@@ -7,6 +7,8 @@ export interface Product {
   deliveryTime: string;
   image: string;
   category: 'Fresh' | 'Groceries' | 'Electronics' | 'Home' | 'Personal Care' | 'Offers';
+  subCategory?: string;
+  brand?: string;
   rating?: number;
   isPopular?: boolean;
 }

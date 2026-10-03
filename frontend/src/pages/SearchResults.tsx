@@ -1,99 +1,52 @@
-import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { ChevronDown, ChevronUp, X, Star, Zap, Truck, Heart } from 'lucide-react';
+import { useState, useMemo } from 'react';
+import { Link, useSearchParams } from 'react-router-dom';
+import { Search, Star, Zap, Plus, Minus, ArrowRight } from 'lucide-react';
+import { ALL_PRODUCTS } from '../data/mockData';
+import { matchProductsByGeneralLanguage } from '../data/searchHelper';
+import { useCart } from '../context/CartContext';
+import { Product } from '../types';
 
 export default function SearchResults() {
-  const navigate = useNavigate();
-  const searchResults = [
-    {
-      id: 1,
-      name: 'Espresso coffee maker',
-      brand: "De'Longhi Dedica EC685",
-      price: '32,999',
-      rating: 4.6,
-      reviews: '1.2K',
-      delivery: 'Same day',
-      isFastDelivery: false,
-      image: 'https://images.unsplash.com/photo-1520970014086-2208d157c9e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-    },
-    {
-      id: 2,
-      name: 'Ground coffee',
-      brand: 'Nescafé Classic, 250 g',
-      price: '399',
-      rating: 4.5,
-      reviews: '3.4K',
-      delivery: '10–20 mins',
-      isFastDelivery: true,
-      image: 'https://images.unsplash.com/photo-1559525839-b184a4d698c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-    },
-    {
-      id: 3,
-      name: 'Instant coffee',
-      brand: 'Bru Gold, 100 g',
-      price: '249',
-      rating: 4.4,
-      reviews: '2.1K',
-      delivery: '10–20 mins',
-      isFastDelivery: true,
-      image: 'https://images.unsplash.com/photo-1587734195503-904fca47e0e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-    },
-    {
-      id: 4,
-      name: 'Coffee grinder',
-      brand: 'Philips Daily Collection',
-      price: '1,999',
-      rating: 4.3,
-      reviews: '892',
-      delivery: 'Same day',
-      isFastDelivery: false,
-      image: 'https://images.unsplash.com/photo-1585237894520-2210fb835071?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-    },
-    {
-      id: 5,
-      name: 'Coffee beans',
-      brand: 'Starbucks House Blend, 250 g',
-      price: '549',
-      rating: 4.6,
-      reviews: '1.8K',
-      delivery: '10–20 mins',
-      isFastDelivery: true,
-      image: 'https://images.unsplash.com/photo-1559525839-b184a4d698c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-    },
-    {
-      id: 6,
-      name: 'French press',
-      brand: 'Borosil, 600 ml',
-      price: '999',
-      rating: 4.4,
-      reviews: '650',
-      delivery: 'Same day',
-      isFastDelivery: false,
-      image: 'https://images.unsplash.com/photo-1544787219-7f47ccb76574?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-    },
-    {
-      id: 7,
-      name: 'Espresso coffee maker',
-      brand: 'Nespresso Essenza Mini',
-      price: '11,999',
-      rating: 4.5,
-      reviews: '1.1K',
-      delivery: 'Same day',
-      isFastDelivery: false,
-      image: 'https://images.unsplash.com/photo-1520970014086-2208d157c9e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-    },
-    {
-      id: 8,
-      name: 'Coffee pods',
-      brand: 'Nescafé Dolce Gusto, 16 pods',
-      price: '699',
-      rating: 4.4,
-      reviews: '420',
-      delivery: '10–20 mins',
-      isFastDelivery: true,
-      image: 'https://images.unsplash.com/photo-1587734195503-904fca47e0e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-    },
-  ];
+  const [searchParams] = useSearchParams();
+  const query = searchParams.get('q') || '';
+  const { addToCart, updateQuantity, getItemQuantity } = useCart();
+
+  const [activeCategoryFilter, setActiveCategoryFilter] = useState<string>('All');
+  const [sortBy, setSortBy] = useState<'relevance' | 'price-asc' | 'price-desc'>('relevance');
+
+  // Intelligent domain categorization engine
+  const searchEngineResult = useMemo(() => {
+    return matchProductsByGeneralLanguage(query);
+  }, [query]);
+
+  const detectedDomain = searchEngineResult.detectedDomain;
+
+  // Perform general language & keyword search
+  const matchedProducts = useMemo(() => {
+    let results = searchEngineResult.products;
+
+    // Apply secondary category chip filter if selected
+    if (activeCategoryFilter !== 'All') {
+      results = results.filter(
+        (p) => p.category.toLowerCase() === activeCategoryFilter.toLowerCase()
+      );
+    }
+
+    // Sorting
+    if (sortBy === 'price-asc') {
+      return [...results].sort((a, b) => a.price - b.price);
+    }
+    if (sortBy === 'price-desc') {
+      return [...results].sort((a, b) => b.price - a.price);
+    }
+
+    return results;
+  }, [searchEngineResult, activeCategoryFilter, sortBy]);
+
+  const categoriesAvailable = useMemo(() => {
+    const cats = new Set(ALL_PRODUCTS.map((p) => p.category));
+    return ['All', ...Array.from(cats)];
+  }, []);
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -105,193 +58,212 @@ export default function SearchResults() {
           </li>
           <li>
             <div className="flex items-center">
-              <span className="mx-2">/</span>
-              <span className="text-gray-900 font-medium">Search results</span>
+              <span className="mx-2 text-gray-400">/</span>
+              <span className="text-gray-900 font-medium">Search</span>
             </div>
           </li>
+          {query && (
+            <li>
+              <div className="flex items-center">
+                <span className="mx-2 text-gray-400">/</span>
+                <span className="text-[#198038] font-bold">"{query}"</span>
+              </div>
+            </li>
+          )}
         </ol>
       </nav>
 
-      <div className="mb-6">
-        <h1 className="text-4xl font-bold text-gray-900 tracking-tight">Search results for 'coffee'</h1>
+      {/* Search Header Banner */}
+      <div className="mb-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 bg-gray-50/70 p-6 rounded-3xl border border-gray-100">
+        <div>
+          <h1 className="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight flex items-center gap-2.5">
+            <Search className="text-[#198038] w-7 h-7 stroke-[2.5]" />
+            {query ? (
+              <span>
+                Results for <span className="text-[#198038]">"{query}"</span>
+              </span>
+            ) : (
+              <span>All Catalog Products</span>
+            )}
+          </h1>
+          <p className="text-sm text-gray-500 mt-1">
+            Found <span className="font-bold text-gray-900">{matchedProducts.length}</span> items matching your search
+          </p>
+        </div>
+
+        {/* Sort Dropdown */}
+        <div className="flex items-center gap-2">
+          <span className="text-xs font-semibold text-gray-600">Sort:</span>
+          <select
+            value={sortBy}
+            onChange={(e) => setSortBy(e.target.value as any)}
+            className="p-2 bg-white border border-gray-200 rounded-xl text-xs font-medium text-gray-800 focus:outline-none focus:border-[#198038]"
+          >
+            <option value="relevance">Relevance</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+          </select>
+        </div>
       </div>
 
-      <div className="flex flex-wrap items-center justify-between gap-4 mb-6 border-b border-gray-200 pb-4">
-        <div className="flex items-center gap-6">
-          <span className="text-lg text-gray-600">24 products found</span>
-          <div className="flex items-center gap-2">
-            <span className="bg-gray-100 text-gray-800 font-medium px-4 py-1.5 rounded-full flex items-center gap-2 text-sm border border-gray-200 hover:bg-gray-200 cursor-pointer transition-colors">
-              coffee <X size={14} className="text-gray-500" />
-            </span>
+      {/* Domain Bifurcation Banner */}
+      {detectedDomain && (
+        <div className="mb-8 bg-gradient-to-r from-[#eef8f1] to-white border border-[#c4ebd3] rounded-3xl p-5 sm:p-6 shadow-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div className="flex items-center gap-4">
+            <div className="w-12 h-12 rounded-2xl bg-[#198038] text-white flex items-center justify-center font-bold text-xl shadow-xs shrink-0">
+              ⚡
+            </div>
+            <div>
+              <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#125A27] uppercase tracking-wider mb-0.5">
+                Domain Filter Active
+              </div>
+              <h2 className="text-base sm:text-lg font-extrabold text-gray-900">
+                Displaying only <span className="text-[#198038]">{detectedDomain}</span> items for "{query}"
+              </h2>
+              <p className="text-xs text-gray-500 mt-0.5">
+                All catalog products strictly filtered to the {detectedDomain} domain.
+              </p>
+            </div>
           </div>
+          <Link
+            to={detectedDomain === 'Offers' ? '/offers' : `/category?name=${encodeURIComponent(detectedDomain)}`}
+            className="inline-flex items-center gap-1.5 bg-[#198038] hover:bg-[#125A27] text-white text-xs font-bold px-4 py-2.5 rounded-xl shadow-xs transition-colors shrink-0"
+          >
+            Visit {detectedDomain} Section <ArrowRight size={14} />
+          </Link>
         </div>
-        
-        <div className="flex items-center gap-4">
-          <span className="text-gray-500 text-sm">24 products</span>
-          <div className="flex items-center gap-2">
-            <button className="flex items-center gap-2 px-4 py-1.5 border border-gray-300 rounded-lg text-gray-700 font-medium hover:bg-gray-50 text-sm">
-              Recommended <ChevronDown size={16} />
+      )}
+
+      {/* Category Filter Pills */}
+      <div className="flex flex-wrap gap-2 mb-8 overflow-x-auto pb-2">
+        {categoriesAvailable.map((cat) => {
+          const isSelected = activeCategoryFilter === cat;
+          return (
+            <button
+              key={cat}
+              onClick={() => setActiveCategoryFilter(cat)}
+              className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
+                isSelected
+                  ? 'bg-[#198038] text-white shadow-xs'
+                  : 'bg-white text-gray-700 border border-gray-200 hover:border-[#198038] hover:bg-[#eef8f1]'
+              }`}
+            >
+              {cat}
             </button>
-          </div>
-        </div>
+          );
+        })}
       </div>
 
-      <div className="flex flex-col lg:flex-row gap-8">
-        {/* Left Sidebar (Filters) */}
-        <div className="w-full lg:w-1/4 flex-shrink-0">
-          
-          {/* Category Filter */}
-          <div className="mb-6 border-b border-gray-200 pb-6">
-            <button className="flex justify-between items-center w-full text-left font-bold text-gray-900 mb-4">
-              Category
-              <ChevronUp size={20} className="text-gray-500" />
-            </button>
-            <div className="space-y-3">
-              <label className="flex items-center gap-3 cursor-pointer group">
-                <input type="checkbox" className="w-5 h-5 rounded border-gray-300 text-[#198038] focus:ring-[#198038]" />
-                <span className="text-gray-700 group-hover:text-gray-900">Groceries <span className="text-gray-400">(14)</span></span>
-              </label>
-              <label className="flex items-center gap-3 cursor-pointer group">
-                <input type="checkbox" defaultChecked className="w-5 h-5 rounded border-gray-300 text-[#198038] focus:ring-[#198038]" />
-                <span className="text-gray-900 font-medium">Coffee & tea <span className="text-gray-500">(12)</span></span>
-              </label>
-              <label className="flex items-center gap-3 cursor-pointer group">
-                <input type="checkbox" defaultChecked className="w-5 h-5 rounded border-gray-300 text-[#198038] focus:ring-[#198038]" />
-                <span className="text-gray-900 font-medium">Kitchen appliances <span className="text-gray-500">(10)</span></span>
-              </label>
-              <label className="flex items-center gap-3 cursor-pointer group">
-                <input type="checkbox" className="w-5 h-5 rounded border-gray-300 text-[#198038] focus:ring-[#198038]" />
-                <span className="text-gray-700 group-hover:text-gray-900">Electronics <span className="text-gray-400">(0)</span></span>
-              </label>
-              <label className="flex items-center gap-3 cursor-pointer group">
-                <input type="checkbox" className="w-5 h-5 rounded border-gray-300 text-[#198038] focus:ring-[#198038]" />
-                <span className="text-gray-700 group-hover:text-gray-900">Home <span className="text-gray-400">(0)</span></span>
-              </label>
-              <label className="flex items-center gap-3 cursor-pointer group">
-                <input type="checkbox" className="w-5 h-5 rounded border-gray-300 text-[#198038] focus:ring-[#198038]" />
-                <span className="text-gray-700 group-hover:text-gray-900">Personal care <span className="text-gray-400">(0)</span></span>
-              </label>
-            </div>
-          </div>
+      {/* Results Product Grid */}
+      {matchedProducts.length > 0 ? (
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {matchedProducts.map((product) => {
+            const quantity = getItemQuantity(product.id);
+            return (
+              <div
+                key={product.id}
+                className="bg-white border border-gray-100 rounded-2xl p-4 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group"
+              >
+                <div>
+                  {/* Product Image */}
+                  <div className="aspect-square bg-gray-50 rounded-xl mb-4 overflow-hidden p-4 relative flex items-center justify-center">
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform"
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).src = '/assets/strawberries.jpg';
+                      }}
+                    />
+                    <span className="absolute top-2.5 right-2.5 bg-white/90 text-[#125A27] text-[10px] font-bold px-2 py-0.5 rounded-full border border-gray-200">
+                      {product.category}
+                    </span>
+                    <span className="absolute bottom-2.5 left-2.5 inline-flex items-center gap-1 bg-white/95 backdrop-blur-xs text-[#125A27] text-[10px] font-bold px-2 py-0.5 rounded-md shadow-2xs">
+                      <span className="text-[#198038]">⚡</span> {product.deliveryTime}
+                    </span>
+                  </div>
 
-          {/* Brand Filter */}
-          <div className="mb-6 border-b border-gray-200 pb-6">
-            <button className="flex justify-between items-center w-full text-left font-bold text-gray-900 mb-4">
-              Brand
-              <ChevronUp size={20} className="text-gray-500" />
-            </button>
-            <div className="space-y-3">
-              <label className="flex items-center gap-3 cursor-pointer group">
-                <input type="checkbox" className="w-5 h-5 rounded border-gray-300 text-[#198038] focus:ring-[#198038]" />
-                <span className="text-gray-700 group-hover:text-gray-900">Nescafé <span className="text-gray-400">(5)</span></span>
-              </label>
-              <label className="flex items-center gap-3 cursor-pointer group">
-                <input type="checkbox" className="w-5 h-5 rounded border-gray-300 text-[#198038] focus:ring-[#198038]" />
-                <span className="text-gray-700 group-hover:text-gray-900">Bru <span className="text-gray-400">(3)</span></span>
-              </label>
-              <label className="flex items-center gap-3 cursor-pointer group">
-                <input type="checkbox" className="w-5 h-5 rounded border-gray-300 text-[#198038] focus:ring-[#198038]" />
-                <span className="text-gray-700 group-hover:text-gray-900">De'Longhi <span className="text-gray-400">(2)</span></span>
-              </label>
-              <label className="flex items-center gap-3 cursor-pointer group">
-                <input type="checkbox" className="w-5 h-5 rounded border-gray-300 text-[#198038] focus:ring-[#198038]" />
-                <span className="text-gray-700 group-hover:text-gray-900">Philips <span className="text-gray-400">(2)</span></span>
-              </label>
-              <button className="text-[#198038] font-bold text-sm hover:underline mt-2">
-                Show more <ChevronDown size={14} className="inline" />
-              </button>
-            </div>
-          </div>
+                  {/* Details */}
+                  <h3 className="font-bold text-gray-900 leading-snug line-clamp-1 text-base">
+                    {product.name}
+                  </h3>
+                  <p className="text-xs text-gray-500 mt-1 line-clamp-1">{product.subtitle}</p>
 
-          {/* Price Filter */}
-          <div className="mb-6 border-b border-gray-200 pb-6">
-            <button className="flex justify-between items-center w-full text-left font-bold text-gray-900 mb-4">
-              Price
-              <ChevronUp size={20} className="text-gray-500" />
-            </button>
-            <p className="text-sm text-gray-600 mb-4">₹100 – ₹50,000</p>
-            <div className="px-2">
-              <div className="h-1.5 w-full bg-gray-200 rounded-full relative mb-6">
-                <div className="absolute left-[0%] right-[0%] h-full bg-[#198038] rounded-full"></div>
-                <div className="absolute left-[0%] top-1/2 -translate-y-1/2 w-4 h-4 bg-white border-2 border-[#198038] rounded-full shadow cursor-pointer"></div>
-                <div className="absolute right-[0%] top-1/2 -translate-y-1/2 w-4 h-4 bg-white border-2 border-[#198038] rounded-full shadow cursor-pointer"></div>
-              </div>
-              <div className="flex justify-between text-xs text-gray-500">
-                <span>₹100</span>
-                <span>₹50,000</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Delivery Filter */}
-          <div className="mb-6">
-            <button className="flex justify-between items-center w-full text-left font-bold text-gray-900 mb-4">
-              Delivery
-              <ChevronUp size={20} className="text-gray-500" />
-            </button>
-            <div className="space-y-3">
-              <label className="flex items-center gap-3 cursor-pointer group">
-                <input type="checkbox" className="w-5 h-5 rounded border-gray-300 text-[#198038] focus:ring-[#198038]" />
-                <span className="text-gray-700 group-hover:text-gray-900">10–20 mins <span className="text-gray-400">(14)</span></span>
-              </label>
-              <label className="flex items-center gap-3 cursor-pointer group">
-                <input type="checkbox" className="w-5 h-5 rounded border-gray-300 text-[#198038] focus:ring-[#198038]" />
-                <span className="text-gray-700 group-hover:text-gray-900">Same day <span className="text-gray-400">(10)</span></span>
-              </label>
-            </div>
-          </div>
-
-        </div>
-
-        {/* Main Content (Product Grid) */}
-        <div className="w-full lg:w-3/4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {searchResults.map((product) => (
-              <div key={product.id} className="group flex flex-col">
-                <div className="relative bg-[#f8f6f2] rounded-2xl aspect-square mb-3 flex items-center justify-center p-4">
-                  <img src={product.image} alt={product.name} className="w-full h-full object-contain mix-blend-multiply" />
-                  
-                  {/* Heart button */}
-                  <button className="absolute top-3 right-3 text-gray-400 hover:text-[#198038] transition-colors">
-                    <Heart size={24} strokeWidth={2} />
-                  </button>
-                </div>
-                
-                <h3 className="font-bold text-gray-900 text-sm leading-snug h-10">{product.name}</h3>
-                <p className="text-xs text-gray-500 mt-0.5 h-4 line-clamp-1">{product.brand}</p>
-                
-                <div className="flex items-center gap-1 mt-1">
-                  <Star size={14} className="fill-[#198038] text-[#198038]" />
-                  <span className="font-bold text-sm">{product.rating}</span>
-                  <span className="text-gray-500 text-xs">({product.reviews} reviews)</span>
-                </div>
-                
-                <div className="mt-2">
-                  <span className="font-bold text-xl">₹ {product.price}</span>
-                </div>
-                
-                <div className="mt-2 flex items-center gap-1.5 text-xs font-semibold">
-                  {product.isFastDelivery ? (
-                    <>
-                      <Zap size={14} className="fill-[#198038] text-[#198038]" />
-                      <span className="text-[#198038]">{product.delivery}</span>
-                    </>
-                  ) : (
-                    <>
-                      <Truck size={14} className="text-gray-500" />
-                      <span className="text-[#198038]">{product.delivery}</span>
-                    </>
+                  {product.rating && (
+                    <div className="flex items-center gap-1 mt-2 text-xs text-gray-600">
+                      <Star size={13} className="fill-amber-400 text-amber-400" />
+                      <span className="font-bold text-gray-800">{product.rating}</span>
+                      <span className="text-gray-400">• Verified</span>
+                    </div>
                   )}
                 </div>
-                
-                <button onClick={() => navigate('/cart')} className="mt-4 w-full border-2 border-[#198038] text-[#198038] hover:bg-[#eef8f1] font-bold py-2 rounded-lg transition-colors">
-                  Add
-                </button>
+
+                <div className="mt-4 pt-3 border-t border-gray-50 flex items-center justify-between gap-3">
+                  <div>
+                    <span className="text-lg font-extrabold text-gray-950">
+                      ₹{product.price.toLocaleString('en-IN')}
+                    </span>
+                    {product.originalPrice && product.originalPrice > product.price && (
+                      <span className="text-xs text-gray-400 line-through ml-1.5">
+                        ₹{product.originalPrice.toLocaleString('en-IN')}
+                      </span>
+                    )}
+                  </div>
+
+                  {quantity > 0 ? (
+                    <div className="inline-flex items-center bg-[#198038] text-white rounded-xl shadow-xs">
+                      <button
+                        onClick={() => updateQuantity(product.id, -1)}
+                        className="p-2 hover:bg-[#125A27] rounded-l-xl transition-colors cursor-pointer"
+                        title="Decrease"
+                      >
+                        <Minus size={14} strokeWidth={2.5} />
+                      </button>
+                      <span className="px-2 text-xs font-bold">{quantity}</span>
+                      <button
+                        onClick={() => updateQuantity(product.id, 1)}
+                        className="p-2 hover:bg-[#125A27] rounded-r-xl transition-colors cursor-pointer"
+                        title="Increase"
+                      >
+                        <Plus size={14} strokeWidth={2.5} />
+                      </button>
+                    </div>
+                  ) : (
+                    <button
+                      onClick={() => addToCart(product)}
+                      className="bg-[#198038] hover:bg-[#125A27] text-white font-bold py-2 px-4 rounded-xl text-xs transition-colors shadow-xs hover:shadow-md cursor-pointer flex items-center gap-1.5"
+                    >
+                      <Plus size={14} strokeWidth={2.5} /> Add
+                    </button>
+                  )}
+                </div>
               </div>
+            );
+          })}
+        </div>
+      ) : (
+        <div className="bg-white border border-gray-200 rounded-3xl p-12 text-center max-w-xl mx-auto my-8">
+          <div className="w-16 h-16 rounded-full bg-[#eef8f1] text-[#198038] mx-auto flex items-center justify-center mb-4">
+            <Search size={32} />
+          </div>
+          <h2 className="text-xl font-bold text-gray-900 mb-2">No matching products found</h2>
+          <p className="text-sm text-gray-600 mb-6">
+            We couldn't find items matching "{query}". Try checking for spelling or search by category name like "electronics", "groceries", or "fresh".
+          </p>
+
+          <div className="flex flex-wrap gap-2 justify-center">
+            {['Groceries', 'Fresh', 'Electronics', 'Home', 'Personal Care', 'Offers'].map((cat) => (
+              <Link
+                key={cat}
+                to={`/category?name=${encodeURIComponent(cat)}`}
+                className="bg-gray-50 border border-gray-200 text-gray-800 hover:border-[#198038] hover:bg-[#eef8f1] px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-1"
+              >
+                Explore {cat} <ArrowRight size={12} />
+              </Link>
             ))}
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }
