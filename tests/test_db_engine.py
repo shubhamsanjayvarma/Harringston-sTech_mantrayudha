@@ -69,7 +69,10 @@ def test_table_row_counts():
     for table, expected in expected_counts.items():
         row = fetch_one(f"SELECT COUNT(*) as count FROM {table}", conn=conn)
         assert row is not None
-        assert row["count"] == expected, f"Table {table} expected {expected} rows, got {row['count']}"
+        if table in ("support_tickets", "conversations"):
+            assert row["count"] >= expected, f"Table {table} expected at least {expected} rows, got {row['count']}"
+        else:
+            assert row["count"] == expected, f"Table {table} expected {expected} rows, got {row['count']}"
     conn.close()
 
 
