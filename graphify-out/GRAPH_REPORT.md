@@ -1,16 +1,16 @@
 # Graph Report - Hackathon_Boilerplate_speedrun  (2026-10-03)
 
 ## Corpus Check
-- 223 files · ~639,642 words
+- 285 files · ~1,392,392 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 3215 nodes · 4845 edges · 220 communities (207 shown, 13 thin omitted)
-- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 136 edges (avg confidence: 0.56)
+- 4116 nodes · 5759 edges · 276 communities (263 shown, 13 thin omitted)
+- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 136 edges (avg confidence: 0.56)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `85676dd3`
+- Built from commit: `6320f6cf`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -116,6 +116,7 @@
 - [[_COMMUNITY_doctor|doctor.md]]
 - [[_COMMUNITY_cleanup|cleanup]]
 - [[_COMMUNITY_live-setup|live-setup.md]]
+- [[_COMMUNITY_Community 101|Community 101]]
 - [[_COMMUNITY_Cognitive Load Assessment|Cognitive Load Assessment]]
 - [[_COMMUNITY_Impeccable Asset Producer|Impeccable Asset Producer]]
 - [[_COMMUNITY_Impeccable Finish Reviewer|Impeccable Finish Reviewer]]
@@ -135,14 +136,17 @@
 - [[_COMMUNITY_graphify reference incremental update and cluster-only|graphify reference: incremental update and cluster-only]]
 - [[_COMMUNITY_Heuristics Scoring Guide|Heuristics Scoring Guide]]
 - [[_COMMUNITY_01. NovaMart Hackathon Wedge & 2-Minute Demo Script|01. NovaMart Hackathon Wedge & 2-Minute Demo Script]]
+- [[_COMMUNITY_Community 121|Community 121]]
 - [[_COMMUNITY_graphify reference transcribe video and audio|graphify reference: transcribe video and audio]]
 - [[_COMMUNITY_rulesgraphify|rules/graphify.md]]
 - [[_COMMUNITY_extraction-spec|extraction-spec.md]]
 - [[_COMMUNITY_idea-refine.sh|idea-refine.sh]]
 - [[_COMMUNITY_workflowsgraphify|workflows/graphify.md]]
 - [[_COMMUNITY_pre-commit|pre-commit]]
+- [[_COMMUNITY_Community 131|Community 131]]
 - [[_COMMUNITY_compilerOptions|compilerOptions]]
 - [[_COMMUNITY_compilerOptions|compilerOptions]]
+- [[_COMMUNITY_Community 134|Community 134]]
 - [[_COMMUNITY_Header.tsx|Header.tsx]]
 - [[_COMMUNITY_scheduleAcceptCleanup|scheduleAcceptCleanup]]
 - [[_COMMUNITY_plugins|plugins]]
@@ -171,6 +175,7 @@
 - [[_COMMUNITY_Community 160|Community 160]]
 - [[_COMMUNITY_Community 161|Community 161]]
 - [[_COMMUNITY_Community 162|Community 162]]
+- [[_COMMUNITY_Community 163|Community 163]]
 - [[_COMMUNITY_Community 164|Community 164]]
 - [[_COMMUNITY_Community 165|Community 165]]
 - [[_COMMUNITY_Community 166|Community 166]]
@@ -178,6 +183,7 @@
 - [[_COMMUNITY_Community 168|Community 168]]
 - [[_COMMUNITY_Community 169|Community 169]]
 - [[_COMMUNITY_Community 170|Community 170]]
+- [[_COMMUNITY_Community 171|Community 171]]
 - [[_COMMUNITY_Community 172|Community 172]]
 - [[_COMMUNITY_Community 173|Community 173]]
 - [[_COMMUNITY_Community 174|Community 174]]
@@ -226,19 +232,69 @@
 - [[_COMMUNITY_Community 217|Community 217]]
 - [[_COMMUNITY_Community 218|Community 218]]
 - [[_COMMUNITY_Community 222|Community 222]]
+- [[_COMMUNITY_Community 225|Community 225]]
+- [[_COMMUNITY_Community 226|Community 226]]
+- [[_COMMUNITY_Community 227|Community 227]]
+- [[_COMMUNITY_Community 228|Community 228]]
+- [[_COMMUNITY_Community 229|Community 229]]
+- [[_COMMUNITY_Community 230|Community 230]]
+- [[_COMMUNITY_Community 231|Community 231]]
+- [[_COMMUNITY_Community 232|Community 232]]
+- [[_COMMUNITY_Community 233|Community 233]]
+- [[_COMMUNITY_Community 234|Community 234]]
+- [[_COMMUNITY_Community 235|Community 235]]
+- [[_COMMUNITY_Community 236|Community 236]]
+- [[_COMMUNITY_Community 237|Community 237]]
+- [[_COMMUNITY_Community 238|Community 238]]
+- [[_COMMUNITY_Community 239|Community 239]]
+- [[_COMMUNITY_Community 240|Community 240]]
+- [[_COMMUNITY_Community 241|Community 241]]
+- [[_COMMUNITY_Community 242|Community 242]]
+- [[_COMMUNITY_Community 243|Community 243]]
+- [[_COMMUNITY_Community 244|Community 244]]
+- [[_COMMUNITY_Community 245|Community 245]]
+- [[_COMMUNITY_Community 246|Community 246]]
+- [[_COMMUNITY_Community 247|Community 247]]
+- [[_COMMUNITY_Community 248|Community 248]]
+- [[_COMMUNITY_Community 249|Community 249]]
+- [[_COMMUNITY_Community 250|Community 250]]
+- [[_COMMUNITY_Community 251|Community 251]]
+- [[_COMMUNITY_Community 252|Community 252]]
+- [[_COMMUNITY_Community 253|Community 253]]
+- [[_COMMUNITY_Community 254|Community 254]]
+- [[_COMMUNITY_Community 255|Community 255]]
+- [[_COMMUNITY_Community 256|Community 256]]
+- [[_COMMUNITY_Community 257|Community 257]]
+- [[_COMMUNITY_Community 258|Community 258]]
+- [[_COMMUNITY_Community 259|Community 259]]
+- [[_COMMUNITY_Community 260|Community 260]]
+- [[_COMMUNITY_Community 261|Community 261]]
 - [[_COMMUNITY_Universal Frontend Design Bible & Anti-Slop Architectural Standard|Universal Frontend Design Bible & Anti-Slop Architectural Standard]]
+- [[_COMMUNITY_Community 263|Community 263]]
+- [[_COMMUNITY_Community 264|Community 264]]
+- [[_COMMUNITY_Community 265|Community 265]]
+- [[_COMMUNITY_Community 266|Community 266]]
+- [[_COMMUNITY_Community 267|Community 267]]
+- [[_COMMUNITY_Community 268|Community 268]]
+- [[_COMMUNITY_Community 269|Community 269]]
+- [[_COMMUNITY_Community 270|Community 270]]
+- [[_COMMUNITY_Community 271|Community 271]]
+- [[_COMMUNITY_Community 272|Community 272]]
+- [[_COMMUNITY_Community 273|Community 273]]
+- [[_COMMUNITY_Community 274|Community 274]]
+- [[_COMMUNITY_Community 275|Community 275]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `_()` - 55 edges
 2. `NovaMart catalog - Accessories` - 35 edges
-3. `NovaMart catalog - Smartphones` - 31 edges
-4. `resumeSession()` - 30 edges
-5. `setLiveState()` - 29 edges
-6. `el()` - 28 edges
-7. `TestMilestone3` - 26 edges
-8. `injectSvelteComponentsFromManifest()` - 25 edges
-9. `handleKeyDown()` - 25 edges
-10. `showToast()` - 25 edges
+3. `NovaMart catalog - Accessories` - 35 edges
+4. `NovaMart catalog - Accessories` - 35 edges
+5. `NovaMart catalog - Smartphones` - 31 edges
+6. `NovaMart catalog - Smartphones` - 31 edges
+7. `NovaMart catalog - Smartphones` - 31 edges
+8. `resumeSession()` - 30 edges
+9. `setLiveState()` - 29 edges
+10. `el()` - 28 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `setup_db()` --calls--> `close_master_connection()`  [EXTRACTED]
@@ -257,19 +313,19 @@
 - 1-file cycle: `backend/engine/agent_loop.py -> backend/engine/agent_loop.py`
 - 1-file cycle: `backend/engine/policy_rules.py -> backend/engine/policy_rules.py`
 
-## Communities (220 total, 13 thin omitted)
+## Communities (276 total, 13 thin omitted)
 
 ### Community 0 - "live-browser.js"
 Cohesion: 0.03
-Nodes (93): addManualContextText(), applyPlaceholderSizingStyles(), averageRgb01(), buildAnnotationsForCapture(), buildPinElement(), canRestoreManualEditElement(), captureChromeNodes(), captureElementFromRenderedAncestor() (+85 more)
+Nodes (93): addManualContextText(), applyGlobalBarLabelState(), applyPlaceholderSizingStyles(), averageRgb01(), bindEditBadgeProxy(), buildAnnotationsForCapture(), buildPinElement(), captureChromeNodes() (+85 more)
 
 ### Community 1 - "handleManualEditActivity"
-Cohesion: 0.11
-Nodes (49): applyEditing(), beginNewLiveConfiguration(), buildLocatorForLeaf(), cancelEditing(), cancelEditingToPicking(), cancelInsertConfigure(), cleanupAcceptedSession(), clearAnnotations() (+41 more)
+Cohesion: 0.09
+Nodes (64): abortSvelteComponentInjection(), beginNewLiveConfiguration(), buildPickedAnchorSnapshot(), cancelEditing(), cancelEditingToPicking(), cancelInsertConfigure(), cleanup(), cleanupAcceptedSession() (+56 more)
 
 ### Community 2 - "modern-screenshot.umd.js"
 Cohesion: 0.16
-Nodes (18): applyOriginalAttrsToSvelteAnchor(), commitAcceptedSvelteComponentToDom(), componentModuleCandidates(), describeMountFailure(), detectDevServerBase(), findInsertAnchorInDom(), findLiveElementForSvelteManifest(), importFirstReachable() (+10 more)
+Nodes (18): applyOriginalAttrsToSvelteAnchor(), captureAndEmit(), checkpointPayload(), commitAcceptedSvelteComponentToDom(), componentModuleCandidates(), describeMountFailure(), detectDevServerBase(), importFirstReachable() (+10 more)
 
 ### Community 3 - "startVariantObserver"
 Cohesion: 0.11
@@ -284,24 +340,24 @@ Cohesion: 0.08
 Nodes (44): Any, Connection, close_master_connection(), execute_script(), execute_write(), fetch_all(), fetch_one(), get_db_connection() (+36 more)
 
 ### Community 6 - "initGlobalBar"
-Cohesion: 0.09
-Nodes (42): Any, Connection, datetime, date, NovaMart Hybrid Safety Interceptor and Guardrail Engine.  Adapted from clinica, NovaMart Deterministic Policy & Hybrid Safety Engine Package., calculate_delay_goodwill(), calculate_item_refund() (+34 more)
+Cohesion: 0.10
+Nodes (41): Any, Connection, datetime, date, NovaMart Deterministic Policy & Hybrid Safety Engine Package., calculate_delay_goodwill(), calculate_item_refund(), calculate_restocking_fee() (+33 more)
 
 ### Community 7 - "resolveLiveInjectionAnchor"
-Cohesion: 0.06
-Nodes (74): abortSvelteComponentInjection(), applySavedSessionMeta(), buildInsertPlaceholderSnapshotFromDom(), buildPickedAnchorSnapshot(), captureAndEmit(), checkpointPayload(), clampVariantIndex(), cleanup() (+66 more)
+Cohesion: 0.05
+Nodes (75): applyParamDefaults(), applyParamValue(), applySavedSessionMeta(), buildInsertPlaceholderSnapshotFromDom(), clampVariantIndex(), clearHandled(), closedClipPath(), commitAcceptedVariantToDom() (+67 more)
 
 ### Community 8 - "el"
 Cohesion: 0.09
-Nodes (41): actionLabel(), applyConfigureBarChrome(), bindConfigureCountPillTooltip(), bindConfigureInlineControlHover(), buildConfigureActionControl(), buildConfigureCountControl(), buildConfigureRow(), buildConfigureSubmitButton() (+33 more)
+Nodes (45): actionLabel(), applyConfigureBarChrome(), bindConfigureCountPillTooltip(), bindConfigureInlineControlHover(), buildConfigureActionControl(), buildConfigureCountControl(), buildConfigureRow(), buildConfigureSubmitButton() (+37 more)
 
 ### Community 9 - "captureElementToBlob"
-Cohesion: 0.08
-Nodes (42): agentHasWorkInFlight(), agentStatusText(), attachSteerFocusGuard(), barPaletteForTheme(), brandMarkSvg(), buildParamsPanel(), buildSteerProcessingDots(), buildSteerQueueHint() (+34 more)
+Cohesion: 0.09
+Nodes (33): agentHasWorkInFlight(), agentStatusText(), attachSteerFocusDebug(), attachSteerFocusGuard(), barPaletteForTheme(), brandMarkSvg(), buildParamsPanel(), connectSSE() (+25 more)
 
 ### Community 10 - "renderDesignVisual"
 Cohesion: 0.09
-Nodes (39): ChatRequest, ChatResponse, process_chat(), Chat API endpoints for NovaMart Customer Support Agent., Processes customer dialogue through the 9-stage verified agent loop., Any, datetime, Any (+31 more)
+Nodes (38): Any, datetime, Any, Any, NovaMartAgentLoop, NovaMart 9-Stage Hybrid Agent Reasoning Loop.  Implements the layered reasonin, Main execution entrypoint for a single customer message turn., Constructs final standardized audit envelope. (+30 more)
 
 ### Community 11 - "resumeSession"
 Cohesion: 0.06
@@ -312,12 +368,12 @@ Cohesion: 0.07
 Nodes (28): dependencies, clsx, lucide-react, react, react-dom, react-router-dom, tailwind-merge, @tailwindcss/vite (+20 more)
 
 ### Community 13 - "Code Review and Quality"
-Cohesion: 0.12
-Nodes (31): applyGlobalBarLabelState(), armPageChatForTyping(), attachSteerFocusDebug(), clearSteerAwaitTimer(), collapsePageChat(), expandPageChat(), focusConfigureInput(), focusPageChatInput() (+23 more)
+Cohesion: 0.07
+Nodes (47): armPageChatForTyping(), buildSteerProcessingDots(), buildSteerQueueHint(), clearSteerAwaitTimer(), collapsePageChat(), configureVoiceContext(), expandPageChat(), finishVoiceSession() (+39 more)
 
 ### Community 14 - "Security and Hardening"
-Cohesion: 0.11
-Nodes (13): Any, ConversationMemoryManager, NovaMart Agent Memory, Conversation State, Pronoun Resolution, and Disambiguatio, Builds a concise summary string of past conversations and open tickets, Appends a message to the conversation_messages table., Manages historical session transcripts, context retrieval, and message logging, Resolves pronouns and references in user_message.         Returns extracted ent, Retrieves recent conversation records and their messages for a customer. (+5 more)
+Cohesion: 0.09
+Nodes (16): Any, ConversationMemoryManager, PronounContextResolver, NovaMart Agent Memory, Conversation State, Pronoun Resolution, and Disambiguatio, Builds a concise summary string of past conversations and open tickets, Appends a message to the conversation_messages table., Manages historical session transcripts, context retrieval, and message logging, Resolves conversational pronouns ('it', 'that', 'the broken screen', 'photo sent (+8 more)
 
 ### Community 15 - "Test-Driven Development"
 Cohesion: 0.06
@@ -325,11 +381,11 @@ Nodes (31): 1. Read the screenshot (if present), 2. Wrap the element, 3. Load th
 
 ### Community 16 - "mountSvelteComponentVariant"
 Cohesion: 0.06
-Nodes (31): Lumora Spark Core 11 (PROD-00229), Lumora Spark Go X7 (PROD-00220), Lumora Spark Lite S2 (PROD-00241), Lumora Spark Pro 11 (PROD-00222), Lumora Spark Pro 5 (PROD-00235), NovaMart catalog - Smartphones, NovaPhone Air S2 (PROD-00236), NovaPhone Neo 7 (PROD-00231) (+23 more)
+Nodes (35): Helix 30000mAh Power Bank (PROD-00004), Helix Braided 2m Cable (PROD-00020), Helix Tempered Screen Protector (PROD-00029), KiteWorks 100W GaN Charger (PROD-00005), KiteWorks 128GB Memory Card (PROD-00016), KiteWorks 1m Cable (PROD-00019), KiteWorks 20W Charger (PROD-00014), KiteWorks 2m Cable (PROD-00011) (+27 more)
 
 ### Community 17 - "Git Workflow and Versioning"
-Cohesion: 0.12
-Nodes (22): applyPlaceholderDimensions(), beginEditPin(), cancelEditingPin(), canCreateInsert(), clampPlaceholderSize(), finalizeEditingPin(), hideInsertCreateTooltip(), insertCreateDisabledReason() (+14 more)
+Cohesion: 0.16
+Nodes (17): applyPlaceholderDimensions(), beginEditPin(), cancelEditingPin(), clampPlaceholderSize(), finalizeEditingPin(), localCoords(), materializePlaceholderWidth(), onAnnotDown() (+9 more)
 
 ### Community 18 - "Responsive Design"
 Cohesion: 0.07
@@ -341,7 +397,7 @@ Nodes (29): Always Do (No Exceptions), Ask First (Requires Human Approval), Brok
 
 ### Community 20 - "Shipping and Launch"
 Cohesion: 0.04
-Nodes (39): contain_user_input(), get_system_prompt(), NovaMart Agentic Persona, 4-Tier Authority Hierarchy & Prompt Injection Defense., Builds the complete operational system prompt with injected context., Strips prompt injection attempts, imperative system directives, and tag breaks., Encloses customer message in the untrusted claim envelope.     Ensures the LLM, sanitize_input(), calculate_refund() (+31 more)
+Nodes (38): contain_user_input(), get_system_prompt(), NovaMart Agentic Persona, 4-Tier Authority Hierarchy & Prompt Injection Defense., Builds the complete operational system prompt with injected context., Strips prompt injection attempts, imperative system directives, and tag breaks., Encloses customer message in the untrusted claim envelope.     Ensures the LLM, sanitize_input(), calculate_refund() (+30 more)
 
 ### Community 21 - "API and Interface Design"
 Cohesion: 0.07
@@ -364,12 +420,12 @@ Cohesion: 0.08
 Nodes (25): Assess Adaptation Challenge, Breakpoints: Content-Driven, Content Adaptation, Desktop Adaptation (Mobile → Desktop), Detect Input Method, Not Just Screen Size, Email Adaptation (Web → Email), Implement Adaptations, Layout Adaptation Patterns (+17 more)
 
 ### Community 26 - "Deprecation and Migration"
-Cohesion: 0.08
-Nodes (25): Auralix Buds Air ANC (PROD-00070), Auralix Buds Flex 3 (PROD-00071), Auralix Buds One 3 (PROD-00049), Lumora Beats Air ANC (PROD-00051), Lumora Beats Flex 2 (PROD-00063), Lumora Beats Flex Pro (PROD-00055), Lumora Beats Lite ANC (PROD-00064), Lumora Beats Lite Lite (PROD-00056) (+17 more)
+Cohesion: 0.06
+Nodes (35): Helix 30000mAh Power Bank (PROD-00004), Helix Braided 2m Cable (PROD-00020), Helix Tempered Screen Protector (PROD-00029), KiteWorks 100W GaN Charger (PROD-00005), KiteWorks 128GB Memory Card (PROD-00016), KiteWorks 1m Cable (PROD-00019), KiteWorks 20W Charger (PROD-00014), KiteWorks 2m Cable (PROD-00011) (+27 more)
 
 ### Community 27 - "onboard.md"
-Cohesion: 0.08
-Nodes (25): ByteCore Forge Flex 17 (PROD-00145), ByteCore Forge One 14 (PROD-00142), ByteCore Forge Plus 15 (PROD-00144), ByteCore Forge Prime 14 (PROD-00148), ByteCore Forge Spark 16 (PROD-00140), ByteCore Forge Spark 17 (PROD-00137), NovaBook Core 15 (PROD-00143), NovaBook Neo 14 (PROD-00153) (+17 more)
+Cohesion: 0.06
+Nodes (31): Lumora Spark Core 11 (PROD-00229), Lumora Spark Go X7 (PROD-00220), Lumora Spark Lite S2 (PROD-00241), Lumora Spark Pro 11 (PROD-00222), Lumora Spark Pro 5 (PROD-00235), NovaMart catalog - Smartphones, NovaPhone Air S2 (PROD-00236), NovaPhone Neo 7 (PROD-00231) (+23 more)
 
 ### Community 28 - "Incremental Implementation"
 Cohesion: 0.08
@@ -380,8 +436,8 @@ Cohesion: 0.08
 Nodes (24): Accessibility, Code Quality, Common Rationalizations, Documentation, Error Reporting, Feature Flag Strategy, Infrastructure, Monitoring and Observability (+16 more)
 
 ### Community 30 - "Debugging and Error Recovery"
-Cohesion: 0.20
-Nodes (23): clearStoredManualApplyState(), handleManualEditActivity(), hidePendingApplyDock(), manualApplyLoadingText(), manualApplyStateKey(), manualEditEventForCurrentPage(), numberOrNull(), onPendingKeepFixingClick() (+15 more)
+Cohesion: 0.12
+Nodes (34): abandonForeignSession(), clearStoredManualApplyState(), copyToClipboard(), discardOrphanedSession(), dismissToast(), fetchPendingCount(), handleManualEditActivity(), hidePendingApplyDock() (+26 more)
 
 ### Community 31 - "Product Requirements Document (PRD)"
 Cohesion: 0.12
@@ -412,16 +468,16 @@ Cohesion: 0.08
 Nodes (23): Component translation rules, Narrative mapping, Pitfalls, Scan mode (approach C: auto-extract, then confirm descriptive language), Schema, Seed mode, Step 1: Find the design assets, Step 1: Route through new-work's workshop (+15 more)
 
 ### Community 38 - "ReOrder: Keep Your Regulars Ordering Direct"
-Cohesion: 0.06
-Nodes (32): AccountDrawerProps, CartDrawer(), CartDrawerProps, Header(), HeaderProps, HeroSection(), HeroSectionProps, Layout() (+24 more)
+Cohesion: 0.16
+Nodes (10): Header(), useCart(), ALL_PRODUCTS, CATEGORIES, searchProducts(), Cart(), Category(), Checkout() (+2 more)
 
 ### Community 39 - "showToast"
-Cohesion: 0.08
-Nodes (23): Arcadia Flex Pro Mousepad XL (PROD-00084), Arcadia Neo Elite Mousepad XL (PROD-00079), Arcadia Plus Elite Controller (PROD-00092), Arcadia Pro S Gaming Console Accessory (PROD-00076), ByteCore Play Air Pro VR Headset (PROD-00089), ByteCore Play Flex X Controller (PROD-00083), ByteCore Play Lite S Gaming Chair (PROD-00085), ByteCore Play One Z1 Gaming Console Accessory (PROD-00091) (+15 more)
+Cohesion: 0.06
+Nodes (31): Lumora Spark Core 11 (PROD-00229), Lumora Spark Go X7 (PROD-00220), Lumora Spark Lite S2 (PROD-00241), Lumora Spark Pro 11 (PROD-00222), Lumora Spark Pro 5 (PROD-00235), NovaMart catalog - Smartphones, NovaPhone Air S2 (PROD-00236), NovaPhone Neo 7 (PROD-00231) (+23 more)
 
 ### Community 40 - "createLiveBrowserSessionState"
-Cohesion: 0.08
-Nodes (23): Auralix Edge 100 (PROD-00103), Auralix Go X1 (PROD-00100), Auralix Max 700 (PROD-00112), Auralix Neo 700 (PROD-00113), Auralix Prime 100 (PROD-00099), Auralix Prime X1 (PROD-00115), Auralix Spark 500 (PROD-00107), Auralix Ultra X1 (PROD-00110) (+15 more)
+Cohesion: 0.09
+Nodes (32): applyEditing(), buildLocatorForLeaf(), buildPlaceholderResizeHandles(), canRestoreManualEditElement(), copyEditContainerContext(), copyEditLeafContext(), cursorForPlaceholderEdge(), directMixedTextRestoreNodes() (+24 more)
 
 ### Community 41 - "Interview Me"
 Cohesion: 0.08
@@ -452,28 +508,28 @@ Cohesion: 0.09
 Nodes (21): Build Failure Triage, Common Rationalizations, Debugging and Error Recovery, Error-Specific Patterns, Instrumentation Guidelines, Overview, Red Flags, Runtime Error Triage (+13 more)
 
 ### Community 49 - "Idea Refine"
-Cohesion: 0.09
-Nodes (21): Helix Link Air 16P Powerline Kit (PROD-00202), Helix Link Core 16P Mesh System (PROD-00203), Helix Link Go AX1800 Powerline Kit (PROD-00209), Helix Link Plus AC1200 Mesh System (PROD-00205), Helix Link Prime 8P Range Extender (PROD-00206), Helix Link Prime N300 WiFi Router (PROD-00196), NetWeave Flex 8P Range Extender (PROD-00214), NetWeave Flex 8P USB WiFi Adapter (PROD-00200) (+13 more)
+Cohesion: 0.06
+Nodes (31): Lumora Spark Core 11 (PROD-00229), Lumora Spark Go X7 (PROD-00220), Lumora Spark Lite S2 (PROD-00241), Lumora Spark Pro 11 (PROD-00222), Lumora Spark Pro 5 (PROD-00235), NovaMart catalog - Smartphones, NovaPhone Air S2 (PROD-00236), NovaPhone Neo 7 (PROD-00231) (+23 more)
 
 ### Community 50 - "Tech Stack PRD Template"
 Cohesion: 0.14
 Nodes (13): 10. Alternatives Rejected (Decision Log), 11. Open Questions / Risks, 12. Research Log, 1. Overview, 2. Selection Criteria, 3. Research Checklist, 4. Language & Runtime, 5. Package / Dependency Manager (+5 more)
 
 ### Community 51 - "Generate Report"
-Cohesion: 0.09
-Nodes (21): Kinetiq Fit Edge 5 (PROD-00246), Kinetiq Fit Flex Active (PROD-00250), Lumora Watch Air 1 (PROD-00263), Lumora Watch Edge Active (PROD-00252), Lumora Watch Lite S (PROD-00251), Lumora Watch Neo 2 (PROD-00264), Lumora Watch Neo S (PROD-00249), Lumora Watch One Active (PROD-00254) (+13 more)
+Cohesion: 0.10
+Nodes (15): ALL_CUSTOMERS, ALL_ORDERS, ALL_SUPPORT_TICKETS, CURRENT_CUSTOMER_ORDERS, CURRENT_CUSTOMER_TICKETS, getProductById(), getReviewsForProduct(), REVIEWS_BY_PRODUCT (+7 more)
 
 ### Community 52 - "impeccable/SKILL.md"
-Cohesion: 0.09
-Nodes (21): Auralix Wave Core 500 (PROD-00270), Auralix Wave Core Mini (PROD-00282), Auralix Wave Flex 300 (PROD-00267), Auralix Wave Flex Max (PROD-00272), Auralix Wave Lite Max (PROD-00271), Auralix Wave Plus Mini (PROD-00273), Auralix Wave Pro 500 (PROD-00277), Auralix Wave Spark 300 (PROD-00283) (+13 more)
+Cohesion: 0.08
+Nodes (25): Auralix Buds Air ANC (PROD-00070), Auralix Buds Flex 3 (PROD-00071), Auralix Buds One 3 (PROD-00049), Lumora Beats Air ANC (PROD-00051), Lumora Beats Flex 2 (PROD-00063), Lumora Beats Flex Pro (PROD-00055), Lumora Beats Lite ANC (PROD-00064), Lumora Beats Lite Lite (PROD-00056) (+17 more)
 
 ### Community 53 - "Process"
-Cohesion: 0.09
-Nodes (27): list_presets(), Judge Demonstration Presets for NovaMart Customer Support Agent.  Provides 1-c, Lists all available official judge scenarios., Executes an official judge scenario and returns the complete result & audit trac, run_preset(), BatchEvalResponse, get_eval_summary(), Evaluation API endpoints for NovaMart Customer Support Agent.  Enables automat (+19 more)
+Cohesion: 0.13
+Nodes (19): list_presets(), Judge Demonstration Presets for NovaMart Customer Support Agent.  Provides 1-c, Lists all available official judge scenarios., Executes an official judge scenario and returns the complete result & audit trac, run_preset(), Any, Automated Test Suite for the 6 Official NovaMart Judge Scenarios.  Verifies en, Priya S. tracks order ORD-001042 -> Expects ANSWER with ETA and courier. (+11 more)
 
 ### Community 54 - "Using Agent Skills"
-Cohesion: 0.09
-Nodes (21): get_customer_profile(), get_order_details(), get_product_specs(), Ground truth query endpoints for inspecting entities., Retrieves customer record by ID., Retrieves order record with items by ID., Retrieves product record by ID., Any (+13 more)
+Cohesion: 0.13
+Nodes (8): Any, Enforce strict horizontal access control (RBAC).                  Returns True, Recursively scrub internal-only or security-sensitive fields from payloads., Detect prompt injection attempts in customer input., Detect critical hardware or life-safety threats., Detect customer asserting an item was not delivered., Detect legal threats or consumer court mentions., Pre-flight interceptor for tool execution requests.                  Evaluates
 
 ### Community 55 - "README.md"
 Cohesion: 0.10
@@ -488,16 +544,16 @@ Cohesion: 0.10
 Nodes (20): Common Rationalizations, Core Web Vitals Targets, Large Bundle Size, Missing Caching (Backend), Missing Image Optimization (Frontend), N+1 Queries (Backend), Overview, Performance Budget (+12 more)
 
 ### Community 58 - "Scan mode (approach C: auto-extract, then confirm descriptive language)"
-Cohesion: 0.10
-Nodes (19): Arcadia Keys Air 60 (PROD-00125), Arcadia Keys Edge 87 (PROD-00126), Arcadia Keys Neo K2 (PROD-00128), ByteCore Key Air K2 (PROD-00121), ByteCore Key Go K1 (PROD-00118), ByteCore Key Max K2 (PROD-00120), ByteCore Key Plus K1 (PROD-00119), KiteWorks Board Edge 60 (PROD-00129) (+11 more)
+Cohesion: 0.08
+Nodes (25): ByteCore Forge Flex 17 (PROD-00145), ByteCore Forge One 14 (PROD-00142), ByteCore Forge Plus 15 (PROD-00144), ByteCore Forge Prime 14 (PROD-00148), ByteCore Forge Spark 16 (PROD-00140), ByteCore Forge Spark 17 (PROD-00137), NovaBook Core 15 (PROD-00143), NovaBook Neo 14 (PROD-00153) (+17 more)
 
 ### Community 59 - "Spec-Driven Development"
-Cohesion: 0.10
-Nodes (19): Arcadia Strike Flex Z (PROD-00167), Arcadia Strike Go M5 (PROD-00175), Arcadia Strike Max Z (PROD-00159), Arcadia Strike Pro X (PROD-00170), Arcadia Strike Spark G3 (PROD-00168), ByteCore Glide Core M5 (PROD-00160), ByteCore Glide Edge M2 (PROD-00176), ByteCore Glide Spark M5 (PROD-00174) (+11 more)
+Cohesion: 0.08
+Nodes (25): Auralix Buds Air ANC (PROD-00070), Auralix Buds Flex 3 (PROD-00071), Auralix Buds One 3 (PROD-00049), Lumora Beats Air ANC (PROD-00051), Lumora Beats Flex 2 (PROD-00063), Lumora Beats Flex Pro (PROD-00055), Lumora Beats Lite ANC (PROD-00064), Lumora Beats Lite Lite (PROD-00056) (+17 more)
 
 ### Community 60 - "📋 The Unified Architecture Specification Template"
-Cohesion: 0.10
-Nodes (19): ByteCore Vision Air 22 (PROD-00181), ByteCore Vision Prime 34 (PROD-00193), ByteCore Vision Pro 24 (PROD-00189), ByteCore Vision Spark 24 (PROD-00180), ByteCore Vision Spark 27 (PROD-00184), ByteCore Vision Ultra 27 (PROD-00185), NovaMart catalog - Monitors, Orbitron Display Edge 27 (PROD-00182) (+11 more)
+Cohesion: 0.08
+Nodes (25): ByteCore Forge Flex 17 (PROD-00145), ByteCore Forge One 14 (PROD-00142), ByteCore Forge Plus 15 (PROD-00144), ByteCore Forge Prime 14 (PROD-00148), ByteCore Forge Spark 16 (PROD-00140), ByteCore Forge Spark 17 (PROD-00137), NovaBook Core 15 (PROD-00143), NovaBook Neo 14 (PROD-00153) (+17 more)
 
 ### Community 61 - "Refinement & Evaluation Criteria"
 Cohesion: 0.14
@@ -524,8 +580,8 @@ Cohesion: 0.05
 Nodes (39): 1. Executive Summary & Core Rules, 2. The Six-Document System Taxonomy, 3. Document 01: Product Requirements Document (PRD), 4. Document 02: Technical Design Document (TDD / TRD), 5. Document 03: App Flow & State Map, 6. Document 04: UI/UX Design Brief, 7. Document 05: Backend Design & Data Model, 8. Document 06: Engineering Implementation Plan (+31 more)
 
 ### Community 68 - "Source-Driven Development"
-Cohesion: 0.11
-Nodes (17): Lumora Tab Edge 8 (PROD-00293), Lumora Tab Go 12 (PROD-00286), Lumora Tab Neo 10 (PROD-00289), Lumora Tab Prime 12 (PROD-00300), Lumora Tab Spark 8 (PROD-00291), NovaMart catalog - Tablets, NovaPad Flex 11 (PROD-00285), NovaPad Flex 12 (PROD-00295) (+9 more)
+Cohesion: 0.08
+Nodes (25): Auralix Buds Air ANC (PROD-00070), Auralix Buds Flex 3 (PROD-00071), Auralix Buds One 3 (PROD-00049), Lumora Beats Air ANC (PROD-00051), Lumora Beats Flex 2 (PROD-00063), Lumora Beats Flex Pro (PROD-00055), Lumora Beats Lite ANC (PROD-00064), Lumora Beats Lite Lite (PROD-00056) (+17 more)
 
 ### Community 69 - "clarify.md"
 Cohesion: 0.17
@@ -548,8 +604,8 @@ Cohesion: 0.12
 Nodes (15): Common Rationalizations, Cross-model escalation, Doubt-Driven Development, Interaction with Other Skills, Loading Constraints, Overview, Red Flags, Step 1: CLAIM — Surface what stands (+7 more)
 
 ### Community 74 - "polish.md"
-Cohesion: 0.12
-Nodes (15): Helix Optic Edge 4K (PROD-00048), Helix Optic Max R7 (PROD-00039), Helix Optic One Mini (PROD-00035), Helix Optic Pro Mini (PROD-00043), Helix Optic Spark R7 (PROD-00040), Kinetiq Action Air 4K (PROD-00038), Kinetiq Action Plus R7 (PROD-00046), NovaMart catalog - Cameras (+7 more)
+Cohesion: 0.08
+Nodes (25): ByteCore Forge Flex 17 (PROD-00145), ByteCore Forge One 14 (PROD-00142), ByteCore Forge Plus 15 (PROD-00144), ByteCore Forge Prime 14 (PROD-00148), ByteCore Forge Spark 16 (PROD-00140), ByteCore Forge Spark 17 (PROD-00137), NovaBook Core 15 (PROD-00143), NovaBook Neo 14 (PROD-00153) (+17 more)
 
 ### Community 75 - "quieter.md"
 Cohesion: 0.13
@@ -588,8 +644,8 @@ Cohesion: 0.14
 Nodes (13): Animation Performance, Assess Performance Issues, Core Web Vitals Optimization, Cumulative Layout Shift (CLS < 0.1), Interaction to Next Paint (INP < 200ms), Largest Contentful Paint (LCP < 2.5s), Loading Performance, Network Optimization (+5 more)
 
 ### Community 84 - "Community 84"
-Cohesion: 0.09
-Nodes (33): applyParamDefaults(), applyParamValue(), closedClipPath(), commitAcceptedVariantToDom(), ensureInsertPlaceholder(), findVariantsWrapper(), getMountedSvelteComponentAnchor(), getVisibleVariantEl() (+25 more)
+Cohesion: 0.08
+Nodes (23): Arcadia Flex Pro Mousepad XL (PROD-00084), Arcadia Neo Elite Mousepad XL (PROD-00079), Arcadia Plus Elite Controller (PROD-00092), Arcadia Pro S Gaming Console Accessory (PROD-00076), ByteCore Play Air Pro VR Headset (PROD-00089), ByteCore Play Flex X Controller (PROD-00083), ByteCore Play Lite S Gaming Chair (PROD-00085), ByteCore Play One Z1 Gaming Console Accessory (PROD-00091) (+15 more)
 
 ### Community 85 - "Hackathon Speedrun Verification Template — Reusable Agent Instructions"
 Cohesion: 0.29
@@ -624,8 +680,8 @@ Cohesion: 0.15
 Nodes (12): 🎯 Objective, Phase 4: Lean 7-Layer Architecture & Specification Suite, Section 1: Lean Product Requirements (PRD), Section 2: Technology Stack & ADR, Section 3: Macro Architecture & Typed API Contracts, Section 4: Domain Model & State Transitions, Section 5: Smoke Verification & Demo Reliability Plan, Section 6: Demo Telemetry & Visual SRE (+4 more)
 
 ### Community 93 - "Community 93"
-Cohesion: 0.11
-Nodes (23): abandonForeignSession(), configureVoiceContext(), copyToClipboard(), discardOrphanedSession(), dismissToast(), finishVoiceSession(), isEmbeddedPreviewBrowser(), markSessionHandled() (+15 more)
+Cohesion: 0.08
+Nodes (23): Auralix Edge 100 (PROD-00103), Auralix Go X1 (PROD-00100), Auralix Max 700 (PROD-00112), Auralix Neo 700 (PROD-00113), Auralix Prime 100 (PROD-00099), Auralix Prime X1 (PROD-00115), Auralix Spark 500 (PROD-00107), Auralix Ultra X1 (PROD-00110) (+15 more)
 
 ### Community 94 - "adapt.native.md"
 Cohesion: 0.15
@@ -655,13 +711,17 @@ Nodes (11): Accessibility Resilience, Assess Hardening Needs, Edge Cases & Bound
 Cohesion: 0.17
 Nodes (11): Common Rationalizations, Overview, Red Flags, Source-Driven Development, Step 1: Detect Stack and Versions, Step 2: Fetch Official Documentation, Step 3: Implement Following Documented Patterns, Step 4: Cite Your Sources (+3 more)
 
+### Community 101 - "Community 101"
+Cohesion: 0.08
+Nodes (23): Arcadia Flex Pro Mousepad XL (PROD-00084), Arcadia Neo Elite Mousepad XL (PROD-00079), Arcadia Plus Elite Controller (PROD-00092), Arcadia Pro S Gaming Console Accessory (PROD-00076), ByteCore Play Air Pro VR Headset (PROD-00089), ByteCore Play Flex X Controller (PROD-00083), ByteCore Play Lite S Gaming Chair (PROD-00085), ByteCore Play One Z1 Gaming Console Accessory (PROD-00091) (+15 more)
+
 ### Community 102 - "Cognitive Load Assessment"
-Cohesion: 0.17
-Nodes (11): 10. Worked examples, 1. Purpose, 2. Which version applies to an order, 3. Refund eligibility and time windows, 4. Refund amount, 5. Refund method and timelines, 6. Approval requirements, 7. Exceptions (legitimate) (+3 more)
+Cohesion: 0.08
+Nodes (23): Auralix Edge 100 (PROD-00103), Auralix Go X1 (PROD-00100), Auralix Max 700 (PROD-00112), Auralix Neo 700 (PROD-00113), Auralix Prime 100 (PROD-00099), Auralix Prime X1 (PROD-00115), Auralix Spark 500 (PROD-00107), Auralix Ultra X1 (PROD-00110) (+15 more)
 
 ### Community 103 - "Impeccable Asset Producer"
-Cohesion: 0.17
-Nodes (11): 10. Worked examples, 1. Purpose, 2. Which version applies to an order, 3. Refund eligibility and time windows, 4. Refund amount, 5. Refund method and timelines, 6. Approval requirements, 7. Exceptions (legitimate) (+3 more)
+Cohesion: 0.08
+Nodes (23): Arcadia Flex Pro Mousepad XL (PROD-00084), Arcadia Neo Elite Mousepad XL (PROD-00079), Arcadia Plus Elite Controller (PROD-00092), Arcadia Pro S Gaming Console Accessory (PROD-00076), ByteCore Play Air Pro VR Headset (PROD-00089), ByteCore Play Flex X Controller (PROD-00083), ByteCore Play Lite S Gaming Chair (PROD-00085), ByteCore Play One Z1 Gaming Console Accessory (PROD-00091) (+15 more)
 
 ### Community 104 - "Impeccable Finish Reviewer"
 Cohesion: 0.17
@@ -692,8 +752,8 @@ Cohesion: 0.18
 Nodes (10): 🎯 Objective, Phase 5: Rapid UI Scaffolding & Component Assembly Specification, 🔒 Quality & Accessibility Standards, Step 1: Initialize Component Engine, Step 2: Scaffold Core Layout via 21st-ui-build Skill, Step 3: Integrate Real-Time Visual Feedback, Step 4: Add the "Demo Preset Button", 🛠️ Step-by-Step Rapid UI Assembly Workflow (+2 more)
 
 ### Community 111 - "$impeccable hooks"
-Cohesion: 0.18
-Nodes (10): 10. Differences from v1 (summary for agents), 1. Scope, 2. What can be returned, 3. Conditions for a change-of-mind return, 4. Defective, damaged and wrong items, 5. Process, 7. Restocking fee (new in v2), 8. Exceptions (+2 more)
+Cohesion: 0.08
+Nodes (23): Auralix Edge 100 (PROD-00103), Auralix Go X1 (PROD-00100), Auralix Max 700 (PROD-00112), Auralix Neo 700 (PROD-00113), Auralix Prime 100 (PROD-00099), Auralix Prime X1 (PROD-00115), Auralix Spark 500 (PROD-00107), Auralix Ultra X1 (PROD-00110) (+15 more)
 
 ### Community 112 - "Visualize: Direction Comps & Asset Production"
 Cohesion: 0.18
@@ -731,6 +791,10 @@ Nodes (9): Milestone 1: Actual Available Product, Incumbent & Past Winner Multi-
 Cohesion: 0.50
 Nodes (3): 01. NovaMart Hackathon Wedge & 2-Minute Demo Script, 1. Product Overview & Wedge, 2. The 2-Minute Judge Walkthrough Script
 
+### Community 121 - "Community 121"
+Cohesion: 0.09
+Nodes (21): Helix Link Air 16P Powerline Kit (PROD-00202), Helix Link Core 16P Mesh System (PROD-00203), Helix Link Go AX1800 Powerline Kit (PROD-00209), Helix Link Plus AC1200 Mesh System (PROD-00205), Helix Link Prime 8P Range Extender (PROD-00206), Helix Link Prime N300 WiFi Router (PROD-00196), NetWeave Flex 8P Range Extender (PROD-00214), NetWeave Flex 8P USB WiFi Adapter (PROD-00200) (+13 more)
+
 ### Community 122 - "graphify reference: transcribe video and audio"
 Cohesion: 0.20
 Nodes (9): Milestone 1: Time-Budget Mapping & Capacity Sizing (The 70% Buildable Rule), Milestone 2: The "Golden Demo Path" Razor (Rule 2 Invariant), Milestone 3: 3-Tier Feature Triaging & Authentic Visual Mocking, Milestone 4: Local-First SQLite Architecture & Free-Tier Cloud Staging, Milestone 5: Covert Demo-Proofing & Anti-Crash Offline Fallback, 📋 Milestone Execution Contracts (Strict Hybrid YAML), 🎯 Objective & Core Invariants, Phase 3: MVP Scoping, Triaging & Golden Demo Razor Specification (+1 more)
@@ -740,20 +804,24 @@ Cohesion: 0.20
 Nodes (9): 🔒 Final Pre-Flight Pitch Checklist, 🎯 Judge Q&A Defense Matrix, 🎯 Objective, Phase 7: Demo Pitch, Storyboarding & Judge-Proofing Specification, Question 1: "How is this different from [Incumbent]?", Question 2: "What happens if external APIs or network calls fail?", Question 3: "How does this scale to production?", ⏱️ The 3-Minute Pitch Script Formula (+1 more)
 
 ### Community 124 - "extraction-spec.md"
-Cohesion: 0.20
-Nodes (9): 1. Payment methods, 2. Payment states, 3. Money deducted but order not confirmed, 4. Duplicate charges, 5. Refund destination (critical), 6. Refund timelines (after refund is released), 7. Chargebacks, 8. Suspicious payment signals (escalate) (+1 more)
+Cohesion: 0.09
+Nodes (21): Kinetiq Fit Edge 5 (PROD-00246), Kinetiq Fit Flex Active (PROD-00250), Lumora Watch Air 1 (PROD-00263), Lumora Watch Edge Active (PROD-00252), Lumora Watch Lite S (PROD-00251), Lumora Watch Neo 2 (PROD-00264), Lumora Watch Neo S (PROD-00249), Lumora Watch One Active (PROD-00254) (+13 more)
 
 ### Community 125 - "idea-refine.sh"
-Cohesion: 0.20
-Nodes (9): 1. Scope, 2. What can be returned, 3. Conditions for a change-of-mind return, 4. Defective, damaged and wrong items, 5. Process, 6. Restocking fee, 7. Exceptions, 8. Escalation (+1 more)
+Cohesion: 0.09
+Nodes (21): Auralix Wave Core 500 (PROD-00270), Auralix Wave Core Mini (PROD-00282), Auralix Wave Flex 300 (PROD-00267), Auralix Wave Flex Max (PROD-00272), Auralix Wave Lite Max (PROD-00271), Auralix Wave Plus Mini (PROD-00273), Auralix Wave Pro 500 (PROD-00277), Auralix Wave Spark 300 (PROD-00283) (+13 more)
 
 ### Community 126 - "workflows/graphify.md"
-Cohesion: 0.20
-Nodes (9): 1. Delivery estimates, 2. Shipping fee, 3. Delivery verification (OTP), 4. Delays, 5. "Delivered but not received", 6. Address changes, 7. Failed delivery attempts, 8. Couriers (+1 more)
+Cohesion: 0.09
+Nodes (21): Helix Link Air 16P Powerline Kit (PROD-00202), Helix Link Core 16P Mesh System (PROD-00203), Helix Link Go AX1800 Powerline Kit (PROD-00209), Helix Link Plus AC1200 Mesh System (PROD-00205), Helix Link Prime 8P Range Extender (PROD-00206), Helix Link Prime N300 WiFi Router (PROD-00196), NetWeave Flex 8P Range Extender (PROD-00214), NetWeave Flex 8P USB WiFi Adapter (PROD-00200) (+13 more)
 
 ### Community 127 - "pre-commit"
 Cohesion: 0.20
 Nodes (9): 1. Architectural Deep-Dive: Why Hybrid AI + Deterministic Rules Wins, 2.1 The Problem with Vector RAG in a Hackathon Speedrun, 2.2 Why Graphify + Relational Graph is 10x Superior, 2. Graphify Knowledge Base vs. Vector RAG from Scratch, 3. Integrated Knowledge Flow Architecture, 4. Architectural Summary, Deterministic Safety Rails (from clinical-safety-agent) & Graph-Based Context, Hybrid Architecture & Graphify Knowledge Engine (+1 more)
+
+### Community 131 - "Community 131"
+Cohesion: 0.09
+Nodes (21): Kinetiq Fit Edge 5 (PROD-00246), Kinetiq Fit Flex Active (PROD-00250), Lumora Watch Air 1 (PROD-00263), Lumora Watch Edge Active (PROD-00252), Lumora Watch Lite S (PROD-00251), Lumora Watch Neo 2 (PROD-00264), Lumora Watch Neo S (PROD-00249), Lumora Watch One Active (PROD-00254) (+13 more)
 
 ### Community 132 - "compilerOptions"
 Cohesion: 0.10
@@ -762,6 +830,10 @@ Nodes (19): compilerOptions, allowArbitraryExtensions, allowImportingTsExtension
 ### Community 133 - "compilerOptions"
 Cohesion: 0.12
 Nodes (16): compilerOptions, allowImportingTsExtensions, erasableSyntaxOnly, lib, module, moduleDetection, noEmit, noFallthroughCasesInSwitch (+8 more)
+
+### Community 134 - "Community 134"
+Cohesion: 0.09
+Nodes (21): Auralix Wave Core 500 (PROD-00270), Auralix Wave Core Mini (PROD-00282), Auralix Wave Flex 300 (PROD-00267), Auralix Wave Flex Max (PROD-00272), Auralix Wave Lite Max (PROD-00271), Auralix Wave Plus Mini (PROD-00273), Auralix Wave Pro 500 (PROD-00277), Auralix Wave Spark 300 (PROD-00283) (+13 more)
 
 ### Community 135 - "Header.tsx"
 Cohesion: 0.22
@@ -788,16 +860,16 @@ Cohesion: 0.33
 Nodes (5): Expanding the Oxlint configuration, Maintained by, NovaMart E-Commerce Platform, React Compiler, React + TypeScript + Vite
 
 ### Community 141 - "Home.tsx"
-Cohesion: 0.22
-Nodes (8): 1. Trust boundaries (read first), 2. Decision framework, 3. Mandatory escalation triggers, 4. Fraud-risk signals (none of these is proof on its own), 5. SLAs, 6. Tone and conduct, 7. Agent authority limits, NovaMart Customer Escalation & Support Conduct Policy
+Cohesion: 0.09
+Nodes (21): Helix Link Air 16P Powerline Kit (PROD-00202), Helix Link Core 16P Mesh System (PROD-00203), Helix Link Go AX1800 Powerline Kit (PROD-00209), Helix Link Plus AC1200 Mesh System (PROD-00205), Helix Link Prime 8P Range Extender (PROD-00206), Helix Link Prime N300 WiFi Router (PROD-00196), NetWeave Flex 8P Range Extender (PROD-00214), NetWeave Flex 8P USB WiFi Adapter (PROD-00200) (+13 more)
 
 ### Community 142 - "AnnouncementBar.tsx"
 Cohesion: 0.22
 Nodes (9): 1. The Wall of Options, 2. The Memory Bridge, 3. The Hidden Navigation, 4. The Jargon Barrier, 5. The Visual Noise Floor, 6. The Inconsistent Pattern, 7. The Multi-Task Demand, 8. The Context Switch (+1 more)
 
 ### Community 143 - "vite-env.d.ts"
-Cohesion: 0.31
-Nodes (9): bindEditBadgeProxy(), editBadgeProxyTargets(), initEditBadge(), initEditBadgeHitProxies(), positionEditBadge(), setImportantStyle(), styleEditBadgeProxy(), syncEditBadgeHitProxies() (+1 more)
+Cohesion: 0.09
+Nodes (21): Kinetiq Fit Edge 5 (PROD-00246), Kinetiq Fit Flex Active (PROD-00250), Lumora Watch Air 1 (PROD-00263), Lumora Watch Edge Active (PROD-00252), Lumora Watch Lite S (PROD-00251), Lumora Watch Neo 2 (PROD-00264), Lumora Watch Neo S (PROD-00249), Lumora Watch One Active (PROD-00254) (+13 more)
 
 ### Community 144 - "onAnnotDown"
 Cohesion: 0.25
@@ -824,16 +896,16 @@ Cohesion: 0.25
 Nodes (7): append-arrays, append-string, Config drift, Consent prompt (use this phrasing), CSP detection (first-time only), Troubleshooting, Write the config
 
 ### Community 150 - "Community 150"
-Cohesion: 0.25
-Nodes (7): 1. When an order can be cancelled, 2. How cancellation works, 3. Cancellations initiated by NovaMart, 4. Duplicate orders, 5. Abuse limits, 6. Partial cancellation, NovaMart Cancellation Policy
+Cohesion: 0.09
+Nodes (21): Auralix Wave Core 500 (PROD-00270), Auralix Wave Core Mini (PROD-00282), Auralix Wave Flex 300 (PROD-00267), Auralix Wave Flex Max (PROD-00272), Auralix Wave Lite Max (PROD-00271), Auralix Wave Plus Mini (PROD-00273), Auralix Wave Pro 500 (PROD-00277), Auralix Wave Spark 300 (PROD-00283) (+13 more)
 
 ### Community 151 - "Community 151"
-Cohesion: 0.25
-Nodes (7): 1. When a replacement is offered, 2. When a replacement is not offered, 3. Process, 4. Approval, 5. Customer choice, 6. Replacements and warranty, NovaMart Replacement Policy
+Cohesion: 0.17
+Nodes (14): AccountDrawerProps, HeaderProps, LocationModal(), LocationModalProps, DOMAIN_DEFINITIONS, SearchResultData, LOCATIONS, Customer (+6 more)
 
 ### Community 152 - "Community 152"
-Cohesion: 0.25
-Nodes (7): 1. Coverage, 2. Not covered, 3. Warranty vs return/refund/replacement, 4. How a claim works, 5. What agents may and may not promise, 6. Safety, NovaMart Warranty Policy
+Cohesion: 0.10
+Nodes (19): Arcadia Keys Air 60 (PROD-00125), Arcadia Keys Edge 87 (PROD-00126), Arcadia Keys Neo K2 (PROD-00128), ByteCore Key Air K2 (PROD-00121), ByteCore Key Go K1 (PROD-00118), ByteCore Key Max K2 (PROD-00120), ByteCore Key Plus K1 (PROD-00119), KiteWorks Board Edge 60 (PROD-00129) (+11 more)
 
 ### Community 153 - "Community 153"
 Cohesion: 0.25
@@ -875,6 +947,10 @@ Nodes (6): Apply, Live-mode signature params, Set the spatial thesis, Two isolat
 Cohesion: 0.29
 Nodes (6): Apply, Live-mode signature params, Set the system, Two isolated assessments, Verify, Visitor mode
 
+### Community 163 - "Community 163"
+Cohesion: 0.10
+Nodes (19): Arcadia Strike Flex Z (PROD-00167), Arcadia Strike Go M5 (PROD-00175), Arcadia Strike Max Z (PROD-00159), Arcadia Strike Pro X (PROD-00170), Arcadia Strike Spark G3 (PROD-00168), ByteCore Glide Core M5 (PROD-00160), ByteCore Glide Edge M2 (PROD-00176), ByteCore Glide Spark M5 (PROD-00174) (+11 more)
+
 ### Community 164 - "Community 164"
 Cohesion: 0.29
 Nodes (7): Cognitive Load Assessment, Cognitive Load Checklist, Extraneous Load: Bad Design, Germane Load: Learning Effort, Intrinsic Load: The Task Itself, The Working Memory Rule, Three Types of Cognitive Load
@@ -898,6 +974,10 @@ Nodes (5): Before you finish, Scope is sovereign, The amplification, The skeleto
 ### Community 169 - "Community 169"
 Cohesion: 0.33
 Nodes (5): After approval: the comp becomes a spec, Generate three compositional options, One approval point, Plates and provenance, Visualize: Direction Comps & Asset Production
+
+### Community 171 - "Community 171"
+Cohesion: 0.10
+Nodes (19): ByteCore Vision Air 22 (PROD-00181), ByteCore Vision Prime 34 (PROD-00193), ByteCore Vision Pro 24 (PROD-00189), ByteCore Vision Spark 24 (PROD-00180), ByteCore Vision Spark 27 (PROD-00184), ByteCore Vision Ultra 27 (PROD-00185), NovaMart catalog - Monitors, Orbitron Display Edge 27 (PROD-00182) (+11 more)
 
 ### Community 172 - "Community 172"
 Cohesion: 0.33
@@ -1051,29 +1131,229 @@ Nodes (3): shape, argumentHint, description
 Cohesion: 0.67
 Nodes (3): typeset, argumentHint, description
 
+### Community 225 - "Community 225"
+Cohesion: 0.10
+Nodes (19): Arcadia Keys Air 60 (PROD-00125), Arcadia Keys Edge 87 (PROD-00126), Arcadia Keys Neo K2 (PROD-00128), ByteCore Key Air K2 (PROD-00121), ByteCore Key Go K1 (PROD-00118), ByteCore Key Max K2 (PROD-00120), ByteCore Key Plus K1 (PROD-00119), KiteWorks Board Edge 60 (PROD-00129) (+11 more)
+
+### Community 226 - "Community 226"
+Cohesion: 0.10
+Nodes (19): Arcadia Strike Flex Z (PROD-00167), Arcadia Strike Go M5 (PROD-00175), Arcadia Strike Max Z (PROD-00159), Arcadia Strike Pro X (PROD-00170), Arcadia Strike Spark G3 (PROD-00168), ByteCore Glide Core M5 (PROD-00160), ByteCore Glide Edge M2 (PROD-00176), ByteCore Glide Spark M5 (PROD-00174) (+11 more)
+
+### Community 227 - "Community 227"
+Cohesion: 0.10
+Nodes (19): ByteCore Vision Air 22 (PROD-00181), ByteCore Vision Prime 34 (PROD-00193), ByteCore Vision Pro 24 (PROD-00189), ByteCore Vision Spark 24 (PROD-00180), ByteCore Vision Spark 27 (PROD-00184), ByteCore Vision Ultra 27 (PROD-00185), NovaMart catalog - Monitors, Orbitron Display Edge 27 (PROD-00182) (+11 more)
+
+### Community 228 - "Community 228"
+Cohesion: 0.10
+Nodes (19): Arcadia Keys Air 60 (PROD-00125), Arcadia Keys Edge 87 (PROD-00126), Arcadia Keys Neo K2 (PROD-00128), ByteCore Key Air K2 (PROD-00121), ByteCore Key Go K1 (PROD-00118), ByteCore Key Max K2 (PROD-00120), ByteCore Key Plus K1 (PROD-00119), KiteWorks Board Edge 60 (PROD-00129) (+11 more)
+
+### Community 229 - "Community 229"
+Cohesion: 0.10
+Nodes (19): Arcadia Strike Flex Z (PROD-00167), Arcadia Strike Go M5 (PROD-00175), Arcadia Strike Max Z (PROD-00159), Arcadia Strike Pro X (PROD-00170), Arcadia Strike Spark G3 (PROD-00168), ByteCore Glide Core M5 (PROD-00160), ByteCore Glide Edge M2 (PROD-00176), ByteCore Glide Spark M5 (PROD-00174) (+11 more)
+
+### Community 230 - "Community 230"
+Cohesion: 0.10
+Nodes (19): ByteCore Vision Air 22 (PROD-00181), ByteCore Vision Prime 34 (PROD-00193), ByteCore Vision Pro 24 (PROD-00189), ByteCore Vision Spark 24 (PROD-00180), ByteCore Vision Spark 27 (PROD-00184), ByteCore Vision Ultra 27 (PROD-00185), NovaMart catalog - Monitors, Orbitron Display Edge 27 (PROD-00182) (+11 more)
+
+### Community 231 - "Community 231"
+Cohesion: 0.11
+Nodes (17): Lumora Tab Edge 8 (PROD-00293), Lumora Tab Go 12 (PROD-00286), Lumora Tab Neo 10 (PROD-00289), Lumora Tab Prime 12 (PROD-00300), Lumora Tab Spark 8 (PROD-00291), NovaMart catalog - Tablets, NovaPad Flex 11 (PROD-00285), NovaPad Flex 12 (PROD-00295) (+9 more)
+
+### Community 232 - "Community 232"
+Cohesion: 0.11
+Nodes (17): Lumora Tab Edge 8 (PROD-00293), Lumora Tab Go 12 (PROD-00286), Lumora Tab Neo 10 (PROD-00289), Lumora Tab Prime 12 (PROD-00300), Lumora Tab Spark 8 (PROD-00291), NovaMart catalog - Tablets, NovaPad Flex 11 (PROD-00285), NovaPad Flex 12 (PROD-00295) (+9 more)
+
+### Community 233 - "Community 233"
+Cohesion: 0.11
+Nodes (17): Lumora Tab Edge 8 (PROD-00293), Lumora Tab Go 12 (PROD-00286), Lumora Tab Neo 10 (PROD-00289), Lumora Tab Prime 12 (PROD-00300), Lumora Tab Spark 8 (PROD-00291), NovaMart catalog - Tablets, NovaPad Flex 11 (PROD-00285), NovaPad Flex 12 (PROD-00295) (+9 more)
+
+### Community 234 - "Community 234"
+Cohesion: 0.12
+Nodes (15): Helix Optic Edge 4K (PROD-00048), Helix Optic Max R7 (PROD-00039), Helix Optic One Mini (PROD-00035), Helix Optic Pro Mini (PROD-00043), Helix Optic Spark R7 (PROD-00040), Kinetiq Action Air 4K (PROD-00038), Kinetiq Action Plus R7 (PROD-00046), NovaMart catalog - Cameras (+7 more)
+
+### Community 235 - "Community 235"
+Cohesion: 0.12
+Nodes (15): Helix Optic Edge 4K (PROD-00048), Helix Optic Max R7 (PROD-00039), Helix Optic One Mini (PROD-00035), Helix Optic Pro Mini (PROD-00043), Helix Optic Spark R7 (PROD-00040), Kinetiq Action Air 4K (PROD-00038), Kinetiq Action Plus R7 (PROD-00046), NovaMart catalog - Cameras (+7 more)
+
+### Community 236 - "Community 236"
+Cohesion: 0.12
+Nodes (15): Helix Optic Edge 4K (PROD-00048), Helix Optic Max R7 (PROD-00039), Helix Optic One Mini (PROD-00035), Helix Optic Pro Mini (PROD-00043), Helix Optic Spark R7 (PROD-00040), Kinetiq Action Air 4K (PROD-00038), Kinetiq Action Plus R7 (PROD-00046), NovaMart catalog - Cameras (+7 more)
+
+### Community 237 - "Community 237"
+Cohesion: 0.19
+Nodes (5): CartDrawer(), Footer(), Layout(), Toast(), matchProductsByGeneralLanguage()
+
+### Community 238 - "Community 238"
+Cohesion: 0.21
+Nodes (7): HeroSection(), HeroSectionProps, PopularSection(), PopularSectionProps, ProductCard(), ProductCardProps, POPULAR_PRODUCTS
+
+### Community 239 - "Community 239"
+Cohesion: 0.17
+Nodes (11): 10. Worked examples, 1. Purpose, 2. Which version applies to an order, 3. Refund eligibility and time windows, 4. Refund amount, 5. Refund method and timelines, 6. Approval requirements, 7. Exceptions (legitimate) (+3 more)
+
+### Community 240 - "Community 240"
+Cohesion: 0.17
+Nodes (11): 10. Worked examples, 1. Purpose, 2. Which version applies to an order, 3. Refund eligibility and time windows, 4. Refund amount, 5. Refund method and timelines, 6. Approval requirements, 7. Exceptions (legitimate) (+3 more)
+
+### Community 241 - "Community 241"
+Cohesion: 0.17
+Nodes (11): 10. Worked examples, 1. Purpose, 2. Which version applies to an order, 3. Refund eligibility and time windows, 4. Refund amount, 5. Refund method and timelines, 6. Approval requirements, 7. Exceptions (legitimate) (+3 more)
+
+### Community 242 - "Community 242"
+Cohesion: 0.17
+Nodes (11): 10. Worked examples, 1. Purpose, 2. Which version applies to an order, 3. Refund eligibility and time windows, 4. Refund amount, 5. Refund method and timelines, 6. Approval requirements, 7. Exceptions (legitimate) (+3 more)
+
+### Community 243 - "Community 243"
+Cohesion: 0.17
+Nodes (11): 10. Worked examples, 1. Purpose, 2. Which version applies to an order, 3. Refund eligibility and time windows, 4. Refund amount, 5. Refund method and timelines, 6. Approval requirements, 7. Exceptions (legitimate) (+3 more)
+
+### Community 244 - "Community 244"
+Cohesion: 0.17
+Nodes (11): 10. Worked examples, 1. Purpose, 2. Which version applies to an order, 3. Refund eligibility and time windows, 4. Refund amount, 5. Refund method and timelines, 6. Approval requirements, 7. Exceptions (legitimate) (+3 more)
+
+### Community 245 - "Community 245"
+Cohesion: 0.33
+Nodes (6): CartDrawerProps, createOrderFromCart(), getLatestOrder(), getRecentOrders(), saveOrder(), PlacedOrder
+
+### Community 246 - "Community 246"
+Cohesion: 0.18
+Nodes (10): 10. Differences from v1 (summary for agents), 1. Scope, 2. What can be returned, 3. Conditions for a change-of-mind return, 4. Defective, damaged and wrong items, 5. Process, 7. Restocking fee (new in v2), 8. Exceptions (+2 more)
+
+### Community 247 - "Community 247"
+Cohesion: 0.18
+Nodes (10): 10. Differences from v1 (summary for agents), 1. Scope, 2. What can be returned, 3. Conditions for a change-of-mind return, 4. Defective, damaged and wrong items, 5. Process, 7. Restocking fee (new in v2), 8. Exceptions (+2 more)
+
+### Community 248 - "Community 248"
+Cohesion: 0.18
+Nodes (10): 10. Differences from v1 (summary for agents), 1. Scope, 2. What can be returned, 3. Conditions for a change-of-mind return, 4. Defective, damaged and wrong items, 5. Process, 7. Restocking fee (new in v2), 8. Exceptions (+2 more)
+
+### Community 249 - "Community 249"
+Cohesion: 0.20
+Nodes (9): 1. Payment methods, 2. Payment states, 3. Money deducted but order not confirmed, 4. Duplicate charges, 5. Refund destination (critical), 6. Refund timelines (after refund is released), 7. Chargebacks, 8. Suspicious payment signals (escalate) (+1 more)
+
+### Community 250 - "Community 250"
+Cohesion: 0.20
+Nodes (9): 1. Scope, 2. What can be returned, 3. Conditions for a change-of-mind return, 4. Defective, damaged and wrong items, 5. Process, 6. Restocking fee, 7. Exceptions, 8. Escalation (+1 more)
+
+### Community 251 - "Community 251"
+Cohesion: 0.20
+Nodes (9): 1. Delivery estimates, 2. Shipping fee, 3. Delivery verification (OTP), 4. Delays, 5. "Delivered but not received", 6. Address changes, 7. Failed delivery attempts, 8. Couriers (+1 more)
+
+### Community 252 - "Community 252"
+Cohesion: 0.20
+Nodes (9): 1. Payment methods, 2. Payment states, 3. Money deducted but order not confirmed, 4. Duplicate charges, 5. Refund destination (critical), 6. Refund timelines (after refund is released), 7. Chargebacks, 8. Suspicious payment signals (escalate) (+1 more)
+
+### Community 253 - "Community 253"
+Cohesion: 0.20
+Nodes (9): 1. Scope, 2. What can be returned, 3. Conditions for a change-of-mind return, 4. Defective, damaged and wrong items, 5. Process, 6. Restocking fee, 7. Exceptions, 8. Escalation (+1 more)
+
+### Community 254 - "Community 254"
+Cohesion: 0.20
+Nodes (9): 1. Delivery estimates, 2. Shipping fee, 3. Delivery verification (OTP), 4. Delays, 5. "Delivered but not received", 6. Address changes, 7. Failed delivery attempts, 8. Couriers (+1 more)
+
+### Community 255 - "Community 255"
+Cohesion: 0.20
+Nodes (9): 1. Payment methods, 2. Payment states, 3. Money deducted but order not confirmed, 4. Duplicate charges, 5. Refund destination (critical), 6. Refund timelines (after refund is released), 7. Chargebacks, 8. Suspicious payment signals (escalate) (+1 more)
+
+### Community 256 - "Community 256"
+Cohesion: 0.20
+Nodes (9): 1. Scope, 2. What can be returned, 3. Conditions for a change-of-mind return, 4. Defective, damaged and wrong items, 5. Process, 6. Restocking fee, 7. Exceptions, 8. Escalation (+1 more)
+
+### Community 257 - "Community 257"
+Cohesion: 0.20
+Nodes (9): 1. Delivery estimates, 2. Shipping fee, 3. Delivery verification (OTP), 4. Delays, 5. "Delivered but not received", 6. Address changes, 7. Failed delivery attempts, 8. Couriers (+1 more)
+
+### Community 258 - "Community 258"
+Cohesion: 0.28
+Nodes (8): BatchEvalResponse, get_eval_summary(), Evaluation API endpoints for NovaMart Customer Support Agent.  Enables automat, Executes all 6 official judge scenarios sequentially and compiles evaluation met, Retrieves the most recent evaluation metrics or a default status., run_all_scenarios(), ScenarioEvalResult, Any
+
+### Community 259 - "Community 259"
+Cohesion: 0.28
+Nodes (8): get_customer_profile(), get_order_details(), get_product_specs(), Ground truth query endpoints for inspecting entities., Retrieves customer record by ID., Retrieves order record with items by ID., Retrieves product record by ID., Any
+
+### Community 260 - "Community 260"
+Cohesion: 0.22
+Nodes (8): 1. Trust boundaries (read first), 2. Decision framework, 3. Mandatory escalation triggers, 4. Fraud-risk signals (none of these is proof on its own), 5. SLAs, 6. Tone and conduct, 7. Agent authority limits, NovaMart Customer Escalation & Support Conduct Policy
+
+### Community 261 - "Community 261"
+Cohesion: 0.22
+Nodes (8): 1. Trust boundaries (read first), 2. Decision framework, 3. Mandatory escalation triggers, 4. Fraud-risk signals (none of these is proof on its own), 5. SLAs, 6. Tone and conduct, 7. Agent authority limits, NovaMart Customer Escalation & Support Conduct Policy
+
 ### Community 262 - "Universal Frontend Design Bible & Anti-Slop Architectural Standard"
 Cohesion: 0.18
 Nodes (10): 1. Executive Summary & Design System Philosophy, 2. Watertight 5-Layer Frontend Tool Stack & Execution Lifecycle, 3. The 6-Category Anti-Slop Codex (What NOT to Use), 4. Token Architecture & Root `DESIGN.md` Contract, 5. Core Web Vitals, Render Physics & Performance Budgets, 6. Client-Side Security & Threat Hardening (STRIDE & OWASP), 7. Legacy Strangler Fig Refactoring & Design Drift Prevention, 8. Frontend Smoke Verification & Golden-Path Quality Gates (+2 more)
 
+### Community 263 - "Community 263"
+Cohesion: 0.22
+Nodes (8): 1. Trust boundaries (read first), 2. Decision framework, 3. Mandatory escalation triggers, 4. Fraud-risk signals (none of these is proof on its own), 5. SLAs, 6. Tone and conduct, 7. Agent authority limits, NovaMart Customer Escalation & Support Conduct Policy
+
+### Community 264 - "Community 264"
+Cohesion: 0.25
+Nodes (7): 1. When an order can be cancelled, 2. How cancellation works, 3. Cancellations initiated by NovaMart, 4. Duplicate orders, 5. Abuse limits, 6. Partial cancellation, NovaMart Cancellation Policy
+
+### Community 265 - "Community 265"
+Cohesion: 0.25
+Nodes (7): 1. When a replacement is offered, 2. When a replacement is not offered, 3. Process, 4. Approval, 5. Customer choice, 6. Replacements and warranty, NovaMart Replacement Policy
+
+### Community 266 - "Community 266"
+Cohesion: 0.25
+Nodes (7): 1. Coverage, 2. Not covered, 3. Warranty vs return/refund/replacement, 4. How a claim works, 5. What agents may and may not promise, 6. Safety, NovaMart Warranty Policy
+
+### Community 267 - "Community 267"
+Cohesion: 0.39
+Nodes (5): DEFAULT_USER, getAuthState(), logoutUser(), setAuthState(), UserProfile
+
+### Community 268 - "Community 268"
+Cohesion: 0.25
+Nodes (7): 1. When an order can be cancelled, 2. How cancellation works, 3. Cancellations initiated by NovaMart, 4. Duplicate orders, 5. Abuse limits, 6. Partial cancellation, NovaMart Cancellation Policy
+
+### Community 269 - "Community 269"
+Cohesion: 0.25
+Nodes (7): 1. When a replacement is offered, 2. When a replacement is not offered, 3. Process, 4. Approval, 5. Customer choice, 6. Replacements and warranty, NovaMart Replacement Policy
+
+### Community 270 - "Community 270"
+Cohesion: 0.25
+Nodes (7): 1. Coverage, 2. Not covered, 3. Warranty vs return/refund/replacement, 4. How a claim works, 5. What agents may and may not promise, 6. Safety, NovaMart Warranty Policy
+
+### Community 271 - "Community 271"
+Cohesion: 0.25
+Nodes (7): 1. When an order can be cancelled, 2. How cancellation works, 3. Cancellations initiated by NovaMart, 4. Duplicate orders, 5. Abuse limits, 6. Partial cancellation, NovaMart Cancellation Policy
+
+### Community 272 - "Community 272"
+Cohesion: 0.25
+Nodes (7): 1. When a replacement is offered, 2. When a replacement is not offered, 3. Process, 4. Approval, 5. Customer choice, 6. Replacements and warranty, NovaMart Replacement Policy
+
+### Community 273 - "Community 273"
+Cohesion: 0.25
+Nodes (7): 1. Coverage, 2. Not covered, 3. Warranty vs return/refund/replacement, 4. How a claim works, 5. What agents may and may not promise, 6. Safety, NovaMart Warranty Policy
+
+### Community 274 - "Community 274"
+Cohesion: 0.47
+Nodes (5): ChatRequest, ChatResponse, process_chat(), Chat API endpoints for NovaMart Customer Support Agent., Processes customer dialogue through the 9-stage verified agent loop.
+
+### Community 275 - "Community 275"
+Cohesion: 0.47
+Nodes (4): CartContext, CartContextType, CartProvider(), CartItem
+
 ## Knowledge Gaps
-- **1654 isolated node(s):** `enabled`, `PreToolUse`, `idea-refine.sh script`, `description`, `argumentHint` (+1649 more)
+- **2415 isolated node(s):** `enabled`, `PreToolUse`, `idea-refine.sh script`, `description`, `argumentHint` (+2410 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **13 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `run_preset()` connect `Process` to `CartContext.tsx`?**
-  _High betweenness centrality (0.003) - this node is a cross-community bridge._
-- **Why does `execute_write()` connect `CartContext.tsx` to `renderDesignVisual`, `Process`?**
+- **Why does `RuleMerger` connect `renderDesignVisual` to `Using Agent Skills`, `initGlobalBar`?**
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
-- **Why does `get_system_prompt()` connect `Shipping and Launch` to `renderDesignVisual`?**
+- **Why does `fetch_one()` connect `CartContext.tsx` to `Refinement & Evaluation Criteria`, `renderDesignVisual`, `Community 259`, `Process`?**
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
+- **Why does `SecurityGuardrail` connect `renderDesignVisual` to `Community 259`, `Using Agent Skills`, `initGlobalBar`?**
+  _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **What connects `enabled`, `PreToolUse`, `De-obfuscates command strings across 4 phases to prevent regex evasion:     Pha` to the rest of the system?**
-  _1826 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _2587 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `live-browser.js` be split into smaller, more focused modules?**
-  _Cohesion score 0.03188405797101449 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.030663615560640733 - nodes in this community are weakly interconnected._
 - **Should `handleManualEditActivity` be split into smaller, more focused modules?**
-  _Cohesion score 0.11394557823129252 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.08978174603174603 - nodes in this community are weakly interconnected._
 - **Should `startVariantObserver` be split into smaller, more focused modules?**
   _Cohesion score 0.10621942697414395 - nodes in this community are weakly interconnected._
