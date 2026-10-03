@@ -1,96 +1,122 @@
-# 🏆 Hackathon_Boilerplate
+# 🛍️ NovaMart AI
 
-> **The High-Velocity Hackathon & Venture Build Operating System**  
-> *Autonomously discover validated ideas, dismantle market incumbents, build high-performance MVPs via the Golden Demo Path, and win competitions with flawless live presentations.*
+> **Autonomous Customer Support & Deterministic Policy Enforcement System**  
+> *Engineered for Harrington's Tech Mantra Yudha Hackathon*
 
----
-
-## ⚡ Overview & Philosophy
-
-In fast-paced hackathons (12h, 24h, 48h), speed without discipline leads to the #1 failure mode: **ideation paralysis, rushed spaghetti code, broken live demos, and unfocused pitches.**
-
-`Hackathon_Boilerplate` is an autonomous operating system engineered for AI coding agents and human developers. It shifts the competitive paradigm from *"guessing random ideas and building toys"* to **empirical sentiment arbitrage**:
-
-1. **Evidence-Backed Ideation:** Discover real, unserved user pain across YC, a16z, Reddit, and VC thesis libraries.
-2. **Sentiment Arbitrage:** Tear down the category's market incumbent, mine their 1-star to 3-star reviews on G2/Reddit/GitHub, and invert their flaws into an unfair product wedge.
-3. **The Golden Demo Path Razor:** Strictly ban any button, toggle, or feature that does not sit directly on the 2-minute judging presentation.
-4. **Lean 7-Layer Architecture:** Fast-track high-density architecture specs (PRD, BaaS decisions, typed API contracts, deterministic state machines) without enterprise bloat.
-5. **Rapid UI Scaffolding:** Assemble a venture-backed visual interface in under 4 hours using 21st.dev components, Tailwind CSS, Lucide icons, and Framer Motion.
-6. **Golden-Path Smoke Verification:** Clean compilation gate (`npm run build` or `tsc --noEmit`) and zero-crash browser demo verification with instant offline fallback protection.
-7. **Tri-Layer Fail-Safe Demo Shield:** Zero-latency preset demo mode, deterministic local JSON fallbacks, and 60fps silent backup video so your live pitch never crashes.
+[![FastAPI](https://img.shields.io/badge/Backend-FastAPI-009688?style=flat&logo=fastapi)](https://fastapi.tiangolo.com/)
+[![React](https://img.shields.io/badge/Frontend-React%2019%20%2B%20Vite-61DAFB?style=flat&logo=react)](https://react.dev/)
+[![Gemini](https://img.shields.io/badge/LLM-Gemini%203.8%20Flash-4285F4?style=flat&logo=google)](https://ai.google.dev/)
+[![SQLite](https://img.shields.io/badge/Database-In--Memory%20SQLite-003B57?style=flat&logo=sqlite)](https://www.sqlite.org/)
+[![Graphify](https://img.shields.io/badge/Knowledge%20Graph-Graphify%20Ontology-8A2BE2?style=flat)](https://github.com/pratikforge)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 ---
 
-## 📂 The 7-Phase Hackathon Pipeline
+## ⚡ Executive Summary
 
-All operational playbooks and executable specifications live under [`spec_universal/hackathon_pipeline/`](spec_universal/hackathon_pipeline/):
+Traditional LLM customer support chatbots suffer from two fatal production flaws: **hallucinated refund calculations** and **vulnerability to social-engineering prompt injections**.
 
-| Phase | Specification Document | Core Capabilities & Deliverables | Time Budget |
-| :---: | :--- | :--- | :---: |
-| **00** | [`00_master_hackathon_operating_system.md`](spec_universal/hackathon_pipeline/00_master_hackathon_operating_system.md) | Master speedrun protocol, operational invariants, and time-budget brackets. | Foundation |
-| **01** | [`01_idea_discovery_and_scoring.md`](spec_universal/hackathon_pipeline/01_idea_discovery_and_scoring.md) | Dual-mode intake, 15m speedrun fast-track, 4-subagent research, 9-parameter matrix, Top 10 Idea Bank. | 15m – 2h |
-| **02** | [`02_competitor_teardown_and_sentiment_mining.md`](spec_universal/hackathon_pipeline/02_competitor_teardown_and_sentiment_mining.md) | Incumbent teardown, 1-3 star review mining (G2/Reddit), flaw inversion, and pitch contrast. | 15m – 2h |
-| **03** | [`03_mvp_scoping_and_demo_razor.md`](spec_universal/hackathon_pipeline/03_mvp_scoping_and_demo_razor.md) | Golden Demo Path Razor, 70% buildable time rule, P0/P1/P2 triaging, and mandatory mocks. | 30m – 1h |
-| **04** | [`04_lean_7layer_architecture.md`](spec_universal/hackathon_pipeline/04_lean_7layer_architecture.md) | Consolidated 7-layer architecture: Lean PRD, BaaS tech stack ADR, Mermaid data flow, typed contracts. | 30m – 1h |
-| **05** | [`05_rapid_ui_scaffolding.md`](spec_universal/hackathon_pipeline/05_rapid_ui_scaffolding.md) | 21st.dev component assembly, dark mode visual DNA, and the "⚡ Load Judge Demo" preset. | 2h – 4h |
-| **06** | [`06_golden_path_smoke_verification.md`](spec_universal/hackathon_pipeline/06_golden_path_smoke_verification.md) | Smoke verification: clean compilation and zero-crash 2-minute judge walkthrough with fail-safe fallbacks. | 30m – 45m |
-| **07** | [`07_demo_pitch_and_judge_proofing.md`](spec_universal/hackathon_pipeline/07_demo_pitch_and_judge_proofing.md) | 3-Minute pitch formula, tri-layer fail-safe shields (JSON fallback, demo mode, backup video), Q&A defense. | 30m – 1h |
+**NovaMart AI** solves this with a **Dual-Engine Hybrid Architecture**:
+- **Deterministic Policy Engine:** Evaluates return windows, policy cutoff dates (Policy v1 vs. v2), 5% restocking fees capped at ₹2,500, delivery delay goodwill, and hygiene rules with mathematical precision (<2ms).
+- **Gemini Multi-Turn Intelligence:** Delivers empathetic, contextual dialogue, pronoun resolution, and order disambiguation powered by Google Gemini 3.8 / Flash.
+- **Graphify Domain Ontology:** Structural knowledge graph mapping category policies, version matrices, and warranty constraints directly into agent cognition.
+- **Sub-Millisecond Relational Memory:** In-memory indexed SQLite database tracking customers, catalog products, orders, and support tickets with full transaction safety.
+- **Fail-Safe Offline Resilience:** Automatic graceful fallback to deterministic local rules if network or external model APIs disconnect.
 
 ---
 
-## ⏱️ Time-Budget Brackets
+## 🏗️ Architecture
 
-```yaml
-time_budget_matrix:
-  bracket_0_speedrun_sprint (4 - 6h):
-    scope: "1 High-Impact Problem Wedge + 1 Killer Unfair Technical Differentiator."
-    strategy: "Single-page dashboard, pre-tested 21st.dev components, Tailwind CSS, 1-click '⚡ Load Judge Demo' preset button."
-    verification: "Smoke Verification only (clean build + zero-crash 2-minute judge walkthrough)."
-    demo: "Live UI with silent local JSON fallback fixtures on all external APIs + 3-minute rehearsed pitch."
-
-  bracket_a_extreme_sprint (12 - 18h):
-    scope: "1 Core Baseline Workflow + 1 Hero Leverage Kill Feature only."
-    strategy: "Single-page dashboard, pre-tested components, hardcoded mock data for all secondary tabs."
-    demo: "Pre-recorded 60fps walkthrough video running side-by-side with live UI."
-
-  bracket_b_standard_hackathon (24 - 36h):
-    scope: "2 Core Baseline Workflows + 1-2 Leverage Features + Live Interactive State."
-    strategy: "Multi-view app with interactive filters, live toast notifications, and dark mode."
-    demo: "Live interactive demo using pre-seeded test accounts + instant fallback JSON caches on all APIs."
-
-  bracket_c_extended_competition (48h+):
-    scope: "Full Baseline Parity on primary modules + multi-point leverage additions + real-time sync."
-    strategy: "Complete responsive web app with mobile preview and polished micro-interactions."
-    demo: "Two connected devices interacting in real time (e.g., judge device and admin dashboard)."
+```mermaid
+flowchart TD
+    User["👤 Customer / Judge"] --> UI["💻 NovaMart Storefront & Floating Agent (React 19 + Tailwind)"]
+    UI --> API["⚡ FastAPI Gateway (:8001)"]
+    
+    subgraph Security & Verification
+        API --> Guard["🛡️ Guardrail Interceptor & Sanitizer"]
+        Guard --> Policy["⚖️ Deterministic Policy Engine (v1/v2 Rules)"]
+    end
+    
+    subgraph Dual-Engine Core
+        Policy --> Agent["🤖 Agent Loop & Orchestrator"]
+        Agent <--> Gemini["🧠 Gemini 3.8 Flash (Multi-Turn Chat)"]
+        Agent <--> Graph["🕸️ Graphify Domain Ontology"]
+        Agent <--> Memory["💾 SQLite Relational Memory (Orders / Tickets)"]
+    end
+    
+    Agent --> Response["✨ Verified Response & Action Audit"]
+    Response --> UI
 ```
 
 ---
 
-## 🛡️ Non-Negotiable Operational Invariants
+## 🎯 Key Features & Differentiators
 
-1. **The Golden Demo Path Razor (Rule 2):** If a feature or setting does not sit directly on the 2-minute judging script, it is strictly banned from being coded.
-2. **Mandatory Mocking of Commodities:** Never waste hackathon hours writing custom OAuth flows, password reset emails, or Stripe payment webhooks. Always use mock sessions and hardcoded enterprise tier badges.
-3. **Offline Resilience:** Every external LLM or API integration must have a deterministic local fallback JSON cache to survive venue Wi-Fi drops.
-4. **Physical Harmful Command Prevention Hook (Rule 32):** All terminal commands are guarded by `.agents/scripts/destructive_command_guard.py` via `.agents/hooks.json`.
-5. **Physical Immuntability Guard (Rule 29 & 30):** Pre-commit hook (`.githooks/pre-commit`) prevents accidental commits to protected templates.
+| Feature | Capability | Benefit |
+| :--- | :--- | :--- |
+| **Dual-Engine Fusion** | Hybrid LLM + Deterministic Math | Zero policy hallucinations on fees, refunds, and returns. |
+| **Policy v1 vs. v2 Transition** | Automatic date cutoff detection (2026-06-01) | Applies correct rules across legacy and new orders. |
+| **5% Restocking Fee Cap** | Exact category logic (Laptops, Tablets, Cameras, Monitors) | Strictly caps change-of-mind deductions at ₹2,500. |
+| **Life-Safety Guardrail** | Immediate block on hazard keywords (swelling, smoke, smell) | Instant critical ticket escalation to Technical Support. |
+| **Relational Memory** | Multi-turn history + SQLite conversation tracking | Seamless pronoun resolution without context loss. |
+| **Judge Demo Presets** | One-click walkthrough scenarios in UI | 100% crash-proof live presentations. |
 
 ---
 
-## 🚀 Quickstart: Starting a New Hackathon
+## 🚀 Quickstart
 
-1. **Clone this repository for your competition:**
-   ```bash
-   git clone https://github.com/pratikforge/Hackathon_Boilerplate.git my-hackathon-app
-   cd my-hackathon-app
-   ```
+### Prerequisites
+- **Node.js** >= 18
+- **Python** >= 3.11 (Managed with `uv`)
 
-2. **Initialize Git Hooks:**
-   ```bash
-   git config core.hooksPath .githooks
-   ```
+### 1. Backend Setup
+```bash
+# Clone the repository
+git clone https://github.com/shubhamsanjayvarma/HarringstonsTech_mantrayudha.git
+cd HarringstonsTech_mantrayudha
 
-3. **Tell your AI Agent:**
-   > *"We are competing in [Hackathon Name]. The theme is [Theme/Track]. Execute Phase 1 of `spec_universal/hackathon_pipeline/` to discover and score the Top 10 validated ideas."*
+# Set up environment variables
+cp .env.example .env
 
-4. **Follow the 7-Phase Protocol:**
-   The agent will systematically guide the project from problem intake to a winning 3-minute pitch.
+# Run FastAPI backend (port 8001)
+uv run uvicorn backend.main:app --port 8001 --reload
+```
+
+### 2. Frontend Setup
+```bash
+# In a new terminal window
+cd frontend
+
+# Install dependencies and launch Vite dev server
+npm install
+npm run dev
+```
+Open **`http://localhost:5175`** to experience the NovaMart storefront and AI assistant.
+
+---
+
+## 🧪 Verification & Test Suite
+
+The project includes unit and integration test suites covering the policy engine, guardrails, SQLite memory, and Gemini integration:
+
+```bash
+# Run full backend test suite
+uv run pytest
+
+# Verify frontend build
+cd frontend && npm run build
+```
+
+---
+
+## 🔒 Security & Secret Sanitization
+
+- **Zero Tracked Secrets:** Automated `.githooks/pre-commit` hook physically prevents staging `.env` files, credentials, or live API keys.
+- **Sanitized Repository:** Environment templates (`.env.example`) provide placeholder schemas only.
+- **Prompt Injection Airgap:** All customer inputs are wrapped in untrusted data boundaries with HTML-entity normalization and control character stripping.
+
+---
+
+## 👥 Harrington's Tech Mantra Yudha
+
+Built with precision for the **Mantra Yudha Hackathon**. Designed for production scalability, sub-millisecond reliability, and flawless live judging demonstrations.
