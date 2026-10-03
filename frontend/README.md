@@ -30,3 +30,17 @@ If you are developing a production application, we recommend enabling type-aware
 ```
 
 See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+
+---
+
+# NovaMart E-Commerce Platform
+
+NovaMart is a high-performance ultra-fast grocery and lifestyle delivery application featuring:
+- **Reference-Accurate Homepage**: Pixel-perfect replication of the NovaMart visual identity.
+- **Floating Customer Support**: In-context help drawer with live chat, 1-tap delivery tracking, and doorstep return management.
+- **Reactive Multi-Page Routing**: Complete navigation for Groceries, Fresh, Electronics, Home, Personal Care, and Offers.
+- **Hyperlocal Delivery System**: 10-15m dark store fulfillment engine across Bengaluru hubs.
+
+### Maintained by
+- **[@shubhamsanjayvarma](https://github.com/shubhamsanjayvarma)**
+
