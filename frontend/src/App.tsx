@@ -12,6 +12,7 @@ import Wishlist from './pages/Wishlist';
 import Offers from './pages/Offers';
 import SearchResults from './pages/SearchResults';
 import HelpSupport from './pages/HelpSupport';
+import Login from './pages/Login';
 
 function ScrollToTop() {
   React.useEffect(() => {
@@ -32,6 +33,7 @@ export function App() {
           <Route path="checkout" element={<><ScrollToTop /><Checkout /></>} />
           <Route path="order-confirmed" element={<><ScrollToTop /><OrderConfirmed /></>} />
           <Route path="account" element={<><ScrollToTop /><MyAccount /></>} />
+          <Route path="login" element={<><ScrollToTop /><Login /></>} />
           <Route path="wishlist" element={<><ScrollToTop /><Wishlist /></>} />
           <Route path="offers" element={<><ScrollToTop /><Offers /></>} />
           <Route path="search" element={<><ScrollToTop /><SearchResults /></>} />

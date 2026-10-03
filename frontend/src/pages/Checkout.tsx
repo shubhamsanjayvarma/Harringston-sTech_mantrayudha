@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { 
   Home as HomeIcon, 
   Truck, 
@@ -14,9 +14,28 @@ import {
   Check, 
   X 
 } from 'lucide-react';
+import { useCart } from '../context/CartContext';
+import { createOrderFromCart, saveOrder } from '../data/orderHelper';
 
 export default function Checkout() {
+  const navigate = useNavigate();
+  const { items, cartTotal, clearCart } = useCart();
   const [paymentMethod, setPaymentMethod] = useState('upi');
+
+  const handlePlaceOrder = () => {
+    if (items.length > 0) {
+      const order = createOrderFromCart(items, cartTotal, {
+        id: 'indiranagar',
+        area: 'Indiranagar',
+        city: 'Bengaluru',
+        pincode: '560038',
+        eta: '10-15 mins',
+      });
+      saveOrder(order);
+      clearCart();
+    }
+    navigate('/order-confirmed');
+  };
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -314,9 +333,12 @@ export default function Checkout() {
               <span className="text-2xl font-bold text-gray-900">₹ 8,597</span>
             </div>
 
-            <Link to="/order-confirmed" className="w-full bg-[#198038] hover:bg-[#125A27] text-white font-semibold rounded-lg py-4 transition-colors text-lg flex items-center justify-center gap-2 mb-4 shadow-sm shadow-[#198038]/20">
+            <button 
+              onClick={handlePlaceOrder}
+              className="w-full bg-[#198038] hover:bg-[#125A27] text-white font-semibold rounded-lg py-4 transition-colors text-lg flex items-center justify-center gap-2 mb-4 shadow-sm shadow-[#198038]/20 cursor-pointer"
+            >
               Place order
-            </Link>
+            </button>
 
             <div className="flex items-start gap-2 text-xs text-gray-500 justify-center text-center mt-4">
               <Lock size={14} className="text-gray-400 flex-shrink-0 mt-0.5" />

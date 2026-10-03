@@ -22,6 +22,7 @@ import { CartDrawer } from './CartDrawer';
 import { Toast } from './Toast';
 import { LOCATIONS, ALL_PRODUCTS } from '../data/mockData';
 import { matchProductsByGeneralLanguage } from '../data/searchHelper';
+import { getAuthState } from '../data/authHelper';
 import { DeliveryLocation } from '../types';
 
 export default function Layout() {
@@ -39,6 +40,17 @@ export default function Layout() {
       return LOCATIONS[0];
     }
   });
+
+  // Auth state for profile / account link
+  const [auth, setAuth] = useState(() => getAuthState());
+
+  useEffect(() => {
+    const handleAuthChange = () => {
+      setAuth(getAuthState());
+    };
+    window.addEventListener('novamart_auth_updated', handleAuthChange);
+    return () => window.removeEventListener('novamart_auth_updated', handleAuthChange);
+  }, []);
   const [isLocationModalOpen, setIsLocationModalOpen] = useState(false);
 
   // Search state
@@ -279,13 +291,23 @@ export default function Layout() {
             </div>
 
             {/* Header Right Action Icons */}
-            <div className="flex items-center gap-5 sm:gap-6">
+            <div className="flex items-center gap-4 sm:gap-6">
               <Link 
-                to="/account" 
-                className="text-gray-700 hover:text-[#198038] p-1.5 rounded-full hover:bg-gray-50 transition-colors"
-                title="My Account"
+                to={auth.isLoggedIn ? "/account" : "/login"} 
+                className="text-gray-700 hover:text-[#198038] p-1.5 rounded-full hover:bg-gray-50 transition-colors relative flex items-center gap-1.5"
+                title={auth.isLoggedIn ? `My Account (${auth.name})` : "Sign In / Login"}
               >
                 <User size={24} />
+                {auth.isLoggedIn ? (
+                  <span 
+                    className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 bg-[#198038] border-2 border-white rounded-full" 
+                    title="Logged In"
+                  />
+                ) : (
+                  <span className="hidden sm:inline text-xs font-bold text-gray-700 hover:text-[#198038]">
+                    Sign In
+                  </span>
+                )}
               </Link>
               <button 
                 onClick={() => setIsCartOpen(true)}

@@ -193,7 +193,7 @@ export function FloatingSupportButton() {
                 <div
                   onClick={() => {
                     setIsOpen(false);
-                    navigate('/cart');
+                    navigate('/order-confirmed');
                   }}
                   className="p-3 bg-gray-50/80 hover:bg-[#f0f9f2] rounded-2xl border border-gray-100 hover:border-[#b8e2be] transition-all cursor-pointer flex items-center justify-between group"
                 >

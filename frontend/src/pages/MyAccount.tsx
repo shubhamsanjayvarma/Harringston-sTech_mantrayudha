@@ -17,6 +17,9 @@ import {
   X,
   Briefcase
 } from 'lucide-react';
+import { getRecentOrders, saveOrder } from '../data/orderHelper';
+import { getAuthState, logoutUser } from '../data/authHelper';
+import { PlacedOrder } from '../types';
 
 interface SavedAddress {
   id: string;
@@ -99,6 +102,33 @@ export default function MyAccount() {
       setActiveTab('orders');
     }
   }, [tabParam, actionParam]);
+
+  // Real placed orders state
+  const [recentOrders, setRecentOrders] = useState<PlacedOrder[]>(() => getRecentOrders());
+
+  // User auth state
+  const [auth, setAuth] = useState(() => getAuthState());
+
+  useEffect(() => {
+    const handleAuth = () => {
+      setAuth(getAuthState());
+    };
+    window.addEventListener('novamart_auth_updated', handleAuth);
+    return () => window.removeEventListener('novamart_auth_updated', handleAuth);
+  }, []);
+
+  useEffect(() => {
+    const handleOrderUpdate = () => {
+      setRecentOrders(getRecentOrders());
+    };
+    window.addEventListener('novamart_order_updated', handleOrderUpdate);
+    return () => window.removeEventListener('novamart_order_updated', handleOrderUpdate);
+  }, []);
+
+  const handleTrackDelivery = (order: PlacedOrder) => {
+    saveOrder(order);
+    navigate('/order-confirmed');
+  };
 
   // Persist addresses
   const persistAddresses = (newAddrs: SavedAddress[]) => {
@@ -201,8 +231,30 @@ export default function MyAccount() {
 
       <div className="mb-8">
         <h1 className="text-4xl font-extrabold text-gray-900 tracking-tight">My account</h1>
-        <p className="text-lg text-gray-600 mt-1">Welcome back, Tarak</p>
+        <p className="text-lg text-gray-600 mt-1">
+          {auth.isLoggedIn ? `Welcome back, ${auth.name}` : 'Welcome! Sign in to manage your account'}
+        </p>
       </div>
+
+      {!auth.isLoggedIn && (
+        <div className="mb-6 p-4 rounded-2xl bg-[#eef8f1] border border-[#c4ebd3] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-full bg-[#198038] text-white flex items-center justify-center font-bold">
+              !
+            </div>
+            <div>
+              <p className="font-bold text-gray-900 text-sm">You are browsing as Guest</p>
+              <p className="text-xs text-gray-600 mt-0.5">Sign in to save addresses, track live deliveries, and claim exclusive vouchers.</p>
+            </div>
+          </div>
+          <button
+            onClick={() => navigate('/login')}
+            className="bg-[#198038] hover:bg-[#125A27] text-white font-bold text-xs px-5 py-2.5 rounded-xl transition-all shadow-xs cursor-pointer whitespace-nowrap"
+          >
+            Sign In Now
+          </button>
+        </div>
+      )}
 
       <div className="flex flex-col lg:flex-row gap-8">
         {/* Left Sidebar Navigation */}
@@ -210,13 +262,13 @@ export default function MyAccount() {
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden mb-6 sticky top-28">
             <div className="p-6 flex items-center gap-4 bg-[#fbfdfb] border-b border-gray-100">
               <div className="w-14 h-14 bg-[#eef8f1] text-[#198038] rounded-full flex items-center justify-center text-xl font-extrabold border border-[#c4ebd3]">
-                TS
+                {auth.avatar || (auth.name ? auth.name.slice(0, 2).toUpperCase() : 'TS')}
               </div>
               <div>
-                <h3 className="font-bold text-gray-900 text-base">Tarak S.</h3>
-                <p className="text-xs text-gray-500">tarak.s@email.com</p>
+                <h3 className="font-bold text-gray-900 text-base">{auth.name || 'Guest User'}</h3>
+                <p className="text-xs text-gray-500">{auth.email || auth.phone || 'guest@novamart.in'}</p>
                 <span className="inline-block mt-1 text-[10px] bg-[#eef8f1] text-[#125A27] font-bold px-2 py-0.5 rounded-full">
-                  Nova Gold Member
+                  {auth.isLoggedIn ? 'Nova Gold Member' : 'Guest'}
                 </span>
               </div>
             </div>
@@ -307,11 +359,14 @@ export default function MyAccount() {
               </Link>
 
               <button
-                onClick={() => navigate('/')}
+                onClick={() => {
+                  logoutUser();
+                  navigate('/login');
+                }}
                 className="flex items-center gap-4 px-6 py-3.5 text-sm text-gray-500 hover:text-red-600 hover:bg-red-50/50 font-semibold border-l-4 border-transparent text-left cursor-pointer transition-colors"
               >
                 <LogOut size={18} />
-                Sign out
+                {auth.isLoggedIn ? 'Sign out' : 'Sign In'}
               </button>
             </nav>
           </div>
@@ -597,50 +652,93 @@ export default function MyAccount() {
                 </div>
 
                 <div className="space-y-4">
-                  {/* Order 1 */}
-                  <div className="border border-gray-200 rounded-2xl overflow-hidden hover:border-gray-300 transition-all">
-                    <div className="p-5 flex flex-wrap justify-between items-start gap-4 bg-gray-50/50">
-                      <div>
-                        <p className="font-bold text-gray-900 text-sm">Order #NM-240918-5821</p>
-                        <p className="text-xs text-gray-500 mt-0.5">18 Sep 2026 • 3 items</p>
-                      </div>
-                      <div>
-                        <p className="text-xs text-gray-500">Total Amount</p>
-                        <p className="font-bold text-gray-900 text-sm">₹ 8,597</p>
-                      </div>
-                      <div>
-                        <span className="inline-flex items-center gap-1.5 bg-[#eef8f1] text-[#198038] px-2.5 py-1 rounded-full text-xs font-bold border border-[#c4ebd3]">
-                          <Box size={13} /> Packing in dark store
-                        </span>
-                      </div>
-                    </div>
-
-                    <div className="p-5 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-                      <div className="flex flex-wrap gap-4">
-                        <div className="flex items-center gap-3">
-                          <img src="/assets/headphones.jpg" alt="Headphones" className="w-12 h-12 object-contain rounded-lg bg-gray-50 p-1 border border-gray-100" />
-                          <div className="text-xs">
-                            <p className="font-bold text-gray-900">Sony Wireless Headphones</p>
-                            <p className="text-gray-500">Qty: 1</p>
+                  {recentOrders.length > 0 ? (
+                    recentOrders.map((order) => (
+                      <div key={order.id} className="border border-gray-200 rounded-2xl overflow-hidden hover:border-[#198038] transition-all bg-white shadow-2xs">
+                        <div className="p-5 flex flex-wrap justify-between items-start gap-4 bg-gray-50/50 border-b border-gray-100">
+                          <div>
+                            <p className="font-bold text-gray-900 text-sm">Order #{order.orderNumber}</p>
+                            <p className="text-xs text-gray-500 mt-0.5">{order.createdAt} • {order.itemCount} {order.itemCount === 1 ? 'item' : 'items'}</p>
+                          </div>
+                          <div>
+                            <p className="text-xs text-gray-500">Total Amount</p>
+                            <p className="font-bold text-[#198038] text-sm">₹ {order.total.toLocaleString('en-IN')}</p>
+                          </div>
+                          <div>
+                            <span className="inline-flex items-center gap-1.5 bg-[#eef8f1] text-[#198038] px-2.5 py-1 rounded-full text-xs font-bold border border-[#c4ebd3]">
+                              <Box size={13} /> {order.status}
+                            </span>
                           </div>
                         </div>
-                        <div className="flex items-center gap-3">
-                          <img src="/assets/air-fryer.jpg" alt="Air fryer" className="w-12 h-12 object-contain rounded-lg bg-gray-50 p-1 border border-gray-100" />
-                          <div className="text-xs">
-                            <p className="font-bold text-gray-900">Digital Air Fryer</p>
-                            <p className="text-gray-500">Qty: 1</p>
+
+                        <div className="p-5 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                          <div className="flex flex-wrap gap-4">
+                            {order.items.map(({ product, quantity }) => (
+                              <div key={product.id} className="flex items-center gap-3">
+                                <img
+                                  src={product.image}
+                                  alt={product.name}
+                                  className="w-12 h-12 object-contain rounded-lg bg-gray-50 p-1 border border-gray-100"
+                                  onError={(e) => {
+                                    (e.target as HTMLImageElement).src = '/assets/strawberries.jpg';
+                                  }}
+                                />
+                                <div className="text-xs max-w-[180px]">
+                                  <p className="font-bold text-gray-900 truncate">{product.name}</p>
+                                  <p className="text-gray-500">Qty: {quantity} • ₹{product.price.toLocaleString('en-IN')}</p>
+                                </div>
+                              </div>
+                            ))}
                           </div>
+
+                          <button
+                            onClick={() => handleTrackDelivery(order)}
+                            className="bg-[#198038] hover:bg-[#125A27] text-white font-bold py-2 px-5 rounded-xl text-xs transition-colors shrink-0 cursor-pointer flex items-center gap-1"
+                          >
+                            Track Delivery <ChevronRight size={14} />
+                          </button>
+                        </div>
+                      </div>
+                    ))
+                  ) : (
+                    /* Default fallback order */
+                    <div className="border border-gray-200 rounded-2xl overflow-hidden hover:border-gray-300 transition-all">
+                      <div className="p-5 flex flex-wrap justify-between items-start gap-4 bg-gray-50/50">
+                        <div>
+                          <p className="font-bold text-gray-900 text-sm">Order #NM-261003-8419</p>
+                          <p className="text-xs text-gray-500 mt-0.5">Today • 1 item</p>
+                        </div>
+                        <div>
+                          <p className="text-xs text-gray-500">Total Amount</p>
+                          <p className="font-bold text-gray-900 text-sm">₹ 2,014</p>
+                        </div>
+                        <div>
+                          <span className="inline-flex items-center gap-1.5 bg-[#eef8f1] text-[#198038] px-2.5 py-1 rounded-full text-xs font-bold border border-[#c4ebd3]">
+                            <Box size={13} /> Packing in dark store
+                          </span>
                         </div>
                       </div>
 
-                      <button
-                        onClick={() => navigate('/order-confirmed')}
-                        className="bg-[#198038] hover:bg-[#125A27] text-white font-bold py-2 px-5 rounded-xl text-xs transition-colors"
-                      >
-                        Track Delivery
-                      </button>
+                      <div className="p-5 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                        <div className="flex flex-wrap gap-4">
+                          <div className="flex items-center gap-3">
+                            <img src="/assets/smartwatch.jpg" alt="Smartwatch" className="w-12 h-12 object-contain rounded-lg bg-gray-50 p-1 border border-gray-100" />
+                            <div className="text-xs">
+                              <p className="font-bold text-gray-900">ColorFit Pulse Smartwatch</p>
+                              <p className="text-gray-500">Qty: 1 • ₹1,999</p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <button
+                          onClick={() => navigate('/order-confirmed')}
+                          className="bg-[#198038] hover:bg-[#125A27] text-white font-bold py-2 px-5 rounded-xl text-xs transition-colors cursor-pointer"
+                        >
+                          Track Delivery
+                        </button>
+                      </div>
                     </div>
-                  </div>
+                  )}
                 </div>
               </div>
             </>

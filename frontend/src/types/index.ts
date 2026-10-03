@@ -25,3 +25,19 @@ export interface DeliveryLocation {
   pincode: string;
   eta: string;
 }
+
+export interface PlacedOrder {
+  id: string;
+  orderNumber: string;
+  createdAt: string;
+  items: CartItem[];
+  itemCount: number;
+  subtotal: number;
+  deliveryFee: number;
+  handlingFee: number;
+  total: number;
+  location: DeliveryLocation;
+  status: 'Order Placed' | 'Packing in dark store' | 'On the way' | 'Delivered';
+  estimatedArrival: string;
+  paymentMethod: string;
+}
