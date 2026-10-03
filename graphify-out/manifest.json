@@ -245,8 +245,8 @@
     "semantic_hash": ""
   },
   ".githooks/pre-commit": {
-    "mtime": 1789371251.0951102,
-    "ast_hash": "49281921a7dc36518db08b94cdb3130f",
+    "mtime": 1791052502.8898056,
+    "ast_hash": "16a974d128b6086dd8a3993c0de30b55",
     "semantic_hash": ""
   },
   ".agents/hooks.json": {
@@ -265,8 +265,8 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1790966810.521783,
-    "ast_hash": "5025acde9d3b44a383e72b14145382b2",
+    "mtime": 1791052537.6749597,
+    "ast_hash": "d0dfdbaacbdb2faeb389ec119267af65",
     "semantic_hash": ""
   },
   "spec_universal/hackathon_pipeline/00_master_hackathon_operating_system.md": {
@@ -840,8 +840,8 @@
     "semantic_hash": ""
   },
   "frontend/src/components/FloatingSupportButton.tsx": {
-    "mtime": 1791036838.8371575,
-    "ast_hash": "89d56d272b5477c5ef34b96a8c2734ff",
+    "mtime": 1791041482.478818,
+    "ast_hash": "bae261daf3d75f015fda9a14725871a3",
     "semantic_hash": ""
   },
   "backend/__init__.py": {
@@ -855,8 +855,8 @@
     "semantic_hash": ""
   },
   "backend/api/routes_chat.py": {
-    "mtime": 1791035370.5324378,
-    "ast_hash": "89dd477e5fd70bf8dccc58d09210f080",
+    "mtime": 1791044177.0448318,
+    "ast_hash": "14e20cd11aa40879cf6dc0e4c7d81d08",
     "semantic_hash": ""
   },
   "backend/api/routes_demo.py": {
@@ -875,8 +875,8 @@
     "semantic_hash": ""
   },
   "backend/config.py": {
-    "mtime": 1791035370.5335143,
-    "ast_hash": "224909065258bea641da7b16ea8d144e",
+    "mtime": 1791041120.2745001,
+    "ast_hash": "fc56f41fdbc52f6e748502fda36b87be",
     "semantic_hash": ""
   },
   "backend/db/__init__.py": {
@@ -905,8 +905,8 @@
     "semantic_hash": ""
   },
   "backend/engine/agent_loop.py": {
-    "mtime": 1791035370.5427003,
-    "ast_hash": "99aff017e55ac777d3dc6a5c5a0dd39a",
+    "mtime": 1791044299.7776618,
+    "ast_hash": "7e723d0ec9aa685f2d4a13802993274e",
     "semantic_hash": ""
   },
   "backend/engine/guardrail_interceptor.py": {
@@ -915,8 +915,8 @@
     "semantic_hash": ""
   },
   "backend/engine/memory.py": {
-    "mtime": 1791035370.5427003,
-    "ast_hash": "7d0d1ae0a937d1253eca266eb367879e",
+    "mtime": 1791038591.0989585,
+    "ast_hash": "b2d8ec0d4e70b080250c178837c0dddd",
     "semantic_hash": ""
   },
   "backend/engine/multi_intent.py": {
@@ -925,8 +925,8 @@
     "semantic_hash": ""
   },
   "backend/engine/persona_prompts.py": {
-    "mtime": 1791035370.548936,
-    "ast_hash": "4fa50b848b2292ef41f547de08b425f5",
+    "mtime": 1791044206.2942283,
+    "ast_hash": "efc27a1238944a73b61066dc60c8d15a",
     "semantic_hash": ""
   },
   "backend/engine/policy_rules.py": {
@@ -940,8 +940,8 @@
     "semantic_hash": ""
   },
   "backend/engine/tools.py": {
-    "mtime": 1791035370.5493312,
-    "ast_hash": "5debb6eb4ceaf6c3e2a0d7d002563266",
+    "mtime": 1791041275.12463,
+    "ast_hash": "ee010c4a75b9d93bb5665498ad587ba0",
     "semantic_hash": ""
   },
   "backend/engine/workflow_graph.py": {
@@ -1290,8 +1290,8 @@
     "semantic_hash": ""
   },
   "frontend/src/services/chatbotService.ts": {
-    "mtime": 1791036744.8253913,
-    "ast_hash": "13994bde8b3b3b836370d82cf3618449",
+    "mtime": 1791044189.7713566,
+    "ast_hash": "1f3624c807f9d9a39de5c36c7d3edd90",
     "semantic_hash": ""
   },
   "CSV Files/public/policies/cancellation_policy.md": {
@@ -1612,6 +1612,146 @@
   "frontend/public/assets/ananya-avatar.jpg": {
     "mtime": 1791024498.1693957,
     "ast_hash": "415ab483094df37852d21540e507f0de",
+    "semantic_hash": ""
+  },
+  "backend/engine/build_domain_graph.py": {
+    "mtime": 1791037855.523692,
+    "ast_hash": "7ae46793063482b2ba5acf23a85de968",
+    "semantic_hash": ""
+  },
+  "backend/engine/domain_graph.py": {
+    "mtime": 1791037875.9094026,
+    "ast_hash": "7da7ba0b3a2935ae8123c59177082c8f",
+    "semantic_hash": ""
+  },
+  "backend/tests/test_gemini_integration.py": {
+    "mtime": 1791039270.943679,
+    "ast_hash": "3f57f37173c11c6e1b23b58da31e4203",
+    "semantic_hash": ""
+  },
+  "backend/domain_knowledge/policies/cancellation_policy.md": {
+    "mtime": 1791035370.7273107,
+    "ast_hash": "4d01be0f43fbc48cc626af2a90d60155",
+    "semantic_hash": ""
+  },
+  "backend/domain_knowledge/policies/customer_escalation_policy.md": {
+    "mtime": 1791035370.7273107,
+    "ast_hash": "47ef78f8b400072882195dde2fb081bd",
+    "semantic_hash": ""
+  },
+  "backend/domain_knowledge/policies/payment_policy.md": {
+    "mtime": 1791035370.7293353,
+    "ast_hash": "752421799050c5b05ffb1509c9a2c5e1",
+    "semantic_hash": ""
+  },
+  "backend/domain_knowledge/policies/refund_policy_v1.md": {
+    "mtime": 1791035370.7293353,
+    "ast_hash": "c6224a767909216d5696e210a328e60d",
+    "semantic_hash": ""
+  },
+  "backend/domain_knowledge/policies/refund_policy_v2.md": {
+    "mtime": 1791035370.7313726,
+    "ast_hash": "718b15e7b94b95b417cb62a9be55250c",
+    "semantic_hash": ""
+  },
+  "backend/domain_knowledge/policies/replacement_policy.md": {
+    "mtime": 1791035370.7313726,
+    "ast_hash": "da1d6bd114cbd26df2b104d0a7ee3cc7",
+    "semantic_hash": ""
+  },
+  "backend/domain_knowledge/policies/return_policy_v1.md": {
+    "mtime": 1791035370.7313726,
+    "ast_hash": "27f3bf16975137739a3f588d3801e6b6",
+    "semantic_hash": ""
+  },
+  "backend/domain_knowledge/policies/return_policy_v2.md": {
+    "mtime": 1791035370.733385,
+    "ast_hash": "79432904ade3fc000474fc5f69b128cc",
+    "semantic_hash": ""
+  },
+  "backend/domain_knowledge/policies/shipping_policy.md": {
+    "mtime": 1791035370.733385,
+    "ast_hash": "d189645e97f5798ca2c5fcf50a5515f1",
+    "semantic_hash": ""
+  },
+  "backend/domain_knowledge/policies/warranty_policy.md": {
+    "mtime": 1791035370.734697,
+    "ast_hash": "59c723d5599f2ab3ed2e9af1db7033e9",
+    "semantic_hash": ""
+  },
+  "backend/domain_knowledge/products/accessories.md": {
+    "mtime": 1791035370.734697,
+    "ast_hash": "8aefbb7e45537066fcc7890fbbf0cfa5",
+    "semantic_hash": ""
+  },
+  "backend/domain_knowledge/products/cameras.md": {
+    "mtime": 1791035370.734697,
+    "ast_hash": "70ed9e8457c813ac78640a65ecb94722",
+    "semantic_hash": ""
+  },
+  "backend/domain_knowledge/products/earbuds.md": {
+    "mtime": 1791035370.734697,
+    "ast_hash": "ded70b02692a78cc94b7060a4f4af666",
+    "semantic_hash": ""
+  },
+  "backend/domain_knowledge/products/gaming.md": {
+    "mtime": 1791035370.734697,
+    "ast_hash": "0558a65dbcdf8b5b73afc1f608e2f6b8",
+    "semantic_hash": ""
+  },
+  "backend/domain_knowledge/products/headphones.md": {
+    "mtime": 1791035370.742647,
+    "ast_hash": "f59055c97e2828857949ada40632dff1",
+    "semantic_hash": ""
+  },
+  "backend/domain_knowledge/products/keyboards.md": {
+    "mtime": 1791035370.742647,
+    "ast_hash": "ee8e503b96a0c778ab82a151f9040cea",
+    "semantic_hash": ""
+  },
+  "backend/domain_knowledge/products/laptops.md": {
+    "mtime": 1791035370.742647,
+    "ast_hash": "85a6d5ffbae014b496321326392ab59a",
+    "semantic_hash": ""
+  },
+  "backend/domain_knowledge/products/mice.md": {
+    "mtime": 1791035370.7451603,
+    "ast_hash": "25ccec0c67f1d0788e9967da5d444bb3",
+    "semantic_hash": ""
+  },
+  "backend/domain_knowledge/products/monitors.md": {
+    "mtime": 1791035370.745548,
+    "ast_hash": "eb2b6d29d6ee75320482632076f8b510",
+    "semantic_hash": ""
+  },
+  "backend/domain_knowledge/products/networking.md": {
+    "mtime": 1791035370.745548,
+    "ast_hash": "7a1423ac2fa1f094be1805280dcbb548",
+    "semantic_hash": ""
+  },
+  "backend/domain_knowledge/products/smartphones.md": {
+    "mtime": 1791035370.745548,
+    "ast_hash": "f7d58025f0c465f49255c1f08a91531f",
+    "semantic_hash": ""
+  },
+  "backend/domain_knowledge/products/smartwatches.md": {
+    "mtime": 1791035370.7486517,
+    "ast_hash": "a0d5ff3c5b74efac74bbbf1479dd1400",
+    "semantic_hash": ""
+  },
+  "backend/domain_knowledge/products/speakers.md": {
+    "mtime": 1791035370.7486517,
+    "ast_hash": "349071019c273434cb0a3a30a810ad3f",
+    "semantic_hash": ""
+  },
+  "backend/domain_knowledge/products/tablets.md": {
+    "mtime": 1791035370.7486517,
+    "ast_hash": "3f461c9a0a7c64522cdfad18287ff3ce",
+    "semantic_hash": ""
+  },
+  "backend/domain_knowledge/schema/database_ontology.md": {
+    "mtime": 1791037801.078303,
+    "ast_hash": "0cd71cd31a9901c65f232b6abe7cd2a2",
     "semantic_hash": ""
   }
 }
