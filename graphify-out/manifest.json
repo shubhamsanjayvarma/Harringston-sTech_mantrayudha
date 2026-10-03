@@ -5,8 +5,8 @@
     "semantic_hash": ""
   },
   ".agents/AGENTS.md": {
-    "mtime": 1789371094.1444404,
-    "ast_hash": "2d7c42c10b1277215a5865a976d7dd80",
+    "mtime": 1790966965.087746,
+    "ast_hash": "f6703a8e252d8f58a691933ff6049ba6",
     "semantic_hash": ""
   },
   ".agents/rules/graphify.md": {
@@ -42,11 +42,6 @@
   ".agents/skills/context-engineering/SKILL.md": {
     "mtime": 1789243345.9699466,
     "ast_hash": "6f2c69b1d24c974b4f9ca33b9ba0dea8",
-    "semantic_hash": ""
-  },
-  ".agents/skills/cyber-security-frameworks/SKILL.md": {
-    "mtime": 1789243345.9699466,
-    "ast_hash": "6cab85a4c414611a706fe8056c49aae3",
     "semantic_hash": ""
   },
   ".agents/skills/debugging-and-error-recovery/SKILL.md": {
@@ -210,18 +205,8 @@
     "semantic_hash": ""
   },
   ".pre-commit-config.yaml": {
-    "mtime": 1789243346.0189824,
-    "ast_hash": "694d24180a4f5732c53e3e583bd858ed",
-    "semantic_hash": ""
-  },
-  "discovery-agent-spec.md": {
-    "mtime": 1789243346.0189824,
-    "ast_hash": "86db0f1c5f3bd547f4b2b5e3266c1762",
-    "semantic_hash": ""
-  },
-  "system_design_notes.md": {
-    "mtime": 1789243346.0997162,
-    "ast_hash": "05a45ed1e5d4512f65d8e99e54db2093",
+    "mtime": 1790965935.5993702,
+    "ast_hash": "4f822c740debfc9ced7421c3bae9994d",
     "semantic_hash": ""
   },
   ".agents/rules/context.md": {
@@ -230,78 +215,18 @@
     "semantic_hash": ""
   },
   ".agents/rules/CONTEXT.md": {
-    "mtime": 1789371109.7657597,
-    "ast_hash": "57b4ed0de26905b062fea59fe14f5f80",
+    "mtime": 1790965812.274731,
+    "ast_hash": "fe91315a228fda059046a97edca8bc24",
     "semantic_hash": ""
   },
   "spec/README.md": {
-    "mtime": 1789243346.0521123,
-    "ast_hash": "8c3956facaba4c563e133b78e4a252ed",
+    "mtime": 1790966950.1717515,
+    "ast_hash": "043d991e159030abff97bb412fd1cdd1",
     "semantic_hash": ""
   },
   "spec_universal/product_requirements_document_template.md": {
     "mtime": 1789243346.0542336,
     "ast_hash": "d3445039742f59b1e8be764db4461329",
-    "semantic_hash": ""
-  },
-  "spec_universal/production_software_engineering_pillars_and_gap_analysis.md": {
-    "mtime": 1789243346.0542336,
-    "ast_hash": "e9837033f37583728b9be25791c93f77",
-    "semantic_hash": ""
-  },
-  "spec_universal/second_brain_ai_operating_system_blueprint.md": {
-    "mtime": 1789243346.0542336,
-    "ast_hash": "a59dc3b1f9510567034ee92994f0ae96",
-    "semantic_hash": ""
-  },
-  "spec_universal/system_design/00_system_design_routing_and_navigation_guide.md": {
-    "mtime": 1789370978.3337367,
-    "ast_hash": "5c71c01f61018ee9c122d7d3e7e87c83",
-    "semantic_hash": ""
-  },
-  "spec_universal/system_design/01_non_negotiable_rules_and_principles.md": {
-    "mtime": 1789243346.0846086,
-    "ast_hash": "ddf7c828662c23c04c22eb5808a7b43d",
-    "semantic_hash": ""
-  },
-  "spec_universal/system_design/02_high_level_design_and_distributed_systems.md": {
-    "mtime": 1789243346.0846086,
-    "ast_hash": "8a0d71a025cab4f1ded794940af73892",
-    "semantic_hash": ""
-  },
-  "spec_universal/system_design/03_low_level_design_and_object_oriented_architecture.md": {
-    "mtime": 1789243346.0889502,
-    "ast_hash": "fbbc907a8f983b8fb86858abd96136d0",
-    "semantic_hash": ""
-  },
-  "spec_universal/system_design/04_system_archetypes_and_decision_matrices.md": {
-    "mtime": 1789243346.0889502,
-    "ast_hash": "14fff0473a856a4e2bb1a575685653b6",
-    "semantic_hash": ""
-  },
-  "spec_universal/system_design/05_system_design_verification_and_testing_playbook.md": {
-    "mtime": 1789370978.3337367,
-    "ast_hash": "9a0deca8c62f08e89120dd67c2f5841c",
-    "semantic_hash": ""
-  },
-  "spec_universal/system_design/06_observability_telemetry_and_reliability_engineering.md": {
-    "mtime": 1789243346.0933554,
-    "ast_hash": "0599390727e0e03ec76c8d04f0612ff5",
-    "semantic_hash": ""
-  },
-  "spec_universal/system_design/07_deployment_operations_governance_and_finops.md": {
-    "mtime": 1789243346.0933554,
-    "ast_hash": "cd6ba8c55cb14eb2964aacca0335b63c",
-    "semantic_hash": ""
-  },
-  "spec_universal/system_design/README.md": {
-    "mtime": 1789243346.0953696,
-    "ast_hash": "8ee7cf16a07bd559def3cd811abcccf3",
-    "semantic_hash": ""
-  },
-  "spec_universal/tdd_4tier_testing_template.md": {
-    "mtime": 1789243346.0953696,
-    "ast_hash": "3ef3b55cfbd3ef92cfe9eda573a340d7",
     "semantic_hash": ""
   },
   "spec_universal/tech_stack_prd_template.md": {
@@ -310,13 +235,8 @@
     "semantic_hash": ""
   },
   "spec_universal/universal_prd_and_task_plan_requirements.md": {
-    "mtime": 1789243346.0993898,
-    "ast_hash": "b391680c76515003866b78eb023caeda",
-    "semantic_hash": ""
-  },
-  "spec_universal/second_brain_ai_operating_system_blueprint.pdf": {
-    "mtime": 1789243346.0824237,
-    "ast_hash": "77583f05f4773b97d37d67793d0adf2f",
+    "mtime": 1790966934.8948772,
+    "ast_hash": "0b6673e4d1eda1a4c6f89cab2f5ae348",
     "semantic_hash": ""
   },
   "spec_universal/project_architecture_initialization.md": {
@@ -325,18 +245,18 @@
     "semantic_hash": ""
   },
   ".githooks/pre-commit": {
-    "mtime": 1789370978.3327363,
-    "ast_hash": "6b98057298a02ab047b984cc63ff9b13",
+    "mtime": 1789371251.0951102,
+    "ast_hash": "49281921a7dc36518db08b94cdb3130f",
     "semantic_hash": ""
   },
   ".agents/hooks.json": {
-    "mtime": 1789286922.1026607,
-    "ast_hash": "f340d866619f9cad4e69954d11f425a2",
+    "mtime": 1790966795.2719834,
+    "ast_hash": "8e1cd600504f8837e3ea3d9e36f58079",
     "semantic_hash": ""
   },
   ".agents/scripts/destructive_command_guard.py": {
-    "mtime": 1789370978.3327363,
-    "ast_hash": "cce5273638acab741c79cdc7cefd01d4",
+    "mtime": 1789371251.0941112,
+    "ast_hash": "559bce7e88f9780ff3e57820e9fef916",
     "semantic_hash": ""
   },
   "dump/README.md": {
@@ -345,18 +265,18 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1789370978.3347363,
-    "ast_hash": "9c52314a05c23e9b81ab768c5fd905dc",
+    "mtime": 1790966810.521783,
+    "ast_hash": "5025acde9d3b44a383e72b14145382b2",
     "semantic_hash": ""
   },
   "spec_universal/hackathon_pipeline/00_master_hackathon_operating_system.md": {
-    "mtime": 1789286922.1191318,
-    "ast_hash": "a74bf72de6bd61dfb491077e49575202",
+    "mtime": 1790965846.1134987,
+    "ast_hash": "2db1aedf2478ecceb4a64e868d2e9135",
     "semantic_hash": ""
   },
   "spec_universal/hackathon_pipeline/01_idea_discovery_and_scoring.md": {
-    "mtime": 1789286922.1201315,
-    "ast_hash": "84d53e6ff070d3241d13a6271e569ca6",
+    "mtime": 1790965908.5529003,
+    "ast_hash": "d4e85a82e37d63e36658f5595a13ef5d",
     "semantic_hash": ""
   },
   "spec_universal/hackathon_pipeline/02_competitor_teardown_and_sentiment_mining.md": {
@@ -365,13 +285,13 @@
     "semantic_hash": ""
   },
   "spec_universal/hackathon_pipeline/03_mvp_scoping_and_demo_razor.md": {
-    "mtime": 1789286922.1299922,
-    "ast_hash": "da217af8dfa0de543886a72da6f565d5",
+    "mtime": 1790966845.0820293,
+    "ast_hash": "801cfe601e4a2738a325880ca6612616",
     "semantic_hash": ""
   },
   "spec_universal/hackathon_pipeline/04_lean_7layer_architecture.md": {
-    "mtime": 1789286922.1309936,
-    "ast_hash": "b6c7d496617132aa1b538658f9342f08",
+    "mtime": 1790966874.3403068,
+    "ast_hash": "167f52ba19bc0fe346e660baaa1dab34",
     "semantic_hash": ""
   },
   "spec_universal/hackathon_pipeline/05_rapid_ui_scaffolding.md": {
@@ -379,19 +299,14 @@
     "ast_hash": "114695bfd0a0bad1d220317bc23351ce",
     "semantic_hash": ""
   },
-  "spec_universal/hackathon_pipeline/06_lean_4tier_tdd_and_security.md": {
-    "mtime": 1789286922.1325986,
-    "ast_hash": "3a79115a02d79d2ba46d2efe1c84227a",
-    "semantic_hash": ""
-  },
   "spec_universal/hackathon_pipeline/07_demo_pitch_and_judge_proofing.md": {
-    "mtime": 1789286922.1325986,
-    "ast_hash": "2e6bab48df5a6976c77679fd68aac315",
+    "mtime": 1790966884.6058784,
+    "ast_hash": "b1ff4df9e4ebebccd02dff4b3d433c83",
     "semantic_hash": ""
   },
   "spec_universal/hackathon_pipeline/README.md": {
-    "mtime": 1789286922.133606,
-    "ast_hash": "7fe3f54b5e8c7781005c10b47d82bf7d",
+    "mtime": 1790966822.8284407,
+    "ast_hash": "f2039fd25a56e58281594cc806036b5f",
     "semantic_hash": ""
   },
   ".agents/skills/impeccable/scripts/command-metadata.json": {
@@ -442,56 +357,6 @@
   ".codex/hooks.json": {
     "mtime": 1789319876.6881416,
     "ast_hash": "e42003b8ea9ac82a95a5cf62789020c6",
-    "semantic_hash": ""
-  },
-  ".github/hooks/impeccable.json": {
-    "mtime": 1789319876.6936617,
-    "ast_hash": "36956644301030de928f1d5a95593714",
-    "semantic_hash": ""
-  },
-  ".github/skills/impeccable/scripts/command-metadata.json": {
-    "mtime": 1789319876.7313342,
-    "ast_hash": "bbc144be80de0ee05449928525f42807",
-    "semantic_hash": ""
-  },
-  ".github/skills/impeccable/scripts/data/font-index-failures.json": {
-    "mtime": 1789319876.7329664,
-    "ast_hash": "5b4fd9d1631c390b9c5883d951b03983",
-    "semantic_hash": ""
-  },
-  ".github/skills/impeccable/scripts/data/font-index.json": {
-    "mtime": 1789319876.742751,
-    "ast_hash": "4a4426c85ec12df1d9a487a39d656ff4",
-    "semantic_hash": ""
-  },
-  ".github/skills/impeccable/scripts/impeccable": {
-    "mtime": 1789319876.7439075,
-    "ast_hash": "f2fd10849e3dc2f9af15535c28470ad4",
-    "semantic_hash": ""
-  },
-  ".github/skills/impeccable/scripts/live-browser-dom.js": {
-    "mtime": 1789319876.7471852,
-    "ast_hash": "7e050dcec2e475b566fdeae1a7317e58",
-    "semantic_hash": ""
-  },
-  ".github/skills/impeccable/scripts/live-browser-ignores.js": {
-    "mtime": 1789319876.7471852,
-    "ast_hash": "e08d31e97007cc803af9a5f0f6a39012",
-    "semantic_hash": ""
-  },
-  ".github/skills/impeccable/scripts/live-browser-session.js": {
-    "mtime": 1789319876.7488773,
-    "ast_hash": "6d6d703be4ba100de389535ba2893fcd",
-    "semantic_hash": ""
-  },
-  ".github/skills/impeccable/scripts/live-browser.js": {
-    "mtime": 1789319876.7548046,
-    "ast_hash": "733a60e8b4a7ce65300cf8d680358522",
-    "semantic_hash": ""
-  },
-  ".github/skills/impeccable/scripts/modern-screenshot.umd.js": {
-    "mtime": 1789319876.7565126,
-    "ast_hash": "c6afaf6ebceb162206f6a2e5b0ed653c",
     "semantic_hash": ""
   },
   ".agents/skills/impeccable/SKILL.md": {
@@ -699,229 +564,24 @@
     "ast_hash": "62118ec2ee136b71edcf66bce6f4705c",
     "semantic_hash": ""
   },
-  ".github/agents/impeccable-asset-producer.agent.md": {
-    "mtime": 1789319876.689103,
-    "ast_hash": "f21141a2f3bfb436265887021185aa1a",
-    "semantic_hash": ""
-  },
-  ".github/agents/impeccable-documenter.agent.md": {
-    "mtime": 1789319876.689103,
-    "ast_hash": "5cbf4f2f0b19974bb15d393396712e2d",
-    "semantic_hash": ""
-  },
-  ".github/agents/impeccable-finish-reviewer.agent.md": {
-    "mtime": 1789319876.6904662,
-    "ast_hash": "38d044a330272cde51dd8bf932045faf",
-    "semantic_hash": ""
-  },
-  ".github/agents/impeccable-manual-edit-applier.agent.md": {
-    "mtime": 1789319876.691985,
-    "ast_hash": "73522ebc4a22bd578a8b0c6d96c4dddb",
-    "semantic_hash": ""
-  },
-  ".github/skills/impeccable/SKILL.md": {
-    "mtime": 1789319876.6953583,
-    "ast_hash": "4151daa957f1991d228eb5e77bfed4f0",
-    "semantic_hash": ""
-  },
-  ".github/skills/impeccable/reference/adapt.md": {
-    "mtime": 1789319876.696367,
-    "ast_hash": "40e19459017df6999e2d0e3359edb4cd",
-    "semantic_hash": ""
-  },
-  ".github/skills/impeccable/reference/adapt.native.md": {
-    "mtime": 1789319876.696367,
-    "ast_hash": "9299acb931f92ba1593df9a07cda849e",
-    "semantic_hash": ""
-  },
-  ".github/skills/impeccable/reference/android.md": {
-    "mtime": 1789319876.698074,
-    "ast_hash": "c24b60e4c799a798519995dd2701eb74",
-    "semantic_hash": ""
-  },
-  ".github/skills/impeccable/reference/animate.md": {
-    "mtime": 1789319876.698074,
-    "ast_hash": "ca551c65d0fea883f782ad3ce9f659d3",
-    "semantic_hash": ""
-  },
-  ".github/skills/impeccable/reference/audit.md": {
-    "mtime": 1789319876.701409,
-    "ast_hash": "2ba9598c063cdfbb4612866bb03ed42d",
-    "semantic_hash": ""
-  },
-  ".github/skills/impeccable/reference/audit.native.md": {
-    "mtime": 1789319876.701409,
-    "ast_hash": "3e40fe4b52c52c1b2518e0994d9436dc",
-    "semantic_hash": ""
-  },
-  ".github/skills/impeccable/reference/bolder.md": {
-    "mtime": 1789319876.7030323,
-    "ast_hash": "1753e09d776fa1eb47e2826124c93f70",
-    "semantic_hash": ""
-  },
-  ".github/skills/impeccable/reference/clarify.md": {
-    "mtime": 1789319876.7039917,
-    "ast_hash": "3763b3dbb5e5d9f00b4d82f00664e3b4",
-    "semantic_hash": ""
-  },
-  ".github/skills/impeccable/reference/colorize.md": {
-    "mtime": 1789319876.7046936,
-    "ast_hash": "8ce0379650affa0d86fcd85c5b10379a",
-    "semantic_hash": ""
-  },
-  ".github/skills/impeccable/reference/craft-floor.md": {
-    "mtime": 1789319876.7057896,
-    "ast_hash": "122583c0e04f9df8e15f1deaaf4bdd29",
-    "semantic_hash": ""
-  },
-  ".github/skills/impeccable/reference/craft.md": {
-    "mtime": 1789319876.7057896,
-    "ast_hash": "d27896066a5b2752e31873c3772e2803",
-    "semantic_hash": ""
-  },
-  ".github/skills/impeccable/reference/critique.md": {
-    "mtime": 1789319876.7075655,
-    "ast_hash": "00a51b8b51dde48ebe37ba43e1c33adb",
-    "semantic_hash": ""
-  },
-  ".github/skills/impeccable/reference/degraded/asset-producer.md": {
-    "mtime": 1789319876.7092814,
-    "ast_hash": "cb536d2555ff9f2222a6fd653b701df8",
-    "semantic_hash": ""
-  },
-  ".github/skills/impeccable/reference/degraded/documenter.md": {
-    "mtime": 1789319876.7099366,
-    "ast_hash": "f6584090b949535f344e8c3a0d2e3653",
-    "semantic_hash": ""
-  },
-  ".github/skills/impeccable/reference/degraded/finish-reviewer.md": {
-    "mtime": 1789319876.7106247,
-    "ast_hash": "0268bb33f8a91f08d2ac952a08811e7b",
-    "semantic_hash": ""
-  },
-  ".github/skills/impeccable/reference/degraded/manual-edit-applier.md": {
-    "mtime": 1789319876.7110145,
-    "ast_hash": "b0c19aba2d1bc52d22f6758cef85fe49",
-    "semantic_hash": ""
-  },
-  ".github/skills/impeccable/reference/delight.md": {
-    "mtime": 1789319876.712145,
-    "ast_hash": "a32b99a19de5c15fa3df42f6f01396d5",
-    "semantic_hash": ""
-  },
-  ".github/skills/impeccable/reference/distill.md": {
-    "mtime": 1789319876.712145,
-    "ast_hash": "00c9096b17b2a30f3ff80d475058bff8",
-    "semantic_hash": ""
-  },
-  ".github/skills/impeccable/reference/doctor.md": {
-    "mtime": 1789319876.7138875,
-    "ast_hash": "5482e37fd3e2c36f99f2d2009311bd97",
-    "semantic_hash": ""
-  },
-  ".github/skills/impeccable/reference/document.md": {
-    "mtime": 1789319876.7138875,
-    "ast_hash": "929ff8be2cd5f22fbf1784372c0b331b",
-    "semantic_hash": ""
-  },
-  ".github/skills/impeccable/reference/extract.md": {
-    "mtime": 1789319876.7155392,
-    "ast_hash": "0554f25ad40a7f6b60abf9febe3999a6",
-    "semantic_hash": ""
-  },
-  ".github/skills/impeccable/reference/harden.md": {
-    "mtime": 1789319876.715976,
-    "ast_hash": "059c6e1372173292961455287692f56b",
-    "semantic_hash": ""
-  },
-  ".github/skills/impeccable/reference/hooks.md": {
-    "mtime": 1789319876.7169867,
-    "ast_hash": "ccc2dd34eb54f8df7f8d426cc74d8acf",
-    "semantic_hash": ""
-  },
-  ".github/skills/impeccable/reference/init.md": {
-    "mtime": 1789319876.7169867,
-    "ast_hash": "002b1950e9ec515ad6969106e5d93e42",
-    "semantic_hash": ""
-  },
-  ".github/skills/impeccable/reference/ios.md": {
-    "mtime": 1789319876.7186515,
-    "ast_hash": "91ad1ec9152100168db6ec1079c0ad6b",
-    "semantic_hash": ""
-  },
-  ".github/skills/impeccable/reference/layout.md": {
-    "mtime": 1789319876.7194195,
-    "ast_hash": "aacf614007f90e952edb15980d8c8b91",
-    "semantic_hash": ""
-  },
-  ".github/skills/impeccable/reference/live-setup.md": {
-    "mtime": 1789319876.7194195,
-    "ast_hash": "6805859c01734521e714c5a0c4cc8a80",
-    "semantic_hash": ""
-  },
-  ".github/skills/impeccable/reference/live.md": {
-    "mtime": 1789319876.7207897,
-    "ast_hash": "a1639172f9323e6ca718c3de322fe57e",
-    "semantic_hash": ""
-  },
-  ".github/skills/impeccable/reference/new-work.md": {
-    "mtime": 1789319876.7218025,
-    "ast_hash": "53e97094820752e7912eb47fc18fe626",
-    "semantic_hash": ""
-  },
-  ".github/skills/impeccable/reference/onboard.md": {
-    "mtime": 1789319876.7218025,
-    "ast_hash": "b26a00ed39ddec9588f99ca40898e73d",
-    "semantic_hash": ""
-  },
-  ".github/skills/impeccable/reference/operate.md": {
-    "mtime": 1789319876.7235055,
-    "ast_hash": "e1c02f0c6823fef3c2a7b0c50aa9da04",
-    "semantic_hash": ""
-  },
-  ".github/skills/impeccable/reference/optimize.md": {
-    "mtime": 1789319876.7235055,
-    "ast_hash": "9d94e9ddef2d927ef5b0e34688eb0e2d",
-    "semantic_hash": ""
-  },
-  ".github/skills/impeccable/reference/overdrive.md": {
-    "mtime": 1789319876.7250838,
-    "ast_hash": "4a71cc6eb09ce186bc7c0d9af800a5f0",
-    "semantic_hash": ""
-  },
-  ".github/skills/impeccable/reference/polish.md": {
-    "mtime": 1789319876.7250838,
-    "ast_hash": "4feb5292bb4a9f39d46407a97990a5af",
-    "semantic_hash": ""
-  },
-  ".github/skills/impeccable/reference/quieter.md": {
-    "mtime": 1789319876.72715,
-    "ast_hash": "89c1925dc46ea5891cd09fcff1055eed",
-    "semantic_hash": ""
-  },
-  ".github/skills/impeccable/reference/routing.md": {
-    "mtime": 1789319876.72715,
-    "ast_hash": "17ea953d4aa396289ad13feebdabcb91",
-    "semantic_hash": ""
-  },
-  ".github/skills/impeccable/reference/shape.md": {
-    "mtime": 1789319876.7286334,
-    "ast_hash": "6fdc5a047039048759c1c40d21297f37",
-    "semantic_hash": ""
-  },
-  ".github/skills/impeccable/reference/typeset.md": {
-    "mtime": 1789319876.729648,
-    "ast_hash": "9386bc3ef8069d2e5121c3bf1963d25d",
-    "semantic_hash": ""
-  },
-  ".github/skills/impeccable/reference/visualize.md": {
-    "mtime": 1789319876.729648,
-    "ast_hash": "c838b39d720624c3ac40c6b559d1eaeb",
-    "semantic_hash": ""
-  },
   "spec_universal/frontend_design_bible.md": {
-    "mtime": 1789328543.993464,
-    "ast_hash": "8bb657a42f5079af2bc1d8a452963ca7",
+    "mtime": 1790966899.2597966,
+    "ast_hash": "982bdd2291860c35bbbfff2525c22c8a",
+    "semantic_hash": ""
+  },
+  "spec_universal/hackathon_pipeline/06_golden_path_smoke_verification.md": {
+    "mtime": 1790965828.270814,
+    "ast_hash": "0d55623cbaf1e5733595863177b41886",
+    "semantic_hash": ""
+  },
+  "spec_universal/hackathon_smoke_verification_template.md": {
+    "mtime": 1790965852.6039927,
+    "ast_hash": "7080fd919824c583ed34e02fb3e1ed03",
+    "semantic_hash": ""
+  },
+  "spec_universal/hackathon_system_architecture.md": {
+    "mtime": 1790965878.1578531,
+    "ast_hash": "73d3a91aae6d7a29a5cab689f7834aba",
     "semantic_hash": ""
   }
 }
