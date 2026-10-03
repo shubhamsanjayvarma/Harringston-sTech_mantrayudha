@@ -2,11 +2,13 @@
 
 Provides authoritative, zero-hallucination answers to general customer queries
 regarding delivery timelines, return windows, restocking fees, cancellations,
-payments, and customer support, grounded in the NovaMart Policy Handbook.
+payments, warranties, exchanges, and product catalog searches, grounded in the
+NovaMart Policy Handbook and SQLite database.
 """
 
 import re
 from typing import Any, Dict, Optional, Tuple
+from backend.db.connection import fetch_all
 from backend.engine.workflow_graph import TerminalMove
 
 
@@ -16,7 +18,7 @@ def resolve_general_policy_query(
     active_order: Optional[Dict[str, Any]] = None,
     customer_record: Optional[Dict[str, Any]] = None,
 ) -> Optional[Tuple[TerminalMove, str]]:
-    """Evaluates whether the customer message is a general policy or FAQ inquiry.
+    """Evaluates whether the customer message is a general policy, product, or FAQ inquiry.
     
     Returns:
         Optional tuple of (TerminalMove, response_text). Returns None if not a recognized FAQ.
@@ -27,9 +29,9 @@ def resolve_general_policy_query(
     # 1. DELIVERY TIMELINES & SHIPPING CHARGES
     # -------------------------------------------------------------------------
     if re.search(
-        r"\b(how\s+many\s+days|how\s+long|delivery\s+time|when\s+will\s+(it|my|orders?)\s+deliver|"
-        r"transit\s+time|delivery\s+estimate|delivery\s+duration|how\s+fast|shipping\s+time|"
-        r"shipping\s+cost|shipping\s+charge|delivery\s+fee|free\s+shipping)\b",
+        r"\b(how\s+many\s+days|how\s+long|how\s+fast|"
+        r"(delivery|shipping|transit)\s+(time|times|duration|timeline|timelines|estimate|speed|delay|charges?|fees?|cost)|"
+        r"when\s+will\s+.*(deliver|arrive|reach)|free\s+shipping)\b",
         text,
         re.IGNORECASE,
     ):
@@ -68,7 +70,8 @@ def resolve_general_policy_query(
     # -------------------------------------------------------------------------
     if re.search(
         r"\b(return\s+policy|how\s+(do|can)\s+i\s+return|return\s+window|return\s+period|"
-        r"how\s+many\s+days\s+to\s+return|can\s+i\s+return|returnable|restocking\s+fee)\b",
+        r"how\s+many\s+days\s+to\s+return|can\s+i\s+return|returnable|restocking\s+fee|"
+        r"return\s+rules?|return\s+guidelines?)\b",
         text,
         re.IGNORECASE,
     ) and not re.search(r"\b(ORD-\d{6}|NM-?\d{4,6})\b", text, re.IGNORECASE):
@@ -86,11 +89,29 @@ def resolve_general_policy_query(
         )
 
     # -------------------------------------------------------------------------
-    # 3. CANCELLATION POLICY
+    # 3. REPLACEMENT & EXCHANGE POLICY
+    # -------------------------------------------------------------------------
+    if re.search(
+        r"\b(exchange|replacement|replace\s+(my\s+)?(item|product|order)|can\s+i\s+exchange|"
+        r"swap\s+for|exchange\s+policy|replacement\s+policy)\b",
+        text,
+        re.IGNORECASE,
+    ) and not re.search(r"\b(ORD-\d{6}|NM-?\d{4,6})\b", text, re.IGNORECASE):
+        return (
+            TerminalMove.ANSWER,
+            "NovaMart Replacement & Exchange Policy:\n"
+            "• **Defective or Damaged Products**: Eligible for a free 1-to-1 replacement within **10 days** of delivery upon sharing photo/video proof.\n"
+            "• **Size / Color Variants**: For lifestyle products, doorstep exchange is supported subject to stock availability in your dark store.\n"
+            "• **Electronics**: If an exact replacement unit is unavailable, an immediate 100% refund to your original payment method will be issued.\n\n"
+            "To request a replacement, please provide your Order ID and describe the reason!",
+        )
+
+    # -------------------------------------------------------------------------
+    # 4. CANCELLATION POLICY
     # -------------------------------------------------------------------------
     if re.search(
         r"\b(cancellation\s+policy|how\s+(do|can)\s+i\s+cancel|can\s+i\s+cancel|cancel\s+my\s+order|"
-        r"cancel\s+policy|cancellation\s+charges?|cancel\s+fee)\b",
+        r"cancel\s+policy|cancellation\s+charges?|cancel\s+fee|cancellation\s+rules?)\b",
         text,
         re.IGNORECASE,
     ) and not re.search(r"\b(ORD-\d{6}|NM-?\d{4,6})\b", text, re.IGNORECASE):
@@ -104,12 +125,12 @@ def resolve_general_policy_query(
         )
 
     # -------------------------------------------------------------------------
-    # 4. REFUND TIMELINES & DESTINATION
+    # 5. REFUND TIMELINES & DESTINATION
     # -------------------------------------------------------------------------
     if re.search(
         r"\b(refund\s+policy|when\s+will\s+i\s+get\s+my\s+refund|how\s+long\s+(does|for)\s+refund|"
         r"refund\s+timeline|refund\s+destination|money\s+back\s+time|refund\s+to\s+bank|"
-        r"refund\s+to\s+upi|refund\s+method)\b",
+        r"refund\s+to\s+upi|refund\s+method|how\s+do\s+refunds\s+work)\b",
         text,
         re.IGNORECASE,
     ) and not re.search(r"\b(ORD-\d{6}|NM-?\d{4,6})\b", text, re.IGNORECASE):
@@ -125,20 +146,23 @@ def resolve_general_policy_query(
         )
 
     # -------------------------------------------------------------------------
-    # 5. PAYMENT METHODS & MONEY DEDUCTED ISSUES
+    # 6. PAYMENT METHODS & MONEY / BILLING DEDUCTED ISSUES
     # -------------------------------------------------------------------------
     if re.search(
-        r"\b(payment\s+methods?|cod|cash\s+on\s+delivery|money\s+deducted|payment\s+failed|"
-        r"payment\s+pending|deducted\s+but\s+not\s+placed|accepted\s+payments?)\b",
+        r"\b(payment\s+methods?|cod|cash\s+on\s+delivery|money\s+deducted|payment\s+deducted|"
+        r"amount\s+deducted|account\s+debited|debited\s+from|payment\s+failed|payment\s+pending|"
+        r"deducted\s+but\s+not\s+placed|accepted\s+payments?|charged\s+twice|double\s+charge|"
+        r"why\s+was\s+(i\s+charged|my\s+payment\s+deducted|money\s+deducted))\b",
         text,
         re.IGNORECASE,
     ):
-        if re.search(r"\b(deducted|pending|debited|failed)\b", text, re.IGNORECASE):
+        if re.search(r"\b(deducted|pending|debited|failed|charged|twice|double)\b", text, re.IGNORECASE):
             return (
                 TerminalMove.ANSWER,
-                "Payment Deduction Guidelines:\n"
+                "Payment & Billing Guidelines:\n"
                 "• **Pending Bank Confirmations**: Banks can take up to 24 hours to confirm payment settlement. If your order was placed under 24 hours ago, please allow a short window for confirmation.\n"
-                "• **Failed / Unconfirmed Transactions**: If payment status remains pending after 24 hours or fails completely, your bank will automatically reverse the full amount within 5–7 business days.\n\n"
+                "• **Failed / Unconfirmed Transactions**: If payment status remains pending after 24 hours or fails completely, your bank will automatically reverse the full amount within 5–7 business days.\n"
+                "• **Duplicate Charges**: If an amount was deducted twice, the duplicate capture will be auto-refunded by our payment gateway within 48 hours.\n\n"
                 "If you need us to trace a specific failed transaction, please share your registered mobile number or Order ID.",
             )
         return (
@@ -152,7 +176,44 @@ def resolve_general_policy_query(
         )
 
     # -------------------------------------------------------------------------
-    # 6. ADDRESS CHANGE RULES
+    # 7. WARRANTY & DEFECTIVE HARDWARE
+    # -------------------------------------------------------------------------
+    if re.search(
+        r"\b(warranty|guarantee|warranty\s+period|how\s+does\s+warranty\s+work|"
+        r"brand\s+warranty|repair\s+policy|warranty\s+claim|service\s+center)\b",
+        text,
+        re.IGNORECASE,
+    ):
+        return (
+            TerminalMove.ANSWER,
+            "NovaMart Product Warranty & Service:\n"
+            "• **Official Brand Warranty**: All electronic products and appliances sold on NovaMart carry official manufacturer warranties (typically 12 to 24 months).\n"
+            "• **First 10 Days**: Direct doorstep replacement or refund by NovaMart for defects or transit damage (with photo verification).\n"
+            "• **After 10 Days**: Servicing is handled by brand-authorized service centers nationwide using your official NovaMart invoice.\n"
+            "• **Invoice Download**: Your GST tax invoice is accessible anytime under **My Account > Orders**.\n\n"
+            "Share your Order ID or product name if you need warranty assistance!",
+        )
+
+    # -------------------------------------------------------------------------
+    # 8. DISCOUNTS, OFFERS & COUPONS
+    # -------------------------------------------------------------------------
+    if re.search(
+        r"\b(offers?|discounts?|coupons?|promos?|promo\s+code|deals?|cashback|sale\b)\b",
+        text,
+        re.IGNORECASE,
+    ):
+        return (
+            TerminalMove.ANSWER,
+            "NovaMart Active Offers & Discounts: 🏷️\n"
+            "• **NOVA10**: 10% off on your first grocery & essentials purchase (up to ₹200).\n"
+            "• **TECHFEST**: Flat ₹1,500 instant discount on laptops & monitors using HDFC/ICICI cards.\n"
+            "• **FREEDEL**: Free shipping on all orders above ₹1,000.\n"
+            "• **Loyalty Rewards**: Earn 1 Reward Coin for every ₹100 spent. Redeem coins at checkout for instant cash discounts!\n\n"
+            "Visit our **Offers** page in the top menu to view all active deals.",
+        )
+
+    # -------------------------------------------------------------------------
+    # 9. ADDRESS CHANGE RULES
     # -------------------------------------------------------------------------
     if re.search(
         r"\b(can\s+i\s+change\s+(my\s+)?address|change\s+delivery\s+address|update\s+shipping\s+address|"
@@ -169,7 +230,7 @@ def resolve_general_policy_query(
         )
 
     # -------------------------------------------------------------------------
-    # 7. HOW TO TRACK ORDERS
+    # 10. HOW TO TRACK ORDERS
     # -------------------------------------------------------------------------
     if re.search(
         r"\b(how\s+(do|can)\s+i\s+track|track\s+order|tracking\s+my\s+order|where\s+to\s+track)\b",
@@ -186,11 +247,11 @@ def resolve_general_policy_query(
         )
 
     # -------------------------------------------------------------------------
-    # 8. HUMAN AGENT / CUSTOMER CARE HOTLINE
+    # 11. HUMAN AGENT / CUSTOMER CARE HOTLINE
     # -------------------------------------------------------------------------
     if re.search(
         r"\b(talk\s+to\s+(a\s+)?human|human\s+agent|speak\s+with\s+a\s+person|customer\s+care\s+number|"
-        r"toll\s*free|phone\s+number|call\s+support|contact\s+support|helpline)\b",
+        r"toll\s*free|phone\s+number|call\s+support|contact\s+support|helpline|customer\s+support)\b",
         text,
         re.IGNORECASE,
     ):
@@ -203,22 +264,51 @@ def resolve_general_policy_query(
         )
 
     # -------------------------------------------------------------------------
-    # 9. WARRANTY & DEFECTIVE HARDWARE
+    # 12. PRODUCT CATALOG SEARCH & RECOMMENDATIONS
     # -------------------------------------------------------------------------
-    if re.search(
-        r"\b(warranty\s+policy|how\s+does\s+warranty\s+work|brand\s+warranty|repair\s+policy|"
-        r"warranty\s+claim|service\s+center)\b",
-        text,
-        re.IGNORECASE,
-    ):
-        return (
-            TerminalMove.ANSWER,
-            "NovaMart Product Warranty & Service:\n"
-            "• All electronics and appliances sold on NovaMart carry official manufacturer warranties (typically 12 to 24 months).\n"
-            "• **First 10 Days**: If your item arrives defective or damaged, NovaMart provides a direct doorstep return or replacement with photo verification.\n"
-            "• **After 10 Days**: Warranty service and repairs are supported by the brand's authorized service centers using your NovaMart GST invoice.\n\n"
-            "Share your Order ID or product name and I can check your warranty coverage and invoice details!",
-        )
+    # Must not intercept order-specific actions, returns, damage claims, or memory continuity
+    if re.search(r"\b(ORD-\d{6}|NM-?\d{4,6}|refund|return|cancel|damaged|broken|photo|sent|yesterday|crack|arrived|defective|bought|purchased|deliver)\b", text, re.IGNORECASE):
+        return None
+
+    catalog_keywords = [
+        "laptop", "laptops", "notebook",
+        "phone", "phones", "smartphone", "smartphones", "mobile",
+        "earbud", "earbuds", "tws",
+        "headphone", "headphones",
+        "camera", "cameras",
+        "monitor", "monitors",
+        "keyboard", "keyboards",
+        "mouse", "mice",
+        "tablet", "tablets", "ipad",
+        "smartwatch", "smartwatches", "watch",
+        "speaker", "speakers", "bluetooth speaker",
+        "gaming console", "accessories",
+        "groceries", "fruits", "vegetables"
+    ]
+    has_browsing_intent = bool(re.search(r"\b(do\s+you\s+(have|sell)|show\s+me|recommend|looking\s+for|what\s+products?|buy\s+a|price\s+of|catalog|search\s+for)\b", text, re.IGNORECASE))
+    matched_cat = [k for k in catalog_keywords if re.search(rf"\b{k}\b", text, re.IGNORECASE)]
+
+    if has_browsing_intent and (matched_cat or "product" in text):
+        term = matched_cat[0] if matched_cat else "laptop"
+        try:
+            prods = fetch_all(
+                "SELECT product_name, category, price, rating FROM products "
+                "WHERE category LIKE ? OR product_name LIKE ? "
+                "ORDER BY rating DESC, price ASC LIMIT 3",
+                (f"%{term}%", f"%{term}%"),
+            )
+            if prods:
+                lines = []
+                for p in prods:
+                    lines.append(f"• **{p['product_name']}** ({p['category']}): ₹{int(p['price']):,} • ⭐ {p['rating']}/5.0")
+                return (
+                    TerminalMove.ANSWER,
+                    f"Yes! Here are top-rated **{term.capitalize()}** available on NovaMart:\n"
+                    + "\n".join(lines)
+                    + f"\n\nYou can explore more options in the **{prods[0]['category']}** category in the top navigation bar or add them to your cart!"
+                )
+        except Exception:
+            pass
 
     # Not an FAQ pattern
     return None

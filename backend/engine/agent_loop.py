@@ -554,7 +554,7 @@ class NovaMartAgentLoop:
             return self._build_result(ctx, start_time)
 
         # Check for order status inquiry without explicit order ID
-        if re.search(r"\b(where\s+is\s+my\s+order|my\s+order\s+status|track\s+my\s+order|check\s+my\s+order|delivery\s+update)\b", sanitized, re.IGNORECASE):
+        if re.search(r"\b(where\s+is\s+(my\s+)?order|my\s+order\s+status|track\s+(my\s+)?order|check\s+(my\s+)?order|delivery\s+update|any\s+orders?)\b", sanitized, re.IGNORECASE):
             if active_order:
                 status = active_order.get("order_status")
                 oid = active_order.get("order_id")
@@ -568,17 +568,60 @@ class NovaMartAgentLoop:
                 else:
                     ctx.response_text = f"Your order {oid} is currently {status}. Our team is preparing your package for dispatch (Expected: {eta})."
                 return self._build_result(ctx, start_time)
+            else:
+                # Check recent orders on customer account
+                recent_orders = fetch_all(
+                    "SELECT order_id, order_status, total_amount, actual_delivery_date, order_date FROM orders WHERE customer_id = ? ORDER BY order_date DESC LIMIT 3",
+                    (customer_id,),
+                )
+                if recent_orders:
+                    ctx.terminal_move = TerminalMove.ANSWER
+                    lines = []
+                    for o in recent_orders:
+                        dt = o.get("actual_delivery_date") or o.get("order_date", "").split(" ")[0]
+                        lines.append(f"• **{o['order_id']}**: Status `{o['order_status']}` (Total: ₹{int(o['total_amount']):,}, {dt})")
+                    ctx.response_text = (
+                        "You don't have any in-flight packages right now. Here are your most recent orders:\n"
+                        + "\n".join(lines)
+                        + "\n\nIf you need help with returns, refunds, or details for any of these, just let me know the Order ID!"
+                    )
+                    return self._build_result(ctx, start_time)
+                else:
+                    ctx.terminal_move = TerminalMove.ANSWER
+                    ctx.response_text = "You do not have any active or previous orders on your NovaMart account yet. Once you place an order, you can track it live right here!"
+                    return self._build_result(ctx, start_time)
 
         # Check for friendly greeting
-        if re.search(r"^(hi|hello|hey|good\s+morning|good\s+afternoon|good\s+evening)\b", sanitized, re.IGNORECASE):
+        if re.search(r"^(hi|hello|hey|good\s+morning|good\s+afternoon|good\s+evening|namaste|greetings)\b", sanitized, re.IGNORECASE):
             ctx.terminal_move = TerminalMove.ANSWER
-            cust_name = customer.get("name", "there")
-            ctx.response_text = f"Hello {cust_name}! 👋 Welcome to NovaMart Support. How can I assist you today? You can ask about order tracking, delivery timelines, return & refund policies, or product details."
+            cust_name = customer.get("first_name") or "there"
+            ctx.response_text = f"Hello {cust_name}! 👋 Welcome to NovaMart Support. How can I assist you today? You can ask about order tracking, delivery timelines, return & refund policies, product recommendations, or warranty."
             return self._build_result(ctx, start_time)
 
-        # Fallback general query
+        # Check for assistant identity and capabilities
+        if re.search(r"\b(who\s+are\s+you|what\s+can\s+you\s+do|what\s+is\s+novamart|how\s+can\s+you\s+help|what\s+do\s+you\s+do)\b", sanitized, re.IGNORECASE):
+            ctx.terminal_move = TerminalMove.ANSWER
+            ctx.response_text = (
+                "I am **NovaMart AI Customer Support Assistant**! 🛒✨\n\n"
+                "I can assist you with:\n"
+                "• **Live Order Tracking**: Instant status and courier updates on your parcels.\n"
+                "• **Returns & Refunds**: Checking return windows, calculating restocking fees, and authorizing capped refunds.\n"
+                "• **Order Cancellations**: Instant pre-shipment cancellations with 100% refund.\n"
+                "• **Policy Information**: Delivery timelines, warranty claims, and accepted payment methods.\n"
+                "• **Product Catalog**: Checking electronics, gadgets, and grocery availability.\n"
+                "• **Human Escalations**: Dispatching priority tickets to Logistics, Payments, and Technical Support.\n\n"
+                "How can I assist you today?"
+            )
+            return self._build_result(ctx, start_time)
+
+        # Fallback general query with helpful guidance
         ctx.terminal_move = TerminalMove.ANSWER
-        ctx.response_text = "How can I help you with your NovaMart orders, deliveries, or products today?"
+        cust_name = customer.get("first_name") or "there"
+        ctx.response_text = (
+            f"Hello {cust_name}, I'm here to help! Could you please clarify your question? "
+            "You can provide your **Order ID** (e.g. `ORD-001042`) to track or return a package, "
+            "or ask about our **delivery timelines**, **return policy**, **warranty**, or **products**."
+        )
         return self._build_result(ctx, start_time)
 
     def _build_result(self, ctx: WorkflowContext, start_time: float) -> Dict[str, Any]:

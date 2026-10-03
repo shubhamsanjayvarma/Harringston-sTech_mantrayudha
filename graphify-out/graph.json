@@ -6998,7 +6998,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "api_routes_chat",
-      "community": 101,
+      "community": 10,
       "norm_label": "routes_chat.py"
     },
     {
@@ -7008,7 +7008,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "api_routes_chat_chatrequest",
-      "community": 101,
+      "community": 10,
       "norm_label": "chatrequest"
     },
     {
@@ -7028,7 +7028,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "api_routes_chat_chatresponse",
-      "community": 101,
+      "community": 10,
       "norm_label": "chatresponse"
     },
     {
@@ -7038,7 +7038,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "api_routes_chat_process_chat",
-      "community": 101,
+      "community": 10,
       "norm_label": "process_chat()"
     },
     {
@@ -7048,7 +7048,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "api_routes_chat_rationale_1",
-      "community": 101,
+      "community": 10,
       "norm_label": "chat api endpoints for novamart customer support agent."
     },
     {
@@ -7058,7 +7058,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "api_routes_chat_rationale_33",
-      "community": 101,
+      "community": 10,
       "norm_label": "processes customer dialogue through the 9-stage verified agent loop."
     },
     {
@@ -7138,7 +7138,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "api_routes_eval",
-      "community": 131,
+      "community": 53,
       "norm_label": "routes_eval.py"
     },
     {
@@ -7148,7 +7148,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "api_routes_eval_scenarioevalresult",
-      "community": 131,
+      "community": 53,
       "norm_label": "scenarioevalresult"
     },
     {
@@ -7158,7 +7158,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "api_routes_eval_batchevalresponse",
-      "community": 131,
+      "community": 53,
       "norm_label": "batchevalresponse"
     },
     {
@@ -7168,7 +7168,7 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "api_routes_eval_run_all_scenarios",
-      "community": 131,
+      "community": 53,
       "norm_label": "run_all_scenarios()"
     },
     {
@@ -7178,7 +7178,7 @@
       "source_location": "L97",
       "_origin": "ast",
       "id": "api_routes_eval_get_eval_summary",
-      "community": 131,
+      "community": 53,
       "norm_label": "get_eval_summary()"
     },
     {
@@ -7188,7 +7188,7 @@
       "source_location": "L97",
       "_origin": "ast",
       "id": "backend_api_routes_eval_py_any",
-      "community": 131,
+      "community": 53,
       "norm_label": "any"
     },
     {
@@ -7198,7 +7198,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "api_routes_eval_rationale_1",
-      "community": 131,
+      "community": 53,
       "norm_label": "evaluation api endpoints for novamart customer support agent.  enables automat"
     },
     {
@@ -7208,7 +7208,7 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "api_routes_eval_rationale_46",
-      "community": 131,
+      "community": 53,
       "norm_label": "executes all 6 official judge scenarios sequentially and compiles evaluation met"
     },
     {
@@ -7218,7 +7218,7 @@
       "source_location": "L98",
       "_origin": "ast",
       "id": "api_routes_eval_rationale_98",
-      "community": 131,
+      "community": 53,
       "norm_label": "retrieves the most recent evaluation metrics or a default status."
     },
     {
@@ -7228,7 +7228,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "api_routes_orders",
-      "community": 134,
+      "community": 54,
       "norm_label": "routes_orders.py"
     },
     {
@@ -7238,7 +7238,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "api_routes_orders_get_customer_profile",
-      "community": 134,
+      "community": 54,
       "norm_label": "get_customer_profile()"
     },
     {
@@ -7248,7 +7248,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "backend_api_routes_orders_py_any",
-      "community": 134,
+      "community": 54,
       "norm_label": "any"
     },
     {
@@ -7258,7 +7258,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "api_routes_orders_get_order_details",
-      "community": 134,
+      "community": 54,
       "norm_label": "get_order_details()"
     },
     {
@@ -7268,7 +7268,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "api_routes_orders_get_product_specs",
-      "community": 134,
+      "community": 54,
       "norm_label": "get_product_specs()"
     },
     {
@@ -7278,7 +7278,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "api_routes_orders_rationale_1",
-      "community": 134,
+      "community": 54,
       "norm_label": "ground truth query endpoints for inspecting entities."
     },
     {
@@ -7288,7 +7288,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "api_routes_orders_rationale_14",
-      "community": 134,
+      "community": 54,
       "norm_label": "retrieves customer record by id."
     },
     {
@@ -7298,7 +7298,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "api_routes_orders_rationale_23",
-      "community": 134,
+      "community": 54,
       "norm_label": "retrieves order record with items by id."
     },
     {
@@ -7308,7 +7308,7 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "api_routes_orders_rationale_40",
-      "community": 134,
+      "community": 54,
       "norm_label": "retrieves product record by id."
     },
     {
@@ -8038,7 +8038,7 @@
       "source_location": "L88",
       "_origin": "ast",
       "id": "engine_agent_loop_novamartagentloop_init",
-      "community": 14,
+      "community": 10,
       "norm_label": ".__init__()"
     },
     {
@@ -8075,7 +8075,7 @@
       "label": "._build_result()",
       "file_type": "code",
       "source_file": "backend/engine/agent_loop.py",
-      "source_location": "L584",
+      "source_location": "L627",
       "_origin": "ast",
       "id": "engine_agent_loop_novamartagentloop_build_result",
       "community": 10,
@@ -8085,7 +8085,7 @@
       "label": "WorkflowContext",
       "file_type": "code",
       "source_file": "backend/engine/agent_loop.py",
-      "source_location": "L584",
+      "source_location": "L627",
       "_origin": "ast",
       "id": "workflowcontext",
       "community": 10,
@@ -8125,9 +8125,9 @@
       "label": "Constructs final standardized audit envelope.",
       "file_type": "rationale",
       "source_file": "backend/engine/agent_loop.py",
-      "source_location": "L585",
+      "source_location": "L628",
       "_origin": "ast",
-      "id": "engine_agent_loop_rationale_585",
+      "id": "engine_agent_loop_rationale_628",
       "community": 10,
       "norm_label": "constructs final standardized audit envelope."
     },
@@ -8145,7 +8145,7 @@
       "label": "resolve_general_policy_query()",
       "file_type": "code",
       "source_file": "backend/engine/faq_engine.py",
-      "source_location": "L13",
+      "source_location": "L15",
       "_origin": "ast",
       "id": "engine_faq_engine_resolve_general_policy_query",
       "community": 10,
@@ -8155,7 +8155,7 @@
       "label": "Any",
       "file_type": "code",
       "source_file": "backend/engine/faq_engine.py",
-      "source_location": "L13",
+      "source_location": "L15",
       "_origin": "ast",
       "id": "backend_engine_faq_engine_py_any",
       "community": 10,
@@ -8165,31 +8165,31 @@
       "label": "TerminalMove",
       "file_type": "code",
       "source_file": "backend/engine/faq_engine.py",
-      "source_location": "L13",
+      "source_location": "L15",
       "_origin": "ast",
       "id": "terminalmove",
       "community": 10,
       "norm_label": "terminalmove"
     },
     {
-      "label": "NovaMart Policy Knowledge Base & General FAQ Engine.  Provides authoritative,",
+      "label": "NovaMart Policy Knowledge Base & General FAQ Engine.  Provides authoritative, ze",
       "file_type": "rationale",
       "source_file": "backend/engine/faq_engine.py",
       "source_location": "L1",
       "_origin": "ast",
       "id": "engine_faq_engine_rationale_1",
       "community": 10,
-      "norm_label": "novamart policy knowledge base & general faq engine.  provides authoritative,"
+      "norm_label": "novamart policy knowledge base & general faq engine.  provides authoritative, ze"
     },
     {
-      "label": "Evaluates whether the customer message is a general policy or FAQ inquiry.",
+      "label": "Evaluates whether the customer message is a general policy, product, or FAQ inqu",
       "file_type": "rationale",
       "source_file": "backend/engine/faq_engine.py",
-      "source_location": "L19",
+      "source_location": "L21",
       "_origin": "ast",
-      "id": "engine_faq_engine_rationale_19",
+      "id": "engine_faq_engine_rationale_21",
       "community": 10,
-      "norm_label": "evaluates whether the customer message is a general policy or faq inquiry."
+      "norm_label": "evaluates whether the customer message is a general policy, product, or faq inqu"
     },
     {
       "label": "guardrail_interceptor.py",
@@ -8198,7 +8198,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "engine_guardrail_interceptor",
-      "community": 10,
+      "community": 6,
       "norm_label": "guardrail_interceptor.py"
     },
     {
@@ -8228,7 +8228,7 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "engine_guardrail_interceptor_securityguardrail",
-      "community": 10,
+      "community": 54,
       "norm_label": "securityguardrail"
     },
     {
@@ -8238,7 +8238,7 @@
       "source_location": "L69",
       "_origin": "ast",
       "id": "engine_guardrail_interceptor_securityguardrail_sanitize_user_input",
-      "community": 10,
+      "community": 54,
       "norm_label": ".sanitize_user_input()"
     },
     {
@@ -8278,7 +8278,7 @@
       "source_location": "L134",
       "_origin": "ast",
       "id": "engine_guardrail_interceptor_rulemerger",
-      "community": 10,
+      "community": 54,
       "norm_label": "rulemerger"
     },
     {
@@ -8338,7 +8338,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "engine_guardrail_interceptor_rationale_1",
-      "community": 10,
+      "community": 6,
       "norm_label": "novamart hybrid safety interceptor and guardrail engine.  adapted from clinica"
     },
     {
@@ -8358,7 +8358,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "engine_guardrail_interceptor_rationale_49",
-      "community": 10,
+      "community": 54,
       "norm_label": "security filter for raw inputs, data exposure, and rbac enforcement."
     },
     {
@@ -8368,7 +8368,7 @@
       "source_location": "L70",
       "_origin": "ast",
       "id": "engine_guardrail_interceptor_rationale_70",
-      "community": 10,
+      "community": 54,
       "norm_label": "sanitize raw user input to defang injection, xss, and exploit attempts."
     },
     {
@@ -8398,7 +8398,7 @@
       "source_location": "L135",
       "_origin": "ast",
       "id": "engine_guardrail_interceptor_rationale_135",
-      "community": 10,
+      "community": 54,
       "norm_label": "hybrid rule merger evaluating proposed agent moves before database mutation."
     },
     {
@@ -8558,7 +8558,7 @@
       "source_location": "L188",
       "_origin": "ast",
       "id": "engine_memory_pronouncontextresolver",
-      "community": 14,
+      "community": 10,
       "norm_label": "pronouncontextresolver"
     },
     {
@@ -8698,7 +8698,7 @@
       "source_location": "L189",
       "_origin": "ast",
       "id": "engine_memory_rationale_189",
-      "community": 14,
+      "community": 10,
       "norm_label": "resolves conversational pronouns ('it', 'that', 'the broken screen', 'photo sent"
     },
     {
@@ -9568,7 +9568,7 @@
       "source_location": "L106",
       "_origin": "ast",
       "id": "engine_tools_get_customer",
-      "community": 4,
+      "community": 20,
       "norm_label": "get_customer()"
     },
     {
@@ -9588,7 +9588,7 @@
       "source_location": "L144",
       "_origin": "ast",
       "id": "engine_tools_get_order",
-      "community": 20,
+      "community": 4,
       "norm_label": "get_order()"
     },
     {
@@ -9688,7 +9688,7 @@
       "source_location": "L107",
       "_origin": "ast",
       "id": "engine_tools_rationale_107",
-      "community": 4,
+      "community": 20,
       "norm_label": "retrieves complete customer profile, loyalty tier, account standing, and contact"
     },
     {
@@ -9698,7 +9698,7 @@
       "source_location": "L145",
       "_origin": "ast",
       "id": "engine_tools_rationale_145",
-      "community": 20,
+      "community": 4,
       "norm_label": "retrieves order details, items, shipping state, and delivery tracking.     crit"
     },
     {
@@ -10448,7 +10448,7 @@
       "source_location": "L112",
       "_origin": "ast",
       "id": "tests_verify_milestone_3_testmilestone3_test_02_memory_and_pronouns",
-      "community": 14,
+      "community": 20,
       "norm_label": ".test_02_memory_and_pronouns()"
     },
     {
@@ -10618,7 +10618,7 @@
       "source_location": "L113",
       "_origin": "ast",
       "id": "tests_verify_milestone_3_rationale_113",
-      "community": 14,
+      "community": 20,
       "norm_label": "verify memory manager and pronoun/evidence resolver."
     },
     {
@@ -53980,6 +53980,28 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "backend/engine/faq_engine.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "engine_faq_engine",
+      "target": "db_connection_fetch_all",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/engine/faq_engine.py",
+      "source_location": "L294",
+      "weight": 1.0,
+      "source": "engine_faq_engine_resolve_general_policy_query",
+      "target": "db_connection_fetch_all",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "tests/test_db_engine.py",
       "source_location": "L16",
       "weight": 1.0,
@@ -56457,11 +56479,11 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/engine/agent_loop.py",
-      "source_location": "L585",
+      "source_location": "L628",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "engine_agent_loop_rationale_585",
-      "target": "engine_agent_loop_novamartagentloop_build_result"
+      "source": "engine_agent_loop_rationale_628",
+      "target": "engine_agent_loop_novamartagentloop_build_result",
+      "confidence_score": 1.0
     },
     {
       "relation": "uses",
@@ -56648,11 +56670,11 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/engine/faq_engine.py",
-      "source_location": "L19",
+      "source_location": "L21",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "engine_faq_engine_rationale_19",
-      "target": "engine_faq_engine_resolve_general_policy_query"
+      "source": "engine_faq_engine_rationale_21",
+      "target": "engine_faq_engine_resolve_general_policy_query",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -62000,9 +62022,9 @@
       "source_file": "frontend/src/components/Layout.tsx",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_layout",
-      "target": "components_cartdrawer",
-      "confidence_score": 1.0
+      "target": "components_cartdrawer"
     },
     {
       "relation": "references",
@@ -62033,9 +62055,9 @@
       "source_file": "frontend/src/components/Layout.tsx",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_layout",
-      "target": "components_cartdrawer_cartdrawer",
-      "confidence_score": 1.0
+      "target": "components_cartdrawer_cartdrawer"
     },
     {
       "relation": "contains",
@@ -62461,9 +62483,9 @@
       "source_file": "frontend/src/components/Layout.tsx",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_layout",
-      "target": "components_locationmodal",
-      "confidence_score": 1.0
+      "target": "components_locationmodal"
     },
     {
       "relation": "imports",
@@ -62472,9 +62494,9 @@
       "source_file": "frontend/src/components/Layout.tsx",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_layout",
-      "target": "components_locationmodal_locationmodal",
-      "confidence_score": 1.0
+      "target": "components_locationmodal_locationmodal"
     },
     {
       "relation": "imports_from",
@@ -62483,9 +62505,9 @@
       "source_file": "frontend/src/components/Layout.tsx",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_layout",
-      "target": "components_toast",
-      "confidence_score": 1.0
+      "target": "components_toast"
     },
     {
       "relation": "imports",
@@ -62494,9 +62516,9 @@
       "source_file": "frontend/src/components/Layout.tsx",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_layout",
-      "target": "components_toast_toast",
-      "confidence_score": 1.0
+      "target": "components_toast_toast"
     },
     {
       "relation": "imports_from",
@@ -62505,9 +62527,9 @@
       "source_file": "frontend/src/components/Layout.tsx",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_layout",
-      "target": "context_cartcontext",
-      "confidence_score": 1.0
+      "target": "context_cartcontext"
     },
     {
       "relation": "imports",
@@ -62516,9 +62538,9 @@
       "source_file": "frontend/src/components/Layout.tsx",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_layout",
-      "target": "context_cartcontext_usecart",
-      "confidence_score": 1.0
+      "target": "context_cartcontext_usecart"
     },
     {
       "relation": "imports_from",
@@ -62527,9 +62549,9 @@
       "source_file": "frontend/src/components/Layout.tsx",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_layout",
-      "target": "data_mockdata",
-      "confidence_score": 1.0
+      "target": "data_mockdata"
     },
     {
       "relation": "imports",
@@ -62538,9 +62560,9 @@
       "source_file": "frontend/src/components/Layout.tsx",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_layout",
-      "target": "data_mockdata_all_products",
-      "confidence_score": 1.0
+      "target": "data_mockdata_all_products"
     },
     {
       "relation": "imports",
@@ -62549,9 +62571,9 @@
       "source_file": "frontend/src/components/Layout.tsx",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_layout",
-      "target": "data_mockdata_locations",
-      "confidence_score": 1.0
+      "target": "data_mockdata_locations"
     },
     {
       "relation": "imports_from",
@@ -62560,9 +62582,9 @@
       "source_file": "frontend/src/components/Layout.tsx",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_layout",
-      "target": "data_searchhelper",
-      "confidence_score": 1.0
+      "target": "data_searchhelper"
     },
     {
       "relation": "imports",
@@ -62571,9 +62593,9 @@
       "source_file": "frontend/src/components/Layout.tsx",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_layout",
-      "target": "data_searchhelper_matchproductsbygenerallanguage",
-      "confidence_score": 1.0
+      "target": "data_searchhelper_matchproductsbygenerallanguage"
     },
     {
       "relation": "imports_from",
@@ -62582,9 +62604,9 @@
       "source_file": "frontend/src/components/Layout.tsx",
       "source_location": "L26",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_layout",
-      "target": "types_index",
-      "confidence_score": 1.0
+      "target": "types_index"
     },
     {
       "relation": "imports",
@@ -62593,9 +62615,9 @@
       "source_file": "frontend/src/components/Layout.tsx",
       "source_location": "L26",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_layout",
-      "target": "types_index_deliverylocation",
-      "confidence_score": 1.0
+      "target": "types_index_deliverylocation"
     },
     {
       "relation": "calls",
@@ -63000,9 +63022,9 @@
       "source_file": "frontend/src/pages/Category.tsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_category",
-      "target": "context_cartcontext",
-      "confidence_score": 1.0
+      "target": "context_cartcontext"
     },
     {
       "relation": "imports_from",
@@ -63011,9 +63033,9 @@
       "source_file": "frontend/src/pages/Offers.tsx",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_offers",
-      "target": "context_cartcontext",
-      "confidence_score": 1.0
+      "target": "context_cartcontext"
     },
     {
       "relation": "imports_from",
@@ -63022,9 +63044,9 @@
       "source_file": "frontend/src/pages/SearchResults.tsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_searchresults",
-      "target": "context_cartcontext",
-      "confidence_score": 1.0
+      "target": "context_cartcontext"
     },
     {
       "relation": "imports_from",
@@ -63077,9 +63099,9 @@
       "source_file": "frontend/src/pages/Category.tsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_category",
-      "target": "context_cartcontext_usecart",
-      "confidence_score": 1.0
+      "target": "context_cartcontext_usecart"
     },
     {
       "relation": "calls",
@@ -63099,9 +63121,9 @@
       "source_file": "frontend/src/pages/Offers.tsx",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_offers",
-      "target": "context_cartcontext_usecart",
-      "confidence_score": 1.0
+      "target": "context_cartcontext_usecart"
     },
     {
       "relation": "calls",
@@ -63121,9 +63143,9 @@
       "source_file": "frontend/src/pages/SearchResults.tsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_searchresults",
-      "target": "context_cartcontext_usecart",
-      "confidence_score": 1.0
+      "target": "context_cartcontext_usecart"
     },
     {
       "relation": "calls",
@@ -63206,9 +63228,9 @@
       "source_file": "frontend/src/data/searchHelper.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "data_searchhelper",
-      "target": "data_mockdata",
-      "confidence_score": 1.0
+      "target": "data_mockdata"
     },
     {
       "relation": "imports_from",
@@ -63217,9 +63239,9 @@
       "source_file": "frontend/src/pages/Category.tsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_category",
-      "target": "data_mockdata",
-      "confidence_score": 1.0
+      "target": "data_mockdata"
     },
     {
       "relation": "imports_from",
@@ -63239,9 +63261,9 @@
       "source_file": "frontend/src/pages/Offers.tsx",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_offers",
-      "target": "data_mockdata",
-      "confidence_score": 1.0
+      "target": "data_mockdata"
     },
     {
       "relation": "imports_from",
@@ -63250,9 +63272,9 @@
       "source_file": "frontend/src/pages/SearchResults.tsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_searchresults",
-      "target": "data_mockdata",
-      "confidence_score": 1.0
+      "target": "data_mockdata"
     },
     {
       "relation": "imports",
@@ -63272,9 +63294,9 @@
       "source_file": "frontend/src/data/searchHelper.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "data_searchhelper",
-      "target": "data_mockdata_all_products",
-      "confidence_score": 1.0
+      "target": "data_mockdata_all_products"
     },
     {
       "relation": "imports",
@@ -63283,9 +63305,9 @@
       "source_file": "frontend/src/pages/Category.tsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_category",
-      "target": "data_mockdata_all_products",
-      "confidence_score": 1.0
+      "target": "data_mockdata_all_products"
     },
     {
       "relation": "imports",
@@ -63294,9 +63316,9 @@
       "source_file": "frontend/src/pages/Offers.tsx",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_offers",
-      "target": "data_mockdata_all_products",
-      "confidence_score": 1.0
+      "target": "data_mockdata_all_products"
     },
     {
       "relation": "imports",
@@ -63305,9 +63327,9 @@
       "source_file": "frontend/src/pages/SearchResults.tsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_searchresults",
-      "target": "data_mockdata_all_products",
-      "confidence_score": 1.0
+      "target": "data_mockdata_all_products"
     },
     {
       "relation": "contains",
@@ -63315,9 +63337,9 @@
       "source_file": "frontend/src/data/searchHelper.ts",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "data_searchhelper",
-      "target": "data_searchhelper_domain_definitions",
-      "confidence_score": 1.0
+      "target": "data_searchhelper_domain_definitions"
     },
     {
       "relation": "contains",
@@ -63325,9 +63347,9 @@
       "source_file": "frontend/src/data/searchHelper.ts",
       "source_location": "L203",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "data_searchhelper",
-      "target": "data_searchhelper_matchproductsbygenerallanguage",
-      "confidence_score": 1.0
+      "target": "data_searchhelper_matchproductsbygenerallanguage"
     },
     {
       "relation": "contains",
@@ -63335,9 +63357,9 @@
       "source_file": "frontend/src/data/searchHelper.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "data_searchhelper",
-      "target": "data_searchhelper_searchresultdata",
-      "confidence_score": 1.0
+      "target": "data_searchhelper_searchresultdata"
     },
     {
       "relation": "imports_from",
@@ -63346,9 +63368,9 @@
       "source_file": "frontend/src/data/searchHelper.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "data_searchhelper",
-      "target": "types_index",
-      "confidence_score": 1.0
+      "target": "types_index"
     },
     {
       "relation": "imports",
@@ -63357,9 +63379,9 @@
       "source_file": "frontend/src/data/searchHelper.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "data_searchhelper",
-      "target": "types_index_product",
-      "confidence_score": 1.0
+      "target": "types_index_product"
     },
     {
       "relation": "imports_from",
@@ -63368,9 +63390,9 @@
       "source_file": "frontend/src/pages/SearchResults.tsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_searchresults",
-      "target": "data_searchhelper",
-      "confidence_score": 1.0
+      "target": "data_searchhelper"
     },
     {
       "relation": "references",
@@ -63379,9 +63401,9 @@
       "source_file": "frontend/src/data/searchHelper.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "data_searchhelper_searchresultdata",
-      "target": "types_index_product",
-      "confidence_score": 1.0
+      "target": "types_index_product"
     },
     {
       "relation": "imports",
@@ -63390,9 +63412,9 @@
       "source_file": "frontend/src/pages/SearchResults.tsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_searchresults",
-      "target": "data_searchhelper_matchproductsbygenerallanguage",
-      "confidence_score": 1.0
+      "target": "data_searchhelper_matchproductsbygenerallanguage"
     },
     {
       "relation": "contains",
@@ -63431,9 +63453,9 @@
       "source_file": "frontend/src/pages/Category.tsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_category",
-      "target": "types_index",
-      "confidence_score": 1.0
+      "target": "types_index"
     },
     {
       "relation": "imports",
@@ -63442,9 +63464,9 @@
       "source_file": "frontend/src/pages/Category.tsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_category",
-      "target": "types_index_product",
-      "confidence_score": 1.0
+      "target": "types_index_product"
     },
     {
       "relation": "contains",
@@ -63492,9 +63514,9 @@
       "source_file": "frontend/src/pages/MyAccount.tsx",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_myaccount",
-      "target": "pages_myaccount_savedaddress",
-      "confidence_score": 1.0
+      "target": "pages_myaccount_savedaddress"
     },
     {
       "relation": "contains",
@@ -63543,9 +63565,9 @@
       "source_file": "frontend/src/pages/SearchResults.tsx",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_searchresults",
-      "target": "types_index",
-      "confidence_score": 1.0
+      "target": "types_index"
     },
     {
       "relation": "imports",
@@ -63554,9 +63576,9 @@
       "source_file": "frontend/src/pages/SearchResults.tsx",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_searchresults",
-      "target": "types_index_product",
-      "confidence_score": 1.0
+      "target": "types_index_product"
     },
     {
       "relation": "contains",
@@ -82534,5 +82556,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "513ed2b35fe86a3c906ab3e8ef740039651e9b09"
+  "built_at_commit": "85676dd33fb596fa29867c096eb9e1c2bc1e9d23"
 }

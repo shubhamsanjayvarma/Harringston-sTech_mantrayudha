@@ -1,16 +1,16 @@
 # Graph Report - Hackathon_Boilerplate_speedrun  (2026-10-03)
 
 ## Corpus Check
-- 223 files · ~638,929 words
+- 223 files · ~639,642 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 3215 nodes · 4843 edges · 223 communities (210 shown, 13 thin omitted)
+- 3215 nodes · 4845 edges · 220 communities (207 shown, 13 thin omitted)
 - Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 136 edges (avg confidence: 0.56)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `513ed2b3`
+- Built from commit: `85676dd3`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -116,7 +116,6 @@
 - [[_COMMUNITY_doctor|doctor.md]]
 - [[_COMMUNITY_cleanup|cleanup]]
 - [[_COMMUNITY_live-setup|live-setup.md]]
-- [[_COMMUNITY_Community 101|Community 101]]
 - [[_COMMUNITY_Cognitive Load Assessment|Cognitive Load Assessment]]
 - [[_COMMUNITY_Impeccable Asset Producer|Impeccable Asset Producer]]
 - [[_COMMUNITY_Impeccable Finish Reviewer|Impeccable Finish Reviewer]]
@@ -142,10 +141,8 @@
 - [[_COMMUNITY_idea-refine.sh|idea-refine.sh]]
 - [[_COMMUNITY_workflowsgraphify|workflows/graphify.md]]
 - [[_COMMUNITY_pre-commit|pre-commit]]
-- [[_COMMUNITY_tailwindcss|tailwindcss]]
 - [[_COMMUNITY_compilerOptions|compilerOptions]]
 - [[_COMMUNITY_compilerOptions|compilerOptions]]
-- [[_COMMUNITY_showBar|showBar]]
 - [[_COMMUNITY_Header.tsx|Header.tsx]]
 - [[_COMMUNITY_scheduleAcceptCleanup|scheduleAcceptCleanup]]
 - [[_COMMUNITY_plugins|plugins]]
@@ -260,7 +257,7 @@
 - 1-file cycle: `backend/engine/agent_loop.py -> backend/engine/agent_loop.py`
 - 1-file cycle: `backend/engine/policy_rules.py -> backend/engine/policy_rules.py`
 
-## Communities (223 total, 13 thin omitted)
+## Communities (220 total, 13 thin omitted)
 
 ### Community 0 - "live-browser.js"
 Cohesion: 0.03
@@ -287,8 +284,8 @@ Cohesion: 0.08
 Nodes (44): Any, Connection, close_master_connection(), execute_script(), execute_write(), fetch_all(), fetch_one(), get_db_connection() (+36 more)
 
 ### Community 6 - "initGlobalBar"
-Cohesion: 0.10
-Nodes (41): Any, Connection, datetime, date, NovaMart Deterministic Policy & Hybrid Safety Engine Package., calculate_delay_goodwill(), calculate_item_refund(), calculate_restocking_fee() (+33 more)
+Cohesion: 0.09
+Nodes (42): Any, Connection, datetime, date, NovaMart Hybrid Safety Interceptor and Guardrail Engine.  Adapted from clinica, NovaMart Deterministic Policy & Hybrid Safety Engine Package., calculate_delay_goodwill(), calculate_item_refund() (+34 more)
 
 ### Community 7 - "resolveLiveInjectionAnchor"
 Cohesion: 0.06
@@ -304,7 +301,7 @@ Nodes (42): agentHasWorkInFlight(), agentStatusText(), attachSteerFocusGuard(), 
 
 ### Community 10 - "renderDesignVisual"
 Cohesion: 0.09
-Nodes (38): Any, datetime, Any, Any, NovaMartAgentLoop, NovaMart 9-Stage Hybrid Agent Reasoning Loop.  Implements the layered reasonin, Main execution entrypoint for a single customer message turn., Constructs final standardized audit envelope. (+30 more)
+Nodes (39): ChatRequest, ChatResponse, process_chat(), Chat API endpoints for NovaMart Customer Support Agent., Processes customer dialogue through the 9-stage verified agent loop., Any, datetime, Any (+31 more)
 
 ### Community 11 - "resumeSession"
 Cohesion: 0.06
@@ -319,8 +316,8 @@ Cohesion: 0.12
 Nodes (31): applyGlobalBarLabelState(), armPageChatForTyping(), attachSteerFocusDebug(), clearSteerAwaitTimer(), collapsePageChat(), expandPageChat(), focusConfigureInput(), focusPageChatInput() (+23 more)
 
 ### Community 14 - "Security and Hardening"
-Cohesion: 0.09
-Nodes (16): Any, ConversationMemoryManager, PronounContextResolver, NovaMart Agent Memory, Conversation State, Pronoun Resolution, and Disambiguatio, Builds a concise summary string of past conversations and open tickets, Appends a message to the conversation_messages table., Manages historical session transcripts, context retrieval, and message logging, Resolves conversational pronouns ('it', 'that', 'the broken screen', 'photo sent (+8 more)
+Cohesion: 0.11
+Nodes (13): Any, ConversationMemoryManager, NovaMart Agent Memory, Conversation State, Pronoun Resolution, and Disambiguatio, Builds a concise summary string of past conversations and open tickets, Appends a message to the conversation_messages table., Manages historical session transcripts, context retrieval, and message logging, Resolves pronouns and references in user_message.         Returns extracted ent, Retrieves recent conversation records and their messages for a customer. (+5 more)
 
 ### Community 15 - "Test-Driven Development"
 Cohesion: 0.06
@@ -344,7 +341,7 @@ Nodes (29): Always Do (No Exceptions), Ask First (Requires Human Approval), Brok
 
 ### Community 20 - "Shipping and Launch"
 Cohesion: 0.04
-Nodes (38): contain_user_input(), get_system_prompt(), NovaMart Agentic Persona, 4-Tier Authority Hierarchy & Prompt Injection Defense., Builds the complete operational system prompt with injected context., Strips prompt injection attempts, imperative system directives, and tag breaks., Encloses customer message in the untrusted claim envelope.     Ensures the LLM, sanitize_input(), calculate_refund() (+30 more)
+Nodes (39): contain_user_input(), get_system_prompt(), NovaMart Agentic Persona, 4-Tier Authority Hierarchy & Prompt Injection Defense., Builds the complete operational system prompt with injected context., Strips prompt injection attempts, imperative system directives, and tag breaks., Encloses customer message in the untrusted claim envelope.     Ensures the LLM, sanitize_input(), calculate_refund() (+31 more)
 
 ### Community 21 - "API and Interface Design"
 Cohesion: 0.07
@@ -471,12 +468,12 @@ Cohesion: 0.09
 Nodes (21): Auralix Wave Core 500 (PROD-00270), Auralix Wave Core Mini (PROD-00282), Auralix Wave Flex 300 (PROD-00267), Auralix Wave Flex Max (PROD-00272), Auralix Wave Lite Max (PROD-00271), Auralix Wave Plus Mini (PROD-00273), Auralix Wave Pro 500 (PROD-00277), Auralix Wave Spark 300 (PROD-00283) (+13 more)
 
 ### Community 53 - "Process"
-Cohesion: 0.13
-Nodes (19): list_presets(), Judge Demonstration Presets for NovaMart Customer Support Agent.  Provides 1-c, Lists all available official judge scenarios., Executes an official judge scenario and returns the complete result & audit trac, run_preset(), Any, Automated Test Suite for the 6 Official NovaMart Judge Scenarios.  Verifies en, Priya S. tracks order ORD-001042 -> Expects ANSWER with ETA and courier. (+11 more)
+Cohesion: 0.09
+Nodes (27): list_presets(), Judge Demonstration Presets for NovaMart Customer Support Agent.  Provides 1-c, Lists all available official judge scenarios., Executes an official judge scenario and returns the complete result & audit trac, run_preset(), BatchEvalResponse, get_eval_summary(), Evaluation API endpoints for NovaMart Customer Support Agent.  Enables automat (+19 more)
 
 ### Community 54 - "Using Agent Skills"
-Cohesion: 0.13
-Nodes (8): Any, Enforce strict horizontal access control (RBAC).                  Returns True, Recursively scrub internal-only or security-sensitive fields from payloads., Detect prompt injection attempts in customer input., Detect critical hardware or life-safety threats., Detect customer asserting an item was not delivered., Detect legal threats or consumer court mentions., Pre-flight interceptor for tool execution requests.                  Evaluates
+Cohesion: 0.09
+Nodes (21): get_customer_profile(), get_order_details(), get_product_specs(), Ground truth query endpoints for inspecting entities., Retrieves customer record by ID., Retrieves order record with items by ID., Retrieves product record by ID., Any (+13 more)
 
 ### Community 55 - "README.md"
 Cohesion: 0.10
@@ -658,10 +655,6 @@ Nodes (11): Accessibility Resilience, Assess Hardening Needs, Edge Cases & Bound
 Cohesion: 0.17
 Nodes (11): Common Rationalizations, Overview, Red Flags, Source-Driven Development, Step 1: Detect Stack and Versions, Step 2: Fetch Official Documentation, Step 3: Implement Following Documented Patterns, Step 4: Cite Your Sources (+3 more)
 
-### Community 101 - "Community 101"
-Cohesion: 0.47
-Nodes (5): ChatRequest, ChatResponse, process_chat(), Chat API endpoints for NovaMart Customer Support Agent., Processes customer dialogue through the 9-stage verified agent loop.
-
 ### Community 102 - "Cognitive Load Assessment"
 Cohesion: 0.17
 Nodes (11): 10. Worked examples, 1. Purpose, 2. Which version applies to an order, 3. Refund eligibility and time windows, 4. Refund amount, 5. Refund method and timelines, 6. Approval requirements, 7. Exceptions (legitimate) (+3 more)
@@ -762,10 +755,6 @@ Nodes (9): 1. Delivery estimates, 2. Shipping fee, 3. Delivery verification (OTP
 Cohesion: 0.20
 Nodes (9): 1. Architectural Deep-Dive: Why Hybrid AI + Deterministic Rules Wins, 2.1 The Problem with Vector RAG in a Hackathon Speedrun, 2.2 Why Graphify + Relational Graph is 10x Superior, 2. Graphify Knowledge Base vs. Vector RAG from Scratch, 3. Integrated Knowledge Flow Architecture, 4. Architectural Summary, Deterministic Safety Rails (from clinical-safety-agent) & Graph-Based Context, Hybrid Architecture & Graphify Knowledge Engine (+1 more)
 
-### Community 131 - "tailwindcss"
-Cohesion: 0.28
-Nodes (8): BatchEvalResponse, get_eval_summary(), Evaluation API endpoints for NovaMart Customer Support Agent.  Enables automat, Executes all 6 official judge scenarios sequentially and compiles evaluation met, Retrieves the most recent evaluation metrics or a default status., run_all_scenarios(), ScenarioEvalResult, Any
-
 ### Community 132 - "compilerOptions"
 Cohesion: 0.10
 Nodes (19): compilerOptions, allowArbitraryExtensions, allowImportingTsExtensions, erasableSyntaxOnly, jsx, lib, module, moduleDetection (+11 more)
@@ -773,10 +762,6 @@ Nodes (19): compilerOptions, allowArbitraryExtensions, allowImportingTsExtension
 ### Community 133 - "compilerOptions"
 Cohesion: 0.12
 Nodes (16): compilerOptions, allowImportingTsExtensions, erasableSyntaxOnly, lib, module, moduleDetection, noEmit, noFallthroughCasesInSwitch (+8 more)
-
-### Community 134 - "showBar"
-Cohesion: 0.28
-Nodes (8): get_customer_profile(), get_order_details(), get_product_specs(), Ground truth query endpoints for inspecting entities., Retrieves customer record by ID., Retrieves order record with items by ID., Retrieves product record by ID., Any
 
 ### Community 135 - "Header.tsx"
 Cohesion: 0.22
@@ -1078,7 +1063,7 @@ Nodes (10): 1. Executive Summary & Design System Philosophy, 2. Watertight 5-Lay
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `run_preset()` connect `Process` to `tailwindcss`, `CartContext.tsx`?**
+- **Why does `run_preset()` connect `Process` to `CartContext.tsx`?**
   _High betweenness centrality (0.003) - this node is a cross-community bridge._
 - **Why does `execute_write()` connect `CartContext.tsx` to `renderDesignVisual`, `Process`?**
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
