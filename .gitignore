@@ -2,6 +2,10 @@ graphify-out/cache/
 graphify-out/20*/
 __pycache__/
 *.py[cod]
+*.db
+*.sqlite
+*.sqlite3
+.pytest_cache/
 
 # Platform-specific binaries (downloaded on demand per OS)
 **/scripts/bin/

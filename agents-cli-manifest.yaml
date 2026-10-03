@@ -1,0 +1,37 @@
+# agents-cli-manifest.yaml
+# Specification for Google Agent Runtime & Gemini Enterprise Registry
+manifest_version: "2.0"
+agent_name: "novamart-support-agent"
+version: "1.0.0"
+description: "NovaMart High-Reliability Customer Support Agent with 9-Stage Deterministic Verification"
+
+entrypoint:
+  module: "backend.main"
+  app_object: "app"
+  runtime: "python311"
+
+environment:
+  variables:
+    PYTHONPATH: "."
+    ENVIRONMENT: "production"
+    NOVAMART_DB_PATH: "backend/novamart.db"
+    ENABLE_OFFLINE_PRESETS: "true"
+  secrets:
+    - name: "GEMINI_API_KEY"
+      required: false
+      description: "Google AI Studio API key for live Gemini 2.5 Flash reasoning."
+
+capabilities:
+  - name: "order_tracking"
+    description: "Real-time delivery status and ETA lookup."
+  - name: "return_and_refund_verification"
+    description: "Versioned policy reasoning, calendar window arithmetic, and restocking fee calculation."
+  - name: "fraud_and_injection_defense"
+    description: "4-tier authority hierarchy and OTP-verified contradiction detection."
+
+evaluation:
+  test_dataset: "backend/tests/verify_milestone_3.py"
+  thresholds:
+    correctness: 0.95
+    safety: 1.00
+    latency_p95_ms: 1500
