@@ -456,57 +456,26 @@ legacy_refactoring_and_drift_protocol:
 
 ---
 
-## 8. Mandatory 4-Tier TDD Testing Matrix for Frontend
+## 8. Frontend Smoke Verification & Golden-Path Quality Gates
 
-Every frontend feature, component refactor, or UI implementation MUST include dedicated automated verification across all four test tiers before completion.
+In a ~6-hour hackathon speedrun, writing dedicated 4-tier test suites (Big-O frame bounds, DOM leak tests, and STRIDE security fuzzing scripts) is **strictly suspended**. Frontend verification is performed through clean compilation and real browser smoke validation:
 
 ```yaml
-tdd_frontend_testing_matrix:
-  tier_1_space_and_time_complexity:
-    objective: "Verify DOM node efficiency, render execution speed, and memory stability."
-    test_harness:
-      tool: "Vitest / Playwright + Chrome DevTools Performance Profiler"
-      assertions:
-        - "Render execution time: Component initial render completes in < 16.6ms (1 frame)."
-        - "DOM node budget: Total DOM node count remains <= 1200 nodes under loaded state."
-        - "DOM depth ceiling: Maximum DOM tree nesting depth does not exceed 24 levels."
-        - "Memory allocation stability: 100 mount/unmount cycles produce zero detached DOM node leaks."
-      adversarial_dos_test: "Feed 10,000 items into list view; assert virtualization bounds active DOM nodes to < 80."
+hackathon_frontend_verification:
+  compilation_gate:
+    command: "npm run build" # or "tsc --noEmit"
+    criteria: "Clean compilation with zero TypeScript errors or syntax parse failures."
 
-  tier_2_logic_and_state_transitions:
-    objective: "Verify state machine correctness, edge cases, and keyboard navigation."
-    test_harness:
-      tool: "Vitest + React Testing Library"
-      state_machine_coverage:
-        - "Idle State: Default presentation with zero side effects."
-        - "Loading State: Geometry-preserving skeletons render; buttons display disabled loading spinner."
-        - "Success State: Data rendered accurately with proper typography and formatting."
-        - "Error State: Actionable error banner renders with retry trigger; no unhandled exceptions."
-        - "Empty State: Helpful zero-data illustration and primary CTA displayed."
-      keyboard_navigation_assertions:
-        - "Tab navigation reaches all interactive controls in logical DOM order."
-        - "Esc key dismisses open menus, dropdowns, and modal dialogs."
-        - "Enter and Space trigger button activations cleanly."
-
-  tier_3_ui_and_integration_chaos:
-    objective: "Verify responsive layouts, theme toggles, and cross-browser visual fidelity."
-    test_harness:
-      tool: "Playwright CLI"
-      assertions:
-        - "Multi-viewport layout: Zero horizontal overflow or clipped text across 375px, 768px, and 1440px."
-        - "Dark / Light theme toggle: Toggling theme changes CSS custom properties; contrast remains WCAG 2.1 AA compliant (>= 4.5:1 for body, >= 3.0:1 for large text)."
-        - "Focus visibility: Focus ring is clearly visible on keyboard focus and suppressed on mouse click (:focus-visible)."
-        - "Network chaos resilience: Simulate 3G network throttle and 500 API errors; assert UI recovers gracefully without white-screen crash."
-
-  tier_4_qa_and_security_testing:
-    objective: "Verify immunity against DOM XSS, prototype pollution, and CSS injection."
-    test_harness:
-      tool: "Vitest / Playwright Security Fuzzing Suite"
-      adversarial_vectors:
-        - "XSS payload injection: Pass <img src=x onerror=alert(1)> and <svg><script>alert(1)</script></svg> through all text and profile inputs; assert payloads are safely escaped or sanitized."
-        - "Prototype pollution fuzzing: Supply query string ?__proto__[polluted]=true; assert Object.prototype.polluted remains undefined."
-        - "Reverse tabnabbing verification: Query all external links; assert target='_blank' unconditionally pairs with rel='noopener noreferrer'."
-        - "CSP enforcement: Assert page headers or meta tags contain strict Content-Security-Policy with zero 'unsafe-inline' on script-src."
+  golden_path_browser_gate:
+    visual_inspection:
+      - "Layout: Multi-viewport presentation is clean without horizontal overflow or clipped text."
+      - "Contrast: Typography is readable and high-contrast (WCAG AA compliant)."
+      - "Interactions: Buttons, dropdowns, and modals open and close smoothly."
+    demo_flow_check:
+      - "Preset Activation: '⚡ Load Judge Demo' button hydrates inputs instantly with realistic data."
+      - "Core Execution: The primary differentiating feature executes end-to-end."
+      - "Console Cleanliness: DevTools console has zero red errors or unhandled promise rejections."
+      - "Fail-Safe Fallback: Offline mock JSON fixture triggers seamlessly if external APIs lag (>3s) or fail."
 ```
 
 ---

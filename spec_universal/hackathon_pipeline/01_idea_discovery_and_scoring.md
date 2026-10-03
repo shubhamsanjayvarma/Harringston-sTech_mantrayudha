@@ -14,6 +14,10 @@ phase_specification:
   phase_id: "PHASE_01_IDEA_DISCOVERY_AND_SCORING"
   mission: "Autonomously ingest hackathon rules, discover unaddressed user pain points across online communities and VC libraries, validate commercial intent, and output a ranked Top 10 Scored Idea Bank."
   intake_modes:
+    mode_speedrun_6hour_fast_track:
+      trigger: "Short hackathons (~6-hour window) or rapid prototype sprints."
+      duration: "15 - 20 minutes maximum"
+      execution_flow: "Bypass multi-subagent web scraping and 9-parameter matrix. Formulate 1 killer problem wedge, 1 unfair technical differentiator, and the exact 2-minute demo pitch script directly into spec/01_hackathon_wedge.md, then transition immediately to Phase 5 (Rapid UI Scaffolding)."
     mode_a_targeted_problem_statement:
       trigger: "Organizer or sponsor provides a single problem statement or a catalog of candidate problem statements (softcopy or hardcopy photo printouts)."
       intake_payload: "Raw PS text, PDF documents, spreadsheet tables, or camera photos of printed problem sheets."

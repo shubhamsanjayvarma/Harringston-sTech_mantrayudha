@@ -2,7 +2,7 @@
 
 > **File:** `spec_universal/hackathon_pipeline/04_lean_7layer_architecture.md`  
 > **Parent Protocol:** `00_master_hackathon_operating_system.md`  
-> **Source Synthesis:** `Universal_Project_Boilerplate` (`spec_universal/system_design/` Layers 00–07)  
+> **Source Synthesis:** `Universal_Project_Boilerplate` (`spec_universal/hackathon_system_architecture.md`)  
 > **Execution Mode:** High-signal, lean architectural modeling  
 > **Designated Skills:** `spec-driven-development`, `api-and-interface-design`, `documentation-and-adrs`
 
@@ -34,9 +34,9 @@ lean_architecture_layers:
     focus: "Entity definitions, invariants, and deterministic State Machine transitions."
     output_section: "Section 4: Domain Model & State Transitions"
 
-  layer_5_tdd_verification_plan:
-    focus: "Mapping all 4 test tiers (Execution bounds, Golden Path logic, Integration, STRIDE security)."
-    output_section: "Section 5: 4-Tier Verification & Test Plan"
+  layer_5_smoke_verification_plan:
+    focus: "Defining compilation gates and the 2-minute Golden Demo Path smoke check with fail-safe fallbacks."
+    output_section: "Section 5: Smoke Verification & Demo Reliability Plan"
 
   layer_6_demo_telemetry_and_sre:
     focus: "Lightweight in-app telemetry HUD showing live latency, token usage, and error boundaries to judges."
@@ -146,12 +146,12 @@ Model the core entity as a deterministic Finite State Machine (FSM):
           [EXPORTED]
 ```
 
-### Section 5: 4-Tier Verification & Test Plan
-Map the 4 testing tiers directly to the Golden Demo Path:
-- **Type 1 (Performance Bounds):** Verify end-to-end API response resolves in $<4000\text{ ms}$.
-- **Type 2 (Logic & FSM):** Test state machine transitions from `IDLE` to `READY_TO_DEMO`.
-- **Type 3 (UI Rendering):** Test that the hero leverage card renders correctly with zero DOM errors.
-- **Type 4 (STRIDE / OWASP Security):** Verify that input fields reject malicious XSS payloads (`<script>alert(1)</script>`) and SQL injection attempts.
+### Section 5: Smoke Verification & Demo Reliability Plan
+Map the verification steps directly to the Golden Demo Path:
+- **Gate 1 (Compilation):** Verify clean build with zero TypeScript type or syntax errors (`npm run build` or `tsc --noEmit`).
+- **Gate 2 (Golden Path Walkthrough):** Test that the landing view, 1-click preset button, and differentiating feature execute smoothly.
+- **Fail-Safe Fallbacks:** Ensure that external API timeouts or errors gracefully switch to local mock fixtures (`src/mock/demo_fallback.json`).
+- **Targeted Unit Tests (Exceptions Only):** Test only mission-critical mathematical or algorithmic logic where a silent calculation bug would break the demo. Enterprise 4-tier TDD and STRIDE threat testing are strictly disabled.
 
 ### Section 6: Demo Telemetry & Visual SRE
 Judges love seeing technical maturity. Include a lightweight "System Status" or "Telemetry HUD" in the footer of your application:

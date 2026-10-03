@@ -174,14 +174,14 @@ milestone:
 
   autonomous_execution_steps:
     1_triage_p0_core_engine:
-      rule: "Must be 100% functional, real application logic, and covered by 4-tier automated tests."
+      rule: "Must be 100% functional, real application logic, and verified via smoke testing (clean build + zero-crash demo walkthrough)."
       components:
         - "1 Essential Baseline Workflow (table-stakes incumbent capability)"
         - "1-2 Leverage Kill Features (flaw inverters)"
       budget_percentage: 60
 
     2_triage_p1_fast_follows:
-      rule: "Build ONLY IF Tier 1 P0 tests pass with >30% remaining buildable time; otherwise discard immediately."
+      rule: "Build ONLY IF P0 core engine smoke test passes with >30% remaining buildable time; otherwise discard immediately."
       components:
         - "Export to Markdown / PDF / CSV"
         - "Keyboard navigation shortcuts or dark/light theme switch"

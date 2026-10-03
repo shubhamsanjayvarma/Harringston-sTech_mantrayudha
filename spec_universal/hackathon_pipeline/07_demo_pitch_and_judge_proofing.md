@@ -39,8 +39,8 @@ three_minute_pitch_architecture:
   minute_2_15_to_2_45_technical_depth_and_sre:
     duration: "30 Seconds"
     objective: "Prove engineering excellence to technical judges."
-    script_formula: "'Under the hood, we didn't just build a prompt wrapper. We implemented a 7-layer architecture with a deterministic state machine, real-time edge streaming, and a full 4-tier TDD suite including STRIDE threat hardening on all inputs. You can see our live latency HUD right here: 240ms end-to-end.'"
-    visual: "Point to the footer Telemetry HUD and briefly flash the terminal with all 4 test suites passing green."
+    script_formula: "'Under the hood, we didn't just build a prompt wrapper. We architected a responsive system with deterministic state machines, typed API contracts, and an automated tri-layer fail-safe shield that guarantees zero live crashes. You can see our live latency HUD right here: 240ms end-to-end.'"
+    visual: "Point to the footer Telemetry HUD and briefly highlight the clean architecture contracts and responsive live engine."
 
   minute_2_45_to_3_00_sponsor_fit_and_close:
     duration: "15 Seconds"

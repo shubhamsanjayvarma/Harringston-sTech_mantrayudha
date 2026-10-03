@@ -55,19 +55,18 @@ hackathon_pipeline_architecture:
       - "21st-ui-build"
       - "frontend-ui-engineering"
 
-  phase_6_lean_4tier_tdd_and_security:
-    spec_file: "spec_universal/hackathon_pipeline/06_lean_4tier_tdd_and_security.md"
-    objective: "Enforce rapid automated test suites across all 4 tiers (Execution bounds, Golden Path logic, UI rendering contracts, and STRIDE/OWASP threat hardening on demo input fields)."
-    time_allocation: "Hour 10 - Hour 18"
+  phase_6_golden_path_smoke_verification:
+    spec_file: "spec_universal/hackathon_pipeline/06_golden_path_smoke_verification.md"
+    objective: "Compile cleanly without fatal syntax/type errors and verify that the 2-minute Golden Demo Path renders with zero console red or runtime crashes. Enterprise 4-tier TDD and STRIDE threat testing are strictly disabled."
+    time_allocation: "30 - 45 minutes"
     primary_skills:
-      - "test-driven-development"
-      - "cyber-security-frameworks"
       - "systematic-debugging"
+      - "verification-before-completion"
 
   phase_7_demo_pitch_and_judge_proofing:
     spec_file: "spec_universal/hackathon_pipeline/07_demo_pitch_and_judge_proofing.md"
     objective: "Formulate the 3-minute pitch script (Hook, Problem, Solution, Live Demo, Impact), construct zero-latency preset modes, and package offline backup video recordings to prevent live Wi-Fi crashes."
-    time_allocation: "Hour 18 - Hour 24"
+    time_allocation: "30 - 45 minutes"
     primary_skills:
       - "shipping-and-launch"
       - "verification-before-completion"
@@ -79,6 +78,13 @@ hackathon_pipeline_architecture:
 
 ```yaml
 time_budget_matrix:
+  bracket_0_speedrun_sprint:
+    duration: "4 - 6 Hours"
+    p0_scope: "1 High-Impact Problem Wedge + 1 Killer Unfair Technical Differentiator."
+    ui_strategy: "Single-page dashboard, pre-tested 21st.dev components, Tailwind CSS, 1-click '⚡ Load Judge Demo' preset button."
+    verification_strategy: "Smoke Verification only (clean build + zero-crash 2-minute judge walkthrough)."
+    demo_strategy: "Live UI with silent local JSON fallback fixtures on all external APIs + 3-minute rehearsed pitch."
+
   bracket_a_extreme_sprint:
     duration: "12 - 18 Hours"
     p0_scope: "1 Core Baseline Workflow + 1 Leverage Kill Feature only."

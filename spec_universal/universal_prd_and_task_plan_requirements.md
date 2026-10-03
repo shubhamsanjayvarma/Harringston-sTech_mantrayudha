@@ -17,7 +17,7 @@ Before selecting or committing to a technical stack, conduct thorough research t
    - All libraries and packages must originate strictly from official, trusted registries (crates.io, PyPI, npm) — never untrusted forks, mirrors, or typosquats.
    - Specify the exact package names and pinned version numbers (no loose wildcards).
 4. **Research Validation:**
-   - Follow the template defined in [`spec_universal/tech_stack_prd_template.md`](file:///c:/Project_Struct/spec_universal/tech_stack_prd_template.md).
+   - Follow the template defined in [`spec_universal/tech_stack_prd_template.md`](spec_universal/tech_stack_prd_template.md).
 
 ---
 
@@ -38,17 +38,17 @@ task_plan_structure:
     title: "Codebase Navigation via Graphify"
     details: "Query the knowledge graph (graphify query) to identify relevant symbols, dependencies, callers, and existing architectural patterns before writing code."
   section_c:
-    title: "Automated Verification, Pre-Commit Hooks & CI/CD Setup"
-    details: "Define explicit test scripts across all 4 TDD categories (Complexity, Logic, Integration, STRIDE/OWASP), strict pre-commit hooks, GitHub Actions CI workflows, and automated evaluation scripts."
+    title: "Smoke Verification & Demo Quality Gates"
+    details: "Define explicit compilation checks (npm run build or tsc --noEmit), the 2-minute Golden Demo Path walkthrough, and fail-safe mock fallback fixtures."
   section_d:
     title: "Knowledge Graph Synchronization"
     details: "Mandatory step to execute 'graphify update .' upon completing code modifications to keep AST and community graphs current."
   section_e:
     title: "Security & Architectural Guardrails"
-    details: "Explicit negative permissions and constraints specifying what the feature must NOT do (e.g., forbidden endpoints, unauthorized external network calls, destructive filesystem operations, prototype pollution risks)."
+    details: "Explicit constraints specifying what the feature must NOT do (e.g., destructive filesystem operations, prototype pollution risks)."
   section_f:
     title: "Mandatory Agent Skill Mapping"
-    details: "Explicitly name and assign the designated available skills from the skills catalog to be activated during execution (e.g., test-driven-development, frontend-ui-engineering, cyber-security-frameworks, performance-optimization)."
+    details: "Explicitly name and assign the designated available skills from the skills catalog to be activated during execution (e.g., 21st-ui-build, frontend-ui-engineering, systematic-debugging)."
 ```
 
 ---
@@ -56,8 +56,8 @@ task_plan_structure:
 ## 3. Strict Execution Protocol
 
 1. **Refer to Project Rules First:**
-   - Consult [`.agents/AGENTS.md`](file:///c:/Project_Struct/.agents/AGENTS.md) for full procedural rules and guardrails.
+   - Consult [`.agents/AGENTS.md`](.agents/AGENTS.md) for full procedural rules and guardrails.
 2. **Zero Code Touched Before Approval:**
-   - In accordance with TDD and planning guidelines, do not create, modify, or refactor any source code until the implementation plan has been reviewed and verified.
-3. **4-Tier Testing Compliance:**
-   - All test plans must adhere strictly to [`spec_universal/tdd_4tier_testing_template.md`](file:///c:/Project_Struct/spec_universal/tdd_4tier_testing_template.md).
+   - In accordance with planning guidelines, do not create, modify, or refactor any source code until the implementation plan has been reviewed and verified.
+3. **Smoke Verification Compliance:**
+   - All verification plans must adhere to [`spec_universal/hackathon_smoke_verification_template.md`](spec_universal/hackathon_smoke_verification_template.md).
