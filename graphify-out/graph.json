@@ -138,7 +138,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_project_hackathon_hackathon_boilerplate_agents_skills_impeccable_scripts_command_metadata_json",
-      "community": 205,
+      "community": 190,
       "norm_label": "command-metadata.json"
     },
     {
@@ -978,7 +978,7 @@
       "source_location": "L225",
       "_origin": "ast",
       "id": "scripts_live_browser_writescrolly",
-      "community": 1,
+      "community": 7,
       "norm_label": "writescrolly()"
     },
     {
@@ -998,7 +998,7 @@
       "source_location": "L227",
       "_origin": "ast",
       "id": "scripts_live_browser_clearscrolly",
-      "community": 1,
+      "community": 7,
       "norm_label": "clearscrolly()"
     },
     {
@@ -1068,7 +1068,7 @@
       "source_location": "L512",
       "_origin": "ast",
       "id": "scripts_live_browser_updateclearchip",
-      "community": 0,
+      "community": 17,
       "norm_label": "updateclearchip()"
     },
     {
@@ -1118,7 +1118,7 @@
       "source_location": "L560",
       "_origin": "ast",
       "id": "scripts_live_browser_redrawstrokes",
-      "community": 0,
+      "community": 17,
       "norm_label": "redrawstrokes()"
     },
     {
@@ -1128,7 +1128,7 @@
       "source_location": "L588",
       "_origin": "ast",
       "id": "scripts_live_browser_localcoords",
-      "community": 0,
+      "community": 17,
       "norm_label": "localcoords()"
     },
     {
@@ -1138,7 +1138,7 @@
       "source_location": "L593",
       "_origin": "ast",
       "id": "scripts_live_browser_onannotdown",
-      "community": 0,
+      "community": 17,
       "norm_label": "onannotdown()"
     },
     {
@@ -1148,7 +1148,7 @@
       "source_location": "L671",
       "_origin": "ast",
       "id": "scripts_live_browser_onannotmove",
-      "community": 0,
+      "community": 17,
       "norm_label": "onannotmove()"
     },
     {
@@ -1168,7 +1168,7 @@
       "source_location": "L737",
       "_origin": "ast",
       "id": "scripts_live_browser_onannotup",
-      "community": 0,
+      "community": 17,
       "norm_label": "onannotup()"
     },
     {
@@ -1178,7 +1178,7 @@
       "source_location": "L780",
       "_origin": "ast",
       "id": "scripts_live_browser_renderallpins",
-      "community": 0,
+      "community": 17,
       "norm_label": "renderallpins()"
     },
     {
@@ -1198,7 +1198,7 @@
       "source_location": "L825",
       "_origin": "ast",
       "id": "scripts_live_browser_begineditpin",
-      "community": 0,
+      "community": 17,
       "norm_label": "begineditpin()"
     },
     {
@@ -1208,7 +1208,7 @@
       "source_location": "L858",
       "_origin": "ast",
       "id": "scripts_live_browser_onannotinputkey",
-      "community": 0,
+      "community": 17,
       "norm_label": "onannotinputkey()"
     },
     {
@@ -1218,7 +1218,7 @@
       "source_location": "L871",
       "_origin": "ast",
       "id": "scripts_live_browser_finalizeeditingpin",
-      "community": 0,
+      "community": 17,
       "norm_label": "finalizeeditingpin()"
     },
     {
@@ -1228,7 +1228,7 @@
       "source_location": "L881",
       "_origin": "ast",
       "id": "scripts_live_browser_canceleditingpin",
-      "community": 0,
+      "community": 17,
       "norm_label": "canceleditingpin()"
     },
     {
@@ -1248,7 +1248,7 @@
       "source_location": "L939",
       "_origin": "ast",
       "id": "scripts_live_browser_stripmanualeditruntimestate",
-      "community": 17,
+      "community": 0,
       "norm_label": "stripmanualeditruntimestate()"
     },
     {
@@ -1258,7 +1258,7 @@
       "source_location": "L962",
       "_origin": "ast",
       "id": "scripts_live_browser_sanitizedcontextouterhtml",
-      "community": 17,
+      "community": 0,
       "norm_label": "sanitizedcontextouterhtml()"
     },
     {
@@ -1268,7 +1268,7 @@
       "source_location": "L969",
       "_origin": "ast",
       "id": "scripts_live_browser_extractcontext",
-      "community": 17,
+      "community": 7,
       "norm_label": "extractcontext()"
     },
     {
@@ -1278,7 +1278,7 @@
       "source_location": "L1014",
       "_origin": "ast",
       "id": "scripts_live_browser_contextelementformanualedit",
-      "community": 17,
+      "community": 0,
       "norm_label": "contextelementformanualedit()"
     },
     {
@@ -1288,7 +1288,7 @@
       "source_location": "L1038",
       "_origin": "ast",
       "id": "scripts_live_browser_isusefulmanualeditcontext",
-      "community": 17,
+      "community": 0,
       "norm_label": "isusefulmanualeditcontext()"
     },
     {
@@ -1298,7 +1298,7 @@
       "source_location": "L1044",
       "_origin": "ast",
       "id": "scripts_live_browser_collectmanualcontextpieces",
-      "community": 17,
+      "community": 0,
       "norm_label": "collectmanualcontextpieces()"
     },
     {
@@ -1308,7 +1308,7 @@
       "source_location": "L1063",
       "_origin": "ast",
       "id": "scripts_live_browser_addmanualcontexttext",
-      "community": 17,
+      "community": 0,
       "norm_label": "addmanualcontexttext()"
     },
     {
@@ -1328,7 +1328,7 @@
       "source_location": "L1074",
       "_origin": "ast",
       "id": "scripts_live_browser_normalizemanualcontexttext",
-      "community": 17,
+      "community": 0,
       "norm_label": "normalizemanualcontexttext()"
     },
     {
@@ -1348,7 +1348,7 @@
       "source_location": "L1117",
       "_origin": "ast",
       "id": "scripts_live_browser_positionbar",
-      "community": 84,
+      "community": 7,
       "norm_label": "positionbar()"
     },
     {
@@ -1358,7 +1358,7 @@
       "source_location": "L1162",
       "_origin": "ast",
       "id": "scripts_live_browser_showbar",
-      "community": 8,
+      "community": 7,
       "norm_label": "showbar()"
     },
     {
@@ -1748,7 +1748,7 @@
       "source_location": "L1823",
       "_origin": "ast",
       "id": "scripts_live_browser_cursorforinsertaxis",
-      "community": 0,
+      "community": 9,
       "norm_label": "cursorforinsertaxis()"
     },
     {
@@ -1768,7 +1768,7 @@
       "source_location": "L1846",
       "_origin": "ast",
       "id": "scripts_live_browser_placeholderwidthisimplicit",
-      "community": 0,
+      "community": 17,
       "norm_label": "placeholderwidthisimplicit()"
     },
     {
@@ -1788,7 +1788,7 @@
       "source_location": "L1867",
       "_origin": "ast",
       "id": "scripts_live_browser_materializeplaceholderwidth",
-      "community": 0,
+      "community": 17,
       "norm_label": "materializeplaceholderwidth()"
     },
     {
@@ -1798,7 +1798,7 @@
       "source_location": "L1879",
       "_origin": "ast",
       "id": "scripts_live_browser_cancreateinsert",
-      "community": 8,
+      "community": 17,
       "norm_label": "cancreateinsert()"
     },
     {
@@ -1808,7 +1808,7 @@
       "source_location": "L1888",
       "_origin": "ast",
       "id": "scripts_live_browser_insertcreatedisabledreason",
-      "community": 8,
+      "community": 17,
       "norm_label": "insertcreatedisabledreason()"
     },
     {
@@ -1818,7 +1818,7 @@
       "source_location": "L1893",
       "_origin": "ast",
       "id": "scripts_live_browser_clampplaceholdersize",
-      "community": 0,
+      "community": 17,
       "norm_label": "clampplaceholdersize()"
     },
     {
@@ -1838,7 +1838,7 @@
       "source_location": "L1907",
       "_origin": "ast",
       "id": "scripts_live_browser_resizeplaceholderfromedge",
-      "community": 0,
+      "community": 17,
       "norm_label": "resizeplaceholderfromedge()"
     },
     {
@@ -1878,7 +1878,7 @@
       "source_location": "L2002",
       "_origin": "ast",
       "id": "scripts_live_browser_setpageinteractioncursor",
-      "community": 0,
+      "community": 9,
       "norm_label": "setpageinteractioncursor()"
     },
     {
@@ -1888,7 +1888,7 @@
       "source_location": "L2022",
       "_origin": "ast",
       "id": "scripts_live_browser_syncpageinteractioncursor",
-      "community": 0,
+      "community": 9,
       "norm_label": "syncpageinteractioncursor()"
     },
     {
@@ -1918,7 +1918,7 @@
       "source_location": "L2051",
       "_origin": "ast",
       "id": "scripts_live_browser_deferredrecoverysuperseded",
-      "community": 2,
+      "community": 114,
       "norm_label": "deferredrecoverysuperseded()"
     },
     {
@@ -1958,7 +1958,7 @@
       "source_location": "L2101",
       "_origin": "ast",
       "id": "scripts_live_browser_buildinsertplaceholdersnapshotfromdom",
-      "community": 1,
+      "community": 7,
       "norm_label": "buildinsertplaceholdersnapshotfromdom()"
     },
     {
@@ -1968,7 +1968,7 @@
       "source_location": "L2115",
       "_origin": "ast",
       "id": "scripts_live_browser_findinsertanchorindom",
-      "community": 7,
+      "community": 2,
       "norm_label": "findinsertanchorindom()"
     },
     {
@@ -1998,7 +1998,7 @@
       "source_location": "L2167",
       "_origin": "ast",
       "id": "scripts_live_browser_applyplaceholderdimensions",
-      "community": 84,
+      "community": 17,
       "norm_label": "applyplaceholderdimensions()"
     },
     {
@@ -2008,7 +2008,7 @@
       "source_location": "L2179",
       "_origin": "ast",
       "id": "scripts_live_browser_showorupdatecyclingbar",
-      "community": 8,
+      "community": 7,
       "norm_label": "showorupdatecyclingbar()"
     },
     {
@@ -2038,7 +2038,7 @@
       "source_location": "L2225",
       "_origin": "ast",
       "id": "scripts_live_browser_startplaceholderedgeresize",
-      "community": 0,
+      "community": 17,
       "norm_label": "startplaceholderedgeresize()"
     },
     {
@@ -2098,7 +2098,7 @@
       "source_location": "L2336",
       "_origin": "ast",
       "id": "scripts_live_browser_hideinsertcreatetooltip",
-      "community": 8,
+      "community": 17,
       "norm_label": "hideinsertcreatetooltip()"
     },
     {
@@ -2108,7 +2108,7 @@
       "source_location": "L2341",
       "_origin": "ast",
       "id": "scripts_live_browser_insertcreategatestate",
-      "community": 8,
+      "community": 17,
       "norm_label": "insertcreategatestate()"
     },
     {
@@ -2118,7 +2118,7 @@
       "source_location": "L2349",
       "_origin": "ast",
       "id": "scripts_live_browser_syncinsertcreatebutton",
-      "community": 8,
+      "community": 17,
       "norm_label": "syncinsertcreatebutton()"
     },
     {
@@ -2298,7 +2298,7 @@
       "source_location": "L3031",
       "_origin": "ast",
       "id": "scripts_live_browser_ensurecyclingrenderable",
-      "community": 8,
+      "community": 7,
       "norm_label": "ensurecyclingrenderable()"
     },
     {
@@ -2308,7 +2308,7 @@
       "source_location": "L3040",
       "_origin": "ast",
       "id": "scripts_live_browser_recoveremptycycling",
-      "community": 1,
+      "community": 7,
       "norm_label": "recoveremptycycling()"
     },
     {
@@ -2428,7 +2428,7 @@
       "source_location": "L3428",
       "_origin": "ast",
       "id": "scripts_live_browser_unwrapmixedcontenttextnodes",
-      "community": 17,
+      "community": 0,
       "norm_label": "unwrapmixedcontenttextnodes()"
     },
     {
@@ -2538,7 +2538,7 @@
       "source_location": "L3586",
       "_origin": "ast",
       "id": "scripts_live_browser_buildlocatorforleaf",
-      "community": 17,
+      "community": 1,
       "norm_label": "buildlocatorforleaf()"
     },
     {
@@ -2548,7 +2548,7 @@
       "source_location": "L3612",
       "_origin": "ast",
       "id": "scripts_live_browser_sourcehintforelement",
-      "community": 17,
+      "community": 0,
       "norm_label": "sourcehintforelement()"
     },
     {
@@ -2558,7 +2558,7 @@
       "source_location": "L3628",
       "_origin": "ast",
       "id": "scripts_live_browser_parsesourceloc",
-      "community": 17,
+      "community": 0,
       "norm_label": "parsesourceloc()"
     },
     {
@@ -2568,7 +2568,7 @@
       "source_location": "L3636",
       "_origin": "ast",
       "id": "scripts_live_browser_documentrefforelement",
-      "community": 17,
+      "community": 0,
       "norm_label": "documentrefforelement()"
     },
     {
@@ -2578,7 +2578,7 @@
       "source_location": "L3653",
       "_origin": "ast",
       "id": "scripts_live_browser_documentrefsegment",
-      "community": 17,
+      "community": 0,
       "norm_label": "documentrefsegment()"
     },
     {
@@ -2588,7 +2588,7 @@
       "source_location": "L3658",
       "_origin": "ast",
       "id": "scripts_live_browser_documentrefidsuffix",
-      "community": 17,
+      "community": 0,
       "norm_label": "documentrefidsuffix()"
     },
     {
@@ -2598,7 +2598,7 @@
       "source_location": "L3662",
       "_origin": "ast",
       "id": "scripts_live_browser_documentrefclasssuffix",
-      "community": 17,
+      "community": 0,
       "norm_label": "documentrefclasssuffix()"
     },
     {
@@ -2608,7 +2608,7 @@
       "source_location": "L3673",
       "_origin": "ast",
       "id": "scripts_live_browser_normalizedocumentreftoken",
-      "community": 17,
+      "community": 0,
       "norm_label": "normalizedocumentreftoken()"
     },
     {
@@ -2618,7 +2618,7 @@
       "source_location": "L3677",
       "_origin": "ast",
       "id": "scripts_live_browser_indexamongsametag",
-      "community": 17,
+      "community": 0,
       "norm_label": "indexamongsametag()"
     },
     {
@@ -2628,7 +2628,7 @@
       "source_location": "L3691",
       "_origin": "ast",
       "id": "scripts_live_browser_copyeditleafcontext",
-      "community": 17,
+      "community": 0,
       "norm_label": "copyeditleafcontext()"
     },
     {
@@ -2638,7 +2638,7 @@
       "source_location": "L3705",
       "_origin": "ast",
       "id": "scripts_live_browser_nearbyeditabletextsformanualedit",
-      "community": 17,
+      "community": 0,
       "norm_label": "nearbyeditabletextsformanualedit()"
     },
     {
@@ -2648,7 +2648,7 @@
       "source_location": "L3725",
       "_origin": "ast",
       "id": "scripts_live_browser_copyeditcontainercontext",
-      "community": 17,
+      "community": 0,
       "norm_label": "copyeditcontainercontext()"
     },
     {
@@ -2658,7 +2658,7 @@
       "source_location": "L3737",
       "_origin": "ast",
       "id": "scripts_live_browser_forbiddenmanualtextchars",
-      "community": 17,
+      "community": 1,
       "norm_label": "forbiddenmanualtextchars()"
     },
     {
@@ -2668,7 +2668,7 @@
       "source_location": "L3745",
       "_origin": "ast",
       "id": "scripts_live_browser_applyediting",
-      "community": 17,
+      "community": 1,
       "norm_label": "applyediting()"
     },
     {
@@ -2888,7 +2888,7 @@
       "source_location": "L4100",
       "_origin": "ast",
       "id": "scripts_live_browser_fetchpendingcount",
-      "community": 30,
+      "community": 9,
       "norm_label": "fetchpendingcount()"
     },
     {
@@ -2908,7 +2908,7 @@
       "source_location": "L4160",
       "_origin": "ast",
       "id": "scripts_live_browser_onpendingtrashclick",
-      "community": 17,
+      "community": 0,
       "norm_label": "onpendingtrashclick()"
     },
     {
@@ -2938,7 +2938,7 @@
       "source_location": "L4230",
       "_origin": "ast",
       "id": "scripts_live_browser_onpendingrollbackclick",
-      "community": 30,
+      "community": 93,
       "norm_label": "onpendingrollbackclick()"
     },
     {
@@ -2988,7 +2988,7 @@
       "source_location": "L4348",
       "_origin": "ast",
       "id": "scripts_live_browser_restorediscardedmanualedits",
-      "community": 17,
+      "community": 0,
       "norm_label": "restorediscardedmanualedits()"
     },
     {
@@ -2998,7 +2998,7 @@
       "source_location": "L4367",
       "_origin": "ast",
       "id": "scripts_live_browser_canrestoremanualeditelement",
-      "community": 17,
+      "community": 0,
       "norm_label": "canrestoremanualeditelement()"
     },
     {
@@ -3008,7 +3008,7 @@
       "source_location": "L4373",
       "_origin": "ast",
       "id": "scripts_live_browser_mixedtextwraprestorehint",
-      "community": 17,
+      "community": 0,
       "norm_label": "mixedtextwraprestorehint()"
     },
     {
@@ -3018,7 +3018,7 @@
       "source_location": "L4384",
       "_origin": "ast",
       "id": "scripts_live_browser_restoremixedtextnodemanualedit",
-      "community": 17,
+      "community": 0,
       "norm_label": "restoremixedtextnodemanualedit()"
     },
     {
@@ -3028,7 +3028,7 @@
       "source_location": "L4402",
       "_origin": "ast",
       "id": "scripts_live_browser_directmixedtextrestorenodes",
-      "community": 17,
+      "community": 0,
       "norm_label": "directmixedtextrestorenodes()"
     },
     {
@@ -3038,7 +3038,7 @@
       "source_location": "L4412",
       "_origin": "ast",
       "id": "scripts_live_browser_findmanualeditrestoreelement",
-      "community": 17,
+      "community": 0,
       "norm_label": "findmanualeditrestoreelement()"
     },
     {
@@ -3048,7 +3048,7 @@
       "source_location": "L4431",
       "_origin": "ast",
       "id": "scripts_live_browser_querymanualeditref",
-      "community": 17,
+      "community": 0,
       "norm_label": "querymanualeditref()"
     },
     {
@@ -3058,7 +3058,7 @@
       "source_location": "L4451",
       "_origin": "ast",
       "id": "scripts_live_browser_parsemanualeditrefsegment",
-      "community": 17,
+      "community": 0,
       "norm_label": "parsemanualeditrefsegment()"
     },
     {
@@ -3068,7 +3068,7 @@
       "source_location": "L4467",
       "_origin": "ast",
       "id": "scripts_live_browser_elementmatchesmanualrefsegment",
-      "community": 17,
+      "community": 0,
       "norm_label": "elementmatchesmanualrefsegment()"
     },
     {
@@ -3268,7 +3268,7 @@
       "source_location": "L4898",
       "_origin": "ast",
       "id": "scripts_live_browser_mountedparametercount",
-      "community": 93,
+      "community": 84,
       "norm_label": "mountedparametercount()"
     },
     {
@@ -3278,7 +3278,7 @@
       "source_location": "L4909",
       "_origin": "ast",
       "id": "scripts_live_browser_completeparameterpublication",
-      "community": 93,
+      "community": 7,
       "norm_label": "completeparameterpublication()"
     },
     {
@@ -3288,7 +3288,7 @@
       "source_location": "L4924",
       "_origin": "ast",
       "id": "scripts_live_browser_completeparametergenerationifready",
-      "community": 93,
+      "community": 7,
       "norm_label": "completeparametergenerationifready()"
     },
     {
@@ -3408,7 +3408,7 @@
       "source_location": "L5043",
       "_origin": "ast",
       "id": "scripts_live_browser_buildpickedanchorsnapshot",
-      "community": 1,
+      "community": 7,
       "norm_label": "buildpickedanchorsnapshot()"
     },
     {
@@ -3468,7 +3468,7 @@
       "source_location": "L5169",
       "_origin": "ast",
       "id": "scripts_live_browser_issvelteinsertmanifest",
-      "community": 7,
+      "community": 2,
       "norm_label": "issvelteinsertmanifest()"
     },
     {
@@ -3478,7 +3478,7 @@
       "source_location": "L5173",
       "_origin": "ast",
       "id": "scripts_live_browser_findliveelementforsveltemanifest",
-      "community": 7,
+      "community": 2,
       "norm_label": "findliveelementforsveltemanifest()"
     },
     {
@@ -3728,7 +3728,7 @@
       "source_location": "L5716",
       "_origin": "ast",
       "id": "scripts_live_browser_teardownsveltecomponentsession",
-      "community": 1,
+      "community": 7,
       "norm_label": "teardownsveltecomponentsession()"
     },
     {
@@ -3808,7 +3808,7 @@
       "source_location": "L6001",
       "_origin": "ast",
       "id": "scripts_live_browser_showmounterrorcard",
-      "community": 9,
+      "community": 7,
       "norm_label": "showmounterrorcard()"
     },
     {
@@ -3818,7 +3818,7 @@
       "source_location": "L6012",
       "_origin": "ast",
       "id": "scripts_live_browser_clearmounterrorcard",
-      "community": 1,
+      "community": 7,
       "norm_label": "clearmounterrorcard()"
     },
     {
@@ -3858,7 +3858,7 @@
       "source_location": "L6127",
       "_origin": "ast",
       "id": "scripts_live_browser_abortsveltecomponentinjection",
-      "community": 1,
+      "community": 7,
       "norm_label": "abortsveltecomponentinjection()"
     },
     {
@@ -3868,7 +3868,7 @@
       "source_location": "L6161",
       "_origin": "ast",
       "id": "scripts_live_browser_resetsveltecomponentsession",
-      "community": 1,
+      "community": 7,
       "norm_label": "resetsveltecomponentsession()"
     },
     {
@@ -3918,7 +3918,7 @@
       "source_location": "L6285",
       "_origin": "ast",
       "id": "scripts_live_browser_completesourceinjection",
-      "community": 1,
+      "community": 7,
       "norm_label": "completesourceinjection()"
     },
     {
@@ -4028,7 +4028,7 @@
       "source_location": "L6621",
       "_origin": "ast",
       "id": "scripts_live_browser_pickvariantcontent",
-      "community": 84,
+      "community": 7,
       "norm_label": "pickvariantcontent()"
     },
     {
@@ -4068,7 +4068,7 @@
       "source_location": "L6692",
       "_origin": "ast",
       "id": "scripts_live_browser_removevariantstatestylesheet",
-      "community": 1,
+      "community": 7,
       "norm_label": "removevariantstatestylesheet()"
     },
     {
@@ -4078,7 +4078,7 @@
       "source_location": "L6696",
       "_origin": "ast",
       "id": "scripts_live_browser_discardstatestyleid",
-      "community": 0,
+      "community": 7,
       "norm_label": "discardstatestyleid()"
     },
     {
@@ -4088,7 +4088,7 @@
       "source_location": "L6700",
       "_origin": "ast",
       "id": "scripts_live_browser_showoriginalduringdiscard",
-      "community": 0,
+      "community": 7,
       "norm_label": "showoriginalduringdiscard()"
     },
     {
@@ -4098,7 +4098,7 @@
       "source_location": "L6714",
       "_origin": "ast",
       "id": "scripts_live_browser_removediscardstatestylesheet",
-      "community": 0,
+      "community": 7,
       "norm_label": "removediscardstatestylesheet()"
     },
     {
@@ -4108,7 +4108,7 @@
       "source_location": "L6724",
       "_origin": "ast",
       "id": "scripts_live_browser_discardedwrappers",
-      "community": 0,
+      "community": 7,
       "norm_label": "discardedwrappers()"
     },
     {
@@ -4118,7 +4118,7 @@
       "source_location": "L6729",
       "_origin": "ast",
       "id": "scripts_live_browser_releasediscardedstaticwrapper",
-      "community": 0,
+      "community": 7,
       "norm_label": "releasediscardedstaticwrapper()"
     },
     {
@@ -4128,7 +4128,7 @@
       "source_location": "L6746",
       "_origin": "ast",
       "id": "scripts_live_browser_releasediscardedstaticwrappers",
-      "community": 0,
+      "community": 7,
       "norm_label": "releasediscardedstaticwrappers()"
     },
     {
@@ -4138,7 +4138,7 @@
       "source_location": "L6752",
       "_origin": "ast",
       "id": "scripts_live_browser_watchfordiscardedframeworkwrapperremoval",
-      "community": 0,
+      "community": 7,
       "norm_label": "watchfordiscardedframeworkwrapperremoval()"
     },
     {
@@ -4148,7 +4148,7 @@
       "source_location": "L6789",
       "_origin": "ast",
       "id": "scripts_live_browser_resolvescrolllockanchortop",
-      "community": 1,
+      "community": 84,
       "norm_label": "resolvescrolllockanchortop()"
     },
     {
@@ -4158,7 +4158,7 @@
       "source_location": "L6798",
       "_origin": "ast",
       "id": "scripts_live_browser_startscrolllock",
-      "community": 1,
+      "community": 7,
       "norm_label": "startscrolllock()"
     },
     {
@@ -4168,7 +4168,7 @@
       "source_location": "L6917",
       "_origin": "ast",
       "id": "scripts_live_browser_stopscrolllock",
-      "community": 1,
+      "community": 7,
       "norm_label": "stopscrolllock()"
     },
     {
@@ -4178,7 +4178,7 @@
       "source_location": "L6946",
       "_origin": "ast",
       "id": "scripts_live_browser_pickpopulatedvariantswrapper",
-      "community": 7,
+      "community": 84,
       "norm_label": "pickpopulatedvariantswrapper()"
     },
     {
@@ -4208,7 +4208,7 @@
       "source_location": "L6968",
       "_origin": "ast",
       "id": "scripts_live_browser_startvariantobserver",
-      "community": 1,
+      "community": 7,
       "norm_label": "startvariantobserver()"
     },
     {
@@ -4218,7 +4218,7 @@
       "source_location": "L7080",
       "_origin": "ast",
       "id": "scripts_live_browser_startscrolltracking",
-      "community": 1,
+      "community": 7,
       "norm_label": "startscrolltracking()"
     },
     {
@@ -4278,7 +4278,7 @@
       "source_location": "L7405",
       "_origin": "ast",
       "id": "scripts_live_browser_checkpointpayload",
-      "community": 2,
+      "community": 7,
       "norm_label": "checkpointpayload()"
     },
     {
@@ -4288,7 +4288,7 @@
       "source_location": "L7425",
       "_origin": "ast",
       "id": "scripts_live_browser_sendcheckpoint",
-      "community": 2,
+      "community": 7,
       "norm_label": "sendcheckpoint()"
     },
     {
@@ -4378,7 +4378,7 @@
       "source_location": "L7772",
       "_origin": "ast",
       "id": "scripts_live_browser_handlego",
-      "community": 1,
+      "community": 7,
       "norm_label": "handlego()"
     },
     {
@@ -4398,7 +4398,7 @@
       "source_location": "L7858",
       "_origin": "ast",
       "id": "scripts_live_browser_handleinsertcreate",
-      "community": 1,
+      "community": 7,
       "norm_label": "handleinsertcreate()"
     },
     {
@@ -4488,7 +4488,7 @@
       "source_location": "L8096",
       "_origin": "ast",
       "id": "scripts_live_browser_shoulduseancestorcropshaderproxy",
-      "community": 7,
+      "community": 0,
       "norm_label": "shoulduseancestorcropshaderproxy()"
     },
     {
@@ -4538,7 +4538,7 @@
       "source_location": "L8230",
       "_origin": "ast",
       "id": "scripts_live_browser_captureandemit",
-      "community": 2,
+      "community": 7,
       "norm_label": "captureandemit()"
     },
     {
@@ -4618,7 +4618,7 @@
       "source_location": "L8504",
       "_origin": "ast",
       "id": "scripts_live_browser_compileshader",
-      "community": 2,
+      "community": 0,
       "norm_label": "compileshader()"
     },
     {
@@ -4638,7 +4638,7 @@
       "source_location": "L8528",
       "_origin": "ast",
       "id": "scripts_live_browser_removestrayshadernode",
-      "community": 1,
+      "community": 7,
       "norm_label": "removestrayshadernode()"
     },
     {
@@ -4648,7 +4648,7 @@
       "source_location": "L8533",
       "_origin": "ast",
       "id": "scripts_live_browser_hideshaderoverlay",
-      "community": 1,
+      "community": 7,
       "norm_label": "hideshaderoverlay()"
     },
     {
@@ -4658,7 +4658,7 @@
       "source_location": "L8551",
       "_origin": "ast",
       "id": "scripts_live_browser_showshaderbitmapfallback",
-      "community": 2,
+      "community": 0,
       "norm_label": "showshaderbitmapfallback()"
     },
     {
@@ -4668,7 +4668,7 @@
       "source_location": "L8570",
       "_origin": "ast",
       "id": "scripts_live_browser_showshaderoverlay",
-      "community": 2,
+      "community": 0,
       "norm_label": "showshaderoverlay()"
     },
     {
@@ -4688,7 +4688,7 @@
       "source_location": "L8765",
       "_origin": "ast",
       "id": "scripts_live_browser_maybecompleteacceptedsession",
-      "community": 2,
+      "community": 93,
       "norm_label": "maybecompleteacceptedsession()"
     },
     {
@@ -4698,7 +4698,7 @@
       "source_location": "L8784",
       "_origin": "ast",
       "id": "scripts_live_browser_scheduleacceptcleanup",
-      "community": 2,
+      "community": 114,
       "norm_label": "scheduleacceptcleanup()"
     },
     {
@@ -4728,7 +4728,7 @@
       "source_location": "L8831",
       "_origin": "ast",
       "id": "scripts_live_browser_accepteddomalreadyclean",
-      "community": 2,
+      "community": 114,
       "norm_label": "accepteddomalreadyclean()"
     },
     {
@@ -4738,7 +4738,7 @@
       "source_location": "L8838",
       "_origin": "ast",
       "id": "scripts_live_browser_ensureaccepteddomclean",
-      "community": 2,
+      "community": 114,
       "norm_label": "ensureaccepteddomclean()"
     },
     {
@@ -4748,7 +4748,7 @@
       "source_location": "L8878",
       "_origin": "ast",
       "id": "scripts_live_browser_findacceptedruntimewrappers",
-      "community": 2,
+      "community": 114,
       "norm_label": "findacceptedruntimewrappers()"
     },
     {
@@ -4758,7 +4758,7 @@
       "source_location": "L8886",
       "_origin": "ast",
       "id": "scripts_live_browser_restoreaccepteddomfromsnapshot",
-      "community": 2,
+      "community": 114,
       "norm_label": "restoreaccepteddomfromsnapshot()"
     },
     {
@@ -4768,7 +4768,7 @@
       "source_location": "L8908",
       "_origin": "ast",
       "id": "scripts_live_browser_reloadaftermissingaccepteddom",
-      "community": 2,
+      "community": 114,
       "norm_label": "reloadaftermissingaccepteddom()"
     },
     {
@@ -4818,7 +4818,7 @@
       "source_location": "L8981",
       "_origin": "ast",
       "id": "scripts_live_browser_resetsessionfilemeta",
-      "community": 1,
+      "community": 7,
       "norm_label": "resetsessionfilemeta()"
     },
     {
@@ -4948,7 +4948,7 @@
       "source_location": "L9202",
       "_origin": "ast",
       "id": "scripts_live_browser_savesession",
-      "community": 1,
+      "community": 7,
       "norm_label": "savesession()"
     },
     {
@@ -4968,7 +4968,7 @@
       "source_location": "L9243",
       "_origin": "ast",
       "id": "scripts_live_browser_clearsession",
-      "community": 1,
+      "community": 7,
       "norm_label": "clearsession()"
     },
     {
@@ -5008,7 +5008,7 @@
       "source_location": "L9263",
       "_origin": "ast",
       "id": "scripts_live_browser_cleanup",
-      "community": 1,
+      "community": 7,
       "norm_label": "cleanup()"
     },
     {
@@ -5038,7 +5038,7 @@
       "source_location": "L9410",
       "_origin": "ast",
       "id": "scripts_live_browser_handledwrapperreloadkey",
-      "community": 2,
+      "community": 114,
       "norm_label": "handledwrapperreloadkey()"
     },
     {
@@ -5048,7 +5048,7 @@
       "source_location": "L9414",
       "_origin": "ast",
       "id": "scripts_live_browser_clearhandledwrapperreloadstamp",
-      "community": 2,
+      "community": 114,
       "norm_label": "clearhandledwrapperreloadstamp()"
     },
     {
@@ -5058,7 +5058,7 @@
       "source_location": "L9432",
       "_origin": "ast",
       "id": "scripts_live_browser_schedulehandledruntimewrapperreload",
-      "community": 2,
+      "community": 114,
       "norm_label": "schedulehandledruntimewrapperreload()"
     },
     {
@@ -5068,7 +5068,7 @@
       "source_location": "L9471",
       "_origin": "ast",
       "id": "scripts_live_browser_watchforhandledruntimewrapper",
-      "community": 2,
+      "community": 114,
       "norm_label": "watchforhandledruntimewrapper()"
     },
     {
@@ -5168,7 +5168,7 @@
       "source_location": "L9896",
       "_origin": "ast",
       "id": "scripts_live_browser_globalbarmodetoggles",
-      "community": 0,
+      "community": 13,
       "norm_label": "globalbarmodetoggles()"
     },
     {
@@ -5178,7 +5178,7 @@
       "source_location": "L9905",
       "_origin": "ast",
       "id": "scripts_live_browser_applyglobalbarlabelstate",
-      "community": 0,
+      "community": 13,
       "norm_label": "applyglobalbarlabelstate()"
     },
     {
@@ -5298,7 +5298,7 @@
       "source_location": "L10052",
       "_origin": "ast",
       "id": "scripts_live_browser_ispageeditableelement",
-      "community": 0,
+      "community": 1,
       "norm_label": "ispageeditableelement()"
     },
     {
@@ -5308,7 +5308,7 @@
       "source_location": "L10058",
       "_origin": "ast",
       "id": "scripts_live_browser_isinlineeditactive",
-      "community": 0,
+      "community": 1,
       "norm_label": "isinlineeditactive()"
     },
     {
@@ -5318,7 +5318,7 @@
       "source_location": "L10062",
       "_origin": "ast",
       "id": "scripts_live_browser_ispageeditableactive",
-      "community": 0,
+      "community": 1,
       "norm_label": "ispageeditableactive()"
     },
     {
@@ -5808,7 +5808,7 @@
       "source_location": "L11055",
       "_origin": "ast",
       "id": "scripts_live_browser_hideagentpolltooltip",
-      "community": 9,
+      "community": 0,
       "norm_label": "hideagentpolltooltip()"
     },
     {
@@ -5858,7 +5858,7 @@
       "source_location": "L11524",
       "_origin": "ast",
       "id": "scripts_live_browser_updateglobalbarstate",
-      "community": 1,
+      "community": 9,
       "norm_label": "updateglobalbarstate()"
     },
     {
@@ -5868,7 +5868,7 @@
       "source_location": "L11575",
       "_origin": "ast",
       "id": "scripts_live_browser_requestdetectscan",
-      "community": 93,
+      "community": 9,
       "norm_label": "requestdetectscan()"
     },
     {
@@ -5878,7 +5878,7 @@
       "source_location": "L11612",
       "_origin": "ast",
       "id": "scripts_live_browser_toggledetect",
-      "community": 1,
+      "community": 9,
       "norm_label": "toggledetect()"
     },
     {
@@ -5908,7 +5908,7 @@
       "source_location": "L11684",
       "_origin": "ast",
       "id": "scripts_live_browser_loaddetectscript",
-      "community": 1,
+      "community": 9,
       "norm_label": "loaddetectscript()"
     },
     {
@@ -5918,7 +5918,7 @@
       "source_location": "L11693",
       "_origin": "ast",
       "id": "scripts_live_browser_ondetectmessage",
-      "community": 93,
+      "community": 9,
       "norm_label": "ondetectmessage()"
     },
     {
@@ -5928,7 +5928,7 @@
       "source_location": "L11717",
       "_origin": "ast",
       "id": "scripts_live_browser_teardown",
-      "community": 1,
+      "community": 0,
       "norm_label": "teardown()"
     },
     {
@@ -5978,7 +5978,7 @@
       "source_location": "L12153",
       "_origin": "ast",
       "id": "scripts_live_browser_renderdesignchrome",
-      "community": 9,
+      "community": 22,
       "norm_label": "renderdesignchrome()"
     },
     {
@@ -5988,7 +5988,7 @@
       "source_location": "L12172",
       "_origin": "ast",
       "id": "scripts_live_browser_builddesignheader",
-      "community": 9,
+      "community": 22,
       "norm_label": "builddesignheader()"
     },
     {
@@ -5998,7 +5998,7 @@
       "source_location": "L12211",
       "_origin": "ast",
       "id": "scripts_live_browser_toggledesignpanel",
-      "community": 9,
+      "community": 22,
       "norm_label": "toggledesignpanel()"
     },
     {
@@ -6008,7 +6008,7 @@
       "source_location": "L12221",
       "_origin": "ast",
       "id": "scripts_live_browser_fetchdesignsystem",
-      "community": 9,
+      "community": 22,
       "norm_label": "fetchdesignsystem()"
     },
     {
@@ -6982,14 +6982,14 @@
       "norm_label": "__init__.py"
     },
     {
-      "label": "NovaMart API Package.  REST routes for chat, demo presets, order inspections, an",
+      "label": "NovaMart API Package.  REST routes for chat, demo presets, order inspections,",
       "file_type": "rationale",
       "source_file": "backend/api/__init__.py",
       "source_location": "L1",
       "_origin": "ast",
       "id": "api_init_rationale_1",
       "community": 212,
-      "norm_label": "novamart api package.  rest routes for chat, demo presets, order inspections, an"
+      "norm_label": "novamart api package.  rest routes for chat, demo presets, order inspections,"
     },
     {
       "label": "routes_chat.py",
@@ -7102,14 +7102,14 @@
       "norm_label": "run_preset()"
     },
     {
-      "label": "Judge Demonstration Presets for NovaMart Customer Support Agent.  Provides 1-cli",
+      "label": "Judge Demonstration Presets for NovaMart Customer Support Agent.  Provides 1-c",
       "file_type": "rationale",
       "source_file": "backend/api/routes_demo.py",
       "source_location": "L1",
       "_origin": "ast",
       "id": "api_routes_demo_rationale_1",
       "community": 53,
-      "norm_label": "judge demonstration presets for novamart customer support agent.  provides 1-cli"
+      "norm_label": "judge demonstration presets for novamart customer support agent.  provides 1-c"
     },
     {
       "label": "Lists all available official judge scenarios.",
@@ -7192,14 +7192,14 @@
       "norm_label": "any"
     },
     {
-      "label": "Evaluation API endpoints for NovaMart Customer Support Agent.  Enables automated",
+      "label": "Evaluation API endpoints for NovaMart Customer Support Agent.  Enables automat",
       "file_type": "rationale",
       "source_file": "backend/api/routes_eval.py",
       "source_location": "L1",
       "_origin": "ast",
       "id": "api_routes_eval_rationale_1",
       "community": 131,
-      "norm_label": "evaluation api endpoints for novamart customer support agent.  enables automated"
+      "norm_label": "evaluation api endpoints for novamart customer support agent.  enables automat"
     },
     {
       "label": "Executes all 6 official judge scenarios sequentially and compiles evaluation met",
@@ -7342,14 +7342,14 @@
       "norm_label": "__init__.py"
     },
     {
-      "label": "NovaMart Database Package.  Exports connection managers, relational models, and",
+      "label": "NovaMart Database Package.  Exports connection managers, relational models, an",
       "file_type": "rationale",
       "source_file": "backend/db/__init__.py",
       "source_location": "L1",
       "_origin": "ast",
       "id": "db_init_rationale_1",
       "community": 5,
-      "norm_label": "novamart database package.  exports connection managers, relational models, and"
+      "norm_label": "novamart database package.  exports connection managers, relational models, an"
     },
     {
       "label": "connection.py",
@@ -7452,34 +7452,34 @@
       "norm_label": "close_master_connection()"
     },
     {
-      "label": "SQLite in-memory shared and file-backed database connection manager.  Maintains",
+      "label": "SQLite in-memory shared and file-backed database connection manager.  Maintain",
       "file_type": "rationale",
       "source_file": "backend/db/connection.py",
       "source_location": "L1",
       "_origin": "ast",
       "id": "db_connection_rationale_1",
       "community": 5,
-      "norm_label": "sqlite in-memory shared and file-backed database connection manager.  maintains"
+      "norm_label": "sqlite in-memory shared and file-backed database connection manager.  maintain"
     },
     {
-      "label": "Return or initialize the persistent master connection.          Keeping this con",
+      "label": "Return or initialize the persistent master connection.          Keeping this c",
       "file_type": "rationale",
       "source_file": "backend/db/connection.py",
       "source_location": "L25",
       "_origin": "ast",
       "id": "db_connection_rationale_25",
       "community": 5,
-      "norm_label": "return or initialize the persistent master connection.          keeping this con"
+      "norm_label": "return or initialize the persistent master connection.          keeping this c"
     },
     {
-      "label": "Get a connection to the active SQLite database.          Ensures master connecti",
+      "label": "Get a connection to the active SQLite database.          Ensures master connec",
       "file_type": "rationale",
       "source_file": "backend/db/connection.py",
       "source_location": "L77",
       "_origin": "ast",
       "id": "db_connection_rationale_77",
       "community": 5,
-      "norm_label": "get a connection to the active sqlite database.          ensures master connecti"
+      "norm_label": "get a connection to the active sqlite database.          ensures master connec"
     },
     {
       "label": "Execute a SELECT query and return the first row as a dictionary.",
@@ -7702,14 +7702,14 @@
       "norm_label": "initialize_in_memory_engine()"
     },
     {
-      "label": "Data ingestion and schema builder for NovaMart AI Customer Support Agent.  Inges",
+      "label": "Data ingestion and schema builder for NovaMart AI Customer Support Agent.  Ing",
       "file_type": "rationale",
       "source_file": "backend/db/loader.py",
       "source_location": "L1",
       "_origin": "ast",
       "id": "db_loader_rationale_1",
       "community": 24,
-      "norm_label": "data ingestion and schema builder for novamart ai customer support agent.  inges"
+      "norm_label": "data ingestion and schema builder for novamart ai customer support agent.  ing"
     },
     {
       "label": "Parse string or return None if empty/null.",
@@ -7792,14 +7792,14 @@
       "norm_label": "ingest conversations.json."
     },
     {
-      "label": "Ingest all 7 datasets into SQLite.          Creates tables, inserts data inside",
+      "label": "Ingest all 7 datasets into SQLite.          Creates tables, inserts data insid",
       "file_type": "rationale",
       "source_file": "backend/db/loader.py",
       "source_location": "L491",
       "_origin": "ast",
       "id": "db_loader_rationale_491",
       "community": 24,
-      "norm_label": "ingest all 7 datasets into sqlite.          creates tables, inserts data inside"
+      "norm_label": "ingest all 7 datasets into sqlite.          creates tables, inserts data insid"
     },
     {
       "label": "Ensure in-memory shared engine is populated and ready for sub-millisecond querie",
@@ -7902,14 +7902,14 @@
       "norm_label": "conversation"
     },
     {
-      "label": "Typed Pydantic domain models for NovaMart relational entities.  Corresponds to t",
+      "label": "Typed Pydantic domain models for NovaMart relational entities.  Corresponds to",
       "file_type": "rationale",
       "source_file": "backend/db/models.py",
       "source_location": "L1",
       "_origin": "ast",
       "id": "db_models_rationale_1",
       "community": 5,
-      "norm_label": "typed pydantic domain models for novamart relational entities.  corresponds to t"
+      "norm_label": "typed pydantic domain models for novamart relational entities.  corresponds to"
     },
     {
       "label": "Customer account profile and loyalty attributes.",
@@ -8092,14 +8092,14 @@
       "norm_label": "workflowcontext"
     },
     {
-      "label": "NovaMart 9-Stage Hybrid Agent Reasoning Loop.  Implements the layered reasoning",
+      "label": "NovaMart 9-Stage Hybrid Agent Reasoning Loop.  Implements the layered reasonin",
       "file_type": "rationale",
       "source_file": "backend/engine/agent_loop.py",
       "source_location": "L1",
       "_origin": "ast",
       "id": "engine_agent_loop_rationale_1",
       "community": 10,
-      "norm_label": "novamart 9-stage hybrid agent reasoning loop.  implements the layered reasoning"
+      "norm_label": "novamart 9-stage hybrid agent reasoning loop.  implements the layered reasonin"
     },
     {
       "label": "Executes the complete 9-stage loop for customer requests.",
@@ -8172,14 +8172,14 @@
       "norm_label": "terminalmove"
     },
     {
-      "label": "NovaMart Policy Knowledge Base & General FAQ Engine.  Provides authoritative, ze",
+      "label": "NovaMart Policy Knowledge Base & General FAQ Engine.  Provides authoritative,",
       "file_type": "rationale",
       "source_file": "backend/engine/faq_engine.py",
       "source_location": "L1",
       "_origin": "ast",
       "id": "engine_faq_engine_rationale_1",
       "community": 10,
-      "norm_label": "novamart policy knowledge base & general faq engine.  provides authoritative, ze"
+      "norm_label": "novamart policy knowledge base & general faq engine.  provides authoritative,"
     },
     {
       "label": "Evaluates whether the customer message is a general policy or FAQ inquiry.",
@@ -8332,14 +8332,14 @@
       "norm_label": ".evaluate_pre_tool()"
     },
     {
-      "label": "NovaMart Hybrid Safety Interceptor and Guardrail Engine.  Adapted from clinical-",
+      "label": "NovaMart Hybrid Safety Interceptor and Guardrail Engine.  Adapted from clinica",
       "file_type": "rationale",
       "source_file": "backend/engine/guardrail_interceptor.py",
       "source_location": "L1",
       "_origin": "ast",
       "id": "engine_guardrail_interceptor_rationale_1",
       "community": 10,
-      "norm_label": "novamart hybrid safety interceptor and guardrail engine.  adapted from clinical-"
+      "norm_label": "novamart hybrid safety interceptor and guardrail engine.  adapted from clinica"
     },
     {
       "label": "Represents the deterministic outcome of a pre-tool execution evaluation.",
@@ -8372,14 +8372,14 @@
       "norm_label": "sanitize raw user input to defang injection, xss, and exploit attempts."
     },
     {
-      "label": "Enforce strict horizontal access control (RBAC).                  Returns True i",
+      "label": "Enforce strict horizontal access control (RBAC).                  Returns True",
       "file_type": "rationale",
       "source_file": "backend/engine/guardrail_interceptor.py",
       "source_location": "L103",
       "_origin": "ast",
       "id": "engine_guardrail_interceptor_rationale_103",
       "community": 54,
-      "norm_label": "enforce strict horizontal access control (rbac).                  returns true i"
+      "norm_label": "enforce strict horizontal access control (rbac).                  returns true"
     },
     {
       "label": "Recursively scrub internal-only or security-sensitive fields from payloads.",
@@ -8442,14 +8442,14 @@
       "norm_label": "detect legal threats or consumer court mentions."
     },
     {
-      "label": "Pre-flight interceptor for tool execution requests.                  Evaluates t",
+      "label": "Pre-flight interceptor for tool execution requests.                  Evaluates",
       "file_type": "rationale",
       "source_file": "backend/engine/guardrail_interceptor.py",
       "source_location": "L204",
       "_origin": "ast",
       "id": "engine_guardrail_interceptor_rationale_204",
       "community": 54,
-      "norm_label": "pre-flight interceptor for tool execution requests.                  evaluates t"
+      "norm_label": "pre-flight interceptor for tool execution requests.                  evaluates"
     },
     {
       "label": "memory.py",
@@ -8672,14 +8672,14 @@
       "norm_label": "retrieves existing support tickets for a customer to verify open complaints."
     },
     {
-      "label": "Builds a concise summary string of past conversations and open tickets         f",
+      "label": "Builds a concise summary string of past conversations and open tickets",
       "file_type": "rationale",
       "source_file": "backend/engine/memory.py",
       "source_location": "L106",
       "_origin": "ast",
       "id": "engine_memory_rationale_106",
       "community": 14,
-      "norm_label": "builds a concise summary string of past conversations and open tickets         f"
+      "norm_label": "builds a concise summary string of past conversations and open tickets"
     },
     {
       "label": "Appends a message to the conversation_messages table.",
@@ -8702,24 +8702,24 @@
       "norm_label": "resolves conversational pronouns ('it', 'that', 'the broken screen', 'photo sent"
     },
     {
-      "label": "Resolves pronouns and references in user_message.         Returns extracted enti",
+      "label": "Resolves pronouns and references in user_message.         Returns extracted ent",
       "file_type": "rationale",
       "source_file": "backend/engine/memory.py",
       "source_location": "L213",
       "_origin": "ast",
       "id": "engine_memory_rationale_213",
       "community": 14,
-      "norm_label": "resolves pronouns and references in user_message.         returns extracted enti"
+      "norm_label": "resolves pronouns and references in user_message.         returns extracted ent"
     },
     {
-      "label": "Session-level cache for candidate orders across conversational turns.     Enforc",
+      "label": "Session-level cache for candidate orders across conversational turns.     Enfor",
       "file_type": "rationale",
       "source_file": "backend/engine/memory.py",
       "source_location": "L328",
       "_origin": "ast",
       "id": "engine_memory_rationale_328",
       "community": 10,
-      "norm_label": "session-level cache for candidate orders across conversational turns.     enforc"
+      "norm_label": "session-level cache for candidate orders across conversational turns.     enfor"
     },
     {
       "label": "Store candidate orders for a session.",
@@ -8882,14 +8882,14 @@
       "norm_label": "any"
     },
     {
-      "label": "NovaMart Multi-Intent Decomposition & Dependency DAG Sequencer. Implements Gap 0",
+      "label": "NovaMart Multi-Intent Decomposition & Dependency DAG Sequencer. Implements Gap",
       "file_type": "rationale",
       "source_file": "backend/engine/multi_intent.py",
       "source_location": "L1",
       "_origin": "ast",
       "id": "engine_multi_intent_rationale_1",
       "community": 10,
-      "norm_label": "novamart multi-intent decomposition & dependency dag sequencer. implements gap 0"
+      "norm_label": "novamart multi-intent decomposition & dependency dag sequencer. implements gap"
     },
     {
       "label": "An individual intent node in the execution DAG.",
@@ -8922,14 +8922,14 @@
       "norm_label": "decomposes bundled customer requests (e.g. 'order not arrived + refund + change"
     },
     {
-      "label": "Parses bundled customer requests into discrete intent DAG nodes.         Wired w",
+      "label": "Parses bundled customer requests into discrete intent DAG nodes.         Wired",
       "file_type": "rationale",
       "source_file": "backend/engine/multi_intent.py",
       "source_location": "L106",
       "_origin": "ast",
       "id": "engine_multi_intent_rationale_106",
       "community": 90,
-      "norm_label": "parses bundled customer requests into discrete intent dag nodes.         wired w"
+      "norm_label": "parses bundled customer requests into discrete intent dag nodes.         wired"
     },
     {
       "label": "Establishes sequential dependencies between intents:         - Delivery inquiry",
@@ -8952,14 +8952,14 @@
       "norm_label": "topological sort of intent nodes based on dependencies."
     },
     {
-      "label": "Evaluates operational preconditions for a specific intent node.         Example:",
+      "label": "Evaluates operational preconditions for a specific intent node.         Example",
       "file_type": "rationale",
       "source_file": "backend/engine/multi_intent.py",
       "source_location": "L222",
       "_origin": "ast",
       "id": "engine_multi_intent_rationale_222",
       "community": 90,
-      "norm_label": "evaluates operational preconditions for a specific intent node.         example:"
+      "norm_label": "evaluates operational preconditions for a specific intent node.         example"
     },
     {
       "label": "persona_prompts.py",
@@ -9022,14 +9022,14 @@
       "norm_label": "strips prompt injection attempts, imperative system directives, and tag breaks."
     },
     {
-      "label": "Encloses customer message in the untrusted claim envelope.     Ensures the LLM t",
+      "label": "Encloses customer message in the untrusted claim envelope.     Ensures the LLM",
       "file_type": "rationale",
       "source_file": "backend/engine/persona_prompts.py",
       "source_location": "L49",
       "_origin": "ast",
       "id": "engine_persona_prompts_rationale_49",
       "community": 20,
-      "norm_label": "encloses customer message in the untrusted claim envelope.     ensures the llm t"
+      "norm_label": "encloses customer message in the untrusted claim envelope.     ensures the llm"
     },
     {
       "label": "Builds the complete operational system prompt with injected context.",
@@ -9202,14 +9202,14 @@
       "norm_label": "handle_pending_payment()"
     },
     {
-      "label": "NovaMart Deterministic Policy Rules Engine.  Implements exact, auditable busines",
+      "label": "NovaMart Deterministic Policy Rules Engine.  Implements exact, auditable busin",
       "file_type": "rationale",
       "source_file": "backend/engine/policy_rules.py",
       "source_location": "L1",
       "_origin": "ast",
       "id": "engine_policy_rules_rationale_1",
       "community": 6,
-      "norm_label": "novamart deterministic policy rules engine.  implements exact, auditable busines"
+      "norm_label": "novamart deterministic policy rules engine.  implements exact, auditable busin"
     },
     {
       "label": "Parse various datetime representations into a timezone-aware UTC datetime.",
@@ -9222,24 +9222,24 @@
       "norm_label": "parse various datetime representations into a timezone-aware utc datetime."
     },
     {
-      "label": "Resolve dynamic calendar anchor, eliminating system clock drift.          Adhere",
+      "label": "Resolve dynamic calendar anchor, eliminating system clock drift.          Adhe",
       "file_type": "rationale",
       "source_file": "backend/engine/policy_rules.py",
       "source_location": "L125",
       "_origin": "ast",
       "id": "engine_policy_rules_rationale_125",
       "community": 6,
-      "norm_label": "resolve dynamic calendar anchor, eliminating system clock drift.          adhere"
+      "norm_label": "resolve dynamic calendar anchor, eliminating system clock drift.          adhe"
     },
     {
-      "label": "Determine policy version strictly based on order placement date.          - Orde",
+      "label": "Determine policy version strictly based on order placement date.          - Or",
       "file_type": "rationale",
       "source_file": "backend/engine/policy_rules.py",
       "source_location": "L151",
       "_origin": "ast",
       "id": "engine_policy_rules_rationale_151",
       "community": 6,
-      "norm_label": "determine policy version strictly based on order placement date.          - orde"
+      "norm_label": "determine policy version strictly based on order placement date.          - or"
     },
     {
       "label": "Check return window eligibility with calendar arithmetic and loyalty extensions.",
@@ -9252,14 +9252,14 @@
       "norm_label": "check return window eligibility with calendar arithmetic and loyalty extensions."
     },
     {
-      "label": "Calculate restocking fee.          5% capped at Rs 2500 strictly on v2 change-of",
+      "label": "Calculate restocking fee.          5% capped at Rs 2500 strictly on v2 change-",
       "file_type": "rationale",
       "source_file": "backend/engine/policy_rules.py",
       "source_location": "L259",
       "_origin": "ast",
       "id": "engine_policy_rules_rationale_259",
       "community": 6,
-      "norm_label": "calculate restocking fee.          5% capped at rs 2500 strictly on v2 change-of"
+      "norm_label": "calculate restocking fee.          5% capped at rs 2500 strictly on v2 change-"
     },
     {
       "label": "Calculate gross refund inclusive of 18% GST, deducting restocking fee.",
@@ -9282,44 +9282,44 @@
       "norm_label": "compute delivery delay goodwill wallet credit based on shipping policy sec 4."
     },
     {
-      "label": "Determine refundable shipping fee.          Refundable in full ONLY on whole-ord",
+      "label": "Determine refundable shipping fee.          Refundable in full ONLY on whole-o",
       "file_type": "rationale",
       "source_file": "backend/engine/policy_rules.py",
       "source_location": "L405",
       "_origin": "ast",
       "id": "engine_policy_rules_rationale_405",
       "community": 6,
-      "norm_label": "determine refundable shipping fee.          refundable in full only on whole-ord"
+      "norm_label": "determine refundable shipping fee.          refundable in full only on whole-o"
     },
     {
-      "label": "Determine whether an action requires human approval.          CRITICAL RULE (Can",
+      "label": "Determine whether an action requires human approval.          CRITICAL RULE (C",
       "file_type": "rationale",
       "source_file": "backend/engine/policy_rules.py",
       "source_location": "L435",
       "_origin": "ast",
       "id": "engine_policy_rules_rationale_435",
       "community": 6,
-      "norm_label": "determine whether an action requires human approval.          critical rule (can"
+      "norm_label": "determine whether an action requires human approval.          critical rule (c"
     },
     {
-      "label": "Scan database for abuse patterns (throttling & fraud prevention).          - > 5",
+      "label": "Scan database for abuse patterns (throttling & fraud prevention).          - >",
       "file_type": "rationale",
       "source_file": "backend/engine/policy_rules.py",
       "source_location": "L468",
       "_origin": "ast",
       "id": "engine_policy_rules_rationale_468",
       "community": 6,
-      "norm_label": "scan database for abuse patterns (throttling & fraud prevention).          - > 5"
+      "norm_label": "scan database for abuse patterns (throttling & fraud prevention).          - >"
     },
     {
-      "label": "Handle unconfirmed / pending payments per Payment Policy Sec 3.          - < 24",
+      "label": "Handle unconfirmed / pending payments per Payment Policy Sec 3.          - < 2",
       "file_type": "rationale",
       "source_file": "backend/engine/policy_rules.py",
       "source_location": "L541",
       "_origin": "ast",
       "id": "engine_policy_rules_rationale_541",
       "community": 6,
-      "norm_label": "handle unconfirmed / pending payments per payment policy sec 3.          - < 24"
+      "norm_label": "handle unconfirmed / pending payments per payment policy sec 3.          - < 2"
     },
     {
       "label": "ticket_schema.py",
@@ -9402,14 +9402,14 @@
       "norm_label": ".to_db_row()"
     },
     {
-      "label": "NovaMart Support Ticket Schema & SLAs. Reused and customized from awesome-llm-ap",
+      "label": "NovaMart Support Ticket Schema & SLAs. Reused and customized from awesome-llm-a",
       "file_type": "rationale",
       "source_file": "backend/engine/ticket_schema.py",
       "source_location": "L1",
       "_origin": "ast",
       "id": "engine_ticket_schema_rationale_1",
       "community": 4,
-      "norm_label": "novamart support ticket schema & slas. reused and customized from awesome-llm-ap"
+      "norm_label": "novamart support ticket schema & slas. reused and customized from awesome-llm-a"
     },
     {
       "label": "Generate a unique NovaMart ticket identifier (TICK-XXXXX).",
@@ -9432,14 +9432,14 @@
       "norm_label": "standardized novamart support ticket model with pydantic validation     and sla"
     },
     {
-      "label": "Automatically bind SLA resolution hours and default assigned team         if not",
+      "label": "Automatically bind SLA resolution hours and default assigned team         if no",
       "file_type": "rationale",
       "source_file": "backend/engine/ticket_schema.py",
       "source_location": "L117",
       "_origin": "ast",
       "id": "engine_ticket_schema_rationale_117",
       "community": 4,
-      "norm_label": "automatically bind sla resolution hours and default assigned team         if not"
+      "norm_label": "automatically bind sla resolution hours and default assigned team         if no"
     },
     {
       "label": "Serializes model to match the SQLite support_tickets table columns.",
@@ -9568,7 +9568,7 @@
       "source_location": "L106",
       "_origin": "ast",
       "id": "engine_tools_get_customer",
-      "community": 20,
+      "community": 4,
       "norm_label": "get_customer()"
     },
     {
@@ -9672,14 +9672,14 @@
       "norm_label": "escalate_to_human()"
     },
     {
-      "label": "NovaMart Bounded Deterministic Tools & Gemini Function Calling Schemas. Implemen",
+      "label": "NovaMart Bounded Deterministic Tools & Gemini Function Calling Schemas. Impleme",
       "file_type": "rationale",
       "source_file": "backend/engine/tools.py",
       "source_location": "L1",
       "_origin": "ast",
       "id": "engine_tools_rationale_1",
       "community": 4,
-      "norm_label": "novamart bounded deterministic tools & gemini function calling schemas. implemen"
+      "norm_label": "novamart bounded deterministic tools & gemini function calling schemas. impleme"
     },
     {
       "label": "Retrieves complete customer profile, loyalty tier, account standing, and contact",
@@ -9688,18 +9688,18 @@
       "source_location": "L107",
       "_origin": "ast",
       "id": "engine_tools_rationale_107",
-      "community": 20,
+      "community": 4,
       "norm_label": "retrieves complete customer profile, loyalty tier, account standing, and contact"
     },
     {
-      "label": "Retrieves order details, items, shipping state, and delivery tracking.     CRITI",
+      "label": "Retrieves order details, items, shipping state, and delivery tracking.     CRIT",
       "file_type": "rationale",
       "source_file": "backend/engine/tools.py",
       "source_location": "L145",
       "_origin": "ast",
       "id": "engine_tools_rationale_145",
       "community": 20,
-      "norm_label": "retrieves order details, items, shipping state, and delivery tracking.     criti"
+      "norm_label": "retrieves order details, items, shipping state, and delivery tracking.     crit"
     },
     {
       "label": "Retrieves product specs, warranty window, returnability, and replacement flags.",
@@ -9742,14 +9742,14 @@
       "norm_label": "computes exact allowable refund amount, deducting restocking fee and capping at"
     },
     {
-      "label": "Opens an official return request for an eligible order item.     Updates order_i",
+      "label": "Opens an official return request for an eligible order item.     Updates order_",
       "file_type": "rationale",
       "source_file": "backend/engine/tools.py",
       "source_location": "L521",
       "_origin": "ast",
       "id": "engine_tools_rationale_521",
       "community": 20,
-      "norm_label": "opens an official return request for an eligible order item.     updates order_i"
+      "norm_label": "opens an official return request for an eligible order item.     updates order_"
     },
     {
       "label": "Issues a verified monetary refund to original payment instrument or wallet.",
@@ -9862,14 +9862,14 @@
       "norm_label": ".transition()"
     },
     {
-      "label": "ADK 2.0 Graph Workflow Engine & State Nodes.  Implements the 9-stage reasoning l",
+      "label": "ADK 2.0 Graph Workflow Engine & State Nodes.  Implements the 9-stage reasoning",
       "file_type": "rationale",
       "source_file": "backend/engine/workflow_graph.py",
       "source_location": "L1",
       "_origin": "ast",
       "id": "engine_workflow_graph_rationale_1",
       "community": 10,
-      "norm_label": "adk 2.0 graph workflow engine & state nodes.  implements the 9-stage reasoning l"
+      "norm_label": "adk 2.0 graph workflow engine & state nodes.  implements the 9-stage reasoning"
     },
     {
       "label": "Carries end-to-end conversation and execution state across nodes.",
@@ -9972,14 +9972,14 @@
       "norm_label": "engine_status()"
     },
     {
-      "label": "NovaMart AI Customer Support Agent - FastAPI Gateway.  Production-grade entrypoi",
+      "label": "NovaMart AI Customer Support Agent - FastAPI Gateway.  Production-grade entryp",
       "file_type": "rationale",
       "source_file": "backend/main.py",
       "source_location": "L1",
       "_origin": "ast",
       "id": "backend_main_rationale_1",
       "community": 61,
-      "norm_label": "novamart ai customer support agent - fastapi gateway.  production-grade entrypoi"
+      "norm_label": "novamart ai customer support agent - fastapi gateway.  production-grade entryp"
     },
     {
       "label": "FastAPI lifespan event handler for database initialization and warmup.",
@@ -10092,14 +10092,14 @@
       "norm_label": "test_scenario_06_otp_contradiction()"
     },
     {
-      "label": "Automated Test Suite for the 6 Official NovaMart Judge Scenarios.  Verifies end-",
+      "label": "Automated Test Suite for the 6 Official NovaMart Judge Scenarios.  Verifies en",
       "file_type": "rationale",
       "source_file": "backend/tests/test_agent_scenarios.py",
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_agent_scenarios_rationale_1",
       "community": 53,
-      "norm_label": "automated test suite for the 6 official novamart judge scenarios.  verifies end-"
+      "norm_label": "automated test suite for the 6 official novamart judge scenarios.  verifies en"
     },
     {
       "label": "Priya S. tracks order ORD-001042 -> Expects ANSWER with ETA and courier.",
@@ -10282,14 +10282,14 @@
       "norm_label": "test_eval_summary()"
     },
     {
-      "label": "Automated API Endpoint Tests for NovaMart FastAPI Gateway.  Verifies: - Root and",
+      "label": "Automated API Endpoint Tests for NovaMart FastAPI Gateway.  Verifies: - Root",
       "file_type": "rationale",
       "source_file": "backend/tests/test_api_endpoints.py",
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_api_endpoints_rationale_1",
       "community": 41,
-      "norm_label": "automated api endpoint tests for novamart fastapi gateway.  verifies: - root and"
+      "norm_label": "automated api endpoint tests for novamart fastapi gateway.  verifies: - root"
     },
     {
       "label": "Verify root system metadata.",
@@ -10592,14 +10592,14 @@
       "norm_label": ".test_16_tool_schemas_and_registry()"
     },
     {
-      "label": "Comprehensive Verification Suite for Milestone 3: Pre-Built Agent Building Block",
+      "label": "Comprehensive Verification Suite for Milestone 3: Pre-Built Agent Building Bloc",
       "file_type": "rationale",
       "source_file": "backend/tests/verify_milestone_3.py",
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_verify_milestone_3_rationale_1",
       "community": 20,
-      "norm_label": "comprehensive verification suite for milestone 3: pre-built agent building block"
+      "norm_label": "comprehensive verification suite for milestone 3: pre-built agent building bloc"
     },
     {
       "label": "Verify SLA mapping: critical: 4h, high: 24h, medium: 72h, low: 120h.",
@@ -11418,17 +11418,17 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_layout",
-      "community": 185,
+      "community": 38,
       "norm_label": "layout.tsx"
     },
     {
       "label": "Layout()",
       "file_type": "code",
       "source_file": "frontend/src/components/Layout.tsx",
-      "source_location": "L19",
+      "source_location": "L28",
       "_origin": "ast",
       "id": "components_layout_layout",
-      "community": 185,
+      "community": 38,
       "norm_label": "layout()"
     },
     {
@@ -11455,7 +11455,7 @@
       "label": "LocationModal()",
       "file_type": "code",
       "source_file": "frontend/src/components/LocationModal.tsx",
-      "source_location": "L13",
+      "source_location": "L14",
       "_origin": "ast",
       "id": "components_locationmodal_locationmodal",
       "community": 38,
@@ -11615,7 +11615,7 @@
       "label": "ALL_PRODUCTS",
       "file_type": "code",
       "source_file": "frontend/src/data/mockData.ts",
-      "source_location": "L54",
+      "source_location": "L58",
       "_origin": "ast",
       "id": "data_mockdata_all_products",
       "community": 38,
@@ -11625,11 +11625,51 @@
       "label": "LOCATIONS",
       "file_type": "code",
       "source_file": "frontend/src/data/mockData.ts",
-      "source_location": "L135",
+      "source_location": "L835",
       "_origin": "ast",
       "id": "data_mockdata_locations",
       "community": 38,
       "norm_label": "locations"
+    },
+    {
+      "label": "searchHelper.ts",
+      "file_type": "code",
+      "source_file": "frontend/src/data/searchHelper.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "data_searchhelper",
+      "community": 38,
+      "norm_label": "searchhelper.ts"
+    },
+    {
+      "label": "SearchResultData",
+      "file_type": "code",
+      "source_file": "frontend/src/data/searchHelper.ts",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "data_searchhelper_searchresultdata",
+      "community": 38,
+      "norm_label": "searchresultdata"
+    },
+    {
+      "label": "DOMAIN_DEFINITIONS",
+      "file_type": "code",
+      "source_file": "frontend/src/data/searchHelper.ts",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "data_searchhelper_domain_definitions",
+      "community": 38,
+      "norm_label": "domain_definitions"
+    },
+    {
+      "label": "matchProductsByGeneralLanguage()",
+      "file_type": "code",
+      "source_file": "frontend/src/data/searchHelper.ts",
+      "source_location": "L203",
+      "_origin": "ast",
+      "id": "data_searchhelper_matchproductsbygenerallanguage",
+      "community": 38,
+      "norm_label": "matchproductsbygenerallanguage()"
     },
     {
       "label": "main.tsx",
@@ -11685,7 +11725,7 @@
       "label": "Category()",
       "file_type": "code",
       "source_file": "frontend/src/pages/Category.tsx",
-      "source_location": "L5",
+      "source_location": "L8",
       "_origin": "ast",
       "id": "pages_category_category",
       "community": 38,
@@ -11745,7 +11785,7 @@
       "label": "Home()",
       "file_type": "code",
       "source_file": "frontend/src/pages/Home.tsx",
-      "source_location": "L6",
+      "source_location": "L14",
       "_origin": "ast",
       "id": "pages_home_home",
       "community": 38,
@@ -11762,10 +11802,20 @@
       "norm_label": "myaccount.tsx"
     },
     {
+      "label": "SavedAddress",
+      "file_type": "code",
+      "source_file": "frontend/src/pages/MyAccount.tsx",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "pages_myaccount_savedaddress",
+      "community": 38,
+      "norm_label": "savedaddress"
+    },
+    {
       "label": "MyAccount()",
       "file_type": "code",
       "source_file": "frontend/src/pages/MyAccount.tsx",
-      "source_location": "L5",
+      "source_location": "L33",
       "_origin": "ast",
       "id": "pages_myaccount_myaccount",
       "community": 38,
@@ -11785,7 +11835,7 @@
       "label": "Offers()",
       "file_type": "code",
       "source_file": "frontend/src/pages/Offers.tsx",
-      "source_location": "L5",
+      "source_location": "L19",
       "_origin": "ast",
       "id": "pages_offers_offers",
       "community": 38,
@@ -11845,7 +11895,7 @@
       "label": "SearchResults()",
       "file_type": "code",
       "source_file": "frontend/src/pages/SearchResults.tsx",
-      "source_location": "L5",
+      "source_location": "L9",
       "_origin": "ast",
       "id": "pages_searchresults_searchresults",
       "community": 38,
@@ -12055,7 +12105,7 @@
       "label": "CartItem",
       "file_type": "code",
       "source_file": "frontend/src/types/index.ts",
-      "source_location": "L14",
+      "source_location": "L16",
       "_origin": "ast",
       "id": "types_index_cartitem",
       "community": 38,
@@ -12065,7 +12115,7 @@
       "label": "DeliveryLocation",
       "file_type": "code",
       "source_file": "frontend/src/types/index.ts",
-      "source_location": "L19",
+      "source_location": "L21",
       "_origin": "ast",
       "id": "types_index_deliverylocation",
       "community": 38,
@@ -12932,14 +12982,14 @@
       "norm_label": "test_real_sqlite_db_integration()"
     },
     {
-      "label": "Unit tests for NovaMart Policy Rules Engine and Hybrid Safety Guardrails.  Verif",
+      "label": "Unit tests for NovaMart Policy Rules Engine and Hybrid Safety Guardrails.  Ver",
       "file_type": "rationale",
       "source_file": "tests/test_policy_and_guardrails.py",
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_policy_and_guardrails_rationale_1",
       "community": 6,
-      "norm_label": "unit tests for novamart policy rules engine and hybrid safety guardrails.  verif"
+      "norm_label": "unit tests for novamart policy rules engine and hybrid safety guardrails.  ver"
     },
     {
       "label": "AGENTS.md",
@@ -55284,9 +55334,9 @@
       "source_file": "backend/engine/agent_loop.py",
       "source_location": "L37",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "engine_agent_loop",
-      "target": "engine_faq_engine_resolve_general_policy_query",
-      "confidence_score": 1.0
+      "target": "engine_faq_engine_resolve_general_policy_query"
     },
     {
       "relation": "imports",
@@ -55902,9 +55952,9 @@
       "source_file": "backend/engine/agent_loop.py",
       "source_location": "L86",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "engine_agent_loop_rationale_86",
-      "target": "engine_agent_loop_novamartagentloop",
-      "confidence_score": 1.0
+      "target": "engine_agent_loop_novamartagentloop"
     },
     {
       "relation": "calls",
@@ -56077,9 +56127,9 @@
       "source_file": "backend/engine/agent_loop.py",
       "source_location": "L102",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "engine_agent_loop_rationale_102",
-      "target": "engine_agent_loop_novamartagentloop_process_message",
-      "confidence_score": 1.0
+      "target": "engine_agent_loop_novamartagentloop_process_message"
     },
     {
       "relation": "uses",
@@ -56409,9 +56459,9 @@
       "source_file": "backend/engine/agent_loop.py",
       "source_location": "L585",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "engine_agent_loop_rationale_585",
-      "target": "engine_agent_loop_novamartagentloop_build_result",
-      "confidence_score": 1.0
+      "target": "engine_agent_loop_novamartagentloop_build_result"
     },
     {
       "relation": "uses",
@@ -56569,9 +56619,9 @@
       "source_file": "backend/engine/faq_engine.py",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "engine_faq_engine",
-      "target": "engine_faq_engine_resolve_general_policy_query",
-      "confidence_score": 1.0
+      "target": "engine_faq_engine_resolve_general_policy_query"
     },
     {
       "relation": "imports",
@@ -56580,9 +56630,9 @@
       "source_file": "backend/engine/faq_engine.py",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "engine_faq_engine",
-      "target": "engine_workflow_graph_terminalmove",
-      "confidence_score": 1.0
+      "target": "engine_workflow_graph_terminalmove"
     },
     {
       "relation": "rationale_for",
@@ -56590,9 +56640,9 @@
       "source_file": "backend/engine/faq_engine.py",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "engine_faq_engine_rationale_1",
-      "target": "engine_faq_engine",
-      "confidence_score": 1.0
+      "target": "engine_faq_engine"
     },
     {
       "relation": "rationale_for",
@@ -56600,9 +56650,9 @@
       "source_file": "backend/engine/faq_engine.py",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "engine_faq_engine_rationale_19",
-      "target": "engine_faq_engine_resolve_general_policy_query",
-      "confidence_score": 1.0
+      "target": "engine_faq_engine_resolve_general_policy_query"
     },
     {
       "relation": "references",
@@ -56611,9 +56661,9 @@
       "source_file": "backend/engine/faq_engine.py",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "engine_faq_engine_resolve_general_policy_query",
-      "target": "backend_engine_faq_engine_py_any",
-      "confidence_score": 1.0
+      "target": "backend_engine_faq_engine_py_any"
     },
     {
       "relation": "references",
@@ -56622,9 +56672,9 @@
       "source_file": "backend/engine/faq_engine.py",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "engine_faq_engine_resolve_general_policy_query",
-      "target": "terminalmove",
-      "confidence_score": 1.0
+      "target": "terminalmove"
     },
     {
       "relation": "uses",
@@ -56632,9 +56682,9 @@
       "source_file": "backend/engine/faq_engine.py",
       "source_location": "L10",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "backend_engine_faq_engine_py_any",
-      "target": "engine_workflow_graph_terminalmove",
-      "confidence_score": 0.5
+      "target": "engine_workflow_graph_terminalmove"
     },
     {
       "relation": "uses",
@@ -56642,9 +56692,9 @@
       "source_file": "backend/engine/faq_engine.py",
       "source_location": "L10",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "terminalmove",
-      "target": "engine_workflow_graph_terminalmove",
-      "confidence_score": 0.5
+      "target": "engine_workflow_graph_terminalmove"
     },
     {
       "relation": "contains",
@@ -57504,9 +57554,9 @@
       "source_file": "backend/engine/memory.py",
       "source_location": "L328",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "engine_memory_rationale_328",
-      "target": "engine_memory_disambiguationcache",
-      "confidence_score": 1.0
+      "target": "engine_memory_disambiguationcache"
     },
     {
       "relation": "imports",
@@ -57535,9 +57585,9 @@
       "source_file": "backend/engine/memory.py",
       "source_location": "L339",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "engine_memory_rationale_339",
-      "target": "engine_memory_disambiguationcache_cache_candidates",
-      "confidence_score": 1.0
+      "target": "engine_memory_disambiguationcache_cache_candidates"
     },
     {
       "relation": "rationale_for",
@@ -57545,9 +57595,9 @@
       "source_file": "backend/engine/memory.py",
       "source_location": "L348",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "engine_memory_rationale_348",
-      "target": "engine_memory_disambiguationcache_get_candidates",
-      "confidence_score": 1.0
+      "target": "engine_memory_disambiguationcache_get_candidates"
     },
     {
       "relation": "rationale_for",
@@ -57555,9 +57605,9 @@
       "source_file": "backend/engine/memory.py",
       "source_location": "L355",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "engine_memory_rationale_355",
-      "target": "engine_memory_disambiguationcache_resolve_selection",
-      "confidence_score": 1.0
+      "target": "engine_memory_disambiguationcache_resolve_selection"
     },
     {
       "relation": "rationale_for",
@@ -57565,9 +57615,9 @@
       "source_file": "backend/engine/memory.py",
       "source_location": "L402",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "engine_memory_rationale_402",
-      "target": "engine_memory_disambiguationcache_clear",
-      "confidence_score": 1.0
+      "target": "engine_memory_disambiguationcache_clear"
     },
     {
       "relation": "contains",
@@ -61944,6 +61994,17 @@
       "target": "types_index_deliverylocation"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/Layout.tsx",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "components_layout",
+      "target": "components_cartdrawer",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "references",
       "context": "field",
       "confidence": "EXTRACTED",
@@ -61964,6 +62025,17 @@
       "weight": 1.0,
       "source": "components_cartdrawer_cartdrawer",
       "target": "context_cartcontext_usecart"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/Layout.tsx",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "components_layout",
+      "target": "components_cartdrawer_cartdrawer",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -62383,6 +62455,171 @@
       "target": "components_layout_layout"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/Layout.tsx",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "components_layout",
+      "target": "components_locationmodal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/Layout.tsx",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "components_layout",
+      "target": "components_locationmodal_locationmodal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/Layout.tsx",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "components_layout",
+      "target": "components_toast",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/Layout.tsx",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "components_layout",
+      "target": "components_toast_toast",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/Layout.tsx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "components_layout",
+      "target": "context_cartcontext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/Layout.tsx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "components_layout",
+      "target": "context_cartcontext_usecart",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/Layout.tsx",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "components_layout",
+      "target": "data_mockdata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/Layout.tsx",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "components_layout",
+      "target": "data_mockdata_all_products",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/Layout.tsx",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "components_layout",
+      "target": "data_mockdata_locations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/Layout.tsx",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "components_layout",
+      "target": "data_searchhelper",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/Layout.tsx",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "components_layout",
+      "target": "data_searchhelper_matchproductsbygenerallanguage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/Layout.tsx",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "components_layout",
+      "target": "types_index",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/Layout.tsx",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "components_layout",
+      "target": "types_index_deliverylocation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/src/components/Layout.tsx",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "components_layout_layout",
+      "target": "context_cartcontext_usecart"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/src/components/Layout.tsx",
+      "source_location": "L108",
+      "weight": 1.0,
+      "source": "components_layout_layout",
+      "target": "data_searchhelper_matchproductsbygenerallanguage"
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/src/components/LocationModal.tsx",
@@ -62760,6 +62997,39 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/Category.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "pages_category",
+      "target": "context_cartcontext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/Offers.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "pages_offers",
+      "target": "context_cartcontext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/SearchResults.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "pages_searchresults",
+      "target": "context_cartcontext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "frontend/src/main.tsx",
       "source_location": "L4",
       "weight": 1.0,
@@ -62799,6 +63069,72 @@
       "confidence_score": 1.0,
       "source": "src_main",
       "target": "context_cartcontext_cartprovider"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/Category.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "pages_category",
+      "target": "context_cartcontext_usecart",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/src/pages/Category.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "pages_category_category",
+      "target": "context_cartcontext_usecart"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/Offers.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "pages_offers",
+      "target": "context_cartcontext_usecart",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/src/pages/Offers.tsx",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "pages_offers_offers",
+      "target": "context_cartcontext_usecart"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/SearchResults.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "pages_searchresults",
+      "target": "context_cartcontext_usecart",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/src/pages/SearchResults.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "pages_searchresults_searchresults",
+      "target": "context_cartcontext_usecart"
     },
     {
       "relation": "contains",
@@ -62867,12 +63203,56 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "frontend/src/data/searchHelper.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "data_searchhelper",
+      "target": "data_mockdata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/Category.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "pages_category",
+      "target": "data_mockdata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "frontend/src/pages/Home.tsx",
       "source_location": "L4",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "pages_home",
       "target": "data_mockdata"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/Offers.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "pages_offers",
+      "target": "data_mockdata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/SearchResults.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "pages_searchresults",
+      "target": "data_mockdata",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -62884,6 +63264,135 @@
       "confidence_score": 1.0,
       "source": "pages_home",
       "target": "data_mockdata_popular_products"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/data/searchHelper.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "data_searchhelper",
+      "target": "data_mockdata_all_products",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/Category.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "pages_category",
+      "target": "data_mockdata_all_products",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/Offers.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "pages_offers",
+      "target": "data_mockdata_all_products",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/SearchResults.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "pages_searchresults",
+      "target": "data_mockdata_all_products",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/data/searchHelper.ts",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "data_searchhelper",
+      "target": "data_searchhelper_domain_definitions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/data/searchHelper.ts",
+      "source_location": "L203",
+      "weight": 1.0,
+      "source": "data_searchhelper",
+      "target": "data_searchhelper_matchproductsbygenerallanguage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/data/searchHelper.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "data_searchhelper",
+      "target": "data_searchhelper_searchresultdata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/data/searchHelper.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "data_searchhelper",
+      "target": "types_index",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/data/searchHelper.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "data_searchhelper",
+      "target": "types_index_product",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/SearchResults.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "pages_searchresults",
+      "target": "data_searchhelper",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "field",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/data/searchHelper.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "data_searchhelper_searchresultdata",
+      "target": "types_index_product",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/SearchResults.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "pages_searchresults",
+      "target": "data_searchhelper_matchproductsbygenerallanguage",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -62914,6 +63423,28 @@
       "confidence_score": 1.0,
       "source": "pages_category",
       "target": "pages_category_category"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/Category.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "pages_category",
+      "target": "types_index",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/Category.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "pages_category",
+      "target": "types_index_product",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -62958,6 +63489,16 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/MyAccount.tsx",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "pages_myaccount",
+      "target": "pages_myaccount_savedaddress",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "frontend/src/pages/Offers.tsx",
       "source_location": "L5",
       "weight": 1.0,
@@ -62994,6 +63535,28 @@
       "confidence_score": 1.0,
       "source": "pages_searchresults",
       "target": "pages_searchresults_searchresults"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/SearchResults.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "pages_searchresults",
+      "target": "types_index",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/SearchResults.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "pages_searchresults",
+      "target": "types_index_product",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -81971,5 +82534,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "84ab4839601f701e8d71d147a629ed67d9a7abe5"
+  "built_at_commit": "513ed2b35fe86a3c906ab3e8ef740039651e9b09"
 }
