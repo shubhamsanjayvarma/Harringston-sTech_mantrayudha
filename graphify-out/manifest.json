@@ -905,8 +905,8 @@
     "semantic_hash": ""
   },
   "backend/engine/agent_loop.py": {
-    "mtime": 1791024490.3053586,
-    "ast_hash": "dd2f96b26c954ebc16b77483d6877902",
+    "mtime": 1791026293.8978505,
+    "ast_hash": "99aff017e55ac777d3dc6a5c5a0dd39a",
     "semantic_hash": ""
   },
   "backend/engine/guardrail_interceptor.py": {
@@ -1215,8 +1215,8 @@
     "semantic_hash": ""
   },
   "backend/engine/faq_engine.py": {
-    "mtime": 1791024490.3063576,
-    "ast_hash": "8fab20f18b65c65cb20dbb1aa788ab63",
+    "mtime": 1791026259.8250275,
+    "ast_hash": "d87c516e1c20234628e2f97572a6a8e5",
     "semantic_hash": ""
   },
   "frontend/src/data/searchHelper.ts": {
@@ -1290,7 +1290,7 @@
     "semantic_hash": ""
   },
   "frontend/src/services/chatbotService.ts": {
-    "mtime": 1791024498.2793148,
+    "mtime": 1791025335.1523118,
     "ast_hash": "7b18f6de9744dd36bd5afd8f05f8e146",
     "semantic_hash": ""
   },
@@ -1612,6 +1612,11 @@
   "frontend/public/assets/ananya-avatar.jpg": {
     "mtime": 1791024498.1693957,
     "ast_hash": "415ab483094df37852d21540e507f0de",
+    "semantic_hash": ""
+  },
+  "temp_upstream_button.tsx": {
+    "mtime": 1791024989.6354072,
+    "ast_hash": "35fb57f6fdfcde98a032b3efea517c27",
     "semantic_hash": ""
   }
 }
