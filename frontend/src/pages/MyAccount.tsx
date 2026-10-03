@@ -193,30 +193,22 @@ export default function MyAccount() {
                     ))}
                   </div>
 
-                  <div className="p-4 bg-white border-t border-gray-100 flex flex-wrap items-center justify-between gap-3">
+                  <div className="p-4 bg-white border-t border-gray-100 flex items-center justify-between">
                     <p className="text-xs text-gray-500">
                       Delivered to: <span className="text-gray-700 font-medium">{order.shippingAddress}</span>
                     </p>
-                    <div className="flex items-center gap-2">
-                      <button
-                        onClick={() => navigate('/order-confirmed')}
-                        className="bg-[#198038] hover:bg-[#125A27] text-white font-bold py-1.5 px-3.5 rounded-lg text-xs transition-colors cursor-pointer"
-                      >
-                        Track
-                      </button>
-                      <button
-                        onClick={() => {
-                          window.dispatchEvent(
-                            new CustomEvent('open-support-chat', {
-                              detail: { query: `I need help with my order ${order.orderId}`, tab: 'chat' }
-                            })
-                          );
-                        }}
-                        className="text-xs font-bold text-[#198038] bg-[#eef8f1] hover:bg-[#d5edd9] px-3 py-1.5 rounded-lg transition-colors cursor-pointer"
-                      >
-                        Need Help with this order? ⚡
-                      </button>
-                    </div>
+                    <button
+                      onClick={() => {
+                        window.dispatchEvent(
+                          new CustomEvent('open_nova_assist', {
+                            detail: { query: `I need help with my order ${order.orderId}` }
+                          })
+                        );
+                      }}
+                      className="text-xs font-bold text-[#198038] hover:underline cursor-pointer"
+                    >
+                      Need Help with this order?
+                    </button>
                   </div>
                 </div>
               ))}

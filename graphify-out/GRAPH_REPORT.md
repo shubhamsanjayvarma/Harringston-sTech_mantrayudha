@@ -1,16 +1,16 @@
 # Graph Report - Hackathon_Boilerplate_speedrun  (2026-10-03)
 
 ## Corpus Check
-- 285 files · ~1,396,392 words
+- 285 files · ~1,398,450 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 4124 nodes · 5772 edges · 276 communities (262 shown, 14 thin omitted)
+- 4123 nodes · 5780 edges · 275 communities (261 shown, 14 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 136 edges (avg confidence: 0.56)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `913e1e4d`
+- Built from commit: `526a391d`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -265,7 +265,6 @@
 - [[_COMMUNITY_Community 255|Community 255]]
 - [[_COMMUNITY_Community 256|Community 256]]
 - [[_COMMUNITY_Community 257|Community 257]]
-- [[_COMMUNITY_Community 258|Community 258]]
 - [[_COMMUNITY_Community 259|Community 259]]
 - [[_COMMUNITY_Community 260|Community 260]]
 - [[_COMMUNITY_Community 261|Community 261]]
@@ -313,15 +312,15 @@
 - 1-file cycle: `backend/engine/agent_loop.py -> backend/engine/agent_loop.py`
 - 1-file cycle: `backend/engine/policy_rules.py -> backend/engine/policy_rules.py`
 
-## Communities (276 total, 14 thin omitted)
+## Communities (275 total, 14 thin omitted)
 
 ### Community 0 - "live-browser.js"
 Cohesion: 0.03
-Nodes (103): applyGlobalBarLabelState(), applyPlaceholderSizingStyles(), averageRgb01(), buildAnnotationsForCapture(), buildPinElement(), buildPlaceholderResizeHandles(), buildSvelteExpressionTextMap(), buildSveltePropValuesFromLiveElement() (+95 more)
+Nodes (118): addManualContextText(), applyGlobalBarLabelState(), applyPlaceholderDimensions(), applyPlaceholderSizingStyles(), averageRgb01(), beginEditPin(), bindEditBadgeProxy(), buildAnnotationsForCapture() (+110 more)
 
 ### Community 1 - "handleManualEditActivity"
-Cohesion: 0.09
-Nodes (64): abortSvelteComponentInjection(), beginNewLiveConfiguration(), buildPickedAnchorSnapshot(), cancelEditing(), cancelEditingToPicking(), cancelInsertConfigure(), cleanup(), cleanupAcceptedSession() (+56 more)
+Cohesion: 0.08
+Nodes (69): beginNewLiveConfiguration(), cancelEditing(), cancelEditingToPicking(), cancelInsertConfigure(), cleanup(), cleanupAcceptedSession(), clearAnnotations(), clearInsertPicking() (+61 more)
 
 ### Community 2 - "modern-screenshot.umd.js"
 Cohesion: 0.21
@@ -344,16 +343,16 @@ Cohesion: 0.10
 Nodes (41): Any, Connection, datetime, date, NovaMart Deterministic Policy & Hybrid Safety Engine Package., calculate_delay_goodwill(), calculate_item_refund(), calculate_restocking_fee() (+33 more)
 
 ### Community 7 - "resolveLiveInjectionAnchor"
-Cohesion: 0.05
-Nodes (75): applyParamDefaults(), applyParamValue(), applySavedSessionMeta(), buildInsertPlaceholderSnapshotFromDom(), clampVariantIndex(), clearHandled(), closedClipPath(), commitAcceptedVariantToDom() (+67 more)
+Cohesion: 0.06
+Nodes (61): abortSvelteComponentInjection(), applySavedSessionMeta(), clampVariantIndex(), clearHandled(), commitAcceptedVariantToDom(), completeParameterGenerationIfReady(), completeParameterPublication(), completeSourceInjection() (+53 more)
 
 ### Community 8 - "el"
 Cohesion: 0.09
 Nodes (45): actionLabel(), applyConfigureBarChrome(), bindConfigureCountPillTooltip(), bindConfigureInlineControlHover(), buildConfigureActionControl(), buildConfigureCountControl(), buildConfigureRow(), buildConfigureSubmitButton() (+37 more)
 
 ### Community 9 - "captureElementToBlob"
-Cohesion: 0.09
-Nodes (33): agentHasWorkInFlight(), agentStatusText(), attachSteerFocusDebug(), attachSteerFocusGuard(), barPaletteForTheme(), brandMarkSvg(), buildParamsPanel(), connectSSE() (+25 more)
+Cohesion: 0.07
+Nodes (44): agentHasWorkInFlight(), agentStatusText(), attachSteerFocusGuard(), barPaletteForTheme(), brandMarkSvg(), buildParamsPanel(), buildSteerProcessingDots(), buildSteerQueueHint() (+36 more)
 
 ### Community 10 - "renderDesignVisual"
 Cohesion: 0.09
@@ -369,7 +368,7 @@ Nodes (28): dependencies, clsx, lucide-react, react, react-dom, react-router-dom
 
 ### Community 13 - "Code Review and Quality"
 Cohesion: 0.08
-Nodes (44): armPageChatForTyping(), buildSteerProcessingDots(), buildSteerQueueHint(), clearSteerAwaitTimer(), collapsePageChat(), configureVoiceContext(), expandPageChat(), finishVoiceSession() (+36 more)
+Nodes (42): armPageChatForTyping(), attachSteerFocusDebug(), clearSteerAwaitTimer(), collapsePageChat(), configureVoiceContext(), expandPageChat(), finishVoiceSession(), focusConfigureInput() (+34 more)
 
 ### Community 14 - "Security and Hardening"
 Cohesion: 0.09
@@ -384,8 +383,8 @@ Cohesion: 0.06
 Nodes (35): Helix 30000mAh Power Bank (PROD-00004), Helix Braided 2m Cable (PROD-00020), Helix Tempered Screen Protector (PROD-00029), KiteWorks 100W GaN Charger (PROD-00005), KiteWorks 128GB Memory Card (PROD-00016), KiteWorks 1m Cable (PROD-00019), KiteWorks 20W Charger (PROD-00014), KiteWorks 2m Cable (PROD-00011) (+27 more)
 
 ### Community 17 - "Git Workflow and Versioning"
-Cohesion: 0.13
-Nodes (21): applyOriginalAttrsToSvelteAnchor(), captureAndEmit(), checkpointPayload(), commitAcceptedSvelteComponentToDom(), compileShader(), componentModuleCandidates(), describeMountFailure(), detectDevServerBase() (+13 more)
+Cohesion: 0.14
+Nodes (20): applyOriginalAttrsToSvelteAnchor(), captureAndEmit(), checkpointPayload(), commitAcceptedSvelteComponentToDom(), componentModuleCandidates(), describeMountFailure(), detectDevServerBase(), getMountedSvelteComponentAnchor() (+12 more)
 
 ### Community 18 - "Responsive Design"
 Cohesion: 0.07
@@ -436,8 +435,8 @@ Cohesion: 0.08
 Nodes (24): Accessibility, Code Quality, Common Rationalizations, Documentation, Error Reporting, Feature Flag Strategy, Infrastructure, Monitoring and Observability (+16 more)
 
 ### Community 30 - "Debugging and Error Recovery"
-Cohesion: 0.12
-Nodes (34): abandonForeignSession(), clearStoredManualApplyState(), copyToClipboard(), discardOrphanedSession(), dismissToast(), fetchPendingCount(), handleManualEditActivity(), hidePendingApplyDock() (+26 more)
+Cohesion: 0.19
+Nodes (24): clearStoredManualApplyState(), handleManualEditActivity(), hidePendingApplyDock(), manualApplyLoadingText(), manualApplyStateKey(), manualEditEventForCurrentPage(), numberOrNull(), onPendingKeepFixingClick() (+16 more)
 
 ### Community 31 - "Product Requirements Document (PRD)"
 Cohesion: 0.12
@@ -469,15 +468,15 @@ Nodes (23): Component translation rules, Narrative mapping, Pitfalls, Scan mode 
 
 ### Community 38 - "ReOrder: Keep Your Regulars Ordering Direct"
 Cohesion: 0.15
-Nodes (11): Toast(), CartContext, CartContextType, CartProvider(), useCart(), CATEGORIES, Cart(), Category() (+3 more)
+Nodes (14): CartDrawer(), FloatingSupportButton(), Layout(), Toast(), useCart(), DOMAIN_DEFINITIONS, matchProductsByGeneralLanguage(), ALL_PRODUCTS (+6 more)
 
 ### Community 39 - "showToast"
 Cohesion: 0.06
 Nodes (31): Lumora Spark Core 11 (PROD-00229), Lumora Spark Go X7 (PROD-00220), Lumora Spark Lite S2 (PROD-00241), Lumora Spark Pro 11 (PROD-00222), Lumora Spark Pro 5 (PROD-00235), NovaMart catalog - Smartphones, NovaPhone Air S2 (PROD-00236), NovaPhone Neo 7 (PROD-00231) (+23 more)
 
 ### Community 40 - "createLiveBrowserSessionState"
-Cohesion: 0.09
-Nodes (31): addManualContextText(), applyEditing(), buildLocatorForLeaf(), canRestoreManualEditElement(), collectManualContextPieces(), contextElementForManualEdit(), copyEditContainerContext(), copyEditLeafContext() (+23 more)
+Cohesion: 0.13
+Nodes (20): abandonForeignSession(), applyEditing(), buildLocatorForLeaf(), copyEditContainerContext(), copyEditLeafContext(), copyToClipboard(), discardOrphanedSession(), dismissToast() (+12 more)
 
 ### Community 41 - "Interview Me"
 Cohesion: 0.08
@@ -516,8 +515,8 @@ Cohesion: 0.14
 Nodes (13): 10. Alternatives Rejected (Decision Log), 11. Open Questions / Risks, 12. Research Log, 1. Overview, 2. Selection Criteria, 3. Research Checklist, 4. Language & Runtime, 5. Package / Dependency Manager (+5 more)
 
 ### Community 51 - "Generate Report"
-Cohesion: 0.12
-Nodes (14): ALL_CUSTOMERS, ALL_ORDERS, ALL_SUPPORT_TICKETS, getProductById(), getReviewsForProduct(), REVIEWS_BY_PRODUCT, searchProducts(), STORE_POLICIES (+6 more)
+Cohesion: 0.13
+Nodes (10): ALL_CUSTOMERS, ALL_SUPPORT_TICKETS, getProductById(), getReviewsForProduct(), REVIEWS_BY_PRODUCT, searchProducts(), ProductDetails(), Customer (+2 more)
 
 ### Community 52 - "impeccable/SKILL.md"
 Cohesion: 0.08
@@ -556,8 +555,8 @@ Cohesion: 0.08
 Nodes (25): ByteCore Forge Flex 17 (PROD-00145), ByteCore Forge One 14 (PROD-00142), ByteCore Forge Plus 15 (PROD-00144), ByteCore Forge Prime 14 (PROD-00148), ByteCore Forge Spark 16 (PROD-00140), ByteCore Forge Spark 17 (PROD-00137), NovaBook Core 15 (PROD-00143), NovaBook Neo 14 (PROD-00153) (+17 more)
 
 ### Community 61 - "Community 61"
-Cohesion: 0.16
-Nodes (17): applyPlaceholderDimensions(), beginEditPin(), cancelEditingPin(), clampPlaceholderSize(), finalizeEditingPin(), localCoords(), materializePlaceholderWidth(), onAnnotDown() (+9 more)
+Cohesion: 0.17
+Nodes (18): buildSvelteExpressionTextMap(), buildSveltePropValuesFromLiveElement(), buildSveltePropValuesV2(), cloneWithoutElements(), collectTextNodes(), cssEscapeIdent(), elementMatchesOriginalMarkup(), escapeRegExp() (+10 more)
 
 ### Community 62 - "Universal Documentation & Task Plan Requirements"
 Cohesion: 0.33
@@ -900,8 +899,8 @@ Cohesion: 0.09
 Nodes (21): Auralix Wave Core 500 (PROD-00270), Auralix Wave Core Mini (PROD-00282), Auralix Wave Flex 300 (PROD-00267), Auralix Wave Flex Max (PROD-00272), Auralix Wave Lite Max (PROD-00271), Auralix Wave Plus Mini (PROD-00273), Auralix Wave Pro 500 (PROD-00277), Auralix Wave Spark 300 (PROD-00283) (+13 more)
 
 ### Community 151 - "Community 151"
-Cohesion: 0.16
-Nodes (15): AccountDrawerProps, Header(), HeaderProps, Layout(), LocationModal(), LocationModalProps, DOMAIN_DEFINITIONS, matchProductsByGeneralLanguage() (+7 more)
+Cohesion: 0.20
+Nodes (15): applyParamDefaults(), applyParamValue(), closedClipPath(), getVisibleVariantEl(), hideParamsPanel(), openTunePopover(), parseVariantParams(), popoverDirection() (+7 more)
 
 ### Community 152 - "Community 152"
 Cohesion: 0.10
@@ -1032,8 +1031,8 @@ Cohesion: 0.50
 Nodes (3): hooks, PostToolUse, Stop
 
 ### Community 185 - "Community 185"
-Cohesion: 0.18
-Nodes (16): AuditTraceViewer(), AuditTraceViewerProps, ChatMessage, FloatingSupportButton(), chatWithAgent(), checkHealth(), fetchDemoPresets(), runDemoPreset() (+8 more)
+Cohesion: 0.14
+Nodes (21): AuditTraceViewer(), AuditTraceViewerProps, ALL_ORDERS, STORE_POLICIES, chatWithAgent(), checkHealth(), fetchDemoPresets(), runDemoPreset() (+13 more)
 
 ### Community 186 - "Community 186"
 Cohesion: 0.50
@@ -1044,7 +1043,7 @@ Cohesion: 0.50
 Nodes (4): Heuristics Scoring Guide, Issue Severity (P0–P3), Reference Material, Score Summary
 
 ### Community 190 - "Community 190"
-Cohesion: 0.67
+Cohesion: 0.50
 Nodes (3): adapt, argumentHint, description
 
 ### Community 191 - "Community 191"
@@ -1116,7 +1115,7 @@ Cohesion: 0.67
 Nodes (3): overdrive, argumentHint, description
 
 ### Community 208 - "Community 208"
-Cohesion: 0.50
+Cohesion: 0.67
 Nodes (3): polish, argumentHint, description
 
 ### Community 209 - "Community 209"
@@ -1184,8 +1183,8 @@ Cohesion: 0.12
 Nodes (15): Helix Optic Edge 4K (PROD-00048), Helix Optic Max R7 (PROD-00039), Helix Optic One Mini (PROD-00035), Helix Optic Pro Mini (PROD-00043), Helix Optic Spark R7 (PROD-00040), Kinetiq Action Air 4K (PROD-00038), Kinetiq Action Plus R7 (PROD-00046), NovaMart catalog - Cameras (+7 more)
 
 ### Community 238 - "Community 238"
-Cohesion: 0.21
-Nodes (9): HeroSection(), HeroSectionProps, PopularSection(), PopularSectionProps, ProductCard(), ProductCardProps, SearchResultData, POPULAR_PRODUCTS (+1 more)
+Cohesion: 0.13
+Nodes (15): Header(), HeaderProps, HeroSection(), HeroSectionProps, PopularSection(), PopularSectionProps, ProductCard(), ProductCardProps (+7 more)
 
 ### Community 239 - "Community 239"
 Cohesion: 0.17
@@ -1212,8 +1211,8 @@ Cohesion: 0.17
 Nodes (11): 10. Worked examples, 1. Purpose, 2. Which version applies to an order, 3. Refund eligibility and time windows, 4. Refund amount, 5. Refund method and timelines, 6. Approval requirements, 7. Exceptions (legitimate) (+3 more)
 
 ### Community 245 - "Community 245"
-Cohesion: 0.26
-Nodes (8): CartDrawer(), CartDrawerProps, createOrderFromCart(), getLatestOrder(), getRecentOrders(), saveOrder(), Checkout(), PlacedOrder
+Cohesion: 0.18
+Nodes (12): AccountDrawerProps, CartDrawerProps, LocationModal(), LocationModalProps, createOrderFromCart(), getLatestOrder(), getRecentOrders(), saveOrder() (+4 more)
 
 ### Community 246 - "Community 246"
 Cohesion: 0.18
@@ -1262,10 +1261,6 @@ Nodes (9): 1. Scope, 2. What can be returned, 3. Conditions for a change-of-mind
 ### Community 257 - "Community 257"
 Cohesion: 0.20
 Nodes (9): 1. Delivery estimates, 2. Shipping fee, 3. Delivery verification (OTP), 4. Delays, 5. "Delivered but not received", 6. Address changes, 7. Failed delivery attempts, 8. Couriers (+1 more)
-
-### Community 258 - "Community 258"
-Cohesion: 0.31
-Nodes (9): bindEditBadgeProxy(), editBadgeProxyTargets(), initEditBadge(), initEditBadgeHitProxies(), positionEditBadge(), setImportantStyle(), styleEditBadgeProxy(), syncEditBadgeHitProxies() (+1 more)
 
 ### Community 259 - "Community 259"
 Cohesion: 0.28
@@ -1332,7 +1327,7 @@ Cohesion: 0.47
 Nodes (5): ChatRequest, ChatResponse, process_chat(), Chat API endpoints for NovaMart Customer Support Agent., Processes customer dialogue through the 9-stage verified agent loop.
 
 ## Knowledge Gaps
-- **2417 isolated node(s):** `enabled`, `PreToolUse`, `idea-refine.sh script`, `description`, `argumentHint` (+2412 more)
+- **2416 isolated node(s):** `enabled`, `PreToolUse`, `idea-refine.sh script`, `description`, `argumentHint` (+2411 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **14 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -1343,13 +1338,13 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
 - **Why does `fetch_one()` connect `CartContext.tsx` to `What You Must Do When Invoked`, `renderDesignVisual`, `Community 259`, `Process`?**
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
-- **Why does `get_db_connection()` connect `CartContext.tsx` to `modern-screenshot.umd.js`, `renderDesignVisual`?**
-  _High betweenness centrality (0.002) - this node is a cross-community bridge._
+- **Why does `SecurityGuardrail` connect `renderDesignVisual` to `Community 259`, `Using Agent Skills`, `initGlobalBar`?**
+  _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **What connects `enabled`, `PreToolUse`, `De-obfuscates command strings across 4 phases to prevent regex evasion:     Pha` to the rest of the system?**
-  _2589 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _2588 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `live-browser.js` be split into smaller, more focused modules?**
-  _Cohesion score 0.029419354838709676 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.026515930113052415 - nodes in this community are weakly interconnected._
 - **Should `handleManualEditActivity` be split into smaller, more focused modules?**
-  _Cohesion score 0.08978174603174603 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.08226768968456948 - nodes in this community are weakly interconnected._
 - **Should `startVariantObserver` be split into smaller, more focused modules?**
   _Cohesion score 0.10621942697414395 - nodes in this community are weakly interconnected._

@@ -33,6 +33,10 @@ export interface ChatMessage {
   attachmentUrl?: string;
   widget?: ChatWidgetData;
   suggestions?: string[];
+  terminalMove?: string;
+  createdTicketId?: string | null;
+  executionTimeMs?: number;
+  auditTrace?: any[];
 }
 
 export function getCurrentTimeFormatted(): string {
@@ -41,7 +45,8 @@ export function getCurrentTimeFormatted(): string {
 }
 
 /**
- * Intelligent local conversational processor for NovaMart
+ * Intelligent dual-engine conversational processor for NovaMart
+ * Calls FastAPI /api/chat with full offline fallback to local knowledge
  */
 export async function processUserMessage(
   userText: string,
@@ -71,6 +76,73 @@ export async function processUserMessage(
       time,
       suggestions: ['Check refund status', 'View invoice', 'Return to Nova Assist']
     };
+  }
+
+  // 0. Primary Engine: Query FastAPI Hybrid Agent Gateway
+  try {
+    const res = await fetch('/api/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        customer_id: CURRENT_CUSTOMER.customerId || 'CUST-00001',
+        message: text,
+        reference_time: '2026-10-03T14:00:00+05:30'
+      })
+    });
+
+    if (res.ok) {
+      const data = await res.json();
+      let dynamicWidget: ChatWidgetData | undefined;
+
+      // Attach relevant contextual widget
+      const orderMatch = text.match(/ORD-\d{6}/i);
+      if (orderMatch) {
+        const ordId = orderMatch[0].toUpperCase();
+        const found = ALL_ORDERS.find(o => o.orderId.toUpperCase() === ordId) ||
+                      CURRENT_CUSTOMER_ORDERS.find(o => o.orderId.toUpperCase() === ordId);
+        if (found) {
+          dynamicWidget = { type: 'order_detail', selectedOrder: found };
+        }
+      } else if (lower.includes('track') || lower === 'track an order') {
+        dynamicWidget = { type: 'order_list', orders: CURRENT_CUSTOMER_ORDERS };
+      } else if (lower.includes('troubleshoot') || lower.includes('won\'t turn on') || lower.includes('not working')) {
+        dynamicWidget = { type: 'troubleshooting' };
+      } else if (lower.includes('laptop') || lower.includes('phone') || lower.includes('earbud') || lower.includes('headphone') || lower.includes('catalog') || lower.includes('smartwatch') || lower.includes('gaming')) {
+        const keywords = ['laptop', 'phone', 'earbud', 'headphone', 'watch', 'gaming', 'tablet'];
+        const matchedKw = keywords.filter(k => lower.includes(k));
+        const prods = ALL_PRODUCTS.filter(p => {
+          const pStr = `${p.name} ${p.category} ${p.description}`.toLowerCase();
+          return matchedKw.some(k => pStr.includes(k));
+        });
+        dynamicWidget = { type: 'products', products: (prods.length > 0 ? prods : ALL_PRODUCTS).slice(0, 3) };
+      } else if (lower.includes('refund') || lower.includes('return') || lower.includes('broken')) {
+        dynamicWidget = {
+          type: 'refund_stepper',
+          selectedOrder: CURRENT_CUSTOMER_ORDERS.find(o => o.orderId === 'ORD-003621') || CURRENT_CUSTOMER_ORDERS[0]
+        };
+      }
+
+      return {
+        id: `msg-${Date.now()}`,
+        sender: 'bot',
+        senderName: 'Nova Assist',
+        text: data.response,
+        time,
+        widget: dynamicWidget,
+        suggestions: [
+          'Track my orders',
+          'Explain return policy v2',
+          'Explore gaming laptops',
+          'Talk to a person'
+        ],
+        terminalMove: data.terminal_move,
+        createdTicketId: data.created_ticket_id,
+        executionTimeMs: data.execution_time_ms,
+        auditTrace: data.audit_trace,
+      };
+    }
+  } catch (backendErr) {
+    console.warn('Backend /api/chat offline or unreachable, using local fallback:', backendErr);
   }
 
   // 1. Check for Order Tracking (e.g. "ORD-003621" or "track order")

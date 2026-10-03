@@ -750,8 +750,8 @@
     "semantic_hash": ""
   },
   "frontend/src/pages/HelpSupport.tsx": {
-    "mtime": 1791035472.5922742,
-    "ast_hash": "cc6485ceab76def92b01e22166f984c8",
+    "mtime": 1791036554.7303877,
+    "ast_hash": "31e1c8ca1ae8d3d7a00a678b31de0c7d",
     "semantic_hash": ""
   },
   "frontend/src/pages/Home.tsx": {
@@ -760,8 +760,8 @@
     "semantic_hash": ""
   },
   "frontend/src/pages/MyAccount.tsx": {
-    "mtime": 1791035443.8106978,
-    "ast_hash": "a31aed328a799d1d2364dca319a42cf5",
+    "mtime": 1791036569.8690183,
+    "ast_hash": "7e46df27263fdeac033bf98f84e62541",
     "semantic_hash": ""
   },
   "frontend/src/pages/Offers.tsx": {
@@ -840,8 +840,8 @@
     "semantic_hash": ""
   },
   "frontend/src/components/FloatingSupportButton.tsx": {
-    "mtime": 1791035399.7519603,
-    "ast_hash": "117b733a0a7e4aedb771c4287051c876",
+    "mtime": 1791036838.8371575,
+    "ast_hash": "89d56d272b5477c5ef34b96a8c2734ff",
     "semantic_hash": ""
   },
   "backend/__init__.py": {
@@ -1290,8 +1290,8 @@
     "semantic_hash": ""
   },
   "frontend/src/services/chatbotService.ts": {
-    "mtime": 1791025335.1523118,
-    "ast_hash": "7b18f6de9744dd36bd5afd8f05f8e146",
+    "mtime": 1791036744.8253913,
+    "ast_hash": "13994bde8b3b3b836370d82cf3618449",
     "semantic_hash": ""
   },
   "CSV Files/public/policies/cancellation_policy.md": {

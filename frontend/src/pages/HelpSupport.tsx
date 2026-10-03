@@ -726,10 +726,10 @@ export default function HelpSupport() {
               <p>Toll-Free: <span className="font-semibold">1800-209-NOVA</span></p>
             </div>
             <button
-              onClick={() => handleAskNovaAssist('I want to connect to a support agent regarding store policies')}
-              className="mt-3.5 w-full flex items-center justify-center gap-2 bg-[#198038] hover:bg-[#146c2e] text-white py-2.5 rounded-xl text-xs font-bold transition-colors cursor-pointer shadow-xs"
+              onClick={() => handleAskNovaAssist('Connect me to a support agent')}
+              className="mt-3.5 w-full flex items-center justify-center gap-2 bg-[#0284c7] hover:bg-[#0369a1] text-white py-2 rounded-xl text-xs font-bold transition-colors cursor-pointer"
             >
-              <MessageCircle size={14} /> Talk to NovaMart AI Agent
+              <MessageCircle size={14} /> Talk to Support Agent
             </button>
           </div>
         </div>
