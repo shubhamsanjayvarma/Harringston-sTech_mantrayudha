@@ -10,3 +10,25 @@ __pycache__/
 # Platform-specific binaries (downloaded on demand per OS)
 **/scripts/bin/
 *.exe
+
+# Environment Secrets & Credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.cert
+*.pfx
+*.pkcs12
+id_rsa*
+id_ed25519*
+
+# Build, Dependencies & Caches
+node_modules/
+dist/
+.venv/
+venv/
+env/
+.pytest_cache/
+*.log
+
