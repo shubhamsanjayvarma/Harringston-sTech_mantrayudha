@@ -40,7 +40,7 @@ export default function OrderConfirmed() {
               deliveryTime: '10 mins',
               image: '/assets/smartwatch.jpg',
               category: 'Electronics',
-              subCategory: 'Smart Wearables',
+              subcategory: 'Smart Wearables',
               brand: 'Noise',
               rating: 4.6,
             },

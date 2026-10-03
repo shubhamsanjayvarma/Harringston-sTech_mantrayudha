@@ -1,15 +1,34 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { Star, Battery, Navigation, Truck, ShieldCheck, RotateCcw, Search, Minus, Plus } from 'lucide-react';
+import { Link, useNavigate, useSearchParams } from 'react-router-dom';
+import { Star, ShieldCheck, RotateCcw, Truck, Wrench, CheckCircle2, ChevronRight, Minus, Plus } from 'lucide-react';
+import { ALL_PRODUCTS, getProductById, getReviewsForProduct } from '../data/storeData';
+import { useCart } from '../context/CartContext';
 
 export default function ProductDetails() {
-  const [quantity, setQuantity] = useState(1);
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const { addToCart } = useCart();
+  const [quantity, setQuantity] = useState(1);
+
+  const productId = searchParams.get('id') || 'PROD-00001';
+  const product = getProductById(productId) || ALL_PRODUCTS[0];
+  const reviews = getReviewsForProduct(product.id);
+
+  const handleAddToCart = () => {
+    for (let i = 0; i < quantity; i++) {
+      addToCart(product);
+    }
+  };
+
+  const handleBuyNow = () => {
+    handleAddToCart();
+    navigate('/cart');
+  };
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Breadcrumbs */}
-      <nav className="flex text-sm text-gray-500 mb-8" aria-label="Breadcrumb">
+      <nav className="flex text-sm text-gray-500 mb-6" aria-label="Breadcrumb">
         <ol className="inline-flex items-center space-x-1 md:space-x-2">
           <li className="inline-flex items-center">
             <Link to="/" className="hover:text-gray-900">Home</Link>
@@ -17,173 +36,178 @@ export default function ProductDetails() {
           <li>
             <div className="flex items-center">
               <span className="mx-2">/</span>
-              <Link to="/category" className="hover:text-gray-900">Electronics</Link>
+              <Link to={`/category?cat=${product.category}`} className="hover:text-gray-900">
+                {product.category}
+              </Link>
             </div>
           </li>
           <li>
             <div className="flex items-center">
               <span className="mx-2">/</span>
-              <Link to="/category" className="hover:text-gray-900">Audio</Link>
-            </div>
-          </li>
-          <li>
-            <div className="flex items-center">
-              <span className="mx-2">/</span>
-              <span className="text-gray-900 font-medium">Wireless headphones</span>
+              <span className="text-gray-900 font-medium truncate max-w-xs">{product.name}</span>
             </div>
           </li>
         </ol>
       </nav>
 
-      <div className="flex flex-col lg:flex-row gap-12 mb-12">
-        {/* Left: Images */}
+      <div className="flex flex-col lg:flex-row gap-10 mb-12">
+        {/* Left: Product Images */}
         <div className="w-full lg:w-1/2 flex flex-col gap-4">
-          <div className="bg-[#f8f6f2] rounded-2xl p-8 relative flex items-center justify-center aspect-square">
-            <img 
-              src="https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
-              alt="Wireless headphones" 
-              className="w-full h-full object-contain mix-blend-multiply"
+          <div className="bg-[#f9fafb] rounded-2xl p-8 relative flex items-center justify-center aspect-square border border-gray-100 overflow-hidden shadow-2xs">
+            <img
+              src={product.image}
+              alt={product.name}
+              className="w-full h-full object-contain mix-blend-multiply hover:scale-105 transition-transform duration-300"
             />
-            <button className="absolute bottom-4 right-4 bg-white p-2 rounded-full shadow-sm hover:shadow-md transition-shadow">
-              <Search size={20} className="text-gray-600" />
-            </button>
-          </div>
-          
-          <div className="flex gap-4 overflow-x-auto pb-2">
-            {[1, 2, 3, 4].map((i) => (
-              <button 
-                key={i} 
-                className={`w-24 h-24 rounded-xl bg-[#f8f6f2] p-2 flex-shrink-0 border-2 ${i === 1 ? 'border-[#198038]' : 'border-transparent hover:border-gray-300'} transition-colors`}
-              >
-                <img 
-                  src="https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
-                  alt={`Thumbnail ${i}`} 
-                  className="w-full h-full object-contain mix-blend-multiply"
-                />
-              </button>
-            ))}
+            {product.discountPercent && product.discountPercent > 5 && (
+              <span className="absolute top-4 left-4 bg-[#16a34a] text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-xs">
+                {product.discountPercent}% OFF
+              </span>
+            )}
           </div>
         </div>
 
-        {/* Right: Details */}
+        {/* Right: Product Info & Buy Box */}
         <div className="w-full lg:w-1/2 flex flex-col">
           <div className="mb-4">
-            <span className="inline-block bg-[#eef8f1] text-[#125A27] text-xs font-semibold px-3 py-1 rounded-md mb-3">
-              Bestseller
+            <span className="inline-block bg-[#eef8f1] text-[#125A27] text-xs font-semibold px-3 py-1 rounded-md mb-2">
+              {product.brand} · {product.subcategory || product.category}
             </span>
-            <h1 className="text-4xl font-bold text-gray-900 tracking-tight leading-tight">
-              Wireless headphones
+            <h1 className="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight leading-tight">
+              {product.name}
             </h1>
-            <p className="text-lg text-gray-500 mt-2">Sony WH-CH720N</p>
+            <p className="text-sm text-gray-500 mt-1">SKU: {product.sku}</p>
           </div>
 
-          <div className="flex items-center gap-2 mb-6">
-            <Star className="fill-[#198038] text-[#198038]" size={20} />
-            <span className="font-bold text-gray-900 text-lg">4.6</span>
-            <span className="text-gray-500 hover:underline cursor-pointer">(2.4K reviews)</span>
+          {/* Rating */}
+          <div className="flex items-center gap-2 mb-4">
+            <div className="flex items-center gap-1 bg-[#fef9ec] border border-[#fef08a] px-2.5 py-0.5 rounded-md">
+              <Star className="fill-[#eab308] text-[#eab308]" size={14} />
+              <span className="font-bold text-gray-900 text-sm">{product.rating}</span>
+            </div>
+            <span className="text-xs text-gray-500">
+              ({product.reviewCount} customer ratings & {reviews.length} reviews)
+            </span>
           </div>
 
-          <div className="flex items-baseline gap-3 mb-6">
-            <span className="text-4xl font-bold text-gray-900">₹ 4,999</span>
-            <span className="text-xl text-gray-400 line-through">₹ 7,990</span>
-            <span className="text-xl font-bold text-[#198038]">37% off</span>
+          {/* Price */}
+          <div className="flex items-baseline gap-3 mb-5">
+            <span className="text-3xl font-black text-gray-900">
+              ₹ {product.price.toLocaleString('en-IN')}
+            </span>
+            {product.originalPrice && product.originalPrice > product.price && (
+              <span className="text-lg text-gray-400 line-through">
+                ₹ {product.originalPrice.toLocaleString('en-IN')}
+              </span>
+            )}
+            {product.discountPercent && product.discountPercent > 0 && (
+              <span className="text-sm font-bold text-[#16a34a]">
+                Save {product.discountPercent}%
+              </span>
+            )}
           </div>
 
-          <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-            Lightweight comfort with rich sound and all-day battery life.
+          {/* Description */}
+          <p className="text-sm text-gray-700 leading-relaxed mb-6">
+            {product.description}
           </p>
 
-          <div className="flex flex-wrap gap-6 mb-8">
-            <div className="flex items-center gap-3 w-[45%]">
-              <Battery className="text-[#198038]" size={24} />
-              <span className="text-sm font-medium text-gray-700">Up to 35 hours<br/>battery</span>
+          {/* Key Trust Specs */}
+          <div className="grid grid-cols-2 gap-3 mb-6 p-4 bg-gray-50/70 rounded-2xl border border-gray-100 text-xs text-gray-700">
+            <div className="flex items-center gap-2">
+              <ShieldCheck className="w-4 h-4 text-[#16a34a] shrink-0" />
+              <span>{product.warrantyMonths} Months Official Warranty</span>
             </div>
-            <div className="flex items-center gap-3 w-[45%]">
-              <Navigation className="text-[#198038]" size={24} />
-              <span className="text-sm font-medium text-gray-700">Active noise<br/>cancellation</span>
+            <div className="flex items-center gap-2">
+              <Truck className="w-4 h-4 text-[#16a34a] shrink-0" />
+              <span>Express delivery: {product.deliveryTime}</span>
             </div>
-            <div className="flex items-center gap-3 w-[45%]">
-              <Truck className="text-[#198038]" size={24} />
-              <span className="text-sm font-medium text-gray-700">Fast delivery<br/>in 10-20 mins</span>
+            <div className="flex items-center gap-2">
+              <RotateCcw className="w-4 h-4 text-[#16a34a] shrink-0" />
+              <span>{product.returnable ? '7-10 Days Returnable' : '10 Days Replacement'}</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle2 className="w-4 h-4 text-[#16a34a] shrink-0" />
+              <span>Color: {product.color || 'Standard'}</span>
             </div>
           </div>
 
-          {/* Actions */}
-          <div className="flex items-center gap-4 mb-8">
-            <div className="flex items-center border border-gray-300 rounded-lg overflow-hidden h-14">
-              <button 
-                className="px-4 text-gray-500 hover:text-black hover:bg-gray-50 h-full transition-colors"
-                onClick={() => setQuantity(Math.max(1, quantity - 1))}
+          {/* Quantity & Actions */}
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 mt-auto">
+            {/* Quantity Selector */}
+            <div className="flex items-center border border-gray-200 rounded-xl px-2 py-1.5 justify-between w-32 shrink-0">
+              <button
+                onClick={() => setQuantity((q) => Math.max(1, q - 1))}
+                className="p-1 text-gray-500 hover:text-black"
+                aria-label="Decrease quantity"
               >
-                <Minus size={20} />
+                <Minus size={16} />
               </button>
-              <span className="w-10 text-center font-semibold text-lg">{quantity}</span>
-              <button 
-                className="px-4 text-gray-500 hover:text-black hover:bg-gray-50 h-full transition-colors"
-                onClick={() => setQuantity(quantity + 1)}
+              <span className="font-bold text-sm">{quantity}</span>
+              <button
+                onClick={() => setQuantity((q) => q + 1)}
+                className="p-1 text-gray-500 hover:text-black"
+                aria-label="Increase quantity"
               >
-                <Plus size={20} />
+                <Plus size={16} />
               </button>
             </div>
-            
-            <button className="flex-1 bg-[#198038] hover:bg-[#125A27] text-white font-semibold rounded-lg h-14 transition-colors text-lg" onClick={() => navigate('/cart')}>
+
+            <button
+              onClick={handleAddToCart}
+              className="flex-1 bg-white border border-[#198038] text-[#198038] hover:bg-[#eef8f1] font-bold py-3 px-6 rounded-xl transition-colors text-sm shadow-2xs"
+            >
               Add to cart
             </button>
-            <button className="flex-1 bg-white border-2 border-[#198038] hover:bg-[#eef8f1] text-[#198038] font-semibold rounded-lg h-14 transition-colors text-lg" onClick={() => navigate('/checkout')}>
+            <button
+              onClick={handleBuyNow}
+              className="flex-1 bg-[#198038] hover:bg-[#125a27] text-white font-bold py-3 px-6 rounded-xl transition-colors text-sm shadow-2xs"
+            >
               Buy now
             </button>
-          </div>
-
-          {/* Guarantees */}
-          <div className="bg-[#f8f6f2] rounded-xl p-4 flex flex-wrap gap-y-4 justify-between">
-            <div className="flex items-center gap-3 pr-4">
-              <Truck className="text-[#198038]" size={24} />
-              <div>
-                <p className="text-sm font-bold text-gray-900">Free delivery</p>
-                <p className="text-xs text-gray-500">On this product</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-3 px-4 border-l border-gray-300">
-              <RotateCcw className="text-[#198038]" size={24} />
-              <div>
-                <p className="text-sm font-bold text-gray-900">Easy returns</p>
-                <p className="text-xs text-gray-500">Within 7 days</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-3 pl-4 border-l border-gray-300">
-              <ShieldCheck className="text-[#198038]" size={24} />
-              <div>
-                <p className="text-sm font-bold text-gray-900">Secure payment</p>
-                <p className="text-xs text-gray-500">100% safe & encrypted</p>
-              </div>
-            </div>
           </div>
         </div>
       </div>
 
-      {/* Tabs */}
-      <div>
-        <div className="border-b border-gray-200">
-          <nav className="-mb-px flex space-x-8">
-            <button className="border-[#198038] text-[#198038] whitespace-nowrap py-4 px-1 border-b-2 font-medium text-lg">
-              Overview
-            </button>
-            <button className="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-lg">
-              Specifications
-            </button>
-            <button className="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-lg">
-              Reviews
-            </button>
-          </nav>
-        </div>
-        <div className="py-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Made for everyday listening</h2>
-          <p className="text-gray-700 leading-relaxed max-w-3xl">
-            Experience powerful sound, effective noise cancellation and long-lasting comfort wherever you go. 
-            These wireless headphones feature dual noise sensor technology and the Integrated Processor V1 to 
-            take noise cancellation to the next level.
-          </p>
-        </div>
+      {/* Customer Reviews Section from reviews.csv */}
+      <div className="mt-12 border-t border-gray-100 pt-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-6">
+          Customer Reviews ({reviews.length > 0 ? reviews.length : 'Verified Ratings'})
+        </h2>
+
+        {reviews.length === 0 ? (
+          <div className="bg-gray-50 p-6 rounded-2xl text-center text-sm text-gray-500">
+            No text reviews submitted yet for this product. Be the first to write a review!
+          </div>
+        ) : (
+          <div className="space-y-4">
+            {reviews.slice(0, 5).map((rev) => (
+              <div key={rev.reviewId} className="bg-white border border-gray-100 p-5 rounded-2xl shadow-2xs">
+                <div className="flex items-center justify-between mb-2">
+                  <div className="flex items-center gap-2">
+                    <div className="flex text-[#eab308]">
+                      {[...Array(5)].map((_, i) => (
+                        <Star
+                          key={i}
+                          size={14}
+                          className={i < Math.floor(rev.rating) ? 'fill-[#eab308]' : 'text-gray-200'}
+                        />
+                      ))}
+                    </div>
+                    <span className="font-bold text-sm text-gray-900">{rev.title}</span>
+                  </div>
+                  <span className="text-xs text-gray-400">{rev.reviewDate}</span>
+                </div>
+                <p className="text-sm text-gray-700 leading-relaxed">{rev.reviewText}</p>
+                {rev.verifiedPurchase && (
+                  <span className="inline-flex items-center gap-1 text-[11px] text-[#16a34a] font-semibold mt-2">
+                    <CheckCircle2 size={12} /> Verified Purchase
+                  </span>
+                )}
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

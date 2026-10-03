@@ -19,16 +19,16 @@ export function HeroSection({ onShopNowClick }: HeroSectionProps) {
 
             {/* Subtitle */}
             <p className="text-base sm:text-lg text-gray-600 font-normal mt-4 mb-7 max-w-md leading-relaxed">
-              Everyday essentials, delivered with care.
+              Everyday tech, smart electronics & accessories, delivered with care.
             </p>
 
             {/* Shop Now CTA Button */}
             <button
               onClick={onShopNowClick}
               className="inline-flex items-center gap-2 bg-[#1c1d1f] hover:bg-black text-white text-sm font-semibold px-6 py-3.5 rounded-full transition-all duration-150 transform hover:scale-[1.02] active:scale-[0.98] shadow-md focus:outline-none focus:ring-2 focus:ring-gray-900/30"
-              aria-label="Shop now for everyday essentials"
+              aria-label="Shop now for electronics & tech essentials"
             >
-              <span>Shop now</span>
+              <span>Shop tech</span>
               <ChevronRight className="w-4 h-4 stroke-[2.5]" />
             </button>
           </div>
@@ -36,13 +36,13 @@ export function HeroSection({ onShopNowClick }: HeroSectionProps) {
           {/* Hero Benefits Row */}
           <div className="mt-12 lg:mt-16 pt-2">
             <div className="inline-flex flex-wrap items-center gap-4 sm:gap-6">
-              {/* Benefit 1: Fresh daily */}
+              {/* Benefit 1: 100% Genuine */}
               <div className="flex items-center gap-2.5">
                 <div className="w-8 h-8 rounded-full bg-[#dcfce7] flex items-center justify-center shrink-0">
                   <Leaf className="w-4 h-4 text-novagreen-800 fill-novagreen-800" />
                 </div>
                 <span className="text-xs sm:text-[13px] font-semibold text-gray-900">
-                  Fresh daily
+                  100% Genuine
                 </span>
               </div>
 
