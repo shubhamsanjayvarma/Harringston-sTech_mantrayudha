@@ -9,7 +9,7 @@
 [![SQLite](https://img.shields.io/badge/Database-In--Memory%20SQLite-003B57?style=flat&logo=sqlite)](https://www.sqlite.org/)
 [![Graphify](https://img.shields.io/badge/Knowledge%20Graph-Graphify%20Ontology-8A2BE2?style=flat)](https://github.com/pratikforge)
 [![Tests](https://img.shields.io/badge/Tests-39%2F39%20Passing-brightgreen?style=flat)]()
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![License](https://img.shields.io/badge/License-Proprietary-red.svg)](LICENSE)
 
 ---
 
