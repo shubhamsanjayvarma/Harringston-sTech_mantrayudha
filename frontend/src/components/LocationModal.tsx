@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { X, MapPin, Check, Search } from 'lucide-react';
+import { X, MapPin, Check, Search, Plus } from 'lucide-react';
 import { LOCATIONS } from '../data/mockData';
 import { DeliveryLocation } from '../types';
 
@@ -8,6 +8,7 @@ interface LocationModalProps {
   onClose: () => void;
   currentLocation: DeliveryLocation;
   onSelectLocation: (location: DeliveryLocation) => void;
+  onNavigateToAddAddress?: () => void;
 }
 
 export function LocationModal({
@@ -15,6 +16,7 @@ export function LocationModal({
   onClose,
   currentLocation,
   onSelectLocation,
+  onNavigateToAddAddress,
 }: LocationModalProps) {
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -37,7 +39,7 @@ export function LocationModal({
         {/* Header */}
         <div className="p-5 border-b border-gray-100 flex items-center justify-between">
           <div className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-full bg-novagreen-50 flex items-center justify-center text-novagreen-700">
+            <div className="w-8 h-8 rounded-full bg-[#eef8f1] flex items-center justify-center text-[#198038]">
               <MapPin className="w-4 h-4 stroke-[2]" />
             </div>
             <div>
@@ -51,10 +53,34 @@ export function LocationModal({
           </div>
           <button
             onClick={onClose}
-            className="p-1.5 text-gray-400 hover:text-gray-600 rounded-full hover:bg-gray-100 transition-colors"
+            className="p-1.5 text-gray-400 hover:text-gray-600 rounded-full hover:bg-gray-100 transition-colors cursor-pointer"
             aria-label="Close modal"
           >
             <X className="w-5 h-5" />
+          </button>
+        </div>
+
+        {/* Add Address CTA Section */}
+        <div className="px-5 py-3.5 bg-[#eef8f1] border-b border-[#c4ebd3] flex items-center justify-between">
+          <div>
+            <p className="text-xs font-bold text-[#125A27]">
+              Deliver to a different address?
+            </p>
+            <p className="text-[11px] text-[#198038]">
+              Add your home, office, or other locations
+            </p>
+          </div>
+          <button
+            onClick={() => {
+              onClose();
+              if (onNavigateToAddAddress) {
+                onNavigateToAddAddress();
+              }
+            }}
+            className="inline-flex items-center gap-1.5 bg-[#198038] hover:bg-[#125A27] text-white text-xs font-bold py-2 px-3.5 rounded-lg shadow-sm transition-all cursor-pointer hover:shadow-md"
+          >
+            <Plus className="w-3.5 h-3.5 stroke-[2.5]" />
+            Add address
           </button>
         </div>
 
@@ -67,13 +93,16 @@ export function LocationModal({
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               placeholder="Search area or pincode..."
-              className="w-full pl-9 pr-4 py-2 bg-white text-sm rounded-xl border border-gray-200 focus:outline-none focus:border-novagreen-600 focus:ring-1 focus:ring-novagreen-600"
+              className="w-full pl-9 pr-4 py-2 bg-white text-sm rounded-xl border border-gray-200 focus:outline-none focus:border-[#198038] focus:ring-1 focus:ring-[#198038]"
             />
           </div>
         </div>
 
         {/* Locations List */}
         <div className="p-3 max-h-72 overflow-y-auto divide-y divide-gray-50">
+          <p className="px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider text-gray-400">
+            Available Dark Store Delivery Hubs
+          </p>
           {filteredLocations.map((loc) => {
             const isSelected = loc.id === currentLocation.id;
             return (
@@ -83,9 +112,9 @@ export function LocationModal({
                   onSelectLocation(loc);
                   onClose();
                 }}
-                className={`w-full flex items-center justify-between p-3 rounded-xl transition-colors text-left ${
+                className={`w-full flex items-center justify-between p-3 rounded-xl transition-colors text-left cursor-pointer ${
                   isSelected
-                    ? 'bg-novagreen-50/80 text-novagreen-900'
+                    ? 'bg-[#eef8f1] text-[#125A27]'
                     : 'hover:bg-gray-50 text-gray-800'
                 }`}
               >
@@ -93,7 +122,7 @@ export function LocationModal({
                   <div
                     className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 ${
                       isSelected
-                        ? 'bg-novagreen-700 text-white'
+                        ? 'bg-[#198038] text-white'
                         : 'bg-gray-100 text-gray-600'
                     }`}
                   >
@@ -110,7 +139,7 @@ export function LocationModal({
                 </div>
 
                 {isSelected && (
-                  <Check className="w-4 h-4 text-novagreen-700 shrink-0 stroke-[2.5]" />
+                  <Check className="w-4 h-4 text-[#198038] shrink-0 stroke-[2.5]" />
                 )}
               </button>
             );
