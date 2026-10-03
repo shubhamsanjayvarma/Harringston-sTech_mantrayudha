@@ -1,0 +1,498 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {
+    "name": "NovaMart Domain Knowledge Graph",
+    "version": "1.0",
+    "description": "Semantic knowledge graph over NovaMart store policies, product category constraints, and SQLite ontology."
+  },
+  "nodes": [
+    {
+      "id": "policy_cutoff",
+      "label": "Policy Version Cutoff Date (2026-06-01)",
+      "type": "policy_anchor",
+      "file_type": "markdown",
+      "source_file": "policies/refund_policy_v2.md",
+      "summary": "Orders placed before 2026-06-01 follow Policy v1. Orders placed on or after follow Policy v2.",
+      "community": 1,
+      "properties": {
+        "cutoff_date": "2026-06-01",
+        "rule": "Evaluated strictly by orders.order_date, never current time"
+      }
+    },
+    {
+      "id": "policy_refund_v1",
+      "label": "Refund Policy v1 (Prior to 2026-06-01)",
+      "type": "policy_document",
+      "file_type": "markdown",
+      "source_file": "policies/refund_policy_v1.md",
+      "summary": "Orders < 2026-06-01: Change-of-mind 10 calendar days, Defect 15 calendar days, Restocking fee Rs 0 across all categories, Human approval limit Rs 1,00,000.",
+      "community": 1,
+      "properties": {
+        "change_of_mind_days": 10,
+        "defect_days": 15,
+        "restocking_fee_rate": 0.0,
+        "approval_threshold": 100000.0
+      }
+    },
+    {
+      "id": "policy_refund_v2",
+      "label": "Refund Policy v2 (Current, >= 2026-06-01)",
+      "type": "policy_document",
+      "file_type": "markdown",
+      "source_file": "policies/refund_policy_v2.md",
+      "summary": "Orders >= 2026-06-01: Change-of-mind 7 calendar days (+2d Gold / +3d Platinum), Defect 10 calendar days, Restocking fee 5% max Rs 2,500 on electronics, Human approval limit Rs 75,000.",
+      "community": 1,
+      "properties": {
+        "change_of_mind_days": 7,
+        "defect_days": 10,
+        "restocking_fee_rate": 0.05,
+        "restocking_fee_cap": 2500.0,
+        "approval_threshold": 75000.0
+      }
+    },
+    {
+      "id": "rule_restocking_fee",
+      "label": "5% Electronics Restocking Fee Rule",
+      "type": "policy_rule",
+      "file_type": "markdown",
+      "source_file": "policies/refund_policy_v2.md",
+      "summary": "Under Policy v2 change-of-mind returns, high-value electronics incur a 5% restocking fee capped at Rs 2,500. Defective/damaged returns ALWAYS incur Rs 0 fee.",
+      "community": 1,
+      "properties": {
+        "rate": 0.05,
+        "cap": 2500.0,
+        "reason_scope": "change_of_mind_only"
+      }
+    },
+    {
+      "id": "policy_cancellation",
+      "label": "Cancellation Policy (Pre-Shipment)",
+      "type": "policy_document",
+      "file_type": "markdown",
+      "source_file": "policies/cancellation_policy.md",
+      "summary": "Orders can be cancelled before dispatch (status placed, confirmed, processing) for 100% refund including shipping fees. Exempt from human approval thresholds regardless of amount.",
+      "community": 1,
+      "properties": {
+        "exempt_from_human_approval": true,
+        "full_shipping_refund": true
+      }
+    },
+    {
+      "id": "policy_warranty",
+      "label": "Warranty Policy (Brand / Manufacturer)",
+      "type": "policy_document",
+      "file_type": "markdown",
+      "source_file": "policies/warranty_policy.md",
+      "summary": "Electronics carry 12-24 months manufacturer warranty. After return window closes, customer must be guided to brand authorized service centers with invoice.",
+      "community": 1,
+      "properties": {
+        "coverage_months_min": 12,
+        "coverage_months_max": 24
+      }
+    },
+    {
+      "id": "policy_shipping",
+      "label": "Shipping & Delivery Policy",
+      "type": "policy_document",
+      "file_type": "markdown",
+      "source_file": "policies/shipping_policy.md",
+      "summary": "Free delivery on orders >= Rs 1,000, flat Rs 79 otherwise. Orders >= Rs 5,000 require OTP verification. Goodwill credit Rs 100 per 3 full days late beyond ETA (max Rs 300).",
+      "community": 1,
+      "properties": {
+        "free_threshold": 1000.0,
+        "fee": 79.0,
+        "otp_threshold": 5000.0,
+        "goodwill_per_3d": 100.0,
+        "goodwill_cap": 300.0
+      }
+    },
+    {
+      "id": "policy_escalation",
+      "label": "Customer Escalation & Safety Policy",
+      "type": "policy_document",
+      "file_type": "markdown",
+      "source_file": "policies/customer_escalation_policy.md",
+      "summary": "Mandatory human escalation matrix: Tier 1 Support (standard disputes), Refunds & Payments (>24h pending payment), Logistics Desk (OTP dispute / transit loss), Technical Support (battery swelling / safety), Trust & Safety (serial returns / fraud).",
+      "community": 1,
+      "properties": {
+        "critical_sla_hours": 4,
+        "high_sla_hours": 24,
+        "medium_sla_hours": 72,
+        "low_sla_hours": 120
+      }
+    },
+    {
+      "id": "category_laptops",
+      "label": "Category: Laptops",
+      "type": "product_category",
+      "file_type": "markdown",
+      "source_file": "products/laptops.md",
+      "summary": "Restocking fee applicable on v2 change-of-mind (5% max Rs 2500). Free replacement on DOA within 10 days.",
+      "community": 1,
+      "properties": {
+        "category_name": "Laptops",
+        "is_restocking_category": true
+      }
+    },
+    {
+      "id": "category_tablets",
+      "label": "Category: Tablets",
+      "type": "product_category",
+      "file_type": "markdown",
+      "source_file": "products/tablets.md",
+      "summary": "Restocking fee applicable on v2 change-of-mind (5% max Rs 2500).",
+      "community": 1,
+      "properties": {
+        "category_name": "Tablets",
+        "is_restocking_category": true
+      }
+    },
+    {
+      "id": "category_cameras",
+      "label": "Category: Cameras",
+      "type": "product_category",
+      "file_type": "markdown",
+      "source_file": "products/cameras.md",
+      "summary": "Restocking fee applicable on v2 change-of-mind (5% max Rs 2500).",
+      "community": 1,
+      "properties": {
+        "category_name": "Cameras",
+        "is_restocking_category": true
+      }
+    },
+    {
+      "id": "category_monitors",
+      "label": "Category: Monitors",
+      "type": "product_category",
+      "file_type": "markdown",
+      "source_file": "products/monitors.md",
+      "summary": "Restocking fee applicable on v2 change-of-mind (5% max Rs 2500). Zero dead-pixel warranty within 10 days.",
+      "community": 1,
+      "properties": {
+        "category_name": "Monitors",
+        "is_restocking_category": true
+      }
+    },
+    {
+      "id": "category_smartphones",
+      "label": "Category: Smartphones",
+      "type": "product_category",
+      "file_type": "markdown",
+      "source_file": "products/smartphones.md",
+      "summary": "No restocking fee. 7d mind / 10d defect return window. Brand warranty 12 months.",
+      "community": 1,
+      "properties": {
+        "category_name": "Smartphones",
+        "is_restocking_category": false
+      }
+    },
+    {
+      "id": "category_headphones",
+      "label": "Category: Headphones",
+      "type": "product_category",
+      "file_type": "markdown",
+      "source_file": "products/headphones.md",
+      "summary": "Over-ear headphones returnable in intact box. No restocking fee.",
+      "community": 1,
+      "properties": {
+        "category_name": "Headphones",
+        "is_restocking_category": false
+      }
+    },
+    {
+      "id": "category_earbuds",
+      "label": "Category: Earbuds & In-Ear Audio",
+      "type": "product_category",
+      "file_type": "markdown",
+      "source_file": "products/earbuds.md",
+      "summary": "Hygiene non-returnable if inner seal broken or unsealed unless defective on arrival.",
+      "community": 1,
+      "properties": {
+        "category_name": "Earbuds & In-Ear Audio",
+        "is_restocking_category": false
+      }
+    },
+    {
+      "id": "category_smartwatches",
+      "label": "Category: Smartwatches",
+      "type": "product_category",
+      "file_type": "markdown",
+      "source_file": "products/smartwatches.md",
+      "summary": "Standard electronics return window. Must include original magnetic charging cable.",
+      "community": 1,
+      "properties": {
+        "category_name": "Smartwatches",
+        "is_restocking_category": false
+      }
+    },
+    {
+      "id": "category_gaming",
+      "label": "Category: Gaming Consoles & Gear",
+      "type": "product_category",
+      "file_type": "markdown",
+      "source_file": "products/gaming.md",
+      "summary": "Hardware returnable within window. Digital download vouchers non-refundable once scratched.",
+      "community": 1,
+      "properties": {
+        "category_name": "Gaming Consoles & Gear",
+        "is_restocking_category": false
+      }
+    },
+    {
+      "id": "category_keyboards",
+      "label": "Category: Keyboards",
+      "type": "product_category",
+      "file_type": "markdown",
+      "source_file": "products/keyboards.md",
+      "summary": "Returnable within window. Switches and cables must be included.",
+      "community": 1,
+      "properties": {
+        "category_name": "Keyboards",
+        "is_restocking_category": false
+      }
+    },
+    {
+      "id": "category_mice",
+      "label": "Category: Mice & Pointers",
+      "type": "product_category",
+      "file_type": "markdown",
+      "source_file": "products/mice.md",
+      "summary": "Returnable within window with USB dongle.",
+      "community": 1,
+      "properties": {
+        "category_name": "Mice & Pointers",
+        "is_restocking_category": false
+      }
+    },
+    {
+      "id": "category_speakers",
+      "label": "Category: Bluetooth Speakers",
+      "type": "product_category",
+      "file_type": "markdown",
+      "source_file": "products/bluetooth.md",
+      "summary": "Returnable within window. Water damage not covered under defect warranty.",
+      "community": 1,
+      "properties": {
+        "category_name": "Bluetooth Speakers",
+        "is_restocking_category": false
+      }
+    },
+    {
+      "id": "category_networking",
+      "label": "Category: Routers & Networking",
+      "type": "product_category",
+      "file_type": "markdown",
+      "source_file": "products/routers.md",
+      "summary": "Returnable within window with adapter.",
+      "community": 1,
+      "properties": {
+        "category_name": "Routers & Networking",
+        "is_restocking_category": false
+      }
+    },
+    {
+      "id": "category_accessories",
+      "label": "Category: Accessories & Cables",
+      "type": "product_category",
+      "file_type": "markdown",
+      "source_file": "products/accessories.md",
+      "summary": "Unsealed cables and used screen protectors non-returnable.",
+      "community": 1,
+      "properties": {
+        "category_name": "Accessories & Cables",
+        "is_restocking_category": false
+      }
+    },
+    {
+      "id": "rule_hygiene_exclusion",
+      "label": "Hygiene & Intimate Device Return Exclusion",
+      "type": "policy_exception",
+      "file_type": "markdown",
+      "source_file": "policies/return_policy_v2.md",
+      "summary": "In-ear earbuds with broken seals, unsealed internal packaging cables, and used screen protectors are strictly non-returnable for hygiene reasons unless confirmed DOA.",
+      "community": 1,
+      "properties": {
+        "scope": [
+          "Earbuds",
+          "Accessories"
+        ]
+      }
+    },
+    {
+      "id": "rule_safety_emergency",
+      "label": "Life-Safety Critical Escalation Rule",
+      "type": "safety_guardrail",
+      "file_type": "markdown",
+      "source_file": "policies/customer_escalation_policy.md",
+      "summary": "Any report of battery swelling, smoking, burning smell, sparks, or severe overheating immediately halts standard flow, provides immediate disconnect advice, and dispatches critical ticket to Technical Support.",
+      "community": 1,
+      "properties": {
+        "action": "BLOCK_STANDARD_FLOW",
+        "priority": "critical",
+        "team": "Technical Support"
+      }
+    },
+    {
+      "id": "rule_otp_contradiction",
+      "label": "OTP-Verified Delivery Contradiction Guardrail",
+      "type": "fraud_guardrail",
+      "file_type": "markdown",
+      "source_file": "policies/customer_escalation_policy.md",
+      "summary": "If orders.delivery_otp_verified == 1 and customer claims package not delivered, automated refund/replacement is strictly BLOCKED. Escalated to Logistics Desk for forensic audit.",
+      "community": 1,
+      "properties": {
+        "action": "BLOCK_REFUND",
+        "team": "Logistics Desk"
+      }
+    },
+    {
+      "id": "table_customers",
+      "label": "Table: customers (1,500 records)",
+      "type": "database_entity",
+      "file_type": "markdown",
+      "source_file": "schema/database_ontology.md",
+      "summary": "Stores account profile, shipping address, and loyalty_tier (bronze, silver, gold, platinum).",
+      "community": 1,
+      "properties": {}
+    },
+    {
+      "id": "table_orders",
+      "label": "Table: orders (8,000 records)",
+      "type": "database_entity",
+      "file_type": "markdown",
+      "source_file": "schema/database_ontology.md",
+      "summary": "Stores order_date (policy version anchor), order_status, total_amount, courier, tracking, actual_delivery_date, delivery_otp_verified.",
+      "community": 1,
+      "properties": {}
+    },
+    {
+      "id": "table_order_items",
+      "label": "Table: order_items (12,444 records)",
+      "type": "database_entity",
+      "file_type": "markdown",
+      "source_file": "schema/database_ontology.md",
+      "summary": "Stores line item quantity, unit_price, discount, and final_price (gross refund = round(final_price * 1.18, 2)).",
+      "community": 1,
+      "properties": {}
+    },
+    {
+      "id": "table_products",
+      "label": "Table: products (300 items)",
+      "type": "database_entity",
+      "file_type": "markdown",
+      "source_file": "schema/database_ontology.md",
+      "summary": "Stores catalog items, category, returnable, replacement_available, warranty_months.",
+      "community": 1,
+      "properties": {}
+    },
+    {
+      "id": "table_support_tickets",
+      "label": "Table: support_tickets (2,500+ records)",
+      "type": "database_entity",
+      "file_type": "markdown",
+      "source_file": "schema/database_ontology.md",
+      "summary": "Stores ticket_id, category, priority (critical/high/medium/low), escalation_team, status.",
+      "community": 1,
+      "properties": {}
+    }
+  ],
+  "links": [
+    {
+      "source": "policy_refund_v2",
+      "target": "policy_refund_v1",
+      "relation": "SUPERSEDES",
+      "context": "Cutoff date 2026-06-01"
+    },
+    {
+      "source": "policy_refund_v2",
+      "target": "policy_cutoff",
+      "relation": "GOVERNED_BY",
+      "context": "Order date determines version"
+    },
+    {
+      "source": "policy_refund_v2",
+      "target": "rule_restocking_fee",
+      "relation": "CONTAINS_RULE",
+      "context": ""
+    },
+    {
+      "source": "category_laptops",
+      "target": "rule_restocking_fee",
+      "relation": "SUBJECT_TO_FEE",
+      "context": "5% capped at Rs 2,500 on v2 change-of-mind"
+    },
+    {
+      "source": "category_tablets",
+      "target": "rule_restocking_fee",
+      "relation": "SUBJECT_TO_FEE",
+      "context": "5% capped at Rs 2,500 on v2 change-of-mind"
+    },
+    {
+      "source": "category_cameras",
+      "target": "rule_restocking_fee",
+      "relation": "SUBJECT_TO_FEE",
+      "context": "5% capped at Rs 2,500 on v2 change-of-mind"
+    },
+    {
+      "source": "category_monitors",
+      "target": "rule_restocking_fee",
+      "relation": "SUBJECT_TO_FEE",
+      "context": "5% capped at Rs 2,500 on v2 change-of-mind"
+    },
+    {
+      "source": "category_earbuds",
+      "target": "rule_hygiene_exclusion",
+      "relation": "BLOCKED_BY_HYGIENE",
+      "context": ""
+    },
+    {
+      "source": "category_accessories",
+      "target": "rule_hygiene_exclusion",
+      "relation": "BLOCKED_BY_HYGIENE",
+      "context": ""
+    },
+    {
+      "source": "policy_escalation",
+      "target": "rule_safety_emergency",
+      "relation": "INCLUDES_SAFETY_GUARD",
+      "context": ""
+    },
+    {
+      "source": "policy_shipping",
+      "target": "rule_otp_contradiction",
+      "relation": "ENFORCES_OTP_CHECK",
+      "context": ""
+    },
+    {
+      "source": "table_customers",
+      "target": "table_orders",
+      "relation": "HAS_MANY_ORDERS",
+      "context": ""
+    },
+    {
+      "source": "table_orders",
+      "target": "table_order_items",
+      "relation": "HAS_MANY_ITEMS",
+      "context": ""
+    },
+    {
+      "source": "table_order_items",
+      "target": "table_products",
+      "relation": "REFERENCES_PRODUCT",
+      "context": ""
+    },
+    {
+      "source": "table_orders",
+      "target": "policy_cutoff",
+      "relation": "ANCHORED_BY_ORDER_DATE",
+      "context": ""
+    },
+    {
+      "source": "table_orders",
+      "target": "rule_otp_contradiction",
+      "relation": "VERIFIED_BY_OTP",
+      "context": ""
+    }
+  ]
+}
