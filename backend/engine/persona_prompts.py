@@ -95,10 +95,29 @@ Every response you produce must culminate in exactly one of these four terminal 
 """
 
 
+DOMAIN_GRAPH_ONTOLOGY = """=== DOMAIN KNOWLEDGE GRAPH ANCHORS (GRAPHIFY ONTOLOGY) ===
+• Knowledge Graph Source: backend/domain_knowledge/graphify-out/graph.json (4,597 nodes, 6,249 edges)
+• Policy Version Cutoff: Orders placed before 2026-06-01 follow Policy v1. Orders placed on or after 2026-06-01 follow Policy v2.
+• Return Windows:
+  - Electronics (Laptops, Tablets, Cameras, Monitors): 7 days change-of-mind (v2) / 10 days (v1); 10 days defect (v2) / 15 days (v1).
+  - Fashion & Apparel: 14 days change-of-mind / 14 days defect.
+  - Home & Kitchen: 10 days change-of-mind / 10 days defect.
+  - Groceries & Perishables: 0 days (non-returnable once delivered).
+• Restocking Fee Rules (Policy v2):
+  - Strictly 5% of item purchase price, capped at ₹2,500 maximum.
+  - Applies ONLY to change-of-mind returns on Laptops, Tablets, Cameras, Monitors under Policy v2.
+  - Rs 0 fee for defective/damaged items or all Policy v1 orders.
+• Sealed Hygiene Constraints:
+  - In-ear audio (Earbuds, headphones with unsealed hygiene tape) cannot be returned for change-of-mind once opened.
+• Safety Escalation:
+  - Any report of swelling battery, overheating, smoke, or fire requires immediate emergency advice and priority ticket dispatch."""
+
+
 def get_system_prompt(
     customer_context: Optional[str] = None,
     memory_context: Optional[str] = None,
     reference_time: Optional[str] = None,
+    graph_context: Optional[str] = None,
 ) -> str:
     """
     Builds the complete operational system prompt with injected context.
@@ -108,6 +127,9 @@ def get_system_prompt(
     # Reference time injection (Gap 01: Dynamic conversation timestamp anchor)
     ref_time_str = reference_time or datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
     sections.append(f"\n=== GROUND-TRUTH TEMPORAL ANCHOR ===\nActive Conversation Reference Time: {ref_time_str}\n(All calendar return windows and delays must be computed relative to this timestamp!)")
+
+    # Domain Knowledge Graph injection (Graphify)
+    sections.append(f"\n{graph_context or DOMAIN_GRAPH_ONTOLOGY}")
 
     if customer_context:
         sections.append(f"\n=== AUTHENTICATED CUSTOMER PROFILE ===\n{customer_context}")

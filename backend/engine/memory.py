@@ -56,6 +56,23 @@ class ConversationMemoryManager:
 
         return conversations
 
+    def get_recent_history(self, customer_id: str, limit: int = 3) -> str:
+        """
+        Returns a formatted string of recent conversation messages for prompt context injection.
+        """
+        convs = self.get_customer_history(customer_id, limit=limit)
+        if not convs:
+            return ""
+        lines = []
+        for c in convs:
+            msgs = c.get("messages", [])
+            for m in msgs[-3:]:
+                sender = m.get("sender", "user")
+                text = m.get("text", "")
+                if text:
+                    lines.append(f"{sender}: {text}")
+        return "\n".join(lines)
+
     def get_conversation(self, conversation_id: str) -> Optional[Dict[str, Any]]:
         """
         Retrieves a single conversation by its ID.

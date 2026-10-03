@@ -124,9 +124,20 @@ def get_customer(customer_id: Optional[str] = None, email: Optional[str] = None)
         return {"error": f"Customer not found for {'customer_id: ' + customer_id if customer_id else 'email: ' + email}."}
 
     cust = dict(row)
+    cid = cust.get("customer_id")
+
+    # Fetch recent orders for customer context
+    recent_orders = []
+    if cid:
+        cursor.execute(
+            "SELECT order_id, order_date, order_status, total_amount, estimated_delivery_date, actual_delivery_date, courier FROM orders WHERE customer_id = ? ORDER BY order_date DESC LIMIT 5",
+            (cid,),
+        )
+        recent_orders = [dict(r) for r in cursor.fetchall()]
+
     # Assemble sanitized customer record
     return {
-        "customer_id": cust.get("customer_id"),
+        "customer_id": cid,
         "name": f"{cust.get('first_name', '')} {cust.get('last_name', '')}".strip(),
         "email": cust.get("email"),
         "phone": cust.get("phone"),
@@ -138,7 +149,23 @@ def get_customer(customer_id: Optional[str] = None, email: Optional[str] = None)
         "city": cust.get("city"),
         "state": cust.get("state"),
         "pincode": cust.get("pincode"),
+        "recent_orders": recent_orders,
     }
+
+
+def get_customer_orders(customer_id: str) -> List[Dict[str, Any]]:
+    """
+    Retrieves the list of all orders associated with a customer, including order status,
+    order date, total amount, estimated delivery date, actual delivery date, and courier.
+    Use this when the customer asks about their recent orders, order history, or in-flight packages.
+    """
+    conn = get_connection()
+    cursor = conn.cursor()
+    cursor.execute(
+        "SELECT order_id, order_date, order_status, total_amount, estimated_delivery_date, actual_delivery_date, tracking_number, courier FROM orders WHERE customer_id = ? ORDER BY order_date DESC LIMIT 10",
+        (customer_id,),
+    )
+    return [dict(r) for r in cursor.fetchall()]
 
 
 def get_order(order_id: str, authenticated_customer_id: str) -> Dict[str, Any]:
@@ -755,6 +782,29 @@ def escalate_to_human(
     }
 
 
+def query_store_policy(topic: str) -> Dict[str, Any]:
+    """
+    Queries the dedicated NovaMart Domain Knowledge Graph for store policies, return windows, defect rules, and escalation procedures.
+    """
+    from backend.engine.domain_graph import domain_graph
+    nodes = domain_graph.query(topic)
+    if not nodes:
+        return {"found": False, "message": f"No specific policy clause found for topic: {topic}"}
+    return {
+        "found": True,
+        "topic": topic,
+        "results": [{"label": n["label"], "summary": n["summary"]} for n in nodes[:3]]
+    }
+
+
+def get_category_constraints(category: str) -> Dict[str, Any]:
+    """
+    Queries the Domain Knowledge Graph for category-specific return rules (e.g. Laptops restocking fee, Earbuds hygiene non-returnable status).
+    """
+    from backend.engine.domain_graph import domain_graph
+    return domain_graph.get_category_rules(category)
+
+
 # ==============================================================================
 # 3. Tool Registry & Gemini 2.5 Flash / Google ADK Function Declarations
 # ==============================================================================
@@ -770,6 +820,8 @@ TOOL_REGISTRY: Dict[str, Callable] = {
     "create_refund": create_refund,
     "create_support_ticket": create_support_ticket,
     "escalate_to_human": escalate_to_human,
+    "query_store_policy": query_store_policy,
+    "get_category_constraints": get_category_constraints,
 }
 
 TOOL_SCHEMAS: List[Dict[str, Any]] = [

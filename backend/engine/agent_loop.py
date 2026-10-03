@@ -69,10 +69,13 @@ from backend.engine.tools import (
     create_return,
     create_support_ticket,
     escalate_to_human,
+    get_category_constraints,
     get_conversations,
     get_customer,
+    get_customer_orders,
     get_order,
     get_product,
+    query_store_policy,
 )
 from backend.engine.workflow_graph import (
     ADKWorkflowGraph,
@@ -98,6 +101,7 @@ class NovaMartAgentLoop:
         conversation_id: Optional[str] = None,
         reference_time: Optional[datetime] = None,
         offline_mode: bool = False,
+        history: Optional[List[Dict[str, Any]]] = None,
     ) -> Dict[str, Any]:
         """Main execution entrypoint for a single customer message turn."""
         start_time = time.perf_counter()
@@ -105,13 +109,16 @@ class NovaMartAgentLoop:
         # Resolve calendar anchor
         ref_time = resolve_reference_time(reference_time, None)
 
+        effective_conv_id = conversation_id or f"CONV-{customer_id}"
+        current_api_key = self.api_key or os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
         ctx = WorkflowContext(
             customer_id=customer_id,
             message=message,
-            conversation_id=conversation_id,
+            conversation_id=effective_conv_id,
             reference_time=ref_time,
-            offline_mode=offline_mode or (not self.api_key),
+            offline_mode=offline_mode or (not current_api_key),
         )
+        ctx.collected_entities["client_history"] = history or []
 
         # ----------------------------------------------------------------------
         # STAGE 01: USER REQUEST
@@ -188,6 +195,32 @@ class NovaMartAgentLoop:
         # Memory & Pronoun resolution
         resolved_context = self.pronoun_resolver.resolve_context(sanitized, customer_id)
         ctx.collected_entities["resolved_context"] = resolved_context
+
+        # Pre-check Critical Thermal / Battery Safety Incident Check (Warranty Policy §6)
+        if re.search(r"\b(smoke|smoking|spark|sparking|fire|swelling|swollen|overheating|burned|burning)\b", sanitized, re.IGNORECASE):
+            ctx.terminal_move = TerminalMove.ESCALATE
+            ticket_res = escalate_to_human(
+                customer_id=customer_id,
+                order_id=None,
+                reason="product_safety_incident",
+                team="Technical Support",
+                priority="critical",
+                case_summary=f"CRITICAL SAFETY HAZARD reported: {sanitized}",
+            )
+            ctx.created_ticket_id = ticket_res.get("ticket_id")
+            ctx.response_text = (
+                "⚠️ Safety Alert: Please disconnect and stop using or charging the device immediately, and place it in a cool, fire-safe location away from flammable materials.\n\n"
+                f"I have escalated this incident to our Technical Support Safety Team under critical priority (Ticket #{ctx.created_ticket_id}). A safety lead will contact you within 15 minutes."
+            )
+            return self._build_result(ctx, start_time)
+
+        # ----------------------------------------------------------------------
+        # STAGE 02b: LIVE MODEL REASONING GATE (Gemini 2.5 Flash via google-genai)
+        # ----------------------------------------------------------------------
+        if self.use_gemini and not ctx.offline_mode and current_api_key:
+            gemini_result = self._execute_gemini_turn(ctx, customer, sanitized, start_time, current_api_key)
+            if gemini_result is not None:
+                return gemini_result
 
         # ----------------------------------------------------------------------
         # STAGE 03: COLLECT INFO
@@ -664,10 +697,235 @@ class NovaMartAgentLoop:
         )
         return self._build_result(ctx, start_time)
 
+    def _execute_gemini_turn(
+        self,
+        ctx: WorkflowContext,
+        customer: Dict[str, Any],
+        sanitized_input: str,
+        start_time: float,
+        api_key: str,
+    ) -> Optional[Dict[str, Any]]:
+        """Executes a live Gemini 2.5 Flash reasoning turn with official google-genai SDK tools."""
+        try:
+            import functools
+            from google import genai
+            from google.genai import types
+
+            # Query customer's orders directly from SQLite
+            cust_orders = fetch_all(
+                "SELECT order_id, order_date, order_status, total_amount, estimated_delivery_date, actual_delivery_date, tracking_number, courier FROM orders WHERE customer_id = ? ORDER BY order_date DESC LIMIT 10",
+                (customer.get("customer_id"),),
+            )
+            ongoing_orders = [o for o in cust_orders if (o.get("order_status") or "").lower() in ["placed", "confirmed", "processing", "shipped", "out_for_delivery", "in_transit"]]
+            delivered_orders = [o for o in cust_orders if (o.get("order_status") or "").lower() == "delivered"]
+
+            order_lines = []
+            for o in cust_orders:
+                order_lines.append(
+                    f"• {o.get('order_id')}: Placed {o.get('order_date')}, Status '{o.get('order_status')}', Total ₹{o.get('total_amount')}, Courier: {o.get('courier')} ({o.get('tracking_number')})"
+                )
+            orders_str = "\n".join(order_lines) if order_lines else "No orders found in database."
+
+            cust_context = (
+                f"Customer ID: {customer.get('customer_id')}\n"
+                f"Name: {customer.get('first_name')} {customer.get('last_name')}\n"
+                f"Email: {customer.get('email')}\n"
+                f"Phone: {customer.get('phone')}\n"
+                f"City: {customer.get('city')}, {customer.get('state')}\n"
+                f"Loyalty Tier: {customer.get('loyalty_tier', 'bronze')}\n"
+                f"Account Status: {customer.get('account_status', 'active')}\n"
+                f"Total Spend: ₹{customer.get('total_spend', 0)}\n\n"
+                f"=== SQLite DATABASE GROUND TRUTH: CUSTOMER ORDERS ===\n"
+                f"Total Orders: {len(cust_orders)} | Ongoing/In-Transit Orders: {len(ongoing_orders)} | Delivered Orders: {len(delivered_orders)}\n"
+                f"{orders_str}\n\n"
+                f"CRITICAL GROUND TRUTH RULES:\n"
+                f"1. When customer asks if they have ANY ongoing, pending, or in-transit orders, refer to the count above: There are {len(ongoing_orders)} ongoing orders and {len(delivered_orders)} delivered orders. If ongoing orders is 0, explicitly tell them all orders have already been delivered and they have 0 ongoing orders!\n"
+                f"2. Never claim you are 'checking' and then stop. The ground truth data is right above. Answer immediately with facts!"
+            )
+
+            # Build multi-turn conversational transcript and SDK history
+            client_history = ctx.collected_entities.get("client_history") or []
+            gemini_history = []
+            dialogue_turns = []
+
+            if client_history:
+                for h in client_history:
+                    r = (h.get("role") or "user").lower()
+                    c = h.get("content") or h.get("text") or ""
+                    if not c.strip():
+                        continue
+                    genai_role = "user" if r in ["user", "customer"] else "model"
+                    dialogue_turns.append(f"{genai_role.upper()}: {c}")
+                    gemini_history.append(
+                        types.Content(
+                            role=genai_role,
+                            parts=[types.Part.from_text(text=c)],
+                        )
+                    )
+            else:
+                db_hist = self.memory_manager.get_recent_history(customer.get("customer_id"))
+                if db_hist:
+                    dialogue_turns.append(db_hist)
+
+            memory_context = f"=== ACTIVE MULTI-TURN CONVERSATION TRANSCRIPT ===\n" + "\n".join(dialogue_turns) if dialogue_turns else ""
+            ref_time_str = ctx.reference_time.strftime("%Y-%m-%d %H:%M:%S")
+
+            system_prompt = get_system_prompt(
+                customer_context=cust_context,
+                memory_context=memory_context,
+                reference_time=ref_time_str,
+            )
+
+            untrusted_user_envelope = contain_user_input(sanitized_input)
+
+            mutated_action = {"performed": False, "type": "ANSWER", "ticket_id": None}
+
+            def wrap_tool(fn, tool_name: str):
+                @functools.wraps(fn)
+                def tool_wrapper(**kwargs):
+                    ctx.log_stage(WorkflowStage.ACT, f"Gemini invoked tool '{tool_name}'", kwargs)
+
+                    varnames = fn.__code__.co_varnames
+                    if "customer_id" in varnames and not kwargs.get("customer_id"):
+                        kwargs["customer_id"] = customer.get("customer_id")
+                    if "authenticated_customer_id" in varnames and not kwargs.get("authenticated_customer_id"):
+                        kwargs["authenticated_customer_id"] = customer.get("customer_id")
+                    if "reference_time" in varnames and not kwargs.get("reference_time"):
+                        kwargs["reference_time"] = ref_time_str
+
+                    if tool_name in ["create_refund", "create_return"]:
+                        order_rec = None
+                        if kwargs.get("order_id"):
+                            order_rec = fetch_one("SELECT * FROM orders WHERE order_id = ?", (kwargs["order_id"],))
+                        verdict = RuleMerger.evaluate_pre_tool(
+                            intent="refund" if tool_name == "create_refund" else "return",
+                            customer_id=customer.get("customer_id"),
+                            order_record=order_rec,
+                            tool_call_params=kwargs,
+                            conversation_context={"sanitized": sanitized_input},
+                        )
+                        if verdict.is_blocked:
+                            ctx.log_stage(
+                                WorkflowStage.VERIFY,
+                                f"RuleMerger blocked mutation tool '{tool_name}'",
+                                {"reason": verdict.reason},
+                            )
+                            return {
+                                "status": "BLOCKED",
+                                "error": verdict.rule_name,
+                                "reason": verdict.reason,
+                                "suggested_action": verdict.suggested_action,
+                            }
+
+                    res = fn(**kwargs)
+
+                    if tool_name in ["create_refund", "create_return"]:
+                        mutated_action["performed"] = True
+                        mutated_action["type"] = "ACT"
+                    elif tool_name in ["create_support_ticket", "escalate_to_human"]:
+                        mutated_action["performed"] = True
+                        mutated_action["type"] = "ESCALATE"
+                        if isinstance(res, dict) and res.get("ticket_id"):
+                            mutated_action["ticket_id"] = res["ticket_id"]
+                            ctx.created_ticket_id = res["ticket_id"]
+
+                    stage_to_log = WorkflowStage.RETRIEVE_POLICY if ("policy" in tool_name or "category" in tool_name) else WorkflowStage.ACT
+                    ctx.log_stage(stage_to_log, f"Tool '{tool_name}' returned", {"result_summary": str(res)[:200]})
+                    return res
+
+                return tool_wrapper
+
+            wrapped_tools = [
+                wrap_tool(get_customer, "get_customer"),
+                wrap_tool(get_customer_orders, "get_customer_orders"),
+                wrap_tool(get_order, "get_order"),
+                wrap_tool(get_product, "get_product"),
+                wrap_tool(get_conversations, "get_conversations"),
+                wrap_tool(check_refund_eligibility, "check_refund_eligibility"),
+                wrap_tool(calculate_refund, "calculate_refund"),
+                wrap_tool(create_return, "create_return"),
+                wrap_tool(create_refund, "create_refund"),
+                wrap_tool(create_support_ticket, "create_support_ticket"),
+                wrap_tool(escalate_to_human, "escalate_to_human"),
+                wrap_tool(query_store_policy, "query_store_policy"),
+                wrap_tool(get_category_constraints, "get_category_constraints"),
+            ]
+
+            client = genai.Client(api_key=api_key)
+            primary_model = os.environ.get("MODEL_NAME") or "gemini-3.6-flash"
+            candidate_models = [primary_model]
+            for fallback in ["gemini-3.6-flash", "gemini-3.5-flash-lite", "gemini-flash-lite-latest", "gemini-3.1-flash-lite"]:
+                if fallback not in candidate_models:
+                    candidate_models.append(fallback)
+
+            config = types.GenerateContentConfig(
+                system_instruction=system_prompt,
+                tools=wrapped_tools,
+                temperature=0.2,
+                automatic_function_calling=types.AutomaticFunctionCallingConfig(maximum_remote_calls=5),
+            )
+
+            response = None
+            successful_model = None
+            for model_name in candidate_models:
+                try:
+                    ctx.log_stage(WorkflowStage.REASON, f"Executing live Gemini reasoning turn (model: {model_name})")
+                    chat = client.chats.create(model=model_name, config=config, history=gemini_history if gemini_history else None)
+                    resp = chat.send_message(untrusted_user_envelope)
+                    if resp and resp.text:
+                        response = resp
+                        successful_model = model_name
+                        break
+                except Exception as model_err:
+                    ctx.log_stage(
+                        WorkflowStage.REASON,
+                        f"Model {model_name} unavailable: {type(model_err).__name__}",
+                        {"error": str(model_err)[:150]}
+                    )
+                    continue
+
+            if not response or not response.text:
+                ctx.log_stage(
+                    WorkflowStage.RETRIEVE_POLICY,
+                    "Gemini live execution fallback (all candidate models exhausted)",
+                    {"candidates": candidate_models},
+                )
+                return None
+
+            clean_text = response.text.strip()
+            move_match = re.search(r"[\*\_\(]*\s*(?:TERMINAL\s+MOVE:?\s*)?(ANSWER|ASK|ACT|ESCALATE)\s*[\*\_\)]*$", clean_text, flags=re.IGNORECASE)
+            explicit_move = move_match.group(1).upper() if move_match else None
+            clean_text = re.sub(r"\n*[\*\_\(]*\s*(?:TERMINAL\s+MOVE:?\s*)?(ANSWER|ASK|ACT|ESCALATE)\s*[\*\_\)]*\n*$", "", clean_text, flags=re.IGNORECASE).strip()
+            ctx.response_text = clean_text
+
+            if mutated_action["performed"]:
+                ctx.terminal_move = TerminalMove.ACT if mutated_action["type"] == "ACT" else TerminalMove.ESCALATE
+                if mutated_action["ticket_id"]:
+                    ctx.created_ticket_id = mutated_action["ticket_id"]
+            elif explicit_move:
+                ctx.terminal_move = TerminalMove[explicit_move]
+            else:
+                is_question = bool(re.search(r"\b(which\s+(order|item|one)|could\s+you\s+(please\s+)?(provide|clarify|share|specify)|can\s+you\s+(please\s+)?confirm|\?)\b", ctx.response_text, re.IGNORECASE))
+                if is_question and any(k in ctx.response_text.lower() for k in ["which order", "which of your", "order id", "photo", "share a"]):
+                    ctx.terminal_move = TerminalMove.ASK
+                else:
+                    ctx.terminal_move = TerminalMove.ANSWER
+
+            ctx.log_stage(WorkflowStage.VERIFY_RESULT, f"Delivered response via Gemini ({successful_model}, {ctx.terminal_move.value})")
+            return self._build_result(ctx, start_time)
+
+        except Exception as e:
+            ctx.log_stage(
+                WorkflowStage.RETRIEVE_POLICY,
+                f"Gemini live execution fallback ({type(e).__name__}: {str(e)})",
+                {"error": str(e)},
+            )
+            return None
+
     def _build_result(self, ctx: WorkflowContext, start_time: float) -> Dict[str, Any]:
         """Constructs final standardized audit envelope."""
         elapsed_ms = round((time.perf_counter() - start_time) * 1000, 2)
-        return {
+        res = {
             "customer_id": ctx.customer_id,
             "terminal_move": ctx.terminal_move.value,
             "response": ctx.response_text,
@@ -675,3 +933,13 @@ class NovaMartAgentLoop:
             "execution_time_ms": elapsed_ms,
             "audit_trace": ctx.execution_trace,
         }
+        # Persist conversation turn to SQLite memory
+        try:
+            conv_id = ctx.conversation_id or f"CONV-{ctx.customer_id}"
+            if ctx.message:
+                self.memory_manager.store_message(conv_id, "user", ctx.message)
+            if ctx.response_text:
+                self.memory_manager.store_message(conv_id, "assistant", ctx.response_text)
+        except Exception:
+            pass
+        return res
