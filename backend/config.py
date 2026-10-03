@@ -7,13 +7,23 @@ Ground Truth references:
 """
 
 from datetime import datetime
+import os
 from pathlib import Path
 from typing import Dict, Set
+from dotenv import load_dotenv
+
+# Load local environment variables from .env
+load_dotenv()
 
 # Project Paths
 BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / "spec" / "Problem Statement(PS)" / "public-20261003T063850Z-1-001" / "public"
 PERSISTENT_DB_PATH = BASE_DIR / "backend" / "novamart.db"
+
+# LLM Model Configuration
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY") or ""
+MODEL_NAME = os.environ.get("MODEL_NAME", "gemini-3.6-flash")
+ENABLE_LIVE_MODEL = os.environ.get("ENABLE_LIVE_MODEL", "true").lower() in ("true", "1", "yes")
 
 # Database Connection URIs
 SQLITE_SHARED_MEM_URI = "file:novamart_mem?mode=memory&cache=shared"
